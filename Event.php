@@ -9,7 +9,20 @@
 
 </head>
 <body>
+    
     <h1>This is Events page</h1>
     <h2>Developer--Laxman Parajuli</h2>
+    <?php
+    echo "my name is laxman <br>";
+$text1="lagrandee college";
+$text2="BCA 6Th sem  <br>";
+echo $text1." ".$text2;
+$num1=25;
+$num2=30.5;
+echo $num1+$num2;
+if($num1==25 and $num2==30.5)
+echo "<br> Hello World";
+?>
+    
 </body>
 </html>

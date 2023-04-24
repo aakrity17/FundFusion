@@ -1,0 +1,46 @@
+/* CSS code for the navbar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #be3535;
+    display: flex;
+
+  }
+  
+  .nav-link {
+    color: #e72a2a;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  .form-control {
+    border-radius: 20px;
+  }
+  
+  .btn-outline-success {
+    border-radius: 20px;
+  }
+  
+  /* Media query for responsive navbar */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      justify-content: center;
+    }
+  }
+  

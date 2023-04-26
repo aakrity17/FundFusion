@@ -8,7 +8,7 @@
 	<script src="Donation.js"></script>
 </head>
 <body>
-    <h1>Donation page hai</h1>
+    <h1>Donation page haina</h1>
     <h2>Developer--Uzumaki Xatey</h2>
     <br><br><br>
 	

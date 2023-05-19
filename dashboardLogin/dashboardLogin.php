@@ -10,7 +10,10 @@
 </head>
 <body>
     <section class="side">
-        <img src="./images/logo.png" alt="" id="logo">
+        <div class="logo-container">
+
+            <img src="./images/logo3.png" alt="" id="logo">
+        </div>
     </section>
 
     <section class="main">

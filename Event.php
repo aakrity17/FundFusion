@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Donate for Education</h5>
                     <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
+                    <a href="#" class="btn btn-primary">Donate</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Donate for Drinking water</h5>
                     <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
+                    <a href="#" class="btn btn-success">Donate</a>
                 </div>
             </div>
         </div>

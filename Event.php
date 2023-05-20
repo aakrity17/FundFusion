@@ -1,3 +1,8 @@
+<?php
+include "database/Db_Connection.php";
+$sql = "SELECT * from events";
+$records = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,66 +21,23 @@
     <hr/>
     <div class="container-fluid">
     <div class="row">
-        <div class="col-4 event-card-layout">
+        <?php 
+        foreach( $records as $data ) 
+        {
+            echo '<div class="col-4 event-card-layout">
             <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://d1vdjc70h9nzd9.cloudfront.net/media/campaign/208000/208591/image/5eeb103354e12.jpeg" alt="Card image cap">
+                <img class="card-img-top event-card-image" src="img/events/'.$data['event_image_url'].'">
                 <div class="card-body">
-                    <h5 class="card-title">Donate for Education</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
+                    <h5 class="card-title">'.$data['event_name'].'</h5>
+                    <p class="card-text">'.$data['event_description'].'</p>
                     <a href="#" class="btn btn-primary">Donate</a>
                 </div>
             </div>
-        </div>
-        <div class="col-4 event-card-layout">    
-            <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://muslimhands.org.uk/_ui/images/36404f884e19.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Donate for Drinking water</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-success">Donate</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 event-card-layout">    
-            <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://bronxnet.org/media/filer_public_thumbnails/filer_public/c9/d1/c9d1ca88-5b7e-49e8-b0c5-3fa04bf0a7c5/prop-food-02.jpg__840x560_q85_crop_subsampling-2_upscale.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Donate for food</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 event-card-layout">    
-            <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://bronxnet.org/media/filer_public_thumbnails/filer_public/c9/d1/c9d1ca88-5b7e-49e8-b0c5-3fa04bf0a7c5/prop-food-02.jpg__840x560_q85_crop_subsampling-2_upscale.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Donate for food</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 event-card-layout">    
-            <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://bronxnet.org/media/filer_public_thumbnails/filer_public/c9/d1/c9d1ca88-5b7e-49e8-b0c5-3fa04bf0a7c5/prop-food-02.jpg__840x560_q85_crop_subsampling-2_upscale.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Donate for food</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 event-card-layout">    
-            <div class="card" style="width:26rem;">
-                <img class="card-img-top event-card-image" src="https://bronxnet.org/media/filer_public_thumbnails/filer_public/c9/d1/c9d1ca88-5b7e-49e8-b0c5-3fa04bf0a7c5/prop-food-02.jpg__840x560_q85_crop_subsampling-2_upscale.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Donate for food</h5>
-                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
-                    <a href="#" class="btn btn-danger">Donate</a>
-                </div>
-            </div>
-        </div>
+        </div>';
+        }
+        ?>
+        
+        
     </div>
 
     

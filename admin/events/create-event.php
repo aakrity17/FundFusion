@@ -34,9 +34,13 @@ include "../routeconfig.php";
         </div>
         <h2>Create New Event</h2>
         <p>Add all the details regarding events below.</p>
-
+        <?php
+        if(isset($_GET['status'])) {
+            echo '<h3 style="color:green">!!New Event Created Successfully!!</h3>';
+        }
+        ?>
         <div class="containerbox">
-        <form action="/action_page.php">
+        <form action="newevent.php" method="POST" enctype="multipart/form-data">
             <div class="row">
             <div class="col-25">
                 <label for="ename">Event Name</label>

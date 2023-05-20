@@ -1,17 +1,6 @@
 <?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    // If the user is not logged in, redirect them to the login page
-    header('Location: dashboardLogin/login.php');
-    exit();
-}
-
-// If the user is logged in, display the dashboard content
+include "sessioncheck.php";
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +45,9 @@ if (!isset($_SESSION['username'])) {
             <img src="imgs/user.jpg" alt="" />
           </div>
         </div> -->
-         </body>
+      </div>
+    </div>
+  </body>
   <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

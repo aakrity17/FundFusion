@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $providedUsername;
         
         // Redirect the user to the dashboard page
-        header('Location: ../Dashboard.php');
+        header('Location: ../admin/Dashboard.php');
         exit(); // Make sure to exit after the redirect
     } else {
         $errorMessage = "Invalid username or password.";

@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> | FundFusion Dashboard |</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Df9X+loaH7pK/q/Mtx6x0gZQ0Ud3sU6lvjK0JfU9Xelrk+czb1CQTV8xGYhpuGeZIcLZMTY/QBkpejLbF9XBYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Dashboard.css" />
+    <link rel="stylesheet" href="../css/Dashboard.css" />
   </head>
   <body>
     <?php
@@ -35,72 +35,9 @@ if (!isset($_SESSION['username'])) {
     // }
     ?>
     <div class="container">
-      <div class="navigation">
-        <ul>
-          <li>
-            <a href="">
-             <span class="icon"><ion-icon name="hand-heart"></ion-icon></span>
-              <span class="title">FundFusion</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
-              <span class="title">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="people-outline"></ion-icon>
-              </span>
-              <span class="title">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
-              </span>
-              <span class="title">About</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="help-outline"></ion-icon>
-              </span>
-              <span class="title">Donation</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="settings-outline"></ion-icon>
-              </span>
-              <span class="title">Events</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="lock-closed-outline"></ion-icon>
-              </span>
-              <span class="title">Admins</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="icon">
-                <ion-icon name="log-out-outline"></ion-icon>
-              </span>
-              <span class="title">Sign Out</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <?php
+      @include('partials/navigation.php')
+      ?>
       <!-- main -->
       <div class="main">
         <div class="topbar">
@@ -131,5 +68,5 @@ if (!isset($_SESSION['username'])) {
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script> -->
     <!-- <script src="js/chart.umd.js"></script> -->
     <!-- <script src="js/chart.min.js"></script> -->
-    <script src="Dashboard.js"></script>
+    <script src="../js/Dashboard.js"></script>
 </html>

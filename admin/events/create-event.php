@@ -1,5 +1,6 @@
 <?php
 include "../sessioncheck.php";
+include "../routeconfig.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,8 @@ include "../sessioncheck.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> | FundFusion Dashboard |</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Df9X+loaH7pK/q/Mtx6x0gZQ0Ud3sU6lvjK0JfU9Xelrk+czb1CQTV8xGYhpuGeZIcLZMTY/QBkpejLbF9XBYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../css/Dashboard.css" />
-    <link rel="stylesheet" href="../../css/createevent.css" />
+    <link rel="stylesheet" href="<?php echo $site_url ?>css/Dashboard.css" />
+    <link rel="stylesheet" href="<?php echo $site_url ?>css/createevent.css" />
   </head>
   <body>
     <div class="container">
@@ -83,5 +84,5 @@ include "../sessioncheck.php";
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="../../js/Dashboard.js"></script>
+    <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
 </html>

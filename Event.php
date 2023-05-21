@@ -1,7 +1,12 @@
+<?php
+include "database/Db_Connection.php";
+$sql = "SELECT * from events";
+$records = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Event.css" >
+    <link rel="stylesheet" href="css/Event.css" >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +21,14 @@
     <hr/>
     <div class="container-fluid">
     <div class="row">
-        <div class="col-4">    
-            <div class="card" >
-                <img class="card-img-top" src="https://d1vdjc70h9nzd9.cloudfront.net/media/campaign/208000/208591/image/5eeb103354e12.jpeg" alt="Card image cap">
+        <?php 
+        foreach( $records as $data ) 
+        {
+            echo '<div class="col-4 event-card-layout">
+            <div class="card" style="width:26rem;">
+                <img class="card-img-top event-card-image" src="img/events/'.$data['event_image_url'].'">
                 <div class="card-body">
+<<<<<<< HEAD
                     <h5 class="card-title">Donate for Education</h5>
                     <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
                     <a href="#" class="btn">Donate</a>
@@ -46,6 +55,18 @@
                 </div>
             </div>
         </div>
+=======
+                    <h5 class="card-title">'.$data['event_name'].'</h5>
+                    <p class="card-text">'.$data['event_description'].'</p>
+                    <a href="#" class="btn btn-primary">Donate</a>
+                </div>
+            </div>
+        </div>';
+        }
+        ?>
+        
+        
+>>>>>>> e0097af972dfb7ad25151758ac465043f111b622
     </div>
 
     

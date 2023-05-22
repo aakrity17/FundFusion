@@ -42,7 +42,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Contributors</a></li>
 
                     <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Team</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
 
                 </ul>
@@ -76,7 +76,9 @@
                         Let's<span>donate</span>
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
-                        Animals help in maintaining the balance of nature and hence they need to be protected.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
+                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
+                        euismod consequat lorem aliquam eget.
                     </p>
                     <a href="#" class="btn hero-btn animate__animated animate__backInUp">
                         Read More
@@ -189,34 +191,25 @@
                         <div class="tab-pane container p-0" id="about-4">
                             <div class="img" style="background-image: url(img/5.jpg);"></div>
                             <h3><a href="#">Our Vision</a></h3>
-                            <p>The Conservative Party’s 2019 manifesto included a commitment to introduce new laws on
-                                the recognition of animal sentience. In its briefing on the 2019 Queen’s Speech, the
-                                Government said that animal sentience provisions would be included in its Animal Welfare
-                                Bill. Specifically, this bill would require the Government to take account of animal
-                                sentience in its policy decisions and the implementation of policy. The Animal Welfare
-                                (Sentencing) Bill the Government supported did not include these measures.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
+                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
+                        euismod consequat lorem aliquam eget..</p>
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-5">
                             <div class="img" style="background-image: url(img/6.jpg);"></div>
                             <h3><a href="#">Our Mandate</a></h3>
-                            <p>The Conservative Party’s 2019 manifesto committed to ending excessively long journeys for
-                                live animals to slaughter and fattening. In December 2020, the Government opened a
-                                consultation on proposals to ban the export of live animals for rearing and slaughter
-                                from England and Wales. During the same month, in his evidence session with the House of
-                                Commons Environment, Food and Rural Affairs Committee, George Eustice said he
-                                anticipated bringing forward legislation by the end of 2021. The Environment, Food and
-                                Rural Affairs Committee is currently conducting an ongoing inquiry on moving animals
-                                across borders.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
+                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
+                        euismod consequat lorem aliquam eget.</p>
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-6">
                             <div class="img" style="background-image: url(img/7.jpg); no-repeat"></div>
                             <h3><a href="#">Our Plans</a></h3>
-                            <p>Veterinarians at the U.S. Department of Agriculture's Food Safety and Inspection Service
-                                (USDA-FSIS) or a state department of agriculture ensure that only healthy animals enter
-                                our food supply. They see that our meat, poultry and egg products are safe for
-                                consumption through carefully monitored inspection programs.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
+                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
+                        euismod consequat lorem aliquam eget..</p>
                         </div>
                         <!----->
                     </div>
@@ -228,7 +221,7 @@
     </section>
     <!--End About us-->
     <!---Stories Section-->
-    <section class="mt-3">
+    <!-- <section class="mt-3">
         <div class="stories">
             <div class="container">
                 <div class="section-title text-center">
@@ -237,7 +230,7 @@
                         for saving animal life.</p>
                 </div>
                 <!----->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-4">
                         <div class="story-box overlay shadow">
                             <div class="story-icon">
@@ -248,9 +241,9 @@
                                 pharmaceuticals, vaccines and other animal health products throughout the world, as well
                                 as the associations that represent companies at national and regional levels.</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!----->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="story-box overlay shadow">
                             <div class="story-icon">
                                 <i class="fas fa-hand-holding-water"></i>
@@ -259,11 +252,11 @@
                             <p>The most important nutrient for survival is water, according to the University of
                                 Florida's Institute of Food and Agricultural Sciences Extension. Water also functions in
                                 excretion of wastes.Water is the medium in which all chemical reactions take place
-                                within an animal's body.</p>
+                                within an animal's body.</p> -->
                         </div>
                     </div>
                     <!----->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="story-box overlay shadow">
                             <div class="story-icon">
                                 <i class="fas fa-seedling"></i>
@@ -273,14 +266,16 @@
                                 a fundamental level, food provides energy for animals.Toothed herbivores, for example,
                                 have large, flat, round teeth that help them grind plant leaves and grasses.</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!----->
                 </div>
-            </div>
-        </div>
-    </section>
+            <!-- </div> -->
+        <!-- </div> -->
+    </section> -->
     <!--- End of Stories Section-->
     <!---Projects Section-->
+
+
     <section class="project py-5">
         <div class="container">
             <div class="row my-3">
@@ -635,7 +630,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-des">
-                            <h3>Animal World</h3>
+                            <h3>Fund Fusion</h3>
                             <p class="pb-3">
                                 <em>An initiative to protect animal life.</em>
                             </p>

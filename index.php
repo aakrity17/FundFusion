@@ -34,17 +34,16 @@
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Aboutus.php">About</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#">
                             Stories
                         </a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="#">Donation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Donation.php">Donation</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contributors</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Searches</a></li>
-
 
                 </ul>
             </div>

@@ -43,7 +43,7 @@
 
                     <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Searches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
 
                 </ul>
             </div>

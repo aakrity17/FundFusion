@@ -28,6 +28,34 @@ $records = $conn->query($sql);
             <div class="card" style="width:26rem;">
                 <img class="card-img-top event-card-image" src="img/events/'.$data['event_image_url'].'">
                 <div class="card-body">
+<<<<<<< HEAD
+                    <h5 class="card-title">Donate for Education</h5>
+                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
+                    <a href="#" class="btn">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">    
+            <div class="card" >
+                <img class="card-img-top" src="https://muslimhands.org.uk/_ui/images/36404f884e19.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Donate for Drinking water</h5>
+                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
+                    <a href="#" class="btn">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">    
+            <div class="card" >
+                <img class="card-img-top" src="https://bronxnet.org/media/filer_public_thumbnails/filer_public/c9/d1/c9d1ca88-5b7e-49e8-b0c5-3fa04bf0a7c5/prop-food-02.jpg__840x560_q85_crop_subsampling-2_upscale.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Donate for food</h5>
+                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout....</p>
+                    <a href="#" class="btn">Donate</a>
+                </div>
+            </div>
+        </div>
+=======
                     <h5 class="card-title">'.$data['event_name'].'</h5>
                     <p class="card-text">'.$data['event_description'].'</p>
                     <a href="#" class="btn btn-primary">Donate</a>
@@ -38,6 +66,7 @@ $records = $conn->query($sql);
         ?>
         
         
+>>>>>>> e0097af972dfb7ad25151758ac465043f111b622
     </div>
 
     

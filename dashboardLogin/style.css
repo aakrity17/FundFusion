@@ -120,6 +120,7 @@ button.submit {
     letter-spacing: 2px;
     font-weight: bold;
     background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+    
     cursor: pointer;
     transition: opacity 0.4s;
 }

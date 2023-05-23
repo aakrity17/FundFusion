@@ -42,7 +42,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Contributors</a></li>
 
                     <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">Team</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="./team.php">Contributors</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
 
                 </ul>
@@ -632,17 +632,17 @@
                         <div class="footer-des">
                             <h3>Fund Fusion</h3>
                             <p class="pb-3">
-                                <em>An initiative to protect animal life.</em>
+                                <em>An initiative to Donate for the good!</em>
                             </p>
-                            <p>Jolly Street <br>
-                                SP 12345, Brazil <br><br><strong>
+                            <p>Simalchaur, Pokhara <br>
+                                12345,  <br><br><strong>
                                     Phone;
                                 </strong>
-                                +55 61 1234 5678 9<br>
+                                +97981234567<br>
                                 <strong>
-                                    Email:
+                                    Email: 
                                 </strong>
-                                test@info.com<br>
+                                FundFusion@info.com<br>
 
                             </p>
                             <div class="social-links mt-3">
@@ -732,8 +732,8 @@
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our News Letters</h4>
-                        <p>If you want to hear our rescue stories and more about animals. Do hit the subscribe button.
+                        <!-- <h4>Our News Letters</h4> -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae excepturi aut consectetur consequatur fugiat commodi quidem, minus, vero quo eaque praesentium asperiores. Officiis suscipit mollitia dolore et ea impedit tempore!
                         </p>
                         <form>
                             <input type="email" name="email">

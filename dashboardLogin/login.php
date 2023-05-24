@@ -8,9 +8,9 @@ session_start();
 // $password = '';
 
 // Connect to the database
-// $conn = new mysqli($host, $username, $password, $dbName);
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
+// $conn = mysqli_connect($host, $username, $password, $dbName);
+// if (mysqli_connect_errno()) {
+//     die("Connection failed: " . mysqli_connect_error());
 // }
 include "../database/Db_Connection.php";
 
@@ -21,13 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $providedPassword = $_POST['password'];
 
     // Prepare and execute a SELECT statement
-    $stmt = $conn->prepare("SELECT * FROM user WHERE Username = ? AND Password = ?");
-    $stmt->bind_param('ss', $providedUsername, $providedPassword);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE Username = ? AND Password = ?");
+    mysqli_stmt_bind_param($stmt, 'ss', $providedUsername, $providedPassword);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
     // Check if a matching record exists
-    if ($result->num_rows > 0) {
+    if (mysqli_num_rows($result) > 0) {
         // Store user information in the session
         $_SESSION['username'] = $providedUsername;
         
@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Close the statement
-    $stmt->close();
-    $conn->close();
+    // mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 }
 ?>
 

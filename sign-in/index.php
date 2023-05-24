@@ -1,6 +1,3 @@
-<?php
-header("Location:../index.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +19,13 @@ header("Location:../index.php");
         <div class="login-container">
             <p class="title">Sign Up !!</p>
             <div class="separator"></div>
+            <div class="profile-icon">
+            <!-- Add your profile icon here, for example, using Font Awesome -->
+            <i class="fas fa-user-circle"></i>
+        </div>
             <!-- <p class="welcome-message">Please, provide login credential to access dashboard.</p> -->
 
-            <form class="login-form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <form class="login-form" method="POST" action="insertUser.php">
                 <div class="form-control">
                     <input type="text" placeholder="Name" name="name">
                     <i class="fas fa-user"></i>

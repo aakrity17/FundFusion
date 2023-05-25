@@ -1,4 +1,5 @@
 <?php
+include "routeconfig.php";
 include "sessioncheck.php";
 ?>
 
@@ -13,16 +14,7 @@ include "sessioncheck.php";
     <link rel="stylesheet" href="<?php echo $site_url ?>css/Dashboard.css" />
   </head>
   <body>
-    <?php
-    // session_start();
-
-    // // Check if the user is not logged in
-    // if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    //     // Redirect to the login page
-    //     header('Location: ../dashboard-login.html');
-    //     exit();
-    // }
-    ?>
+  
     <div class="container">
       <?php
       @include('partials/navigation.php')

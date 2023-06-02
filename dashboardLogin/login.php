@@ -18,7 +18,7 @@ include "../database/Db_Connection.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the values from the login form
     $providedUsername = $_POST['username'];
-    $providedPassword = $_POST['password'];
+    $providedPassword = md5($_POST['password']);
 
     // Prepare and execute a SELECT statement
     $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE Username = ? AND Password = ?");

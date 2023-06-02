@@ -11,8 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    $passwordmd5=md5($password);
+
     // Prepare the SQL statement
-    $sql = "INSERT INTO user (name, address, contact, username, email, password) VALUES ('$name', '$address', '$contact', '$username', '$email', '$password')";
+    $sql = "INSERT INTO user (name, address, contact, username, email, password) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {

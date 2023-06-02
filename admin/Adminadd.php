@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $site_url ?>css/Dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Df9X+loaH7pK/q/Mtx6x0gZQ0Ud3sU6lvjK0JfU9Xelrk+czb1CQTV8xGYhpuGeZIcLZMTY/QBkpejLbF9XBYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo $site_url ?>css/Adminadd.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/css/all.min.css">
 
 
     <title>Document</title>
@@ -107,6 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["Contact"] . "</td>";
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
+                    // echo "<td><a href='edit.php?id=" . $row["id"] . "'><ion-icon name="help-outline"></ion-icon></a></td>"; // Edit button
+                    echo "<td><a href='delete.php?id=" . $row["id"] . "'><i class='fas fa-trash'></i></a></td>"; // Delete button
                     echo "</tr>";
                 }
             } else {
@@ -122,14 +124,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
 </body>
 
-<script
+<!-- <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <!-- <script
+    ></script> -->
+    <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script> -->
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
+
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
 
 </html>

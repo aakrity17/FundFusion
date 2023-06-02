@@ -5,31 +5,30 @@ include "routeconfig.php";
         <ul>
           <li>
             <a href="">
-             <span class="icon"><ion-icon name="hand-heart"></ion-icon></span>
+            <span class="icon">
+              <i class="fa-solid fa-grid-horizontal" style="color: #f2f2f3;"></i>              </span>
+
               <span class="title">FundFusion</span>
             </a>
           </li>
           <li>
             <a href="<?php echo $site_url ?>admin/Dashboard.php">
               <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
+              <i class="fas-fa-search"></i> </span>
               <span class="title">Dashboard</span>
             </a>
           </li>
           <li>
             <a href="">
               <span class="icon">
-                <ion-icon name="people-outline"></ion-icon>
-              </span>
+              <i class="fa-sharp fa-light fa-house-chimney fa-xl"></i>              </span>
               <span class="title">Home</span>
             </a>
           </li>
           <li>
             <a href="">
               <span class="icon">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
-              </span>
+              <i class="fa-duotone fa-handshake-angle fa-beat-fade"></i>              </span>
               <span class="title">About</span>
             </a>
           </li>

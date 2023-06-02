@@ -82,11 +82,11 @@
                         Read More
                     </a>
                 </div>
-            </div>
-            <!--End of Slide-1-->
+            </div>   
+                     <!--End of Slide-1-->
             <!--Slide-1-->
            <!---End of Donation section Section-->
-    <!-- <footer class="footer mt-5">
+     <footer class="footer mt-5">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div> 
     </footer>
 
 

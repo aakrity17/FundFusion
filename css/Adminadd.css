@@ -1,0 +1,41 @@
+
+  
+  /* Add a container for the content */
+  .container {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 400px;
+  }
+  
+  /* Style the sections */
+  section {
+    width: 60%; /* Adjust the width as needed */
+    margin-left: 20px; /* Add some spacing from the navbar */
+    margin-bottom: 100px;
+  }
+  
+  /* Style the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border-bottom: 1px solid #d28bec;
+  }
+  
+  th {
+    background-color: #dcbbe7;
+  }
+  form{
+    padding: 50px;
+    line-height: 40px;
+    align-items: justify;
+    box-sizing: border-box;
+    border: 2px;
+    border-radius: 20px;
+    box-shadow: #d28bec;
+    font-size: 20px;
+    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }

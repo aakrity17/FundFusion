@@ -19,10 +19,7 @@
         <div class="login-container">
             <p class="title">Sign Up !!</p>
             <div class="separator"></div>
-            <div class="profile-icon">
-            <!-- Add your profile icon here, for example, using Font Awesome -->
-            <i class="fas fa-user-circle"></i>
-        </div>
+            
             <!-- <p class="welcome-message">Please, provide login credential to access dashboard.</p> -->
 
             <form class="login-form" method="POST" action="insertUser.php">

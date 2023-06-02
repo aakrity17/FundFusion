@@ -50,7 +50,7 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-            <a href="">
+          <a href="<?php echo $site_url ?>admin/Adminadd.php">
               <span class="icon">
                 <ion-icon name="lock-closed-outline"></ion-icon>
               </span>

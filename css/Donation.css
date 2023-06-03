@@ -89,10 +89,60 @@ body {
     background-image: linear-gradient(to right, #8b33c5, #15a0e1);
 }
 
-/* Customize progress bar colors */
-/* .progress-bar {
-    background-color: linear-gradient(to right, #8b33c5, #15a0e1);
+/* css for progress bar in the added layouts */
+
+.progress {
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    color: #f9f6f6;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+  }
+  
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+  }
+  
+  .progress-bar::before {
+    content: attr(aria-valuenow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+
+/* CSS for donate button interaction */
+.btn {
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #15a0e1;
+    color: #fff;
+}
+
+/* .btn:active {
+    transform: scale(0.95);
 } */
+
+
+
 
 
 

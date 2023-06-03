@@ -19,9 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     $passwordmd5 = md5($password);
+    $role="admin";
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO user (name, address, Contact, username, email, password) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5')";
+    $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5', '$role')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
@@ -30,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location:./Dashboard.php");
         exit();
     } else {
-        echo "Something went wrong!";
+        echo "Something went wrong!". $conn->error;
     }
 }
 ?>
@@ -90,6 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th>Contact</th>
                 <th>Username</th>
                 <th>Email</th>
+                <th colspan="2">Modify</th>
+
             </tr>
         </thead>
         <tbody>
@@ -107,8 +110,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["Contact"] . "</td>";
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
-                    // echo "<td><a href='edit.php?id=" . $row["id"] . "'><ion-icon name="help-outline"></ion-icon></a></td>"; // Edit button
-                    echo "<td><a href='delete.php?id=" . $row["id"] . "'><i class='fas fa-trash'></i></a></td>"; // Delete button
+                    echo "<td> <button>Delete</button></td>";
+                    echo "<td> <button>Edit</button></td>";
+
+
+                    
                     echo "</tr>";
                 }
             } else {

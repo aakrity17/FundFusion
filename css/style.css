@@ -6,8 +6,19 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+.logo{
+    padding: 50px;
+    background-color: transparent;
+    overflow: auto;
+    position: fixed;
+    height: auto;
+    left:0px;
+    right: 5px;
+    width: 280px;
+} 
 .nav-bg{
-    background: rgb(53, 83, 182);
+/* nav bar ko lagi */
+    background: rgba(98, 10, 206, 0.372);
 }
 .navbar-nav .nav-link{
     color:#ffffff!important;
@@ -21,6 +32,7 @@ body{
     overflow:hidden;
     position: relative;
 }
+
 #hero:after{
     content:'';
     position:absolute;
@@ -28,14 +40,16 @@ body{
     top:0;
     width:130%;
     height:95%;
-    background: rgb(41,35,198);
-background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%, rgba(214,61,215,0.9809173669467787) 81%, rgba(32,20,124,1) 100%);
-    /* background-image: linear-gradient(to right, #8b33c5, #15a0e1); */
-
+    /*backgroudkolagi*/background: linear-gradient(90deg, rgba(45, 40, 196, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
     z-index:0;
     border-radius: 0 0 50% 50%;
     transform:translateX(-50%) rotate(0deg);
+    -webkit-transform:translateX(-50%) rotate(0deg);
+    -moz-transform:translateX(-50%) rotate(0deg);
+    -ms-transform:translateX(-50%) rotate(0deg);
+    -o-transform:translateX(-50%) rotate(0deg);
 }
+
 #hero:before{
     content:'';
     position: absolute;
@@ -43,11 +57,8 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     top:0;
     width:130%;
     height:96%;
-    background: rgb(41,35,198);
-background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%, rgba(214,61,215,0.9809173669467787) 81%, rgba(32,20,124,1) 100%);
-    /* background-image: linear-gradient(to right, #8b33c5, #15a0e1); */
-
-    /* background:rgba(43, 39, 155, 0.8); */
+    /* Button click garda no*/
+    background: rgba(89, 10, 186, 0.653);
     opacity:0.3;
     z-index:0;
     border-radius:0 0 50% 50%;
@@ -64,6 +75,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     left:0;
     right:0;
 }
+/* font color of h2 */
 #hero h2{
     color:#fff;
     margin-bottom:30px;
@@ -76,7 +88,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     margin:0 auto 30px auto;
     color:#fff;
 }
-#hero .carousel-control-prev, 
+#hero .carousel-control-prev,
 #hero .carousel-control-next{
     width:10%;
 }
@@ -100,10 +112,14 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     margin:10px;
     color:#fff;
     animation-delay:0.5s;
-    border:2px solid #c991ee;
+    border: 1px solid rgba(102, 42, 176, 0.696);
+
+    /* border:2px solid #684ad6db; */
 }
+/* button click garda: read More  */
 #hero .hero-btn:hover{
-    background:#c991ee;
+    background: rgba(55, 11, 109, 0.429);
+    /* background:; */
     color:#fff;
     text-decoration:none;
 }
@@ -158,7 +174,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 
     }
 }
-/*--End of Hero---*/
+/*--End of Hero---( sakiyo now About wala*/
 /*======About Us=========*/
 .tabs .nav-pills .nav-item{
     margin-bottom: 10px;
@@ -168,7 +184,9 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     border-radius:4px;
     color:#000;
     font-weight:bold;
-    border:1px solid rgba(102, 22, 120, 0.621);
+    /* About us wala ko color */
+    background: rgba(91, 10, 183, 0.6);
+    border:1px solid ;
     font-size:20px;
     line-height: 30px;
 }
@@ -178,8 +196,9 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 }
 .tabs .nav-pills .nav-item .nav-link.active{
     color:#fff;
-    background:#c991ee;
-    border:1px solid #c991ee;
+    /* after clicking to the about us */
+    background: rgba(91, 10, 183, 0.854);
+    border: 10px solid ;
 }
 .tabs .nav-pills .nav-item .nav-link.active span{
     color:#fff;
@@ -203,9 +222,10 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 }
 /*======End of About Us=========*/
 /*========Stories========*/
-.story-box{
+no need of this
+/* .story-box{
     padding:15px;
-    background:#c991ee;
+    background:#7a05c7c4;
     margin-bottom:30px;
     position:relative;
 }
@@ -258,16 +278,17 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     background:#c991ee;
     width:100%;
     border-radius:10px;
-}
+} */
 /*========End of the Stories========*/
 /*============Projects Section=======*/
 .project-container{
-    background: #c991ee;
+    background: #8c05e64e;
     position: relative;
     overflow: hidden;
 }
+/* donation button under out latest projects */
 .donation{
-    background:#c991ee;
+    background:#8e04ea60;
     color:black;
     padding:3px 3.5px;
     position: absolute;
@@ -286,13 +307,13 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     display: inline-block;
     vertical-align:middle;
     transform:perspective(1px)translateZ(0);
-    box-shadow: 0 0 1px rgba(128, 28, 148, 0.368);
+    box-shadow: 0 0 1px rgba(35, 19, 105, 0.368);
     position: relative;
 }
 .outline:before{
     content:'';
     position:absolute;
-    border: #b16bcf solid 4px;
+    border: #9b0ea8af solid 1px;
     top:4px;
     left: 4px;
     right:4px;
@@ -311,14 +332,14 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
-    box-shadow:0 0 10px #d167f7;
+    box-shadow:0 0 10px #740a9ac4;
     transition-duration:0.3s;
     transition-property: box-shadow, transform;
 }
 .grow:hover,
 .grow:focus,
 .grow:active{
-    box-shadow: 0 10px 10px 5px #df67f7;
+    box-shadow: 0 10px 10px 5px #8708a17e;
     transform: scale(1.1);
 }
 /*====end of Projects Section======*/
@@ -398,7 +419,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 }
 /*====end of Team Section======*/
 /*==========Finished projects======*/
-.project-item{
+/* .project-item{
     display: block;
     position: relative;
     overflow:hidden;
@@ -456,7 +477,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     .project-item:hover .text{
         background-color: rgba(125, 17, 158, 0.6);
     }
-}
+} */
 /*==========End of the Finished projects======*/
 /*========== Donation Section======*/
 .donation-form .input-field .input-group{
@@ -496,7 +517,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     box-shadow: 0  3px 6px rgba(134, 22, 134, 0.16);
     padding: 18px 27px;
     border-radius: 7px;
-    border: 1px solid #b53fc2;
+    border: 1px solid #573fc2b6;
     display: block;
     overflow: hidden;
 }
@@ -529,14 +550,16 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     margin-top: 50px;
 }
 .btn-don{
-    background: #912b8f;
+    background: #573fc2b6;
     color: #fff;
     border-radius: 50px;
 }
 .btn-don:hover{
-    color: #912b8f;
+    background-color: #573fc2de;
+    /* color: white; */
 }
 /*==========End of the Donation Section======*/
+/* footer part */
 .footer{
     background:linear-gradient(rgba(106, 247, 228, 0.rgba(0, 59, 59, 0.4).4));
     padding: 0 0 30px 0;
@@ -549,9 +572,11 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 .footer .footer-top .footer-des{
     margin-top: -90px;
     margin-bottom: 15px;
-    background:#912b8f;
+    background: rgba(98, 10, 206, 0.534);
+
+    /* background:#912b8f; */
     color:#fff;
-    border-top: 4px solid #912b8f;
+    /* border-top: 4px solid #3f2b91; */
     text-align: center;
     padding:30px 20px;
 }
@@ -570,7 +595,9 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
 .footer .footer-top .social-links a{
     font-size: 18px;
     display: inline-block;
-    background: #912b8f;
+    /* the color after the icons */
+    background: white;
+/* color of social icons */
     color:#012a30;
     line-height:1;
     padding:8px 0;
@@ -582,8 +609,12 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     transition: 0.3s;
 }
 .footer .footer-top .social-links a:hover{
-    background: #912b8f;
-    color: #fff;
+    /* background: rgba(98, 10, 206, 0.863);
+     */
+     width: 40px;
+     height: 40px;
+    
+    color: black;
     text-decoration: none;
 }
 .footer .footer-top h4{
@@ -622,7 +653,8 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     line-height: 1;
 }
 .footer .footer-top .footer-links ul a:hover{
-    color: #912b8f;
+    color: rgba(98, 10, 206, 0.863);
+    
 }
 .footer .footer-top .footer-newsletter form{
     margin-top:30px;
@@ -636,7 +668,7 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     padding: 4px;
     width: calc(100% - 110px);
 }
-.footer .footer-top .footer-newsletter form input[type="submit"]{
+/* .footer .footer-top .footer-newsletter form input[type="submit"]{
     position: absolute;
     top:0;
     right:0;
@@ -645,12 +677,14 @@ background: linear-gradient(90deg, rgba(41,35,198,1) 20%, rgba(109,45,205,1) 43%
     background: none;
     font-size:16px;
     padding: 0 20px;
-    background: #912b8f;
+    background: rgba(98, 10, 206, 0.68);
+    
     color:#fff;
     transition: 0.3s;
     border-radius:4;
-}
-.footer .footer-top .footer-newsletter form input[type="submit"]:hover{
-    background: #de9bf1;
-    color:#30012b;
-}
+} */
+/* .footer .footer-top .footer-newsletter form input[type="submit"]:hover{
+    background: rgba(98, 10, 206, 0.863);
+    
+    color:white;
+} */

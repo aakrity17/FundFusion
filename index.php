@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!--Main CSS-->
     <link rel="stylesheet" href="css/style.css">
@@ -34,8 +33,7 @@
             <a class="navbar-brand text-white" href="#"></a>
 
             <!-- Nav barrrrrrrrrrrr ko lagiiiiiiiii, plus tala button vayeko -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -68,12 +66,12 @@
             <div class="carousel-item active">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                        Donate for the good!
+                        Donatpe for the good!
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
                         "A little bit of kindness goes a long way"
                     </p>
-                    <a href="#" class="btn hero-btn animate__animated animate__backInUp">
+                    <a href="./sign-in/index.php" class="btn hero-btn animate__animated animate__backInUp">
                         Donate us
                     </a>
                 </div>
@@ -92,7 +90,7 @@
                     </p>
                     <!-- **************************************** -->
                     <!-- Read more ma click garda aru text aaune banaune, using js -->
-                    <a href="#" class="btn hero-btn animate__animated animate__backInUp">
+                    <a href="#about-us" class="btn hero-btn animate__animated animate__backInUp">
                         Read More
                     </a>
                     <script>
@@ -140,19 +138,7 @@
     <!--About us-->
     <section id="about-us">
         <!-- <section class="mt-5" id="aboutus"> -->
-        <script>
-            $(document).ready(function () {
-                $('a[href^="#"]').on('click', function (event) {
-                    var target = $(this.hash);
-                    if (target.length) {
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 800); // Adjust the scrolling speed here
-                    }
-                });
-            });
-        </script>
+
 
 
 
@@ -268,8 +254,8 @@
     "> -->
     <section id="projects">
         <script>
-            $(document).ready(function () {
-                $('a[href^="#"]').on('click', function (event) {
+            $(document).ready(function() {
+                $('a[href^="#"]').on('click', function(event) {
                     var target = $(this.hash);
                     if (target.length) {
                         event.preventDefault();
@@ -370,8 +356,8 @@
     <!-- Team Section-->
     <section id="our-team">
         <script>
-            $(document).ready(function () {
-                $('a[href^="#"]').on('click', function (event) {
+            $(document).ready(function() {
+                $('a[href^="#"]').on('click', function(event) {
                     var target = $(this.hash);
                     if (target.length) {
                         event.preventDefault();
@@ -597,8 +583,7 @@
                                                 <span class="input-group-text">$</span>
                                             </div>
 
-                                            <input type="text" class="form-control" placeholder="10,000"
-                                                aria-label="Username">
+                                            <input type="text" class="form-control" placeholder="10,000" aria-label="Username">
                                         </div>
                                     </div>
                                 </div>
@@ -770,15 +755,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

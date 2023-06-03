@@ -83,7 +83,7 @@
             <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                        Let's<span>donate</span>
+                        Let's<span> donate</span>
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.

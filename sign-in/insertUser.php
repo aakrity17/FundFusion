@@ -11,20 +11,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $passwordmd5=md5($password);
+    $passwordmd5 = md5($password);
 
     // Prepare the SQL statement
     $sql = "INSERT INTO user (name, address, contact, username, email, password) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5')";
 
-    // Execute the query
+    // Execute the queryP
     if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully!";
         // Redirect to another page after successful insertion
         header("Location:../index.php");
-        exit();}
+        exit();
     }
-    else {
-            echo "Something went wrong!";
-        };
-    
-?>
+} else {
+    echo "Something went wrong!";
+};

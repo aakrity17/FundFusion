@@ -52,6 +52,7 @@
                     <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="./team.php">Contributors</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Login</a></li>
 
                 </ul>
             </div>
@@ -66,7 +67,7 @@
             <div class="carousel-item active">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                        Donatpe for the good!
+                        Donate for the good!
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
                         "A little bit of kindness goes a long way"
@@ -111,7 +112,7 @@
                         Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
                         euismod consequat lorem aliquam eget.
                     </p>
-                    <a href="#" class="btn hero-btn animate__animated animate__backInUp">
+                    <a href="#about-us" class="btn hero-btn animate__animated animate__backInUp">
                         Read More
                     </a>
                 </div>
@@ -177,17 +178,25 @@
                 <div class="col-md-8">
                     <div class="tab-content">
                         <div class="tab-pane container p-0 active" id="about-1">
-                            <div class="img" style="background-image: url(/img/h.jpg);"></div>
-                            <h3><a href="#">About Us</a></h3>
+
+                            <!-- ABOUT US WALA PAGE -->
+                            <div class="img" style="background-image: url(/img/about.jpg);"></div>
+                            <h3><a href="about-us">About Us</a></h3>
                             <p>Welcome to our charity app! We are a team of passionate individuals dedicated to making a
                                 positive impact in the world. Our mission is to connect people with the causes they care
                                 about and make it easy for them to support those causes.
 
                             </p>
                         </div>
+
+
                         <!----->
+                        <!-- PLANE WALA PAGE -->
+
                         <div class="tab-pane container p-0" id="about-2">
-                            <div class="img" style="background-image: url(img/plan.jpg);"></div>
+
+                            <div class="img" style="background-image: url(img/begi.jpeg);"></div>
+
                             <h3><a href="#">Our Beginning</a></h3>
                             <p>After months of hard work, the charity app was finally ready,
                                 to the public for the first time.
@@ -197,8 +206,10 @@
                             </p>
                         </div>
                         <!----->
+                        <!-- OUT MISSION WALA PAGE -->
+
                         <div class="tab-pane container p-0" id="about-3">
-                            <div class="img" style="background-image: url(img/d.jpg);"></div>
+                            <div class="img" style="background-image: url(img/mission.jpg);"></div>
                             <h3><a href="#">Our Mission</a></h3>
                             <p>At our charity app, our mission is to make charitable giving more accessible,
                                 transparent, and impactful. We believe that everyone has the power to make a difference,
@@ -210,7 +221,7 @@
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-4">
-                            <div class="img" style="background-image: url(img/i.jpg);"></div>
+                            <div class="img" style="background-image: url(img/vision.jpg);"></div>
                             <h3><a href="#">Our Vision</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
                                 tempor.
@@ -220,7 +231,7 @@
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-5">
-                            <div class="img" style="background-image: url(img/m.jpg);"></div>
+                            <div class="img" style="background-image: url(img/mandate.jpg);"></div>
                             <h3><a href="#">Our Mandate</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
                                 tempor.
@@ -230,7 +241,7 @@
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-6">
-                            <div class="img" style="background-image: url(img/p4.jpg)no-repeat"></div>
+                            <div class="img" style="background-image: url(img/plan.jpg)no-repeat"></div>
                             <h3><a href="#">Our Plans</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
                                 tempor. Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
@@ -247,242 +258,208 @@
     </section>
     <!-- End About us -->
 
-    <!---Projects Section-->
-
-
-    <!-- <section class="project py-5" id="projects
-    "> -->
-    <section id="projects">
-        <script>
-            $(document).ready(function() {
-                $('a[href^="#"]').on('click', function(event) {
-                    var target = $(this.hash);
-                    if (target.length) {
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 800); // Adjust the scrolling speed here
-                    }
-                });
-            });
-        </script>
-        <div class="container">
-            <div class="row my-3">
-                <div class="col-10 mx-auto text-center">
-                    <h1 class="text-uppercase">Our Latest Projects</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
-                </div>
-            </div>
-            <!----->
-            <div class="row">
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/8.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/p4.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/p3.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/bg1.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/3.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-                <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/2.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Specification
-                    </h6>
-                </div>
-                <!--End of Single Project-->
-
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-10 mx-auto text-center">
+                <h1 class="text-uppercase">Our Latest Projects</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
             </div>
         </div>
+        <!----->
+        <div class="row">
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/8.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+                    Food
+                </h6>
+            </div>
+            <!--End of Single Project-->
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/p4.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+                    water
+                </h6>
+            </div>
+            <!--End of Single Project-->
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/p3.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+                    Medicine
+                </h6>
+            </div>
+            <!--End of Single Project-->
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/p4.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+                    Education
+                </h6>
+            </div>
+            <!--End of Single Project-->
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/3.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+
+                </h6>
+            </div>
+            <!--End of Single Project-->
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img src="img/2.jpg" class="img-fluid grow" alt="">
+                    <a herf="#" class="donation text-capitalize">Donate Now</a>
+                </div>
+                <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                <h6 class="text-center">
+                    Health
+                </h6>
+            </div>
+            <!--End of Single Project-->
+
+        </div>
+    </div>
     </section>
     <!---End of the Projects Section-->
 
     <!-- Team Section-->
-    <section id="our-team">
-        <script>
-            $(document).ready(function() {
-                $('a[href^="#"]').on('click', function(event) {
-                    var target = $(this.hash);
-                    if (target.length) {
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 800); // Adjust the scrolling speed here
-                    }
-                });
-            });
-        </script>
-
-        <!-- <section class="team"> -->
-        <div class="container">
-            <div class="section-title">
-                <h2 class="text-center">Our Team</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
-                    possimus id sapiente sunt ab mollitia cum. </p>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member1.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>John Doe</h4>
-                            <span>Specification</span>
-                            <div class="social">
-                                <a href="">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member2.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>John Doe</h4>
-                            <span>Specification</span>
-                            <div class="social">
-                                <a href="">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>John Doe</h4>
-                            <span>Specification</span>
-                            <div class="social">
-                                <a href="">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member4.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>John Doe</h4>
-                            <span>Specification</span>
-                            <div class="social">
-                                <a href="">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-            </div>
+    <!-- <section class="team"> -->
+    <div class="container">
+        <div class="section-title">
+            <h2 class="text-center">Our Team</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
+                possimus id sapiente sunt ab mollitia cum. </p>
         </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="team-1">
+                    <div class="pic">
+                        <img src="img/member1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-info">
+                        <h4>Akriti Chapagai</h4>
+                        <span>Frontend desiger</span>
+                        <div class="social">
+                            <a href="https://twitter.com/aakrity17">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com/aakrityy17">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/aakrity0">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aakrity17/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="team-1">
+                    <div class="pic">
+                        <img src="img/member2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-info">
+                        <h4>Binaya koirala</h4>
+                        <span>Backend developer</span>
+                        <div class="social">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="team-1">
+                    <div class="pic">
+                        <img src="img/member3.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-info">
+                        <h4>Laxman Parajuli</h4>
+                        <span>Frontend</span>
+                        <div class="social">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="team-1">
+                    <div class="pic">
+                        <img src="img/member4.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-info">
+                        <h4>Ujjawal Adhikari</h4>
+                        <span>Backend</span>
+                        <div class="social">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+        </div>
+    </div>
 
 
     </section>

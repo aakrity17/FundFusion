@@ -1,17 +1,6 @@
 <?php
 session_start();
 
-// Assuming you have the database credentials
-// $host = 'localhost';
-// $dbName = 'FundFusion';
-// $username = 'root';
-// $password = '';
-
-// Connect to the database
-// $conn = mysqli_connect($host, $username, $password, $dbName);
-// if (mysqli_connect_errno()) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
 include "../database/Db_Connection.php";
 
 // Check if the form is submitted
@@ -21,28 +10,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $providedPassword = md5($_POST['password']);
 
     // Prepare and execute a SELECT statement
-    $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE Username = ? AND Password = ?");
-    mysqli_stmt_bind_param($stmt, 'ss', $providedUsername, $providedPassword);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-
-    // Check if a matching record exists
-    if (mysqli_num_rows($result) > 0) {
-        // Store user information in the session
-        $_SESSION['username'] = $providedUsername;
+    $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE role='admin' AND username = ? AND password = ?");
+    
+    // Check if preparing the statement was successful
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, 'ss', $providedUsername, $providedPassword);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
         
-        // Redirect the user to the dashboard page
-        header('Location: ../admin/Dashboard.php');
-        exit(); // Make sure to exit after the redirect
+        // Check if a matching record exists
+        if (mysqli_num_rows($result) > 0) {
+            // Store user information in the session
+            $_SESSION['username'] = $providedUsername;
+            
+            // Redirect the user to the dashboard page
+            header('Location: ../admin/Dashboard.php');
+            exit(); // Make sure to exit after the redirect
+        } else {
+            $errorMessage = "Invalid username or password.";
+        }
+        
+        // Close the statement
+        mysqli_stmt_close($stmt);
     } else {
-        $errorMessage = "Invalid username or password.";
+        // Handle the error if preparing the statement failed
+        $errorMessage = "An error occurred while preparing the statement.";
     }
 
-    // Close the statement
-    // mysqli_stmt_close($stmt);
     mysqli_close($conn);
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

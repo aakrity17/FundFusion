@@ -28,7 +28,7 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-            <a href="">
+          <a href="<?php echo $site_url ?>admin/donation/create-donation.php">
               <span class="icon"></span>
               <span class="title">Donation</span>
             </a>

@@ -180,7 +180,7 @@
                         <div class="tab-pane container p-0 active" id="about-1">
 
                             <!-- ABOUT US WALA PAGE -->
-                            <div class="img" style="background-image: url(/img/about.jpg);"></div>
+                            <div class="img" style="background-image: url(img/about.jpg);"></div>
                             <h3><a href="about-us">About Us</a></h3>
                             <p>Welcome to our charity app! We are a team of passionate individuals dedicated to making a
                                 positive impact in the world. Our mission is to connect people with the causes they care
@@ -241,7 +241,7 @@
                         </div>
                         <!----->
                         <div class="tab-pane container p-0" id="about-6">
-                            <div class="img" style="background-image: url(img/plan.jpg)no-repeat"></div>
+                            <div class="img" style="background-image:url(img/plan.jpg);"></div>
                             <h3><a href="#">Our Plans</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
                                 tempor. Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
@@ -389,16 +389,16 @@
                         <h4>Binaya koirala</h4>
                         <span>Backend developer</span>
                         <div class="social">
-                            <a href="">
+                            <a href="https://twitter.com/">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.facebook.com/">
                                 <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.instagram.com/">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
@@ -415,16 +415,16 @@
                         <h4>Laxman Parajuli</h4>
                         <span>Frontend</span>
                         <div class="social">
-                            <a href="">
+                            <a href="https://twitter.com/">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.facebook.com/">
                                 <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.instagram.com/">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
@@ -438,19 +438,19 @@
                         <img src="img/member4.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="team-info">
-                        <h4>Ujjawal Adhikari</h4>
+                        <h4>Ujjwal Adhikari</h4>
                         <span>Backend</span>
                         <div class="social">
-                            <a href="">
+                            <a href="https://twitter.com/xatey999">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.facebook.com/ujjwal.adhikari.526438">
                                 <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="">
+                            <a href=" https://www.instagram.com/xatey_999">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
@@ -464,81 +464,10 @@
 
     </section>
     <!---End of Team Section-->
-    <!--Finished projects-->
-    <!-- <section>
-        <div class="container">
-            <div class="text-center">
-                <h2 class="mb-5">Finished Projects</h2>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-lg-6">
-                    <a class="project-item" href="">
-                        <span class="text">
-                            <span class="des">
-                                <h1>Animal Rescue</h1>
-                                <p class="mb-0">
-                                    This was one of our best projects in which we rescued animals and landed them to a
-                                    safe and secure place.
-                                </p>
-                            </span>
-                        </span>
-                        <img src="img/p1.jpg" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <!---->
-    <!-- <div class="col-lg-6">
-        <a class="project-item" href="">
-            <span class="text">
-                <span class="des">
-                    <h1>Love Animals</h1>
-                    <p class="mb-0">
-                        This was an amazing webinar in which we taught people about loving and caring
-                        animals as we care about humans. Animals are a precious gifts by nature.
-                    </p>
-                </span>
-            </span>
-            <img src="img/p2.jpg" class="img-fluid" alt="">
-        </a>
-    </div>
-    <!---->
-    <!-- <div class="col-lg-6">
-        <a class="project-item" href="">
-            <span class="text">
-                <span class="des">
-                    <h1>Animals in Air</h1>
-                    <p class="mb-0">
-                        This was a wonderful session in which we demonstrated about not keeping animals in
-                        cages. They also have right to move freely. Definitely you can make forests for them
-                        and let them wonder there freely.
-                    </p>
-                </span>
-            </span>
-            <img src="img/p3.jpg" class="img-fluid" alt="">
-        </a>
-    </div> -->
-    <!---->
-    <!-- <div class="col-lg-6">
-        <a class="project-item" href="">
-            <span class="text">
-                <span class="des">
-                    <h1>Uncage the Birds</h1>
-                    <p class="mb-0">
-                        Once abundant across large parts of India, the species like Parakeets, Mynas,
-                        Owls,Sparrows etc have slipped into the danger of extinction. This is a humble
-                        request to birds and animal lovers, say No to "Bird Trade".
-                    </p>
-                </span>
-            </span>
-            <img src="img/p4.jpg" class="img-fluid" alt="">
-        </a> -->
-    </div> -->
-    <!---->
-    </div>
-    </div>
-    </section> -->
+
     <!---End of finished projects Section-->
     <!---Donation Section-->
-    <section class="mt-5">
+    <!-- <section class="mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -546,9 +475,9 @@
                         <h3>Make a Donation</h3>
                     </div>
                 </div>
-            </div>
-            <!---->
-            <div class="row justify-content-center">
+            </div> -->
+    <!---->
+    <!-- <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <form class="donation-form">
                         <div class="row align-items-center">
@@ -564,13 +493,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!----->
-                            <div class="col-md-8">
+                            </div> -->
+    <!----->
+    <!-- <div class="col-md-8">
                                 <div class="amount">
                                     <div class="need d-flex align-items-center
-                        justify-content-between">
-                                        <div class="select">
+                        justify-content-between"> -->
+    <!-- <div class="select">
                                             <h5>Select Amount</h5>
                                         </div>
                                         <div class="funds">
@@ -593,8 +522,8 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
+                </div> -->
+    <!-- </div>
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="donation-btn text-center">
@@ -604,9 +533,9 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> -->
     <!---End of Donation section Section-->
-    <footer class="footer mt-5">
+    <!-- <footer class="footer mt-5">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -714,7 +643,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <!-- <h4>Our News Letters</h4> -->
+                        <h4>Our News Letters</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae excepturi aut consectetur
                             consequatur fugiat commodi quidem, minus, vero quo eaque praesentium asperiores. Officiis
                             suscipit mollitia dolore et ea impedit tempore!
@@ -722,12 +651,12 @@
                         <form>
                             <input type="email" name="email">
                             <input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+                        </form> -->
+    <!-- </div>
+    </div>
+    </div>
+    </div> -->
+    <!-- </footer> -->
 
 
     <!-- Optional JavaScript -->

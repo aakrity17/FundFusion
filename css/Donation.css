@@ -5,13 +5,6 @@ body {
     padding: 0;
   }
   
-  header {
-    background-color: #e46a6a;
-    color: #fff;
-    padding: 1px;
-    text-align: center;
-  }
-  
   nav ul {
     list-style-type: none;
     margin: 0;
@@ -26,7 +19,7 @@ body {
   
   nav li a {
     display: block;
-    color: #333;
+    color:  #8b33c5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -36,25 +29,63 @@ body {
     background-color: #ddd;
   }
   
-  main {
-    margin: 20px;
-  }
-  
-  section {
-    border: 1px solid #ddd;
+  .donation-banner {
+    background-color: #8b33c5;
+    color: #15a0e1;
     padding: 20px;
+    text-align: center;
   }
   
-  form label {
-    display: block;
-    margin: 10px 0;
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  body {
-    background-color: rgb(255, 255, 255);
+  .card {
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text {
+    overflow: hidden;
+  }
+
+  .card-text.collapsed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show before collapsing */
+    -webkit-box-orient: vertical;
   }
   
-  /* CSS for progress bar */
+  
+  .card-description {
+    height: 20px;
+    transition: height 0.3s ease;
+  }
+  
+  .card-description.expanded {
+    height: auto;
+    
+  }
+  
+  
+  
+  
+  .card-img-top {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
   .progress {
     height: 20px;
     background-color: #f2f2f2;
@@ -64,55 +95,37 @@ body {
   
   .progress-bar {
     height: 100%;
-    color: #f9f6f6;
+    color: #fff;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
     font-weight: bold;
     background-image: linear-gradient(to right, #8b33c5, #15a0e1);
   }
+
+  .read-more-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
   
-  /* CSS for donate button interaction */
-  .btn {
+  
+  
+  .btn-primary {
+    background-color: #8b33c5;
+    color: #fff;
     transition: background-color 0.3s ease;
   }
   
-  .btn:hover {
+  .btn-primary:hover {
     background-color: #15a0e1;
-    color: #fff;
   }
   
-  /* Card layout */
-  .donation-card-layout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .donation-card-layout .card {
-    width: calc(33.33% - 20px);
-    flex: 1 0 calc(33.33% - 20px);
-  }
-  
-  .donation-card-image {
-    width: 100%;
-  }
-  
-  /* Media queries for responsive layout */
-  @media (max-width: 992px) {
-    .donation-card-layout .card {
-      width: calc(50% - 20px);
-      flex: 1 0 calc(50% - 20px);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .donation-card-layout .card {
-      width: 100%;
-      flex: 1 0 100%;
-    }
+  footer {
+    background-color: cornflowerblue;
+    padding: 10px 0;
+    text-align: center;
   }
   

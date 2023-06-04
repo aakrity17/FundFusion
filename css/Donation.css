@@ -1,97 +1,61 @@
 /* Global styles */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-header {
-	background-color: #e46a6a;
-	color: #fff;
-	padding: 1px;
-	text-align: center;
-}
-
-
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: transparent;
-}
-
-nav li {
-	float: left;
-}
-
-nav li a {
-	display: block;
-	color: #333;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-nav li a:hover {
-	background-color: #ddd;
-}
-
-main {
-	margin: 20px;
-}
-
-section {
-	border: 1px solid #ddd;
-	padding: 20px;
-}
-
-form label {
-	display: block;
-	margin: 10px 0;
-}
-
-body {
-    background-color: rgb(255, 255, 255);
-}
-
-.event-banner{
-    height: 6rem;
-    background-color: #9d9b9b40;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #e46a6a;
+    color: #fff;
+    padding: 1px;
     text-align: center;
-    padding-top: 1rem;
-    font-size: 3rem;
-    font-family: math;
-    font-weight: 800;
-}
-
-.card{
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px !important; */
-}
-
-/* CSS for progress bar */
-.progress {
-    height: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-	
-}
-
-.progress-bar {
-    height: 100%;
-    color: #f9f6f6;
+    background-color: transparent;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color: #333;
     text-align: center;
-    line-height: 30px;
-    font-weight: bold;
-    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
-}
-
-/* css for progress bar in the added layouts */
-
-.progress {
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #ddd;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  section {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* CSS for progress bar */
+  .progress {
     height: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -107,49 +71,48 @@ body {
     background-image: linear-gradient(to right, #8b33c5, #15a0e1);
   }
   
-  .progress-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
-  }
-  
-  .progress-bar::before {
-    content: attr(aria-valuenow);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  
-
-/* CSS for donate button interaction */
-.btn {
+  /* CSS for donate button interaction */
+  .btn {
     transition: background-color 0.3s ease;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: #15a0e1;
     color: #fff;
-}
-
-/* .btn:active {
-    transform: scale(0.95);
-} */
-
-
-
-
-
-
-
-@media all and (max-width: 500px) {
-    .card-list {
-        flex-direction: column;
+  }
+  
+  /* Card layout */
+  .donation-card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .donation-card-layout .card {
+    width: calc(33.33% - 20px);
+    flex: 1 0 calc(33.33% - 20px);
+  }
+  
+  .donation-card-image {
+    width: 100%;
+  }
+  
+  /* Media queries for responsive layout */
+  @media (max-width: 992px) {
+    .donation-card-layout .card {
+      width: calc(50% - 20px);
+      flex: 1 0 calc(50% - 20px);
     }
-}
+  }
+  
+  @media (max-width: 576px) {
+    .donation-card-layout .card {
+      width: 100%;
+      flex: 1 0 100%;
+    }
+  }
   

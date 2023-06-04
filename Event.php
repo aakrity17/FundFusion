@@ -18,16 +18,8 @@ $records = $conn->query($sql);
     <div class="event-banner">
         <h1> Events </h1>
     </div>
-<<<<<<< HEAD
         <?php 
-        foreach( $records as $data ) 
-=======
-    <hr/>
-    <div class="container-fluid">
-    <div class="row">
-        <?php
      foreach( $records as $data ) 
->>>>>>> 3d29ea0a44377a893f1b3045be23d08fff6bddb1
         {
             echo '<div class="col-4 event-card-layout">
             <div class="card" style="width:26rem;">
@@ -41,8 +33,3 @@ $records = $conn->query($sql);
         </div>';
         }
         ?>
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> 3d29ea0a44377a893f1b3045be23d08fff6bddb1

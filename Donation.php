@@ -25,41 +25,74 @@ $records = $conn->query($sql);
         <div class="event-banner">
         <h1> Donations </h1>
     </div>
-    <hr/>
-    <div class="container-fluid">
-    <div class="row">
-<div class="col-3">    
-    <div class="card">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1604275689235-fdc521556c16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Donate for Flood Victims</h5>
-            <p class="card-text">Help the recent flood victims to make their lifes better. Donate now to make someone's life liveable.</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 50%;">50%</div>
-            </div>
-            <a href="#" class="btn">Donate</a>
-        </div>
-    </div>
-</div>
+    <!-- <div class="container-fluid">
+    <div class="row"> -->
 
-<?php 
-        foreach( $records as $data ) 
-        {
-            echo '<div class="col-4 donation-card-layout">
+
+
+<!-- <?php 
+foreach ($records as $data) {
+    echo '<div class="col-4 donation-card-layout">
             <div class="card" style="width:26rem;">
                 <img class="card-img-top donation-card-image" src="img/donation/'.$data['donation_image_url'].'">
-    
+
+                <div class="card-body">
                     <h5 class="card-title">'.$data['donation_name'].'</h5>
                     <p class="card-text">'.$data['donation_description'].'</p>
-                    <p class="progress-bar" role="progressbar" style="width: '.$data
-                    ['donation_progress'].'%;" aria-valuenow="'.$data['donation_progress'].'%" 
-                    aria-valuemin="0" aria-valuemax="100">'.$data['donation_progress'].'
+                    <div class="progress">
+                        <div class="progress-bar" style="width: '.$data['donation_progress'].';">'.$data['donation_progress'].'</div>
+                    </div>
                     <a href="#" class="btn">Donate</a>
                 </div>
             </div>
         </div>';
-        }
-        ?>
+}
+?> -->
+
+<!-- <?php
+foreach ($records as $data) {
+    echo '<div class="col-4">
+            <div class="card">
+                <img class="card-img-top donation-card-image" src="img/donation/'.$data['donation_image_url'].'">
+
+                <div class="card-body">
+                    <h5 class="card-title">'.$data['donation_name'].'</h5>
+                    <p class="card-text">'.$data['donation_description'].'</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: '.$data['donation_progress'].';">'.$data['donation_progress'].'</div>
+                    </div>
+                    <a href="#" class="btn">Donate</a>
+                </div>
+            </div>
+        </div>';
+}
+?> -->
+
+<?php
+$counter = 0;
+foreach ($records as $data) {
+    $counter++;
+    $class = ($counter == 1) ? 'first-card' : '';
+    echo '<div class="col-4 donation-card-layout '.$class.'">
+            <div class="card">
+                <img class="card-img-top donation-card-image" src="img/donation/'.$data['donation_image_url'].'">
+
+                <div class="card-body">
+                    <h5 class="card-title">'.$data['donation_name'].'</h5>
+                    <p class="card-text">'.$data['donation_description'].'</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: '.$data['donation_progress'].';">'.$data['donation_progress'].'</div>
+                    </div>
+                    <a href="#" class="btn">Donate</a>
+                </div>
+            </div>
+        </div>';
+}
+?>
+
+
+
+
 	
 
   

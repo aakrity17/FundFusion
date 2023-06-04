@@ -11,6 +11,6 @@ unlink($folder.$deleteimage);
 $sql = "DELETE FROM donation WHERE id='" . $_GET["id"] . "'";
 
 $result = mysqli_query($conn,$sql);
-header('Location: '. $site_url .'admin/donation/create-donation.php?statu=success');
+header('Location: '. $site_url .'admin/donation/create-donation.php?status=success');
 
 ?>

@@ -130,12 +130,20 @@ include "../../database/Db_Connection.php";
            <th>'.$data['donation_name'].'</th>
            <th>'.$data['donation_type'].'</th>
            <th><a href="edit-donation.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
-           <a href="delete-donation.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
+         
+         <a href="javascript:void(0);" onclick="confirmDelete('.$data['id'].')"><ion-icon name="trash"></ion-icon></a>
            </th>" 
            </tr>';
         }
         ?>
     </table>
+    <script>
+function confirmDelete(id) {
+    if (confirm('Are you sure you want to delete this donation?')) {
+        window.location.href = 'delete-donation.php?id=' + id;
+    }
+}
+</script>
 
     </div>
   </body>

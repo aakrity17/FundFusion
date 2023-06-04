@@ -31,8 +31,9 @@ body {
   
   .donation-banner {
     background-color: #8b33c5;
-    color: #15a0e1;
+    color: #feffff;
     padding: 20px;
+    font-weight: 1200;
     text-align: center;
   }
   

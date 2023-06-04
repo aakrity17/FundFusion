@@ -81,16 +81,6 @@ include "../routeconfig.php";
             </div>
         </form>
     </div>
-  </body>
-  <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
     <?php
         include "../../database/Db_Connection.php";
         $sql = "SELECT * from events";
@@ -110,11 +100,23 @@ include "../routeconfig.php";
            <th>'.$data['event_duration'].'</th>
            <th><a href="edit-events.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
            <a href="deleteevent.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
-           </th>" 
+           </th> 
            </tr>';
         }
         ?>
     </table>
+    </div>
+  </body>
+  <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
+    
     <script>
       //  onclick="deleteConfirmation()"
     // function deleteConfirmation(){

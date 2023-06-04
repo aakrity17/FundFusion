@@ -38,21 +38,54 @@
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.php">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">
+                            <i class="fas fa-info-circle"></i> About us
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fas fa-home"></i></a></li>
 
                     <!-- <li><a href="#about-us">About Us</a></li> -->
 
-                    <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li> -->
 
-                    <li class="nav-item"><a class="nav-link" href="./Donation.php">Donation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#our-team">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="./team.php">Contributors</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Login</a></li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Donation.php">
+                            <i class="fas fa-donate"></i> Donation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-team">
+                            <i class="fas fa-users"></i> Our Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">
+                            <i class="fas fa-project-diagram"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Event.php">
+                            <i class="fas fa-calendar-alt"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sign-in/index.php">
+                            <i class="fas fa-sign-in-alt"></i> Sign in
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sign-in/index.php">
+                            <i class="fas fa-user-circle"></i> Login
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

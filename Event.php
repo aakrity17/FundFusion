@@ -18,6 +18,7 @@ $records = $conn->query($sql);
     <div class="event-banner">
         <h1> Events </h1>
     </div>
+    <div class="row">
         <?php 
      foreach( $records as $data ) 
         {
@@ -32,3 +33,5 @@ $records = $conn->query($sql);
             </div>';
         }
         ?>
+</div>
+    </body>

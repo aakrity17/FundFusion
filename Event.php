@@ -32,7 +32,6 @@ $records = $conn->query($sql);
                     <p class="card-text">'.$data['event_description'].'</p>
                     <a href="#" class="btn btn-primary">Donate</a>
                 </div>
-            </div>
-        </div>';
+            </div>';
         }
         ?>

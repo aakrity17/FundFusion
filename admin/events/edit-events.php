@@ -1,8 +1,8 @@
 <?php
 include "../sessioncheck.php";
+include "../../database/Db_Connection.php";
 include "../routeconfig.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,24 +32,32 @@ include "../routeconfig.php";
                 </label>
             </div>
         </div>
-        <h2>Create New Event</h2>
-        <p>Add all the details regarding events below.</p>
+        <?php
+            $id = $_GET['id'];
+            $result = mysqli_query($conn, "SELECT * FROM events WHERE id=$id");
+            while($res = mysqli_fetch_array($result))
+            {
+                $name = $res['event_name'];
+                $duration = $res['event_duration'];
+                $imageURL = $res['event_image_url'];
+                $description = $res['event_description'];
+            }
+        ?>
+            <h2>Update Event</h2>
+        <p>Update the details regarding events.</p>
         <?php
         if(isset($_GET['status'])) {
-            echo '<h3 style="color:green">!!New Event Created Successfully!!</h3>';
-        }
-        if(isset($_GET['statu'])) {
-            echo '<h3 style="color:green">!!Event Deleted Successfully!!</h3>';
+            echo '<h3 style="color:green">!!Event Updated Successfully!!</h3>';
         }
         ?>
         <div class="containerbox">
-        <form action="newevent.php" method="POST" enctype="multipart/form-data">
+        <form action="updateevent.php" method="POST" enctype="multipart/form-data">
             <div class="row">
             <div class="col-25">
                 <label for="ename">Event Name</label>
             </div>
             <div class="col-75">
-                <input type="text" id="ename" name="event_name" placeholder="New Event Name">
+                <input type="text" id="ename" name="event_name" value="<?php echo $name;?>">
             </div>
             </div>
             <div class="row">
@@ -57,7 +65,7 @@ include "../routeconfig.php";
                 <label for="eduration">Event Duration</label>
             </div>
             <div class="col-75">
-                <input type="text" id="eduration" name="event_duration" placeholder="Duration of the event">
+                <input type="text" id="eduration" name="event_duration" value="<?php echo $duration;?>">
             </div>
             </div>
             <div class="row">
@@ -66,62 +74,22 @@ include "../routeconfig.php";
             </div>
             <div class="col-75">
                 <input type="file" id="eimage" name="event_image_url">
+                <img src="../../img/events/<?php echo $imageURL;?>" style="height:100px;width:100px">
             </div>
             </div>
             <div class="row">
+            <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
             <div class="col-25">
                 <label for="eduration">Event Description</label>
             </div>
             <div class="col-75">
-                <textarea id="eduration" name="event_description" placeholder="Event descripton.." style="height:200px"></textarea>
+                <textarea id="eduration" name="event_description" style="height:200px"><?php echo $description;?></textarea>
             </div>
             </div>
             <div class="row">
-            <input type="submit" value="Submit">
+            <input type="submit" name="update" value="Update">
             </div>
         </form>
     </div>
   </body>
-  <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
-    <?php
-        include "../../database/Db_Connection.php";
-        $sql = "SELECT * from events";
-        $records = $conn->query($sql);
-    ?>
-    <table >
-        <tr>
-            <th><u>Event Name</u></th>
-            <th><u>Event Date</u></th>
-            <th><u>Remarks</u></th>
-        </tr>
-        <?php
-     foreach( $records as $data ) 
-        {
-           echo ' <tr>
-           <th>'.$data['event_name'].'</th>
-           <th>'.$data['event_duration'].'</th>
-           <th><a href="edit-events.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
-           <a href="deleteevent.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
-           </th>" 
-           </tr>';
-        }
-        ?>
-    </table>
-    <script>
-      //  onclick="deleteConfirmation()"
-    // function deleteConfirmation(){
-    //   var result = confirm("Are you sure to delete?");
-    //   if(result){
-    //     alert("Deleted")
-    //   }
-  //  }
-  </script>
-</html>
+  </html>

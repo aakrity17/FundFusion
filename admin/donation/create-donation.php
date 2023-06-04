@@ -33,11 +33,13 @@ include "../../database/Db_Connection.php";
             
             <div class="search">
                 <label>
-                <input type="text" placeholder="Search here" />
-                <ion-icon name="search-outline"></ion-icon>
+                <input type="search" placeholder="Search here" />
+                <ion-icon id="search-bar" name="search-outline"></ion-icon>
                 </label>
             </div>
         </div>
+
+        
         <h2>Create New Donation</h2>
         <p>Add all the details regarding donation below.</p>
         <?php
@@ -49,7 +51,7 @@ include "../../database/Db_Connection.php";
         <form action="newdonation.php" method="POST" enctype="multipart/form-data">
             <div class="row">
             <div class="col-25">
-                <label for="ename">Donation Name</label>
+                <label for="donation_name">Donation Name</label>
             </div>
             <div class="col-75">
                 <input type="text" id="donation_name" name="donation_name" placeholder="New Donation Name">
@@ -89,7 +91,7 @@ include "../../database/Db_Connection.php";
 
             <div class="row">
             <div class="col-25">
-                <label for="donation_image">Donation Image</label>
+                <label for="donation_image_url">Donation Image</label>
             </div>
             <div class="col-75">
                 <input type="file" id="donation_image_url" name="donation_image_url">
@@ -108,6 +110,33 @@ include "../../database/Db_Connection.php";
             </div>
         </form>
         </div>
+
+        <?php
+        // include "../../database/Db_Connection.php";
+        $sql = "SELECT * from donation";
+        $records = $conn->query($sql);
+    ?>
+
+    <table>
+        <tr>
+            <th><u>Donation Name</u></th>
+            <th><u>Donation Type</u></th>
+            <th><u>Options</u></th>
+        </tr>
+        <?php
+     foreach( $records as $data ) 
+        {
+           echo ' <tr>
+           <th>'.$data['donation_name'].'</th>
+           <th>'.$data['donation_type'].'</th>
+           <th><a href="edit-donation.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
+           <a href="delete-donation.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
+           </th>" 
+           </tr>';
+        }
+        ?>
+    </table>
+
     </div>
   </body>
   <script
@@ -119,4 +148,5 @@ include "../../database/Db_Connection.php";
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
-</html> 
+    
+</html>

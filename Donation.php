@@ -36,9 +36,9 @@ $records = $conn->query($sql);
               
               <p class="card-text card-description"><?php echo $data['donation_description']; ?>
   
-              <?php if (strlen($data['donation_description']) > 30) { ?>
+              <!-- <?php if (strlen($data['donation_description']) > 30) { ?>
     <button class="read-more-btn">Read More</button>
-  <?php } ?>
+  <?php } ?> -->
 
               <div class="progress">
                 <div class="progress-bar" style="width: <?php echo $data['donation_progress']; ?>;">
@@ -55,7 +55,7 @@ $records = $conn->query($sql);
     </div>
   </div>
 
-
+<br><br><br>
   <footer>
     <p>&copy; 2023 FundFusion</p>
   </footer>

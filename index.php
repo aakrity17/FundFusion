@@ -26,9 +26,9 @@
     <!---Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2" id="mainNav">
         <div class="container">
+            <!-- Logo -->
             <img src="./img/Logo.png" class="logo">
 
-            <!-- even if it has no work, we put it so that the nav will not mess  -->
 
             <a class="navbar-brand text-white" href="#"></a>
 
@@ -40,7 +40,6 @@
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
 
-                    <!-- have to implement feature of scrolling -->
                     <!-- <li><a href="#about-us">About Us</a></li> -->
 
                     <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
@@ -257,410 +256,234 @@
         </div>
     </section>
     <!-- End About us -->
+    <!-- Our project started -->
+    <section id="projects">
 
-    <div class="container">
-        <div class="row my-3">
-            <div class="col-10 mx-auto text-center">
-                <h1 class="text-uppercase">Our Latest Projects</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-10 mx-auto text-center">
+                    <h1 class="text-uppercase">Our Latest Projects</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
+                </div>
+            </div>
+            <!----->
+            <div class="row">
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/8.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+                        Food
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/p4.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+                        water
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/p3.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+                        Medicine
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/p4.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+                        Education
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/3.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+                <!--single Project-->
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="project-container p-5 outline">
+                        <img src="img/2.jpg" class="img-fluid grow" alt="">
+                        <a herf="#" class="donation text-capitalize">Donate Now</a>
+                    </div>
+                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h6 class="text-center">
+                        Health
+                    </h6>
+                </div>
+                <!--End of Single Project-->
+
             </div>
         </div>
-        <!----->
-        <div class="row">
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/8.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Food
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/p4.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    water
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/p3.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Medicine
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/p4.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Education
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/3.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="img/2.jpg" class="img-fluid grow" alt="">
-                    <a herf="#" class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Health
-                </h6>
-            </div>
-            <!--End of Single Project-->
-
-        </div>
-    </div>
     </section>
     <!---End of the Projects Section-->
 
     <!-- Team Section-->
     <!-- <section class="team"> -->
-    <div class="container">
-        <div class="section-title">
-            <h2 class="text-center">Our Team</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
-                possimus id sapiente sunt ab mollitia cum. </p>
+    <section id="our-team">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-center">Our Team</h2>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
+                    possimus id sapiente sunt ab mollitia cum. </p>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="team-1">
+                        <div class="pic">
+                            <img src="img/mem.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Akriti Chapagai</h4>
+                            <span>Frontend desiger</span>
+                            <div class="social">
+                                <a href="https://twitter.com/aakrity17">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://facebook.com/aakrityy17">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/aakrity0">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aakrity17/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="team-1">
+                        <div class="pic">
+                            <img src="img/member2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Binaya koirala</h4>
+                            <span>Backend developer</span>
+                            <div class="social">
+                                <a href="https://twitter.com/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="team-1">
+                        <div class="pic">
+                            <img src="img/member3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Laxman Parajuli</h4>
+                            <span>Frontend</span>
+                            <div class="social">
+                                <a href="https://twitter.com/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/laxman.parajuli.58">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="team-1">
+                        <div class="pic">
+                            <img src="img/member4.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Ujjwal Adhikari</h4>
+                            <span>Backend</span>
+                            <div class="social">
+                                <a href="https://twitter.com/xatey999">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/ujjwal.adhikari.526438">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href=" https://www.instagram.com/xatey_999">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
         </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="img/member1.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>Akriti Chapagai</h4>
-                        <span>Frontend desiger</span>
-                        <div class="social">
-                            <a href="https://twitter.com/aakrity17">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://facebook.com/aakrityy17">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/aakrity0">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/aakrity17/">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="img/member2.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>Binaya koirala</h4>
-                        <span>Backend developer</span>
-                        <div class="social">
-                            <a href="https://twitter.com/">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="img/member3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>Laxman Parajuli</h4>
-                        <span>Frontend</span>
-                        <div class="social">
-                            <a href="https://twitter.com/">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="img/member4.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>Ujjwal Adhikari</h4>
-                        <span>Backend</span>
-                        <div class="social">
-                            <a href="https://twitter.com/xatey999">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.facebook.com/ujjwal.adhikari.526438">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href=" https://www.instagram.com/xatey_999">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-        </div>
-    </div>
 
 
     </section>
-    <!---End of Team Section-->
-
-    <!---End of finished projects Section-->
-    <!---Donation Section-->
-    <!-- <section class="mt-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="text-center mb-55">
-                        <h3>Make a Donation</h3>
-                    </div>
-                </div>
-            </div> -->
-    <!---->
-    <!-- <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <form class="donation-form">
-                        <div class="row align-items-center">
-                            <div class="col-md-4">
-                                <div class="amount">
-                                    <div class="input-field">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">$</span>
-                                            </div>
-
-                                            <input type="text" class="form-control" placeholder="10,000" aria-label="Username">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-    <!----->
-    <!-- <div class="col-md-8">
-                                <div class="amount">
-                                    <div class="need d-flex align-items-center
-                        justify-content-between"> -->
-    <!-- <div class="select">
-                                            <h5>Select Amount</h5>
-                                        </div>
-                                        <div class="funds">
-                                            <input type="radio" name="radio-group">
-                                            <label for="fund-1">100</label>
-                                        </div>
-                                        <div class="funds">
-                                            <input type="radio" name="radio-group">
-                                            <label for="fund-2">150</label>
-                                        </div>
-                                        <div class="funds">
-                                            <input type="radio" name="radio-group">
-                                            <label for="Other">Other</label>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div> -->
-    <!-- </div>
-            <div class="row mb-3">
-                <div class="col-12">
-                    <div class="donation-btn text-center">
-                        <a href="" class="btn btn-don">Donate Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section> -->
-    <!---End of Donation section Section-->
-    <!-- <footer class="footer mt-5">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-des">
-                            <h3>Fund Fusion</h3>
-                            <p class="pb-3">
-                                <em>An initiative to Donate for the good!</em>
-                            </p>
-                            <p>Simalchaur, Pokhara <br>
-                                12345, <br><br><strong>
-                                    Phone;
-                                </strong>
-                                +97981234567<br>
-                                <strong>
-                                    Email:
-                                </strong>
-                                FundFusion@info.com<br>
-
-                            </p>
-                            <div class="social-links mt-3">
-                                <a href=""><i class="fab fa-twitter">
-
-                                    </i></a>
-                                <a href=""><i class="fab fa-facebook">
-
-                                    </i></a>
-                                <a href=""><i class="fab fa-instagram">
-
-                                    </i></a>
-                                <a href=""><i class="fab fa-linkedin">
-
-                                    </i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Projects</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Initiatives</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Our Team</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Our Plans</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Contact Us</a>
-
-
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful links</h4>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Project-1</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Project-2</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Project-3</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Project-4</a>
-
-
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="">Project-5</a>
-
-
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our News Letters</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae excepturi aut consectetur
-                            consequatur fugiat commodi quidem, minus, vero quo eaque praesentium asperiores. Officiis
-                            suscipit mollitia dolore et ea impedit tempore!
-                        </p>
-                        <form>
-                            <input type="email" name="email">
-                            <input type="submit" value="Subscribe">
-                        </form> -->
-    <!-- </div>
-    </div>
-    </div>
-    </div> -->
-    <!-- </footer> -->
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer>
+        <div class="footer-content">
+            <h3>FundFusion </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
+
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright @copy;2023 FundFusion. designed by <span>aakrity</span></p>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
 .logo {
     padding: 50px;
     background-color: transparent;
@@ -18,6 +19,7 @@ body {
     left: 0px;
     right: 5px;
     width: 280px;
+    cursor: pointer;
 }
 
 .nav-bg {
@@ -638,148 +640,93 @@ no need of this
 
 /*==========End of the Donation Section======*/
 /* footer part */
-.footer {
-    background: linear-gradient(rgba(106, 247, 228, 0.rgba(0, 59, 59, 0.4).4));
-    padding: 0 0 30px 0;
-    color: #000;
-    font-size: 15px;
+
+footer {
+    background: rgba(98, 10, 206, 0.68);
+
+    height: auto;
+    width: 100vw;
+    font-family: "open sans";
+    padding-top: 400px;
+    color: "#fff";
 }
 
-.footer .footer-top {
-    padding: 60px 0 30px 0;
-}
-
-.footer .footer-top .footer-des {
-    margin-top: -90px;
-    margin-bottom: 15px;
-    background: rgba(98, 10, 206, 0.534);
-
-    /* background:#912b8f; */
-    color: #fff;
-    /* border-top: 4px solid #3f2b91; */
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.footer .footer-top .footer-des h3 {
-    font-size: 24px;
-    margin: 0 0 2px 0;
-    padding: 2px 0 2px 0;
-    line-height: 1;
-    font-weight: bold;
-}
-
-.footer .footer-top .footer-des p {
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 0;
-}
-
-.footer .footer-top .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    /* the color after the icons */
-    background: white;
-    /* color of social icons */
-    color: #012a30;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-.footer .footer-top .social-links a:hover {
-    /* background: rgba(98, 10, 206, 0.863);
-     */
-    width: 40px;
-    height: 40px;
-
-    color: black;
-    text-decoration: none;
-}
-
-.footer .footer-top h4 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    position: relative;
-    padding-bottom: 12px;
-}
-
-.footer .footer-top .footer-links {
-    margin-bottom: 30px;
-}
-
-.footer .footer-top .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer .footer-top .footer-links ul i {
-    padding-right: 2px;
-    color: #000;
-    font-size: 18px;
-    line-height: 1;
-}
-
-.footer .footer-top .footer-links ul li {
-    padding: 10px 0;
+.footer-content {
     display: flex;
     align-items: center;
-}
-
-.footer .footer-top .footer-links ul li:first-child {
-    padding-top: 0;
-}
-
-.footer .footer-top .footer-links ul a {
-    color: #000;
-    transition: 0.3s;
-    display: inline-block;
-    line-height: 1;
-}
-
-.footer .footer-top .footer-links ul a:hover {
-    color: rgba(98, 10, 206, 0.863);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 
 }
 
-.footer .footer-top .footer-newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 4;
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
 }
 
-.footer .footer-top .footer-newsletter form input[type="email"] {
-    border: 0;
-    padding: 4px;
-    width: calc(100% - 110px);
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
 }
 
-/* .footer .footer-top .footer-newsletter form input[type="submit"]{
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    border:0;
-    background: none;
-    font-size:16px;
-    padding: 0 20px;
-    background: rgba(98, 10, 206, 0.68);
-    
-    color:#fff;
-    transition: 0.3s;
-    border-radius:4;
-} */
-/* .footer .footer-top .footer-newsletter form input[type="submit"]:hover{
-    background: rgba(98, 10, 206, 0.863);
-    
-    color:white;
-} */
+.socials {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    /* givr proper space */
+    white-space: 2px;
+    font-size: 1.1rem;
+    transition: color .4s ease;
+    -webkit-transition: color .4s ease;
+    -moz-transition: color .4s ease;
+    -ms-transition: color .4s ease;
+    -o-transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: #fff;
+
+}
+
+/* copyright */
+.footer-bottom {
+    background: rgba(74, 6, 156, 0.476);
+
+    width: 100w;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* aakrity wala */
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*  */
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

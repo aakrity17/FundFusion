@@ -18,10 +18,7 @@ $records = $conn->query($sql);
     <div class="event-banner">
         <h1> Events </h1>
     </div>
-    <hr/>
-    <div class="container-fluid">
-    <div class="row">
-        <?php
+        <?php 
      foreach( $records as $data ) 
         {
             echo '<div class="col-4 event-card-layout">

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -37,24 +47,21 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-
-                    <!-- have to implement feature of scrolling -->
-                    <!-- <li><a href="#about-us">About Us</a></li> -->
-
-                    <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="./Donation.php">Donation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#our-team">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="./team.php">Contributors</a></li> -->
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="./Donation.php">Donation</a></li>
+    <li class="nav-item"><a class="nav-link" href="#our-team">Our Team</a></li>
+    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
+    <?php if (isset($name)): ?>
+                    <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                <?php else: ?>
                     <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
                     <li class="nav-item"><a class="nav-link" href="User/userlogin.php">Login</a></li>
-
-                </ul>
+                <?php endif; ?>    
+                </ul>  
             </div>
         </div>
     </nav>

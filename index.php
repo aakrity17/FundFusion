@@ -52,7 +52,7 @@
                     <li class="nav-item"><a class="nav-link" href="./Event.php">Events</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="./team.php">Contributors</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="User/userlogin.php">Login</a></li>
 
                 </ul>
             </div>

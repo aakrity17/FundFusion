@@ -17,7 +17,7 @@ body {
     position: fixed;
     height: auto;
     left: 0px;
-    right: 5px;
+    right: 0px;
     width: 280px;
     cursor: pointer;
 }
@@ -27,6 +27,11 @@ body {
     background: rgba(153, 72, 252, 0.98);
 }
 
+/* .corner-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
 .navbar-nav .nav-link {
     color: #ffffff !important;
 }
@@ -265,66 +270,7 @@ body {
 }
 
 /*======End of About Us=========*/
-/*========Stories========*/
-no need of this
 
-/* .story-box{
-    padding:15px;
-    background:#7a05c7c4;
-    margin-bottom:30px;
-    position:relative;
-}
-.story-icon{
-    width:90px;
-    height:90px;
-    text-align:center;
-    line-height: 90px;
-}
-.story-icon i{
-    font-size:50px;
-    color:#fff;
-    mix-blend-mode: difference;
-}
-
-.story-box h2{
-    font-size:24px;
-    font-weight:bold;
-    color:#fff;
-    mix-blend-mode: difference;
-}
-.story-box p{
-    font-size: 16px;
-    font-weight:light;
-    color:#fff;
-    mix-blend-mode: difference;
-}
-
-.overlay{
-    margin:20px auto;
-    border:none;
-    padding:10px 44px;
-    font-size:20px;
-    position:relative;
-    display:inline-block;
-}
-.overlay:before{
-    transition:all 0.85s cubic-bezier(0.68,-0.55,0.265,1.55);
-    content:'';
-    width:50%;
-    height: 100%;
-    background: #c991ee;
-    position: absolute;
-    top:0;
-    left:0;
-    border-radius:10px 0px 0px 10px;
-    
-}
-.overlay:hover:before{
-    background:#c991ee;
-    width:100%;
-    border-radius:10px;
-} */
-/*========End of the Stories========*/
 /*============Projects Section=======*/
 .project-container {
     background: #8c05e64e;
@@ -485,68 +431,7 @@ no need of this
     }
 }
 
-/*====end of Team Section======*/
-/*==========Finished projects======*/
-/* .project-item{
-    display: block;
-    position: relative;
-    overflow:hidden;
-    max-width:530px;
-    margin:auto auto 16px;
-}
-.project-item .text{
-    display:flex;
-    height: 100%;
-    width:100%;
-    background-color:rgba(170, 75, 183, 0.2);
-    position: absolute;
-    top:0;
-    bottom:0;
-    z-index:1;
-}
-.project-item .text .des{
-    color:#fff;
-    margin: auto 32px 32px;
-}
-.project-item .text .des h2{
-    font-size:14px;
-    text-transform: uppercase;
-}
-.project-item .text .des p{
-    font-weight: light;
-    font-size:20px;
-}
-@media(min-width:992px){
-    .project-item{
-        max-width: none;
-        margin:0;
-    }
-    .project-item .text{
-        transition: clip-path 0.25s ease-out, background-color 0.7s;
-        clip-path:inset(0px);
-        -webkit-transition: clip-path 0.25s ease-out, background-color 0.7s;
-        -moz-transition: clip-path 0.25s ease-out, background-color 0.7s;
-        -ms-transition: clip-path 0.25s ease-out, background-color 0.7s;
-        -o-transition: clip-path 0.25s ease-out, background-color 0.7s;
-}
-    .project-item .text .des{
-        transition:opacity 0.25s;
-        margin-left:80px;
-        margin-right: 80px;
-        margin-bottom: 80px;
-    }
-    .project-item img{
-        transition: clip-path 0.25s ease-out;
-        clip-path: inset(-1px);
-    }
-    .project-item:hover img{
-        clip-path:inset(32px);
-    }
-    .project-item:hover .text{
-        background-color: rgba(125, 17, 158, 0.6);
-    }
-} */
-/*==========End of the Finished projects======*/
+
 /*========== Donation Section======*/
 .donation-form .input-field .input-group {
     width: 100%;
@@ -647,7 +532,7 @@ footer {
     height: auto;
     width: 100vw;
     font-family: "open sans";
-    padding-top: 400px;
+    padding-top: 10px;
     color: "#fff";
 }
 

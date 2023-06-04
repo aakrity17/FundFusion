@@ -28,34 +28,26 @@
         <div class="container">
             <!-- Logo -->
             <img src="./img/Logo.png" class="logo">
-
-
             <a class="navbar-brand text-white" href="#"></a>
 
-            <!-- Nav barrrrrrrrrrrr ko lagiiiiiiiii, plus tala button vayeko -->
+            <!-- Navigation toggle button -->
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation links -->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link" href="./index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="#about-us">
                             <i class="fas fa-info-circle"></i> About us
                         </a>
                     </li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fas fa-home"></i></a></li>
-
-                    <!-- <li><a href="#about-us">About Us</a></li> -->
-
-                    <!-- <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li> -->
-
                     <li class="nav-item">
                         <a class="nav-link" href="./Donation.php">
                             <i class="fas fa-donate"></i> Donation
@@ -90,6 +82,7 @@
             </div>
         </div>
     </nav>
+
 
     <!---End of Navbar-->
     <!--Hero Section-->

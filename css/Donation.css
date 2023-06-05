@@ -1,105 +1,132 @@
 /* Global styles */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-header {
-	background-color: #e46a6a;
-	color: #fff;
-	padding: 1px;
-	text-align: center;
-}
-
-
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: transparent;
-}
-
-nav li {
-	float: left;
-}
-
-nav li a {
-	display: block;
-	color: #333;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-nav li a:hover {
-	background-color: #ddd;
-}
-
-main {
-	margin: 20px;
-}
-
-section {
-	border: 1px solid #ddd;
-	padding: 20px;
-}
-
-form label {
-	display: block;
-	margin: 10px 0;
-}
-
-body {
-    background-color: rgb(255, 255, 255);
-}
-
-.event-banner{
-    height: 6rem;
-    background-color: #9d9b9b40;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color:  #8b33c5;
     text-align: center;
-    padding-top: 1rem;
-    font-size: 3rem;
-    font-family: math;
-    font-weight: 800;
-}
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #ddd;
+  }
+  
+  .donation-banner {
+    background-color: #8b33c5;
+    color: #feffff;
+    padding: 20px;
+    font-weight: 1200;
+    text-align: center;
+  }
+  
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-.card{
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px !important; */
-}
+  .card-text {
+    overflow: hidden;
+  }
 
-/* CSS for progress bar */
-.progress {
+  .card-text.collapsed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show before collapsing */
+    -webkit-box-orient: vertical;
+  }
+  
+  
+  .card-description {
+    height: 20px;
+    transition: height 0.3s ease;
+  }
+  
+  .card-description.expanded {
+    height: auto;
+    
+  }
+  
+  
+  
+  
+  .card-img-top {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .progress {
     height: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
     overflow: hidden;
-	
-}
-
-.progress-bar {
+  }
+  
+  .progress-bar {
     height: 100%;
-    color: #f9f6f6;
+    color: #fff;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
     font-weight: bold;
     background-image: linear-gradient(to right, #8b33c5, #15a0e1);
-}
+  }
 
-/* Customize progress bar colors */
-/* .progress-bar {
-    background-color: linear-gradient(to right, #8b33c5, #15a0e1);
-} */
-
-
-
-
-@media all and (max-width: 500px) {
-    .card-list {
-        flex-direction: column;
-    }
-}
+  .read-more-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .btn-primary {
+    background-color: #8b33c5;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #15a0e1;
+  }
+  
+  footer {
+    background-color: cornflowerblue;
+    padding: 10px 0;
+    text-align: center;
+  }
   

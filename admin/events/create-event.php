@@ -38,6 +38,9 @@ include "../routeconfig.php";
         if(isset($_GET['status'])) {
             echo '<h3 style="color:green">!!New Event Created Successfully!!</h3>';
         }
+        if(isset($_GET['statu'])) {
+            echo '<h3 style="color:green">!!Event Deleted Successfully!!</h3>';
+        }
         ?>
         <div class="containerbox">
         <form action="newevent.php" method="POST" enctype="multipart/form-data">
@@ -77,7 +80,31 @@ include "../routeconfig.php";
             <input type="submit" value="Submit">
             </div>
         </form>
-        </div>
+    </div>
+    <?php
+        include "../../database/Db_Connection.php";
+        $sql = "SELECT * from events";
+        $records = $conn->query($sql);
+    ?>
+    <table >
+        <tr>
+            <th><u>Event Name</u></th>
+            <th><u>Event Date</u></th>
+            <th><u>Remarks</u></th>
+        </tr>
+        <?php
+     foreach( $records as $data ) 
+        {
+           echo ' <tr>
+           <th>'.$data['event_name'].'</th>
+           <th>'.$data['event_duration'].'</th>
+           <th><a href="edit-events.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
+           <a href="deleteevent.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
+           </th> 
+           </tr>';
+        }
+        ?>
+    </table>
     </div>
   </body>
   <script
@@ -89,4 +116,14 @@ include "../routeconfig.php";
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
+    
+    <script>
+      //  onclick="deleteConfirmation()"
+    // function deleteConfirmation(){
+    //   var result = confirm("Are you sure to delete?");
+    //   if(result){
+    //     alert("Deleted")
+    //   }
+  //  }
+  </script>
 </html>

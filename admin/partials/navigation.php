@@ -4,7 +4,7 @@ include "routeconfig.php";
 <div class="navigation">
         <ul>
           <li>
-            <a href="">
+          <a href="<?php echo $site_url ?>admin/Dashboard.php">
             <span class="icon"></span>
               <span class="title">FundFusion</span>
             </a>
@@ -12,7 +12,7 @@ include "routeconfig.php";
           <li>
             <a href="<?php echo $site_url ?>admin/Dashboard.php">
             <span class="icon"></span>
-              <span class="title">Dashboard</span>
+              <span class="title">Users</span>
             </a>
           </li>
           <li>
@@ -46,7 +46,13 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-            <a href="">
+          <a href="<?php echo $site_url ?>ourteam/ourteam.php">
+              <span class="icon"></span>
+              <span class="title">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="../User/logout.php">
             <span class="icon"></span>
               <span class="title">Sign Out</span>
             </a>

@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_num_rows($result) > 0) {
             // Store user information in the session
             $_SESSION['username'] = $providedUsername;
+            $_SESSION['role'] = $row["role"];
+
             
             // Redirect the user to the dashboard page
             header('Location: ../admin/Dashboard.php');

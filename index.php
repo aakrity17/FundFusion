@@ -492,8 +492,6 @@
 
     </section>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <footer>
         <div class="footer-content">
             <h3>FundFusion </h3>

@@ -10,7 +10,7 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-            <a href="<?php echo $site_url ?>admin/Dashboard.php">
+            <a href="<?php echo $site_url ?>User/userAdd.php">
             <span class="icon"></span>
               <span class="title">Users</span>
             </a>

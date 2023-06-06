@@ -1,70 +1,37 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: May 25, 2023 at 02:55 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+<?php
+include "database/Db_Connection.php";
+$sql = "SELECT * from events";
+$records = $conn->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/Event.css" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `fundfusion`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `events`
---
-
-CREATE TABLE `events` (
-  `id` int(11) NOT NULL,
-  `event_name` varchar(255) NOT NULL,
-  `event_image_url` mediumtext NOT NULL,
-  `event_description` longtext NOT NULL,
-  `event_duration` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `events`
---
-
-INSERT INTO `events` (`id`, `event_name`, `event_image_url`, `event_description`, `event_duration`) VALUES
-(8, 'Drinking Water Project', 'behavioyr theory.png', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '3rd may - 4th june'),
-(12, 'Support For Education', '25 - Copy.jpg', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'June4th - July 10'),
-(14, 'Concert for the aids for orphans', 'IMG_9142.jpg', 'sbvjks fsdjkbv sjb vnsk', '5th may-8th may');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+</head>
+<body>
+    <div class="event-banner">
+        <h1> Events </h1>
+    </div>
+    <div class="row">
+        <?php 
+     foreach( $records as $data ) 
+        {
+            echo '<div class="col-4 event-card-layout">
+            <div class="card" style="width:26rem;">
+                <img class="card-img-top event-card-image" src="img/events/'.$data['event_image_url'].'">
+    
+                    <h5 class="card-title">'.$data['event_name'].'</h5>
+                    <p class="card-text">'.$data['event_description'].'</p>
+                    <a href="#" class="btn btn-primary">Donate</a>
+                </div>
+            </div>';
+        }
+        ?>
+</div>
+    </body>

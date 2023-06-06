@@ -494,8 +494,8 @@
 
     <footer>
         <div class="footer-content">
-            <h3>FundFusion </h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
+            <h3 style="color:white">FundFusion </h3>
+            <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
 
             <ul class="socials">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -505,7 +505,8 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copyright @copy;2023 FundFusion</p>
+            <p style="color:white; 
+            ">copyright @2023 FundFusion</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

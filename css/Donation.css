@@ -5,29 +5,7 @@ body {
     padding: 0;
   }
   
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-  }
-  
-  nav li {
-    float: left;
-  }
-  
-  nav li a {
-    display: block;
-    color:  #8b33c5;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  nav li a:hover {
-    background-color: #ddd;
-  }
+ 
   
   .donation-banner {
     background-color: #8b33c5;
@@ -35,6 +13,7 @@ body {
     padding: 20px;
     font-weight: 1200;
     text-align: center;
+    margin-top: 80px;
   }
   
   .container {

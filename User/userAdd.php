@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
                     echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
-                    echo "<td> <button class='btn-edit' onclick='editUser(" . $row["id"] . ")' data-user-id='" . $row["id"] . "'>Edit</button></td>";
+                    echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
 
 
                     
@@ -129,11 +129,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       
 </body>
-
-<!-- <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script> -->
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
@@ -141,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
 
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
-    <script>
+    <!-- <script>
     function editUser(userId) {
         // Find the table row corresponding to the selected user
         var row = document.querySelector("[data-user-id='" + userId + "']").closest("tr");
@@ -160,7 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         document.getElementById("username").value = username;
         document.getElementById("email").value = email;
     }
-</script>
+</script> -->
 
 
 </html>

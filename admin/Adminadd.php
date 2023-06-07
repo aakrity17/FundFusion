@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,80 +45,90 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="<?php echo $site_url ?>css/Dashboard.css" />
     <link rel="stylesheet" href="<?php echo $site_url ?>css/Adminadd.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/css/all.min.css">
+
+
     <title>Document</title>
 </head>
 <body>
-  <?php
-  @include('./partials/navigation.php')
-  ?>
-  <div class="container">
-    <section>
-      <h2>Add User</h2>
-      <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required><br>
+<?php
+      @include('./partials/navigation.php')
+      ?>
+<div class="container">
+<section>
+    
+        <h2>Add User</h2>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required><br>
 
-        <label for="address">Address:</label>
-        <input type="text" name="address" id="address" required><br>
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" required><br>
 
-        <label for="contact">Contact:</label>
-        <input type="text" name="contact" id="contact" required><br>
+            <label for="contact">Contact:</label>
+            <input type="text" name="contact" id="contact" required><br>
 
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
 
-        <input type="submit" value="Submit">
-      </form>
+            <input type="submit" value="Submit">
+        </form>
     </section>
 
-    <section>
-      <h2>User List</h2>
-      <table>
+
+    <section >
+    <h2>User List</h2>
+    <table >
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Contact</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th colspan="2">Modify</th>
-          </tr>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th colspan="2">Modify</th>
+
+            </tr>
         </thead>
         <tbody>
-          <?php
-          // Retrieve the user data from the database
-          $sql = "SELECT * FROM user WHERE role = 'admin'";
-          $result = $conn->query($sql);
+            <?php
+            // Retrieve the user data from the database
+            $sql = "SELECT * FROM user WHERE role = 'admin'";
+            $result = $conn->query($sql);
 
-          if ($result->num_rows > 0) {
-              // Output data of each row
-              while ($row = $result->fetch_assoc()) {
-                  echo "<tr>";
-                  echo "<td>" . $row["name"] . "</td>";
-                  echo "<td>" . $row["address"] . "</td>";
-                  echo "<td>" . $row["Contact"] . "</td>";
-                  echo "<td>" . $row["username"] . "</td>";
-                  echo "<td>" . $row["email"] . "</td>";
-                  echo "<td><button class='btn-delete'>Delete</button></td>";
-                  echo "<td><button class='btn-edit'>Edit</button></td>";
-                  echo "</tr>";
-              }
-          } else {
-              echo "<tr><td colspan='6'>No users found</td></tr>";
-          }
-          ?>
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["name"] . "</td>";
+                    echo "<td>" . $row["address"] . "</td>";
+                    echo "<td>" . $row["Contact"] . "</td>";
+                    echo "<td>" . $row["username"] . "</td>";
+                    echo "<td>" . $row["email"] . "</td>";
+                    echo "<td> <button>Delete</button></td>";
+                    echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
+
+
+                    
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='5'>No users found</td></tr>";
+            }
+            ?>
         </tbody>
-      </table>
-    </section>
-  </div>
+    </table>
+    
+</section>
+</div>
 
-
+      
+</body>
 
 <!-- <script
       type="module"
@@ -131,5 +142,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
 
-    </body>
 </html>

@@ -1,5 +1,8 @@
 <?php
-include 'connect.php';
+// include 'connect.php';
+include "../database/Db_Connection.php";
+
+
 if (isset($_POST['submit'])) {
   // Retrieve form data
   // $id = $_POST["id"];
@@ -18,7 +21,7 @@ if (isset($_POST['submit'])) {
     echo "File uploaded successfully.";
 
     // Insert data into the database
-    $sql = "INSERT INTO `our-teams` (`image`, `name`, `lastname`, `position`, `email`) VALUES ('$targetFile', '$name', '$lastname', '$position', '$email')";
+    $sql = "INSERT INTO `our-teams` (`image`, `name`, `position`, `email`) VALUES ('$targetFile', '$name', '$lastname', '$position', '$email')";
 
     if ($conn->query($sql) === TRUE) {
       echo "Data inserted successfully";
@@ -29,10 +32,11 @@ if (isset($_POST['submit'])) {
     echo "Error uploading the file.";
   }
 }
-?>
+
 
 // Close the connection
 //$conn->close(); // Remove this line
+?>
 
 <!DOCTYPE html>
 <html lang="en">

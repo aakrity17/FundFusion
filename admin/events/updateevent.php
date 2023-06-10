@@ -10,6 +10,7 @@ include "../routeconfig.php";
         $duration = mysqli_real_escape_string($conn, $_POST['event_duration']);
         $description = mysqli_real_escape_string($conn, $_POST['event_description']);
         
+        
         $res=mysqli_query($conn,"SELECT* from events WHERE id='" . $_POST['id'] . "'");
         if($row=mysqli_fetch_array($res)) 
         {

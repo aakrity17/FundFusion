@@ -5,7 +5,7 @@ include "routeconfig.php";
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
-            <img src="../img/Logo.png" class="logo">
+            <img src="<?php echo $site_url ?>img/Logo.png" class="logo">
             <a class="navbar-brand text-white" href="#"></a>
 
             <!-- Navigation toggle button -->
@@ -17,17 +17,17 @@ include "routeconfig.php";
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">
+                        <a class="nav-link" href="<?php echo $site_url ?>Aboutus.php">
                             <i class="fas fa-info-circle"></i> About us
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Donation.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>Donation.php">
                             <i class="fas fa-donate"></i> Donation
                         </a>
                     </li>
@@ -42,7 +42,7 @@ include "routeconfig.php";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Event.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>Event.php">
                             <i class="fas fa-calendar-alt"></i> Events
                         </a>
                     </li>

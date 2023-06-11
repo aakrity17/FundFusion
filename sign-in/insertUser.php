@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passwordmd5 = md5($password);
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO user (name, address, contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5','user')";
+    $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5','user')";
 
     // Execute the queryP
     if ($conn->query($sql) === TRUE) {
@@ -24,5 +24,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 } else {
-    echo "Something went wrong!";
+    echo $conn->error;
 };

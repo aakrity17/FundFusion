@@ -1,4 +1,6 @@
 <?php
+include "./sessioncheck.php";
+
 session_start();
 
 include "../database/Db_Connection.php";
@@ -7,6 +9,8 @@ include "../database/Db_Connection.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the values from the login form
     $providedUsername = $_POST['username'];
+    $providedEmail = $_POST['email'];
+
     $providedPassword = md5($_POST['password']);
 
     // Prepare and execute a SELECT statement
@@ -22,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_num_rows($result) > 0) {
             // Store user information in the session
             $_SESSION['username'] = $providedUsername;
+            $_SESSION['email'] = $providedEmail;
+
             $_SESSION['role'] = $row["role"];
 
             

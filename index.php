@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -68,16 +77,14 @@
                             <i class="fas fa-calendar-alt"></i> Events
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-sign-in-alt"></i> Sign in
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-user-circle"></i> Login
-                        </a>
-                    </li>
+                    <?php if (isset($name)): ?>
+                    <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./User/logout.php">Logout</a></li>
+                <?php else: ?>
+                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
+                    <li class="nav-item"><a class="nav-link" href="User/userlogin.php">Login</a></li>
+                </ul>
+                <?php endif; ?>       
                 </ul>
             </div>
         </div>

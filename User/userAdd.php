@@ -136,26 +136,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
 
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
-    <!-- <script>
-    function editUser(userId) {
-        // Find the table row corresponding to the selected user
-        var row = document.querySelector("[data-user-id='" + userId + "']").closest("tr");
-
-        // Fetch the user data from the row
-        var name = row.cells[0].innerHTML;
-        var address = row.cells[1].innerHTML;
-        var contact = row.cells[2].innerHTML;
-        var username = row.cells[3].innerHTML;
-        var email = row.cells[4].innerHTML;
-
-        // Populate the form fields with the user data
-        document.getElementById("name").value = name;
-        document.getElementById("address").value = address;
-        document.getElementById("contact").value = contact;
-        document.getElementById("username").value = username;
-        document.getElementById("email").value = email;
-    }
-</script> -->
-
-
 </html>

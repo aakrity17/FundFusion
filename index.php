@@ -68,23 +68,37 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">
-                            <i class="fas fa-project-diagram"></i> Projects
+                        <a class="nav-link" href="#our-team">
+                            <i class="fas fa-users"></i> Volunteer
                         </a>
                     </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-project-diagram"></i> Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <li><a class="dropdown-item" href="live-events.html">Latest Projects</a></li>
+                            <li><a class="dropdown-item" href="upcoming-projects.html">Upcoming Projects</a></li>
+                            <li><a class="dropdown-item" href="past-projects.html">Past Projects</a></li>
+                        </ul>
+                    </li>
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="./Event.php">
                             <i class="fas fa-calendar-alt"></i> Events
                         </a>
                     </li>
-                    <?php if (isset($name)): ?>
-                    <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="./User/logout.php">Logout</a></li>
-                <?php else: ?>
-                    <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
-                    <li class="nav-item"><a class="nav-link" href="User/userlogin.php">Login</a></li>
-                </ul>
-                <?php endif; ?>       
+                    <?php if (isset($name)) : ?>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i><?php echo $name; ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./User/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                    <?php else : ?>
+                        <li class="nav-item"><a class="nav-link" href="./sign-in/index.php"><i class="fas fa-sign-in-alt"></i>Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="User/userlogin.php"><i class="fas fa-user"></i>Login</a></li>
+                    <?php endif; ?>
+
                 </ul>
             </div>
         </div>
@@ -377,10 +391,65 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
             </div>
         </div>
     </section>
+
+
+
+
     <!---End of the Projects Section-->
 
-    <!-- Team Section-->
-    <!-- <section class="team"> -->
+
+
+    <!-- Membership card -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        Silver Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">1 to 1000 Rupees Donation</h5>
+                        <p class="card-text">Support our cause with a donation amount between 1 to 1000 Rupees and become a Silver Tier member.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">
+                        Gold Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">1000 to 10000 Rupees Donation</h5>
+                        <p class="card-text">Donate an amount between 1000 to 10000 Rupees and upgrade to the Gold Tier membership.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        Diamond Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">10000 Rupees and Above Donation</h5>
+                        <p class="card-text">Make a generous donation of 10000 Rupees or more to join our exclusive Diamond Tier membership.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+<!-- Team Section-->
+<section class="team">
     <section id="our-team">
         <div class="container">
             <div class="section-title">
@@ -519,6 +588,6 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    </body>
 
-</html>
+    </html>

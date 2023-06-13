@@ -2,34 +2,22 @@
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 
-?>
-
-<?php
-session_start(); // Start the session
-
-// Check if the user is logged in and the session variable is set
-if (isset($_SESSION['email'])) {
+session_start(); 
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
     $email = $_SESSION['email'];
 
-    // Establish a database connection
-    $conn = mysqli_connect('localhost', 'username', 'password', 'database_name');
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    // Fetch user details from the users table based on the email
-    $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $name = $row['name'];
-        $address = $row['address'];
-        $contact = $row['contact'];
-        $username = $row['username'];
-    
-    }
 }
+else{
+    header('Location:../User/userlogin.php');
+}
+
+// Check if the user is logged in and the session variable is set
+// if (isset($_SESSION['email'])) {
+//     $email = $_SESSION['email'];
+
+   
+// }
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,25 +46,25 @@ if (isset($_SESSION['email'])) {
                 <h2>Together we can Make!!</h2>
             <form class="donation-form" action="https://uat.esewa.com.np/epay/main" method="POST">
                 <div class="form-control">
-                    <input type="text" value="<?php $name ?>" name="name">
+                    <input type="text" value="<?php echo" $name" ?>" name="name">
                     <i class="fas fa-user"></i>
                 </div>
 
                 <div class="form-control" >
-                    <input type="text" placeholder="Address" name="address">
+                    <input type="text" value="<?php echo" $address" ?>" name="address">
                     <i class="fas fa-user"></i>
                 </div>
 
                 <div class="form-control">
-                    <input type="text" placeholder="Contact" name="contact">
+                    <input type="text" value="<?php echo" $contact" ?>" name="contact">
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="form-control">
-                    <input type="text" placeholder="Username" name="username">
+                <!-- <div class="form-control">
+                    <input type="text" value="<?php echo" $name" ?>" name="username">
                     <i class="fas fa-user"></i>
-                </div>
+                </div> -->
                 <div class="form-control">
-                    <input type="text" placeholder="Email" name="email">
+                    <input type="text" value="<?php echo" $email" ?>" name="email">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">

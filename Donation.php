@@ -1,7 +1,13 @@
 <?php
+session_start();
+// Check if the user is logged in
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
+}
+
 include "database/Db_Connection.php";
 include "admin/routeconfig.php";
-include "admin/sessioncheck.php";
+// include "admin/sessioncheck.php";
 // session_start();
 
 $sql = "SELECT * from donation";

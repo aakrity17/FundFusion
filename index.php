@@ -234,6 +234,42 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
         </div>
     </section>
     <!-- End About us -->
+    <!-- Volunteer section -->
+    <hr/>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <?php
+                        if(isset($_GET['status'])) {
+                            echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
+                        }
+                    ?>
+                    <h1 style="text-align: center;">Become a Volunteer</h1>
+                    <form  action="newvolunteer.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="full_name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email_address" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="occupation" placeholder="Occupation">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <img src="img/2.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Volunteer section end -->
+    <hr/>
     <!-- Our project started -->
     <section id="projects">
 

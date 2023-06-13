@@ -50,63 +50,62 @@ include "../../database/Db_Connection.php";
         <div class="containerbox">
         <form action="newdonation.php" method="POST" enctype="multipart/form-data">
             <div class="row">
-            <div class="col-25">
-                <label for="donation_name">Donation Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="donation_name" name="donation_name" placeholder="New Donation Name">
-            </div>
+                <div class="col-25">
+                    <label for="donation_name">Donation Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="donation_name" name="donation_name" placeholder="New Donation Name">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    <label for="donation_type">Donation type</label>
+                </div>
+                <div class="col-75">
+                    <label for="donation_type"></label>
+                    <select id="donation_type" name="donation_type">
+                        <option value="1">Public Charity</option>
+                        <option value="2">Private Foundations</option>
+                        <option value="3">Private Operating Foundations</option>
+                    </select>
+                </div>
             </div>
             <div class="row">
-            <div class="col-25">
-                <label for="donation_type">Donation type</label>
-            </div>
-            <div class="col-75">
-                <label for="donation_type"></label>
-                <select id="donation_type" name="donation_type">
-                <option value="1">Public Charity</option>
-                <option value="2">Private Foundations</option>
-                <option value="3">Private Operating Foundations</option>
-    </select>
-            </div>
+                <div class="col-25">
+                    <label for="donation_progress">Donation Progress</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="donation_progress" name="donation_progress" placeholder="Donation progress">
+                </div>
+                </div>
+
+                <div class="row">
+                <div class="col-25">
+                    <label for="donation_target">Donation Target</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="donation_target" name="donation_target" placeholder="Donation Target Amount in dollars.">
+                </div>
             </div>
 
             <div class="row">
-            <div class="col-25">
-                <label for="donation_progress">Donation Progress</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="donation_progress" name="donation_progress" placeholder="Donation progress">
-            </div>
-            </div>
-
-            <div class="row">
-            <div class="col-25">
-                <label for="donation_target">Donation Target</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="donation_target" name="donation_target" placeholder="Donation Target Amount in dollars.">
-            </div>
-            </div>
-
-            <div class="row">
-            <div class="col-25">
-                <label for="donation_image_url">Donation Image</label>
-            </div>
-            <div class="col-75">
-                <input type="file" id="donation_image_url" name="donation_image_url">
-            </div>
+                <div class="col-25">
+                    <label for="donation_image_url">Donation Image</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" id="donation_image_url" name="donation_image_url">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    <label for="donation_description">Donation Description</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="donation_description" name="donation_description" placeholder="Donation descripton.." style="height:200px"></textarea>
+                </div>
             </div>
             <div class="row">
-            <div class="col-25">
-                <label for="donation_description">Donation Description</label>
-            </div>
-            <div class="col-75">
-                <textarea id="donation_description" name="donation_description" placeholder="Donation descripton.." style="height:200px"></textarea>
-            </div>
-            </div>
-            <div class="row">
-            <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
             </div>
         </form>
         </div>

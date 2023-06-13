@@ -61,22 +61,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_stmt_get_result($stmt);
         
         // Check if a matching record exists
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $name = $row['name'];
-            $email = $row['email'];
+       // Check if a matching record exists
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $name = $row['name'];
+    $address = $row['address'];
+    $contact = $row['Contact'];
 
+    // Store user information in the session
+    $_SESSION['username'] = $providedUsername;
+    $_SESSION['password'] = $providedPassword;
+    $_SESSION['name'] = $name;
+    $_SESSION['address'] = $address;
+    $_SESSION['contact'] = $contact;
 
-            // Store user information in the session
-            $_SESSION['username'] = $providedUsername;
-             $_SESSION['name'] = $name;
-             $_SESSION['email'] = $email;
+    mysqli_stmt_close($stmt);
 
-
-            
-            // Redirect the user to the dashboard page
-            header('Location: ../index.php');
-            exit(); // Make sure to exit after the redirect
+    // Redirect the user to the dashboard page
+    header('Location: ../index.php');
+    exit(); // Make sure to exit after the redirect
+}
+// Make sure to exit after the redirect
         } else {
             $errorMessage = "Invalid username or password.";
         }

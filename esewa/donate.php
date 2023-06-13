@@ -1,24 +1,46 @@
 <?php
 include "../admin/routeconfig.php";
+// include "../admin/sessioncheck.php";
 include "../database/Db_Connection.php";
 
 session_start(); 
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     $name = $_SESSION['name'];
-    $email = $_SESSION['email'];
+    $username = $_SESSION['username'];
 
+    $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            // Fetch the data
+            $row = mysqli_fetch_assoc($result);
+            // Access the values
+            $address = $row['address'];
+            $contact = $row['Contact'];
+            $email = $row['email'];
+    
+            // Do something with the retrieved data
+            // ...
+        } else {
+            // No matching records found
+            echo "No matching records found.";
+        }
+        mysqli_free_result($result); // Free the result set
+    } else {
+        // Query execution failed
+        echo "Error executing the query: " . mysqli_error($conn);
+    }
+    
 }
-else{
+else {
     header('Location:../User/userlogin.php');
+    exit();
 }
 
-// Check if the user is logged in and the session variable is set
-// if (isset($_SESSION['email'])) {
-//     $email = $_SESSION['email'];
+// Rest of your code...
 
-   
-// }
-        ?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,25 +68,25 @@ else{
                 <h2>Together we can Make!!</h2>
             <form class="donation-form" action="https://uat.esewa.com.np/epay/main" method="POST">
                 <div class="form-control">
-                    <input type="text" value="<?php echo" $name" ?>" name="name">
+                    <input type="text" value="<?php echo" $name"; ?>" name="name">
                     <i class="fas fa-user"></i>
                 </div>
 
                 <div class="form-control" >
-                    <input type="text" value="<?php echo" $address" ?>" name="address">
+                    <input type="text" value="<?php echo" $address"; ?>" name="address">
                     <i class="fas fa-user"></i>
                 </div>
 
                 <div class="form-control">
-                    <input type="text" value="<?php echo" $contact" ?>" name="contact">
+                    <input type="text" value="<?php echo" $contact"; ?>" name="contact">
                     <i class="fas fa-user"></i>
                 </div>
                 <!-- <div class="form-control">
-                    <input type="text" value="<?php echo" $name" ?>" name="username">
+                    <input type="text" value="<?php echo" $name"; ?>" name="username">
                     <i class="fas fa-user"></i>
                 </div> -->
                 <div class="form-control">
-                    <input type="text" value="<?php echo" $email" ?>" name="email">
+                    <input type="text" value="<?php echo" $email"; ?>" name="email">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">

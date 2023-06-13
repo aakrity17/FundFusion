@@ -3,6 +3,8 @@ session_start();
 // Check if the user is logged in
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     $name = $_SESSION['name'];
+    $email = $_SESSION['username'];
+
 }
 
 include "database/Db_Connection.php";

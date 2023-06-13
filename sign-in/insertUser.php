@@ -22,6 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect to another page after successful insertion
         header("Location:../index.php");
         exit();
+
+        // $sql2="SELECT * FROM user WHERE "
     }
 } else {
     echo $conn->error;

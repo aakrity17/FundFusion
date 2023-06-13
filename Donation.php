@@ -1,7 +1,12 @@
 <?php
 include "database/Db_Connection.php";
+include "admin/routeconfig.php";
+include "admin/sessioncheck.php";
+// session_start();
+
 $sql = "SELECT * from donation";
 $records = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +61,7 @@ $records = $conn->query($sql);
               </div>
               
               <br>
-              <a href="#" class="btn btn-primary">Donate</a>
+              <a href="./esewa/donate.php" class="btn btn-primary">Donate</a>
             </div>
           </div>
         </div>

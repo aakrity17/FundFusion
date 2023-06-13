@@ -5,6 +5,7 @@ session_start();
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     $name = $_SESSION['name'];
 }
+include "./admin/routeconfig.php"
 ?>
 
 <!doctype html>

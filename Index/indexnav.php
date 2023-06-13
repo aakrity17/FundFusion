@@ -1,17 +1,15 @@
 <?php
-include "routeconfig.php";
+include "../admin/routeconfig.php";
+include "../admin/sessioncheck.php";
+session_start();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
             <img src="<?php echo $site_url ?>img/Logo.png" class="logo">
-            <a class="navbar-brand text-white" href="#"></a>
+            <a class="navbar-brand text-white" href="<?php echo $site_url ?>index.php"></a>
 
-            <!-- Navigation toggle button -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <!-- Navigation links -->
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -51,23 +49,13 @@ include "routeconfig.php";
                             <i></i> 
                         </a>
                     </li>
-<!-- 
-
-                    <li class="nav-item">
-    <a class="nav-link" href="#">
-        <form class="form-inline my-1 my-lg-0 ml-1">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <i class="fas fa-search"></i>
-        </form>
-    </a>
-</li> -->
                     
-<?php if (isset($name)): ?>
+<?php if (isset($name) || isset($email)) : ?>
         <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
         <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
     <?php else: ?>
         <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
-        <li class="nav-item"><a class="nav-link" href="User/userlogin.php">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="./User/userlogin.php">Login</a></li>
     <?php endif; ?>   
 
 

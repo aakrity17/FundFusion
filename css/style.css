@@ -17,7 +17,7 @@ body {
     position: fixed;
     height: auto;
     left: 0px;
-    right: 0px;
+    right: 800px;
     width: 280px;
     cursor: pointer;
 }
@@ -27,18 +27,19 @@ body {
     background: rgba(153, 72, 252, 0.98);
 }
 
-/* to make signin and login in the corner right */
-/* .corner-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-} */
+
 .navbar-nav .nav-link {
     color: #ffffff !important;
 }
 
 .navbar-toggler {
     outline: none !important;
+}
+
+.py-2 {
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    padding-left: 600px;
 }
 
 #hero {

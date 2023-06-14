@@ -34,8 +34,24 @@
                             <i class="fas fa-users"></i> Our Team
                         </a>
                     </li>
+<<<<<<< Updated upstream
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">
+=======
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">How can you Help
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Sponsor</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Volunteer</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Donate</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Projects.php">
+>>>>>>> Stashed changes
                             <i class="fas fa-project-diagram"></i> Projects
                         </a>
                     </li>

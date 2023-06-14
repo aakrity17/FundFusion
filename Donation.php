@@ -9,8 +9,6 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
 include "database/Db_Connection.php";
 include "admin/routeconfig.php";
-// include "admin/sessioncheck.php";
-// session_start();
 
 $sql = "SELECT * from donation";
 $records = $conn->query($sql);
@@ -64,7 +62,7 @@ $records = $conn->query($sql);
               </div>
               
               <br>
-              <a href="./esewa/donate.php" class="btn btn-primary">Donate</a>
+              <a href="./esewa/donate.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
             </div>
           </div>
         </div>

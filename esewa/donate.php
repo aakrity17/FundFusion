@@ -3,6 +3,15 @@ include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 session_start(); 
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+
+
+    if (isset($_GET['title'])) {
+        $title = urldecode($_GET['title']);
+    } else {
+        $title = '';
+    }
+
+
     $name = $_SESSION['name'];
     $username = $_SESSION['username'];
     $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
@@ -56,13 +65,8 @@ else {
     <?php
 @include('../Index/indexnav.php')
 ?>
-<body>
-    <section class="side">
-    <div class="logo-container">
-            <img src="../img/Logo.png" alt="" id="logo">
-        </div>    
-    </section>
-    </section>
+
+              <section class="main">
             <div class="donation-container">
                 <h2>Together we can Make!!</h2>
             <form class="donation-form" action="https://uat.esewa.com.np/epay/main" method="POST">
@@ -83,26 +87,34 @@ else {
                 <div class="form-control">
                     <input type="text" value="<?php echo" $email"; ?>" name="email">
                     <i class="fas fa-user"></i>
+            </div>
+
+                    <div class="form-control">
+                    <input type="text" value="<?php echo $title; ?>" name="donation_title">
+                    <i class="fas fa-user"></i>
+                   
+
+
                 </div>
                 <div class="form-control">
                     <input type="number" placeholder="1000" name="Amount">
                     <i class="fas fa-lock"></i>
                 </div>
 
-    <input value="100" name="tAmt" type="hidden">
-    <input value="90" name="amt" type="hidden">
-    <input value="5" name="txAmt" type="hidden">
-    <input value="2" name="psc" type="hidden">
-    <input value="3" name="pdc" type="hidden">
-    <input value="EPAYTEST" name="scd" type="hidden">
-    <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
-    <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
-    <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
+                    <input value="100" name="tAmt" type="hidden">
+                    <input value="90" name="amt" type="hidden">
+                    <input value="5" name="txAmt" type="hidden">
+                    <input value="2" name="psc" type="hidden">
+                    <input value="3" name="pdc" type="hidden">
+                    <input value="EPAYTEST" name="scd" type="hidden">
+                    <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
+                    <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
+                    <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
 
 
                 <button type="submit" class="submit">Donate</button>
             </form>
+            </section>
             </div>
-    
 </body>
 </html>

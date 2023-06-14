@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
 <section>
     
-        <h2>Add User</h2>
+        <h2>Add Admin</h2>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required><br>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <section >
-    <h2>User List</h2>
+    <h2>Admin List</h2>
     <table >
         <thead>
             <tr>
@@ -110,8 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["Contact"] . "</td>";
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
-                    echo "<td> <button>Delete</button></td>";
-                    echo "<td> <button>Edit</button></td>";
+                    echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
+                    echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
 
 
                     

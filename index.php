@@ -50,7 +50,7 @@ include "./admin/routeconfig.php"
                     <p class="animate__animated animate__fadeInUp">
                         "A little bit of kindness goes a long way"
                     </p>
-                    <a href="./sign-in/index.php" class="btn hero-btn animate__animated animate__backInUp">
+                    <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
                         Donate us
                     </a>
                 </div>

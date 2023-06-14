@@ -35,7 +35,7 @@ include "./admin/routeconfig.php"
 
     <!---Navbar-->
     <?php
-        include "index/indexnav.php";
+    include "index/indexnav.php";
     ?>
     <!---End of Navbar-->
     <!--Hero Section-->
@@ -236,31 +236,31 @@ include "./admin/routeconfig.php"
     </section>
     <!-- End About us -->
     <!-- Volunteer section -->
-    <hr/>
+    <hr />
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-6">
                     <?php
-                        if(isset($_GET['status'])) {
-                            echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
-                        }
+                    if (isset($_GET['status'])) {
+                        echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
+                    }
                     ?>
                     <h1 style="text-align: center;">Become a Volunteer</h1>
-                    <form  action="newvolunteer.php" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="full_name" placeholder="Full Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="email_address" placeholder="Email Address">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="occupation" placeholder="Occupation">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <form action="newvolunteer.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="full_name" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email_address" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="occupation" placeholder="Occupation">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
                 <div class="col-6">
@@ -270,7 +270,7 @@ include "./admin/routeconfig.php"
         </div>
     </section>
     <!-- Volunteer section end -->
-    <hr/>
+    <hr />
     <!-- Our project started -->
     <section id="projects">
 
@@ -369,193 +369,249 @@ include "./admin/routeconfig.php"
 
     <!-- Membership card -->
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            margin-bottom: 50px;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .silver-card {
+            background-color: #c0c0c0;
+            color: #000;
+        }
+
+        .gold-card {
+            background-color: #ffd700;
+            color: #000;
+        }
+
+        .diamond-card {
+            background-color: brown;
+            color: #fff;
+        }
+
+        .h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .container>.col-md-4 {
+            flex-grow: 1;
+        }
+    </style>
+
+    <h2 class="text-center">Membership</h2>
+
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card silver-card">
                     <div class="card-header bg-secondary text-white">
                         Silver Tier
                     </div>
+                    <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
                     <div class="card-body">
-                        <h5 class="card-title">1 to 1000 Rupees Donation</h5>
-                        <p class="card-text">Support our cause with a donation amount between 1 to 1000 Rupees and become a Silver Tier member.</p>
-                        <a href="#" class="btn btn-primary">Donate Now</a>
+                        <h5 class="card-title">About Silver Tier</h5>
+                        <p class="card-text">In this beginner-friendly tier, you will get early access to my upcoming updates.</p>
+                        <ul>
+                            <li>Only updates</li>
+                            <li>Chat community</li>
+                            <li>One movie free ticket</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card gold-card">
                     <div class="card-header bg-warning text-white">
                         Gold Tier
                     </div>
+                    <img src="./img/gold.png" class="card-img-top" alt="Gold Tier">
                     <div class="card-body">
-                        <h5 class="card-title">1000 to 10000 Rupees Donation</h5>
-                        <p class="card-text">Donate an amount between 1000 to 10000 Rupees and upgrade to the Gold Tier membership.</p>
-                        <a href="#" class="btn btn-primary">Donate Now</a>
+                        <h5 class="card-title">About Gold Tier</h5>
+                        <p class="card-text">By donating $10 monthly, you will become a member of our Gold Tier.</p>
+                        <ul>
+                            <li>All Silver Tier benefits</li>
+                            <li>Exclusive monthly newsletter</li>
+                            <li>Personalized thank you message</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card diamond-card">
                     <div class="card-header bg-danger text-white">
-                        Diamond Tier
+                        Platinum tier
                     </div>
+                    <img src="./img/Platinum-Badge.png" class="card-img-top" alt="Diamond Tier">
                     <div class="card-body">
-                        <h5 class="card-title">10000 Rupees and Above Donation</h5>
-                        <p class="card-text">Make a generous donation of 10000 Rupees or more to join our exclusive Diamond Tier membership.</p>
-                        <a href="#" class="btn btn-primary">Donate Now</a>
+                        <h5 class="card-title">About Platinum Tier</h5>
+                        <p class="card-text">For a monthly donation of $20 or more, you will receive the exclusive benefits of our Platinum.</p>
+                        <ul>
+                            <li>All Silver and Gold Tier benefits</li>
+                            <li>Personalized thank you message</li>
+                            <li>Special recognition on our website</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+        <!--  -->
+
+
+        <!-- Team Section-->
+        <section class="team">
+            <section id="our-team">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="text-center">Our Team</h2>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
+                            possimus id sapiente sunt ab mollitia cum. </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/mem.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4>Akriti Chapagai</h4>
+                                    <span>Frontend desiger</span>
+                                    <div class="social">
+                                        <a href="https://twitter.com/aakrity17">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://facebook.com/aakrityy17">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/aakrity0">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/aakrity17/">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/member2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4>Binaya koirala</h4>
+                                    <span>Backend developer</span>
+                                    <div class="social">
+                                        <a href="https://twitter.com/">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/member3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4>Laxman Parajuli</h4>
+                                    <span>Frontend</span>
+                                    <div class="social">
+                                        <a href="https://twitter.com/">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/laxman.parajuli.58">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/member4.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4>Ujjwal Adhikari</h4>
+                                    <span>Backend</span>
+                                    <div class="social">
+                                        <a href="https://twitter.com/xatey999">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/ujjwal.adhikari.526438">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href=" https://www.instagram.com/xatey_999">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+
+
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <h3 style="color:white">FundFusion </h3>
+                    <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
+
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p style="color:white; 
+            ">copyright @2023 FundFusion</p>
+                </div>
+            </footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-
-<!-- Team Section-->
-<section class="team">
-    <section id="our-team">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="text-center">Our Team</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
-                    possimus id sapiente sunt ab mollitia cum. </p>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/mem.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>Akriti Chapagai</h4>
-                            <span>Frontend desiger</span>
-                            <div class="social">
-                                <a href="https://twitter.com/aakrity17">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://facebook.com/aakrityy17">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://www.instagram.com/aakrity0">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/aakrity17/">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member2.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>Binaya koirala</h4>
-                            <span>Backend developer</span>
-                            <div class="social">
-                                <a href="https://twitter.com/">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.facebook.com/">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://www.instagram.com/">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>Laxman Parajuli</h4>
-                            <span>Frontend</span>
-                            <div class="social">
-                                <a href="https://twitter.com/">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.facebook.com/laxman.parajuli.58">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://www.instagram.com/">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="team-1">
-                        <div class="pic">
-                            <img src="img/member4.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h4>Ujjwal Adhikari</h4>
-                            <span>Backend</span>
-                            <div class="social">
-                                <a href="https://twitter.com/xatey999">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.facebook.com/ujjwal.adhikari.526438">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href=" https://www.instagram.com/xatey_999">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-            </div>
-        </div>
-
-
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <h3 style="color:white">FundFusion </h3>
-            <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
-
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p style="color:white; 
-            ">copyright @2023 FundFusion</p>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-
-    </html>

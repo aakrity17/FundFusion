@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">
+                        <a class="nav-link" href="Projects.php">
                             <i class="fas fa-project-diagram"></i> Projects
                         </a>
                     </li>

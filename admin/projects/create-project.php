@@ -32,49 +32,64 @@ include "../routeconfig.php";
                 </label>
             </div>
         </div>
-        <h2>Create New Event</h2>
-        <p>Add all the details regarding events below.</p>
+        <h2>Create New Project</h2>
+        <p>Add all the details regarding projects below.</p>
         <?php
         if(isset($_GET['status'])) {
-            echo '<h3 style="color:green">!!New Event Created Successfully!!</h3>';
+            echo '<h3 style="color:green">!!New Project Created Successfully!!</h3>';
         }
         if(isset($_GET['statu'])) {
-            echo '<h3 style="color:green">!!Event Deleted Successfully!!</h3>';
+            echo '<h3 style="color:green">!!Project Deleted Successfully!!</h3>';
         }
         ?>
         <div class="containerbox">
-        <form action="newevent.php" method="POST" enctype="multipart/form-data">
+        <form action="newproject.php" method="POST" enctype="multipart/form-data">
             <div class="row">
-            <div class="col-25">
-                <label for="ename">Event Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="ename" name="event_name" placeholder="New Event Name">
-            </div>
-            </div>
-            <div class="row">
-            <div class="col-25">
-                <label for="eduration">Event Duration</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="eduration" name="event_duration" placeholder="Duration of the event">
-            </div>
+                <div class="col-25">
+                    <label for="pname">Project Name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="pname" name="title" placeholder="New Project Name">
+                </div>
             </div>
             <div class="row">
-            <div class="col-25">
-                <label for="eimage">Event Image</label>
-            </div>
-            <div class="col-75">
-                <input type="file" id="eimage" name="event_image_url">
-            </div>
+                <div class="col-25">
+                    <label for="pstartdate">Project Start Date:</label>
+                </div>
+                <div class="col-25">
+                    <input type="date" id="pstartdate" name="p_start_date" placeholder="Start Date">
+                </div>
+                <div class="col-25">
+                    <label for="penddate">Project End Date:</label>
+                </div>
+                <div class="col-25">
+                    <input type="date" id="penddate" name="p_end_date" placeholder="End Date">
+                </div>
             </div>
             <div class="row">
-            <div class="col-25">
-                <label for="eduration">Event Description</label>
+                <div class="col-25">
+                    <label for="pimage">Project Thumbnail:</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" id="pimage" name="thumbnail">
+                </div>
             </div>
-            <div class="col-75">
-                <textarea id="eduration" name="event_description" placeholder="Event descripton.." style="height:200px"></textarea>
+            <div class="row">
+                <div class="col-25">
+                    <label for="vidurl">Video Url:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="vidurl" name="video_url" placeholder="YouTube Video Url">
+                </div>
             </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="prodesc">Project Description:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="prodesc" name="descriptions" placeholder="Event descripton.." style="height:200px"></textarea>
+                </div>
             </div>
             <div class="row">
             <input type="submit" value="Submit">
@@ -83,24 +98,24 @@ include "../routeconfig.php";
     </div>
     <?php
         include "../../database/Db_Connection.php";
-        $sql = "SELECT * from events";
+        $sql = "SELECT * from projects";
         $records = $conn->query($sql);
     ?>
     <table >
         <tr>
-            <th><u>Event Name</u></th>
-            <th><u>Event Date</u></th>
+            <th><u>Project Name</u></th>
+            <th><u>Project Duration</u></th>
             <th><u>Remarks</u></th>
         </tr>
         <?php
      foreach( $records as $data ) 
         {
            echo ' <tr>
-           <th>'.$data['event_name'].'</th>
-           <th>'.$data['event_duration'].'</th>
-           <th><a href="edit-events.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
-           <a href="deleteevent.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
-           </th> 
+           <th>'.$data['title'].'</th>
+           <th>'.'From: '.$data['p_start_date']. ' To: ' .$data['p_end_date'].'</th>
+           <th><a href="edit-projects.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
+           <a href="deleteproject.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
+           </th>
            </tr>';
         }
         ?>

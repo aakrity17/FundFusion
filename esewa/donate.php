@@ -1,13 +1,10 @@
 <?php
 include "../admin/routeconfig.php";
-// include "../admin/sessioncheck.php";
 include "../database/Db_Connection.php";
-
 session_start(); 
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     $name = $_SESSION['name'];
     $username = $_SESSION['username'];
-
     $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -29,16 +26,12 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     } else {
         // Query execution failed
         echo "Error executing the query: " . mysqli_error($conn);
-    }
-    
+    }   
 }
 else {
     header('Location:../User/userlogin.php');
     exit();
 }
-
-// Rest of your code...
-
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +56,13 @@ else {
     <?php
 @include('../Index/indexnav.php')
 ?>
-
+<body>
+    <section class="side">
+    <div class="logo-container">
+            <img src="../img/Logo.png" alt="" id="logo">
+        </div>    
+    </section>
+    </section>
             <div class="donation-container">
                 <h2>Together we can Make!!</h2>
             <form class="donation-form" action="https://uat.esewa.com.np/epay/main" method="POST">
@@ -81,10 +80,6 @@ else {
                     <input type="text" value="<?php echo" $contact"; ?>" name="contact">
                     <i class="fas fa-user"></i>
                 </div>
-                <!-- <div class="form-control">
-                    <input type="text" value="<?php echo" $name"; ?>" name="username">
-                    <i class="fas fa-user"></i>
-                </div> -->
                 <div class="form-control">
                     <input type="text" value="<?php echo" $email"; ?>" name="email">
                     <i class="fas fa-user"></i>

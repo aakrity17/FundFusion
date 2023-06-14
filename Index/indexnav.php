@@ -1,8 +1,3 @@
-<?php
-// include "../admin/routeconfig.php";
-// include "../admin/sessioncheck.php";
-// session_start();
-?>
 
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">

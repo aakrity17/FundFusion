@@ -1,0 +1,86 @@
+/* Global styles */
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sponsorship-banner {
+    background-color: rgba(153, 72, 252, 0.98);
+    color: #ffffff;
+    /* padding: 20px; */
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 50px;
+    outline: none;
+  }
+
+
+
+
+   .card {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.premium-card {
+    background-color: #c0c0c0;
+    color: #000;
+}
+
+.regular-card {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.special-card {
+    background-color: brown;
+    color: #fff;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.container>.col-md-4 {
+    flex-grow: 1;
+}
+
+.btn{
+  outline: none;
+}
+
+.fa-solid {
+  text-decoration: none;
+  text-overflow: none;
+  font-size:x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+
+.text-in{
+  text-decoration: none;
+  text-align: justify;
+  font-size:medium ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  footer {
+    /* background-color: rgba(255, 255, 255, 0.911); */
+    color: rgb(255, 255, 255);;
+    position: fixed;
+    margin: 0%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  

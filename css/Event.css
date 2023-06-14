@@ -2,10 +2,12 @@
     height: 6rem;
     background-color: #9d9b9b40;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 3.2rem;
     font-size: 3rem;
     font-family: math;
     font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .event-card-image{

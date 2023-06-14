@@ -12,8 +12,9 @@
 <body>
     <section class="side">
     <div class="logo-container">
-            <img src="./images/logo3.png" alt="" id="logo">
-        </div>    </section>
+            <img src="../images/logo3.png" alt="" id="logo">
+        </div>    
+    </section>
 
     <section class="main">
         <div class="login-container">

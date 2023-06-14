@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
+}
+include "./admin/routeconfig.php"
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -24,66 +34,9 @@
 <body>
 
     <!---Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2" id="mainNav">
-        <div class="container">
-            <!-- Logo -->
-            <img src="./img/Logo.png" class="logo">
-            <a class="navbar-brand text-white" href="#"></a>
-
-            <!-- Navigation toggle button -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navigation links -->
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.php">
-                            <i class="fas fa-home"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-us">
-                            <i class="fas fa-info-circle"></i> About us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Donation.php">
-                            <i class="fas fa-donate"></i> Donation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#our-team">
-                            <i class="fas fa-users"></i> Our Team
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">
-                            <i class="fas fa-project-diagram"></i> Projects
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Event.php">
-                            <i class="fas fa-calendar-alt"></i> Events
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-sign-in-alt"></i> Sign in
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-user-circle"></i> Login
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+    <?php
+        include "index/indexnav.php";
+    ?>
     <!---End of Navbar-->
     <!--Hero Section-->
     <section id="hero" class="d-flex justify-content-center align-items-center">
@@ -282,6 +235,42 @@
         </div>
     </section>
     <!-- End About us -->
+    <!-- Volunteer section -->
+    <hr/>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <?php
+                        if(isset($_GET['status'])) {
+                            echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
+                        }
+                    ?>
+                    <h1 style="text-align: center;">Become a Volunteer</h1>
+                    <form  action="newvolunteer.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="full_name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email_address" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="occupation" placeholder="Occupation">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <img src="img/2.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Volunteer section end -->
+    <hr/>
     <!-- Our project started -->
     <section id="projects">
 
@@ -370,10 +359,65 @@
             </div>
         </div>
     </section>
+
+
+
+
     <!---End of the Projects Section-->
 
-    <!-- Team Section-->
-    <!-- <section class="team"> -->
+
+
+    <!-- Membership card -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        Silver Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">1 to 1000 Rupees Donation</h5>
+                        <p class="card-text">Support our cause with a donation amount between 1 to 1000 Rupees and become a Silver Tier member.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">
+                        Gold Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">1000 to 10000 Rupees Donation</h5>
+                        <p class="card-text">Donate an amount between 1000 to 10000 Rupees and upgrade to the Gold Tier membership.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        Diamond Tier
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">10000 Rupees and Above Donation</h5>
+                        <p class="card-text">Make a generous donation of 10000 Rupees or more to join our exclusive Diamond Tier membership.</p>
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+<!-- Team Section-->
+<section class="team">
     <section id="our-team">
         <div class="container">
             <div class="section-title">
@@ -512,6 +556,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    </body>
 
-</html>
+    </html>

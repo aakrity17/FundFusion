@@ -17,9 +17,19 @@ body {
     position: fixed;
     height: auto;
     left: 0px;
-    right: 0px;
+    right: 800px;
     width: 280px;
     cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
 }
 
 .nav-bg {
@@ -27,18 +37,19 @@ body {
     background: rgba(153, 72, 252, 0.98);
 }
 
-/* to make signin and login in the corner right */
-/* .corner-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-} */
+
 .navbar-nav .nav-link {
     color: #ffffff !important;
 }
 
 .navbar-toggler {
     outline: none !important;
+}
+
+.py-2 {
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    padding-left: 600px;
 }
 
 #hero {

@@ -64,9 +64,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $name = $row['name'];
+            $email = $row['email'];
+
+
             // Store user information in the session
             $_SESSION['username'] = $providedUsername;
              $_SESSION['name'] = $name;
+             $_SESSION['email'] = $email;
+
 
             
             // Redirect the user to the dashboard page

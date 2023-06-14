@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
                     echo "<td> <button>Delete</button></td>";
-                    echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
+                    echo "<td> <button>Edit</button></td>";
 
 
                     

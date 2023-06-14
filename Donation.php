@@ -1,7 +1,20 @@
 <?php
+session_start();
+// Check if the user is logged in
+if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+    $name = $_SESSION['name'];
+    $email = $_SESSION['username'];
+
+}
+
 include "database/Db_Connection.php";
+include "admin/routeconfig.php";
+// include "admin/sessioncheck.php";
+// session_start();
+
 $sql = "SELECT * from donation";
 $records = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +64,7 @@ $records = $conn->query($sql);
               </div>
               
               <br>
-              <a href="#" class="btn btn-primary">Donate</a>
+              <a href="./esewa/donate.php" class="btn btn-primary">Donate</a>
             </div>
           </div>
         </div>

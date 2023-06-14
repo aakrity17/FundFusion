@@ -1,33 +1,31 @@
 <?php
-include "routeconfig.php";
+// include "../admin/routeconfig.php";
+// include "../admin/sessioncheck.php";
+// session_start();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
-            <img src="../img/Logo.png" class="logo">
-            <a class="navbar-brand text-white" href="#"></a>
+            <img src="<?php echo $site_url ?>img/Logo.png" class="logo">
+            <a class="navbar-brand text-white" href="<?php echo $site_url ?>index.php"></a>
 
-            <!-- Navigation toggle button -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <!-- Navigation links -->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">
+                        <a class="nav-link" href="<?php echo $site_url ?>Aboutus.php">
                             <i class="fas fa-info-circle"></i> About us
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Donation.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>Donation.php">
                             <i class="fas fa-donate"></i> Donation
                         </a>
                     </li>
@@ -42,7 +40,7 @@ include "routeconfig.php";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Event.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>Event.php">
                             <i class="fas fa-calendar-alt"></i> Events
                         </a>
                     </li>
@@ -51,27 +49,14 @@ include "routeconfig.php";
                             <i></i> 
                         </a>
                     </li>
-<!-- 
-
-                    <li class="nav-item">
-    <a class="nav-link" href="#">
-        <form class="form-inline my-1 my-lg-0 ml-1">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <i class="fas fa-search"></i>
-        </form>
-    </a>
-</li> -->
                     
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-sign-in-alt"></i> Sign in
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./sign-in/index.php">
-                            <i class="fas fa-user-circle"></i> Login
-                        </a>
-                    </li>
+<?php if (isset($name) || isset($email)) : ?>
+        <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
+        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+    <?php else: ?>
+        <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
+        <li class="nav-item"><a class="nav-link" href="./User/userlogin.php">Login</a></li>
+    <?php endif; ?>   
 
 
     

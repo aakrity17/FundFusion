@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$dbname="FundFusion";
+$dbname="fundfusion";
 $username = "root";
 $password = "";
 //create connection

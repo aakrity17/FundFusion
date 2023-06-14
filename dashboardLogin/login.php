@@ -1,5 +1,5 @@
 <?php
-include "./sessioncheck.php";
+// include "../admin/sessioncheck.php";
 
 session_start();
 

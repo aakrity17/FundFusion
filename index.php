@@ -591,6 +591,7 @@ include "./admin/routeconfig.php"
 
 
             </section>
+    </section>
 
             <footer>
                 <div class="footer-content">

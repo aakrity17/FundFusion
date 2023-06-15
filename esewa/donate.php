@@ -112,7 +112,7 @@ else {
                     <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
 
 
-                <button type="submit" class="submit">Donate</button>
+                <button type="submit" class="submit" name="submit" value="submit">Donate</button>
             </form>
             </section>
             </div>

@@ -116,7 +116,7 @@ include "admin/routeconfig.php";
       <i class="fa-solid fa-hand fa-bounce" type="submit"><br> VOLUNTEER</i>
       <p class="text-in"> Give us a hand. </p><br>
 
-      <i class="fa-solid fa-handshake fa-beat" type="submit"><br> SPONSORS</i>
+      <i class="fa-solid fa-handshake fa-bounce" type="submit"><br> SPONSORS</i>
       <p class="text-in"> Help the students. </p>
 
     <div>

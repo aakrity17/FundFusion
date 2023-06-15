@@ -104,7 +104,7 @@ include "admin/routeconfig.php";
    
 
     
-<div class="donation-options"><br>
+<!-- <div class="donation-options"><br>
     <h3 class="donation-option">Donation Options</h3>
     <h5 class="text-line">We accept cash and online payments.</h5>
     <br><br><br>
@@ -119,7 +119,7 @@ include "admin/routeconfig.php";
       <i class="fa-solid fa-handshake fa-bounce" type="submit"><br> SPONSORS</i>
       <p class="text-in"> Help the students. </p>
 
-    <div>
+    <div> -->
     
 </div>
 

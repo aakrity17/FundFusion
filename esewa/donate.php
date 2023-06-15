@@ -69,7 +69,7 @@ else {
               <section class="main">
             <div class="donation-container">
                 <h2>Together we can Make!!</h2>
-            <form class="donation-form" action="https://uat.esewa.com.np/epay/main" method="POST">
+            <form class="donation-form" action="toEsewa.php" method="POST">
                 <div class="form-control">
                     <input type="text" value="<?php echo" $name"; ?>" name="name">
                     <i class="fas fa-user"></i>
@@ -101,18 +101,8 @@ else {
                     <i class="fas fa-lock"></i>
                 </div>
 
-                    <input value="100" name="tAmt" type="hidden">
-                    <input value="90" name="amt" type="hidden">
-                    <input value="5" name="txAmt" type="hidden">
-                    <input value="2" name="psc" type="hidden">
-                    <input value="3" name="pdc" type="hidden">
-                    <input value="EPAYTEST" name="scd" type="hidden">
-                    <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
-                    <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
-                    <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
-
-
-                <button type="submit" class="submit">Donate</button>
+                   
+                <button type="submit" class="submit" name="submit" value="submit">Donate</button>
             </form>
             </section>
             </div>

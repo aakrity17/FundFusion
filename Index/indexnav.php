@@ -39,6 +39,12 @@
                             <i class="fas fa-calendar-alt"></i> Events
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $site_url ?>Sponsorship.php">
+                            <i class="fas fa-calendar-alt"></i> Sponsor
+                        </a>
+                    </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">
                             <i></i> 

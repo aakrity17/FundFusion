@@ -41,7 +41,6 @@ body {
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
-    width:110px;
 }
 
 .navbar-toggler {
@@ -55,7 +54,7 @@ body {
 }
 
 #hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -68,7 +67,6 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    /*backgroudkolagi*/
     background: linear-gradient(90deg, rgba(45, 40, 196, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
     z-index: 0;
     border-radius: 0 0 50% 50%;
@@ -149,7 +147,6 @@ body {
     animation-delay: 0.5s;
     border: 1px solid rgba(102, 42, 176, 0.696);
 
-    /* border:2px solid #684ad6db; */
 }
 
 /* button click garda: read More  */
@@ -240,7 +237,7 @@ body {
     font-weight: bold;
     /* About us wala ko color */
     background: rgba(91, 10, 183, 0.6);
-    border: 1px solid;
+    /* border: 1px solid; */
     font-size: 20px;
     line-height: 30px;
 }
@@ -251,11 +248,9 @@ body {
 }
 
 .tabs .nav-pills .nav-item .nav-link.active {
-    color: #fdfcfd;
+    color: #fff;
     /* after clicking to the about us */
-    background: rgba(91, 10, 183, 0.6);
-    /* background: rgba(26, 232, 40, 0.854); */
-
+    /* background: rgba(91, 10, 183, 0.854); */
     border: 10px solid;
 }
 
@@ -289,14 +284,15 @@ body {
 
 /*============Projects Section=======*/
 .project-container {
-    background: rgba(91, 10, 183, 0.6);
+    /* background: #8c05e64e; */
     position: relative;
     overflow: hidden;
 }
 
 /* donation button under out latest projects */
 .donation {
-    background: #5d297d60;
+    /*background: #8e04ea60;
+    */
     color: black;
     padding: 3px 3.5px;
     position: absolute;
@@ -304,6 +300,10 @@ body {
     top: 70%;
     transform: translateX(110%);
     transition: all 1s ease-in-out;
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
 }
 
 .donation:hover {
@@ -325,11 +325,11 @@ body {
 .outline:before {
     content: '';
     position: absolute;
-    border: #9b0ea8af solid 1px;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
+    border: black solid 1px;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
     opacity: 0;
     transition-duration: 0.3s;
     transition-property: opacity;
@@ -346,7 +346,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 5cqmin #740a9ac4;
+    box-shadow: 0 0 10px #740a9ac4;
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
 }
@@ -354,7 +354,7 @@ body {
 .grow:hover,
 .grow:focus,
 .grow:active {
-    box-shadow: 0 5px 5cqmax 5px #8708a17e;
+    box-shadow: 0 10px 10px 5px #8708a17e;
     transform: scale(1.1);
 }
 
@@ -539,41 +539,7 @@ body {
     /* color: white; */
 }
 
-/*==========End of the Donation Section======*/
-/* footer part */
 
-footer {
-    background: rgba(98, 10, 206, 0.68);
-
-    height: auto;
-    width: 100vw;
-    font-family: "open sans";
-    padding-top: 10px;
-    color: "#fff";
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-}
-
-.footer-content h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
 
 .socials {
     list-style-type: none;
@@ -606,28 +572,4 @@ footer {
 .socials a:hover i {
     color: #fff;
 
-}
-
-/* copyright */
-.footer-bottom {
-    background: rgba(74, 6, 156, 0.476);
-
-    width: 100w;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* aakrity wala */
-.footer-bottom p {
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-
-/*  */
-
-.footer-bottom span {
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
 }

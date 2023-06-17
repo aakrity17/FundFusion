@@ -8,15 +8,15 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 include "./admin/routeconfig.php";
 include "./database/Db_Connection.php";
 
-$sliderSql="SELECT * FROM homepageslider WHERE id=1";
-$sliderresult = mysqli_query($conn,$sliderSql);
-while($res = mysqli_fetch_array($sliderresult)){
-    $s1head=$res['s1head'];
-    $s2head=$res['s2head'];
-    $s3head=$res['s3head'];
-    $s1content=$res['s1content'];
-    $s2content=$res['s2content'];
-    $s3content=$res['s3content'];
+$sliderSql = "SELECT * FROM homepageslider WHERE id=1";
+$sliderresult = mysqli_query($conn, $sliderSql);
+while ($res = mysqli_fetch_array($sliderresult)) {
+    $s1head = $res['s1head'];
+    $s2head = $res['s2head'];
+    $s3head = $res['s3head'];
+    $s1content = $res['s1content'];
+    $s2content = $res['s2content'];
+    $s3content = $res['s3content'];
 }
 
 
@@ -59,16 +59,16 @@ while($res = mysqli_fetch_array($sliderresult)){
             <!--Slide-1-->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                
+
                     <h2 class="animate__animated animate__backInDown">
-                    <?php echo $s1head; ?>
+                        <?php echo $s1head; ?>
                     </h2>
-                    
+
 
                     <p class="animate__animated animate__fadeInUp">
-                    <?php echo $s1content; ?>
+                        <?php echo $s1content; ?>
                     </p>
-                
+
                     <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
                         Donate us
                     </a>
@@ -79,10 +79,10 @@ while($res = mysqli_fetch_array($sliderresult)){
             <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                    <span><?php echo $s2head; ?></span>
+                        <span><?php echo $s2head; ?></span>
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
-                    <?php echo $s2content; ?>
+                        <?php echo $s2content; ?>
                     </p>
                     <!-- **************************************** -->
                     <!-- Read more ma click garda aru text aaune banaune, using js -->
@@ -100,15 +100,15 @@ while($res = mysqli_fetch_array($sliderresult)){
             <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                    <?php echo $s3head; ?>
+                        <?php echo $s3head; ?>
 
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
-                    <?php echo $s3content; ?>
+                        <?php echo $s3content; ?>
 
                     </p>
                     <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
-                    Donate Us
+                        Donate Us
                     </a>
                 </div>
             </div>
@@ -318,7 +318,7 @@ while($res = mysqli_fetch_array($sliderresult)){
                         <img src="img/p4.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
                     </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h4 class="text-capitalize text-center my-2">Project-2</h4>
                     <h6 class="text-center">
                         water
                     </h6>
@@ -330,7 +330,7 @@ while($res = mysqli_fetch_array($sliderresult)){
                         <img src="img/p3.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
                     </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h4 class="text-capitalize text-center my-2">Project-3</h4>
                     <h6 class="text-center">
                         Medicine
                     </h6>
@@ -342,7 +342,7 @@ while($res = mysqli_fetch_array($sliderresult)){
                         <img src="img/p4.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
                     </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h4 class="text-capitalize text-center my-2">Project-4</h4>
                     <h6 class="text-center">
                         Education
                     </h6>
@@ -354,7 +354,7 @@ while($res = mysqli_fetch_array($sliderresult)){
                         <img src="img/3.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
                     </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h4 class="text-capitalize text-center my-2">Project-5</h4>
                     <h6 class="text-center">
 
                     </h6>
@@ -366,7 +366,7 @@ while($res = mysqli_fetch_array($sliderresult)){
                         <img src="img/2.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
                     </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
+                    <h4 class="text-capitalize text-center my-2">Project-6</h4>
                     <h6 class="text-center">
                         Health
                     </h6>
@@ -385,178 +385,188 @@ while($res = mysqli_fetch_array($sliderresult)){
 
 
     <!-- Membership card -->
+    <section>
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            .card {
+                margin-bottom: 50px;
+                padding: 10px;
+                height: 100%;
+            }
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .card {
-            margin-bottom: 50px;
-            padding: 10px;
-            height: 100%;
-        }
+            .silver-card {
+                background-color: #c0c0c0;
+                color: #000;
+            }
 
-        .silver-card {
-            background-color: #c0c0c0;
-            color: #000;
-        }
+            .gold-card {
+                background-color: #ffd700;
+                color: #000;
+            }
 
-        .gold-card {
-            background-color: #ffd700;
-            color: #000;
-        }
+            .diamond-card {
+                background-color: brown;
+                color: #fff;
+            }
 
-        .diamond-card {
-            background-color: brown;
-            color: #fff;
-        }
+            .h1 {
+                text-align: center;
+            }
 
-        .h1 {
-            text-align: center;
-        }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+            }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-        }
+            .container>.col-md-4 {
+                flex-grow: 1;
+            }
+        </style>
 
-        .container>.col-md-4 {
-            flex-grow: 1;
-        }
-    </style>
+        <h2 class="text-center">Membership</h2>
 
-    <h2 class="text-center">Membership</h2>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card silver-card">
-                    <div class="card-header bg-secondary text-white">
-                        Silver Tier
-                    </div>
-                    <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
-                    <div class="card-body">
-                        <h5 class="card-title">About Silver Tier</h5>
-                        <p class="card-text">In this beginner-friendly tier, you will get early access to my upcoming updates.</p>
-                        <ul>
-                            <li>Only updates</li>
-                            <li>Chat community</li>
-                            <li>One movie free ticket</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card gold-card">
-                    <div class="card-header bg-warning text-white">
-                        Gold Tier
-                    </div>
-                    <img src="./img/gold.png" class="card-img-top" alt="Gold Tier">
-                    <div class="card-body">
-                        <h5 class="card-title">About Gold Tier</h5>
-                        <p class="card-text">By donating $10 monthly, you will become a member of our Gold Tier.</p>
-                        <ul>
-                            <li>All Silver Tier benefits</li>
-                            <li>Exclusive monthly newsletter</li>
-                            <li>Personalized thank you message</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card diamond-card">
-                    <div class="card-header bg-danger text-white">
-                        Platinum tier
-                    </div>
-                    <img src="./img/Platinum-Badge.png" class="card-img-top" alt="Diamond Tier">
-                    <div class="card-body">
-                        <h5 class="card-title">About Platinum Tier</h5>
-                        <p class="card-text">For a monthly donation of $20 or more, you will receive the exclusive benefits of our Platinum.</p>
-                        <ul>
-                            <li>All Silver and Gold Tier benefits</li>
-                            <li>Personalized thank you message</li>
-                            <li>Special recognition on our website</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-        <!--  -->
-
-
-        <!-- Team Section-->
-<?php
-$teamsSql = "SELECT * FROM teams";
-$teamsresult = mysqli_query($conn, $teamsSql);
-?>
-
-<section class="team">
-    <section id="our-team">
         <div class="container">
-            <div class="section-title">
-                <h2 class="text-center">Our Team</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card silver-card">
+                        <div class="card-header bg-secondary text-white">
+                            Silver Tier
+                        </div>
+                        <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Silver Tier</h5>
+                            <p class="card-text">In this beginner-friendly tier, you will get early access to my upcoming updates.</p>
+                            <ul>
+                                <li>Only updates</li>
+                                <li>Chat community</li>
+                                <li>One movie free ticket</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gold-card">
+                        <div class="card-header bg-warning text-white">
+                            Gold Tier
+                        </div>
+                        <img src="./img/gold.png" class="card-img-top" alt="Gold Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Gold Tier</h5>
+                            <p class="card-text">By donating $10 monthly, you will become a member of our Gold Tier.</p>
+                            <ul>
+                                <li>All Silver Tier benefits</li>
+                                <li>Exclusive monthly newsletter</li>
+                                <li>Personalized thank you message</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card diamond-card">
+                        <div class="card-header bg-danger text-white">
+                            Platinum tier
+                        </div>
+                        <img src="./img/Platinum-Badge.png" class="card-img-top" alt="Diamond Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Platinum Tier</h5>
+                            <p class="card-text">For a monthly donation of $20 or more, you will receive the exclusive benefits of our Platinum.</p>
+                            <ul>
+                                <li>All Silver and Gold Tier benefits</li>
+                                <li>Personalized thank you message</li>
+                                <li>Special recognition on our website</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-1">
-                            <div class="pic">
-                                <img src="img/member1.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="team-info">
-                                <h4><?php echo $rs['name']; ?></h4>
-                                <span><?php echo $rs['skill']; ?></span>
-                                <div class="social">
-                                    <a href="<?php echo $rs['twitter']; ?>">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="<?php echo $rs['fb']; ?>">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                    <a href="<?php echo $rs['insta']; ?>">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="<?php echo $rs['linkedin']; ?>">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
+
+
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    </section>
+    <!--  -->
+
+
+    <!-- Team Section-->
+    <?php
+    $teamsSql = "SELECT * FROM teams";
+    $teamsresult = mysqli_query($conn, $teamsSql);
+    ?>
+
+    <section class="team">
+        <section id="our-team">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="text-center">Our Team</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+                </div>
+                <div class="row">
+                    <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/member1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4><?php echo $rs['name']; ?></h4>
+                                    <span><?php echo $rs['skill']; ?></span>
+                                    <div class="social">
+                                        <a href="<?php echo $rs['twitter']; ?>">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['fb']; ?>">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['insta']; ?>">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['linkedin']; ?>">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
+                    <?php } ?>
+                </div>
             </div>
-        </div>
+        </section>
     </section>
-</section>
-    </section>
+    <style>
+        .full-width-footer {
+            background: rgba(153, 72, 252, 0.98);
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+    </head>
 
-            <footer>
-                <div class="footer-content">
-                    <h3 style="color:white">FundFusion </h3>
-                    <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam possimus totam rem, et minima ea deserunt sit repellat, dignissimos placeat quam! Reiciendis ratione doloribus ipsum provident expedita architecto aliquid!</p>
+    <body>
 
-                    <ul class="socials">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-
-                    </ul>
+        <footer class="full-width-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>&copy; 2023 FundFusion. All rights reserved.</p>
+                    </div>
                 </div>
-                <div class="footer-bottom">
-                    <p style="color:white; 
-            ">copyright @2023 FundFusion</p>
-                </div>
-            </footer>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 
 </html>

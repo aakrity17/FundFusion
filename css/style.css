@@ -3,6 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    width: auto;
 }
 
 body {
@@ -47,8 +48,8 @@ body {
 }
 
 .py-2 {
-    padding-top: 0.5rem!important;
-    padding-bottom: 0.5rem!important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
     padding-left: 600px;
 }
 

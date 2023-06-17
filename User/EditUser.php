@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <tbody>
                 <?php
                 // Retrieve the user data from the database
-                $sql = "SELECT * FROM user WHERE role = 'admin'";
+                $sql = "SELECT * FROM user WHERE role = 'user'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {

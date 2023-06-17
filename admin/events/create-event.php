@@ -104,7 +104,7 @@ include "../routeconfig.php";
            </tr>';
         }
         ?>
-    </table>z
+    </table>
     </div>
   </body>
   <script

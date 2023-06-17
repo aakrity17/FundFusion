@@ -5,7 +5,22 @@ session_start();
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
     $name = $_SESSION['name'];
 }
-include "./admin/routeconfig.php"
+include "./admin/routeconfig.php";
+include "./database/Db_Connection.php";
+
+$sliderSql="SELECT * FROM homepageslider WHERE id=1";
+$sliderresult = mysqli_query($conn,$sliderSql);
+while($res = mysqli_fetch_array($sliderresult)){
+    $s1head=$res['s1head'];
+    $s2head=$res['s2head'];
+    $s3head=$res['s3head'];
+    $s1content=$res['s1content'];
+    $s2content=$res['s2content'];
+    $s3content=$res['s3content'];
+}
+
+
+
 ?>
 
 <!doctype html>
@@ -44,13 +59,17 @@ include "./admin/routeconfig.php"
             <!--Slide-1-->
             <div class="carousel-item active">
                 <div class="carousel-container">
+                
                     <h2 class="animate__animated animate__backInDown">
-                        Donate for the good!
+                    <?php echo $s1head; ?>
                     </h2>
+                    
+
                     <p class="animate__animated animate__fadeInUp">
-                        "A little bit of kindness goes a long way"
+                    <?php echo $s1content; ?>
                     </p>
-                    <a href="./sign-in/index.php" class="btn hero-btn animate__animated animate__backInUp">
+                
+                    <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
                         Donate us
                     </a>
                 </div>
@@ -60,17 +79,15 @@ include "./admin/routeconfig.php"
             <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                        Let's<span> donate</span>
+                    <span><?php echo $s2head; ?></span>
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
-                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
-                        euismod consequat lorem aliquam eget.
+                    <?php echo $s2content; ?>
                     </p>
                     <!-- **************************************** -->
                     <!-- Read more ma click garda aru text aaune banaune, using js -->
-                    <a href="#about-us" class="btn hero-btn animate__animated animate__backInUp">
-                        Read More
+                    <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
+                        Donate Us
                     </a>
                     <script>
 
@@ -83,15 +100,15 @@ include "./admin/routeconfig.php"
             <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__backInDown">
-                        Projects for Fund Fusion
+                    <?php echo $s3head; ?>
+
                     </h2>
                     <p class="animate__animated animate__fadeInUp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis tempor.
-                        Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices malesuada justo,
-                        euismod consequat lorem aliquam eget.
+                    <?php echo $s3content; ?>
+
                     </p>
-                    <a href="#about-us" class="btn hero-btn animate__animated animate__backInUp">
-                        Read More
+                    <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
+                    Donate Us
                     </a>
                 </div>
             </div>
@@ -474,124 +491,51 @@ include "./admin/routeconfig.php"
 
 
         <!-- Team Section-->
-        <section class="team">
-            <section id="our-team">
-                <div class="container">
-                    <div class="section-title">
-                        <h2 class="text-center">Our Team</h2>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus
-                            possimus id sapiente sunt ab mollitia cum. </p>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="team-1">
-                                <div class="pic">
-                                    <img src="img/mem.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h4>Akriti Chapagai</h4>
-                                    <span>Frontend desiger</span>
-                                    <div class="social">
-                                        <a href="https://twitter.com/aakrity17">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://facebook.com/aakrityy17">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/aakrity0">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/aakrity17/">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="team-1">
-                                <div class="pic">
-                                    <img src="img/member2.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h4>Binaya koirala</h4>
-                                    <span>Backend developer</span>
-                                    <div class="social">
-                                        <a href="https://twitter.com/">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://www.facebook.com/">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="team-1">
-                                <div class="pic">
-                                    <img src="img/member3.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h4>Laxman Parajuli</h4>
-                                    <span>Frontend</span>
-                                    <div class="social">
-                                        <a href="https://twitter.com/">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://www.facebook.com/laxman.parajuli.58">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="team-1">
-                                <div class="pic">
-                                    <img src="img/member4.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h4>Ujjwal Adhikari</h4>
-                                    <span>Backend</span>
-                                    <div class="social">
-                                        <a href="https://twitter.com/xatey999">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://www.facebook.com/ujjwal.adhikari.526438">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                        <a href=" https://www.instagram.com/xatey_999">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/ujjwal-adhikari-2a7631279/?trk=contact-info">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---->
-                    </div>
-                </div>
+<?php
+$teamsSql = "SELECT * FROM teams";
+$teamsresult = mysqli_query($conn, $teamsSql);
+?>
 
-
-            </section>
+<section class="team">
+    <section id="our-team">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-center">Our Team</h2>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+            </div>
+            <div class="row">
+                <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="team-1">
+                            <div class="pic">
+                                <img src="img/member1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h4><?php echo $rs['name']; ?></h4>
+                                <span><?php echo $rs['skill']; ?></span>
+                                <div class="social">
+                                    <a href="<?php echo $rs['twitter']; ?>">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="<?php echo $rs['fb']; ?>">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="<?php echo $rs['insta']; ?>">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="<?php echo $rs['linkedin']; ?>">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+</section>
+    </section>
 
             <footer>
                 <div class="footer-content">

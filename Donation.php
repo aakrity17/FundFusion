@@ -9,8 +9,6 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
 include "database/Db_Connection.php";
 include "admin/routeconfig.php";
-// include "admin/sessioncheck.php";
-// session_start();
 
 $sql = "SELECT * from donation";
 $records = $conn->query($sql);
@@ -22,7 +20,7 @@ $records = $conn->query($sql);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donations Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/donation.css">
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -57,11 +55,6 @@ $records = $conn->query($sql);
               <h5 class="card-title"><?php echo $data['donation_name']; ?></h5>
               
               <p class="card-text card-description"><?php echo $data['donation_description']; ?>
-  
-              <!-- <?php if (strlen($data['donation_description']) > 30) { ?>
-    <button class="read-more-btn">Read More</button>
-  <?php } ?> -->
-
               <div class="progress">
                 <div class="progress-bar" style="width: <?php echo $data['donation_progress']; ?>;">
                   <?php echo $data['donation_progress']; ?>
@@ -69,7 +62,7 @@ $records = $conn->query($sql);
               </div>
               
               <br>
-              <a href="./esewa/donate.php" class="btn btn-primary">Donate</a>
+              <a href="./esewa/donate.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
             </div>
           </div>
         </div>

@@ -35,6 +35,41 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// JavaScript code for dropdown menu
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all dropdown toggles
+  var dropdownToggleList = Array.from(document.querySelectorAll('.navbar .dropdown-toggle'));
+
+  // Add click event listener to each dropdown toggle
+  dropdownToggleList.forEach(function(dropdownToggle) {
+    dropdownToggle.addEventListener('click', function() {
+      // Toggle the 'show' class on the parent dropdown
+      var dropdown = this.closest('.dropdown');
+      dropdown.classList.toggle('show');
+
+      // Close other open dropdowns
+      var openDropdowns = document.querySelectorAll('.navbar .dropdown.show');
+      openDropdowns.forEach(function(openDropdown) {
+        if (openDropdown !== dropdown) {
+          openDropdown.classList.remove('show');
+        }
+      });
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    var target = event.target;
+    if (!target.closest('.navbar .dropdown')) {
+      var openDropdowns = document.querySelectorAll('.navbar .dropdown.show');
+      openDropdowns.forEach(function(openDropdown) {
+        openDropdown.classList.remove('show');
+      });
+    }
+  });
+});
+
+
 
 
 

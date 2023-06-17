@@ -22,6 +22,11 @@ include "admin/routeconfig.php";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sponsorship Page</title>
+
+  <!-- css for buttons and cards -->
+  <link rel="stylesheet" href="css/sponsorship.css">
+
+
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/sponsorship.css">
       <!-- Bootstrap CSS -->
@@ -103,24 +108,19 @@ include "admin/routeconfig.php";
 
    
 
-    
-<!-- <div class="donation-options"><br>
-    <h3 class="donation-option">Donation Options</h3>
-    <h5 class="text-line">We accept cash and online payments.</h5>
-    <br><br><br>
+<div class="container-1">
+  <button class="btn btn1" id="button1">DONATE</button>
+  <p>Help us, help others.</p>
+</div>
 
-    <div class="layers">
-    <i class="fa-solid fa-circle-dollar-to-slot fa-bounce" type="submit"><br>DONATE</i>
-      <p class="text-in">Help us, help others.</p><br>
+<div class="container-1">
+  <button class="btn btn2" id="button2">VOLUNTEER</button>
+  <p>Give us a hand.</p>
+</div>
 
-      <i class="fa-solid fa-hand fa-bounce" type="submit"><br> VOLUNTEER</i>
-      <p class="text-in"> Give us a hand. </p><br>
-
-      <i class="fa-solid fa-handshake fa-bounce" type="submit"><br> SPONSORS</i>
-      <p class="text-in"> Help the students. </p>
-
-    <div> -->
-    
+<div class="container-1">
+  <button class="btn btn3" id="button3">SPONSOR</button>
+  <p>Help the students.</p>
 </div>
 
 <br><br><br>

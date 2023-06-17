@@ -53,7 +53,7 @@
                     
 <?php if (isset($name) || isset($email)) : ?>
         <li class="nav-item"><a class="nav-link" href="#"><?php echo $name; ?></a></li>
-        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo $site_url."User/logout.php" ?>">Logout</a></li>
     <?php else: ?>
         <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>
         <li class="nav-item"><a class="nav-link" href="./User/userlogin.php">Login</a></li>

@@ -16,7 +16,7 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="<?php echo $site_url ?>admin/DashboardComponents/Homepage.php">
             <span class="icon"></span>
               <span class="title">Home</span>
             </a>

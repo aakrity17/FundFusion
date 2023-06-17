@@ -40,6 +40,7 @@ body {
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
+    width:110px;
 }
 
 .navbar-toggler {
@@ -249,9 +250,11 @@ body {
 }
 
 .tabs .nav-pills .nav-item .nav-link.active {
-    color: #fff;
+    color: #fdfcfd;
     /* after clicking to the about us */
-    background: rgba(91, 10, 183, 0.854);
+    background: rgba(91, 10, 183, 0.6);
+    /* background: rgba(26, 232, 40, 0.854); */
+
     border: 10px solid;
 }
 
@@ -285,14 +288,14 @@ body {
 
 /*============Projects Section=======*/
 .project-container {
-    background: #8c05e64e;
+    background: rgba(91, 10, 183, 0.6);
     position: relative;
     overflow: hidden;
 }
 
 /* donation button under out latest projects */
 .donation {
-    background: #8e04ea60;
+    background: #5d297d60;
     color: black;
     padding: 3px 3.5px;
     position: absolute;
@@ -322,10 +325,10 @@ body {
     content: '';
     position: absolute;
     border: #9b0ea8af solid 1px;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
     opacity: 0;
     transition-duration: 0.3s;
     transition-property: opacity;
@@ -342,7 +345,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 10px #740a9ac4;
+    box-shadow: 0 0 5cqmin #740a9ac4;
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
 }
@@ -350,7 +353,7 @@ body {
 .grow:hover,
 .grow:focus,
 .grow:active {
-    box-shadow: 0 10px 10px 5px #8708a17e;
+    box-shadow: 0 5px 5cqmax 5px #8708a17e;
     transform: scale(1.1);
 }
 

@@ -23,36 +23,22 @@ include "admin/routeconfig.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sponsorship Page</title>
 
-  <!-- css for buttons and cards -->
-  <link rel="stylesheet" href="css/sponsorship.css">
+ 
+  <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
 
-
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- External css file  -->
   <link rel="stylesheet" href="css/sponsorship.css">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!--Main CSS-->
 <link rel="stylesheet" href="css/style.css">
 
-<!--fontawesome-->
-<script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
-<!--google Fonts-->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<!--Animate.css--->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 <!-- card-layout for sponsorship options -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<!-- fontsawesome cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-
- <!-- Javascript for sponsorship cards from bootstrap -->
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
  
   <?php
@@ -106,22 +92,20 @@ include "admin/routeconfig.php";
         </div>
     </div>
 
-   
+
+
+<br><br>
+
+
 
 <div class="container-1">
-  <button class="btn btn1" id="button1">DONATE</button>
-  <p>Help us, help others.</p>
+  <div class="buttons">
+    <button class="butn butn-primary" id="butn1">Register for Premium Membership</button>
+    <button class="butn butn-primary" id="butn2">Register for Regular Membership</button>
+    <button class="butn butn-primary" id="butn3">Register for VIP Membership</button>
+  </div>
 </div>
 
-<div class="container-1">
-  <button class="btn btn2" id="button2">VOLUNTEER</button>
-  <p>Give us a hand.</p>
-</div>
-
-<div class="container-1">
-  <button class="btn btn3" id="button3">SPONSOR</button>
-  <p>Help the students.</p>
-</div>
 
 <br><br><br>
 

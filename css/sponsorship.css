@@ -8,10 +8,10 @@ body {
   .sponsorship-banner {
     background-color: rgba(153, 72, 252, 0.98);
     color: #ffffff;
-    /* padding: 20px; */
     font-weight: 1000;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 20px;
     outline: none;
   }
 
@@ -24,109 +24,97 @@ body {
     height: 100%;
 }
 
-.premium-card {
-    background-color: #c0c0c0;
-    color: #000;
-}
 
-.regular-card {
-    background-color: #ffd700;
-    color: #000;
-}
-
-.special-card {
-    background-color: brown;
-    color: #fff;
-}
-
-.h1 {
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-.container>.col-md-4 {
-    flex-grow: 1;
-}
 
 
 /* For the button hover effect */
-.container-1{
+/* .container-1{
+  color: red;
+  background-color: none;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  display:flexbox ;
-    /* flex-wrap: wrap; */
-    /* align-items: stretch; */
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex ;
+  justify-content: flex-start;
+  flex-direction: row;
+    
 }
-.btn{
-  border: 3px solid #3498db;
-  background: none;
+.butn{
+  color: red;
+  background-color: red;
   padding: 60px 20px;
   font-size: larger;
   font-family:sans-serif ; 
   cursor: pointer;
-  margin: 10px;
-  transition: 0.8s;
+  
   position: relative;
-  overflow: hidden;
+  margin-right: 10px;
+  
+} */
+
+
+.container-1 {
+  text-align: right;
 }
-.btn1,.btn2,.btn3{
+
+.buttons {
+  display: inline-block;
+}
+
+.butn {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 50px;
+}
+
+.butn:hover {
+  background-color: blueviolet;
+}
+
+
+/* .btn1,.btn2,.btn3{
   color: #3498db;
 }
 
 .btn1:hover,.btn2:hover,.btn3:hover{
-  color: #fff;
-}
+  color: yellow;
+} */
 
-.btn::before{
+/* .butn::before{
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   height: 0%;
-  background: #3498db;
+  background: green;
   z-index: -1;
   transition: 0.8s;
-}
-.btn1::before,.btn2::before,.btn3::before{
+} */
+
+/* .btn1::before,.btn2::before,.btn3::before{
   top: 0;
   border-radius: 0 0 50% 50%;
 }
 
 
 .btn1:hover::before,.btn2:hover::before,.btn3:hover::before{
+  background-color: #ffd700;
   height: 180%;
-}
-
-
-
-
-
-/* .btn{
-  outline: none;
 } */
 
-/* .fa-solid {
-  text-decoration: none;
-  text-overflow: none;
-  font-size:x-large;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
-}
-
-.text-in{
-  text-decoration: none;
-  text-align: justify;
-  font-size:medium ;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
 
   footer {
     

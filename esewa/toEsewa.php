@@ -4,6 +4,7 @@ if (isset($_POST['Amount'])){
     echo $amount;
 }
 ?>
+
 <form action="https://uat.esewa.com.np/epay/main" method="post">
  <input value="<?php echo $amount?>" name="tAmt" type="hidden">
  <input value="<?php echo $amount?>" name="amt" type="hidden">

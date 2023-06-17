@@ -40,6 +40,7 @@ body {
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
+    width:110px;
 }
 
 .navbar-toggler {

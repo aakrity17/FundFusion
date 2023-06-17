@@ -52,7 +52,7 @@ include "routeconfig.php";
             </a>
           </li>
           <li>
-          <a href="<?php echo $site_url ?>ourteam/ourteam.php">
+          <a href="<?php echo $site_url ?>admin/DashboardComponents/Teams.php">
               <span class="icon"></span>
               <span class="title">Team</span>
             </a>

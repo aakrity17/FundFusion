@@ -522,7 +522,7 @@ $teamsresult = mysqli_query($conn, $teamsSql);
                                     <a href="<?php echo $rs['insta']; ?>">
                                         <i class="fab fa-instagram"></i>
                                     </a>
-                                    <a href="<?php echo $rs['link']; ?>">
+                                    <a href="<?php echo $rs['linkedin']; ?>">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </div>

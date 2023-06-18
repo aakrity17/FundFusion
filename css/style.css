@@ -570,7 +570,7 @@ body {
 
 }
 
-<<<<<<< HEAD
+/* HEAD */
 /* copyright */
 .footer-bottom {
     background: rgba(74, 6, 156, 0.476);
@@ -578,14 +578,14 @@ body {
 
     width: 100w;
     padding: 20px 0;
-=======
+}
+
 /* Footer section */
 .nb-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
->>>>>>> 6ac5258d416460e5b3f0c3912fb7c8a487110199
     text-align: center;
     padding: 45px 0px 20px 500px;
     /* //top, right, buttom, left */

@@ -35,7 +35,7 @@ body {
 
 .nav-bg {
     /* nav bar ko lagi */
-    background: rgba(153, 72, 252, 0.98);
+    background: rgba(153, 72, 252, 0.756);
 }
 
 
@@ -284,15 +284,12 @@ body {
 
 /*============Projects Section=======*/
 .project-container {
-    /* background: #8c05e64e; */
     position: relative;
     overflow: hidden;
 }
 
 /* donation button under out latest projects */
 .donation {
-    /*background: #8e04ea60;
-    */
     color: black;
     padding: 3px 3.5px;
     position: absolute;
@@ -346,7 +343,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
-    /* box-shadow: 0 0 10px #740a9ac4; */
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
 }
@@ -354,7 +350,7 @@ body {
 .grow:hover,
 .grow:focus,
 .grow:active {
-    box-shadow: 0 10px 10px 5px #8708a17e;
+    /* box-shadow: 0 10px 10px 5px #8708a17e; */
     transform: scale(1.1);
 }
 
@@ -593,7 +589,9 @@ body {
     text-align: center;
     padding: 45px 0px 20px 500px;
     /* //top, right, buttom, left */
-    background: rgba(89, 10, 186, 0.488);
+    background: rgba(119, 63, 189, 0.634);
+
+    /* background: rgba(89, 10, 186, 0.488); */
 
 }
 
@@ -613,7 +611,7 @@ body {
     text-decoration: none;
 }
 
-.nb-footer .footer-single h2 {
+/* .nb-footer .footer-single h2 {
     color: white;
     font-size: 22px;
     font-weight: 200;
@@ -621,10 +619,10 @@ body {
     border-bottom: 2px solid #7BFF00;
     padding-bottom: 5px;
     margin-bottom: -2px;
-}
+} */
 
 .nb-footer .footer-single li {
-    border-top: solid 1px #353535;
+    border-top: solid 1px white;
 }
 
 .nb-footer .footer-single li:first-child {
@@ -632,17 +630,21 @@ body {
 }
 
 .nb-footer .footer-single li a {
-    color: #979797;
+    color: white;
     font-size: 12px;
     padding: 6px 0px;
     display: block;
     transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
 }
 
 .nb-footer .btn-footer {
     border: 1px solid #7BFF00;
     margin-top: 10px;
-    color: #999;
+    color: white;
 }
 
 
@@ -653,8 +655,46 @@ body {
 
 .nb-footer .footer-single p,
 .footer-single address {
-    color: #979797;
+    color: white;
     font-size: 14px;
     margin-top: 5px;
     line-height: 22px;
+}
+
+/* End of footer section */
+
+/* membership  buttons*/
+.card {
+    margin-bottom: 50px;
+    padding: 10px;
+    height: 100%;
+}
+
+.silver-card {
+    background-color: hwb(0 75% 25%);
+    color: #000;
+}
+
+.gold-card {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.diamond-card {
+    background-color: brown;
+    color: #fff;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.container>.col-md-4 {
+    flex-grow: 1;
 }

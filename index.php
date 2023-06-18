@@ -378,54 +378,12 @@ while ($res = mysqli_fetch_array($sliderresult)) {
         </div>
     </section>
 
-
-
-
     <!---End of the Projects Section-->
 
 
 
     <!-- Membership card -->
     <section>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-            .card {
-                margin-bottom: 50px;
-                padding: 10px;
-                height: 100%;
-            }
-
-            .silver-card {
-                background-color: #c0c0c0;
-                color: #000;
-            }
-
-            .gold-card {
-                background-color: #ffd700;
-                color: #000;
-            }
-
-            .diamond-card {
-                background-color: brown;
-                color: #fff;
-            }
-
-            .h1 {
-                text-align: center;
-            }
-
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: stretch;
-            }
-
-            .container>.col-md-4 {
-                flex-grow: 1;
-            }
-        </style>
-
         <h2 class="text-center">Membership</h2>
 
         <div class="container">
@@ -438,7 +396,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
                         <div class="card-body">
                             <h5 class="card-title">About Silver Tier</h5>
-                            <p class="card-text">In this beginner-friendly tier, you will get early access to my upcoming updates.</p>
+                            <p class="card-text">In this beginner-friendly tier,By donating between $1 to $9 you will become a member of our silver Tier.</p>
                             <ul>
                                 <li>Only updates</li>
                                 <li>Chat community</li>
@@ -559,7 +517,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     </section>
     <style>
         .full-width-footer {
-            background: rgba(153, 72, 252, 0.98);
+            /* background: rgba(153, 72, 252, 0.98); */
             padding: 20px;
             color: white;
             font-size: 14px;

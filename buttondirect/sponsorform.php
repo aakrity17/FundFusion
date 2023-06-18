@@ -126,17 +126,10 @@ if (isset($_POST['submit'])) {
                     <i class="fas fa-user"></i>
             </div>
 
-                    <div class="form-control">
-                    &nbsp;<i class="fas fa-user"></i>
-                    &nbsp;
-        <label for="Sponsorship type">Choose your Sponsorship Type:</label>
-        <select name="sponsorship_title" id="sponsorship_title" placeholder="Sponsorship Type">
-                    <option value="Premium">Premium</option>
-                    <option value="Regular">Regular</option>
-                    <option value="VIP">VIP</option>
-        </select>
-                    
-                   </div>
+            <div class="form-control">
+                    <input type="text" value="<?php echo" $title"; ?>" name="title">
+                    <i class="fas fa-user"></i>
+            </div>  
 
                 <div class="form-control">
                     <input type="number" placeholder="Minimum Rs.1000" name="Amount">

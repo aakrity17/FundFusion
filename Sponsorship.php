@@ -100,9 +100,9 @@ include "admin/routeconfig.php";
 
 <div class="container-1">
   <div class="buttons">
-    <button class="butn butn-primary" id="butn1">Register for Premium Membership</button>
-    <button class="butn butn-primary" id="butn2">Register for Regular Membership</button>
-    <button class="butn butn-primary" id="butn3">Register for VIP Membership</button>
+    <button class="butn butn-primary" herf="buttondirect/sponsorform.php?title=<?php echo "Premium Membership" ?>" id="butn1">Register for Premium Membership</button>
+    <button class="butn butn-primary" herf="buttondirect/sponsorform.php?title=<?php echo "Regular Membership" ?>" id="butn2">Register for Regular Membership</button>
+    <button class="butn butn-primary" herf="buttondirect/sponsorform.php?title=<?php echo "VIP Membership" ?>" id="butn3">Register for VIP Membership</button>
   </div>
 </div>
 

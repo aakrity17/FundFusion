@@ -541,6 +541,8 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             padding: 20px;
             color: white;
             font-size: 14px;
+            padding-left: 500px;
+
             text-align: center;
         }
     </style>

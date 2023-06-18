@@ -1,14 +1,15 @@
 <?php
+// starts a PHP session. It is used to manage user sessions and store session data.
 session_start();
-// Check if the user is logged in
+// Check if the user is logged in by checking if the session variables "name" and "username" are set.
 if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
-    $name = $_SESSION['name'];
-    $email = $_SESSION['username'];
-
+  $name = $_SESSION['name'];
+  $email = $_SESSION['username'];
 }
 
 include "database/Db_Connection.php";
 include "admin/routeconfig.php";
+
 
 $sql = "SELECT * from donation";
 $records = $conn->query($sql);
@@ -16,30 +17,32 @@ $records = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donations Page</title>
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/donation.css">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!--Main CSS-->
-<link rel="stylesheet" href="css/style.css">
+  <!--Main CSS-->
+  <link rel="stylesheet" href="css/style.css">
 
-<!--fontawesome-->
-<script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
-<!--google Fonts-->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<!--Animate.css--->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <!--fontawesome-->
+  <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+  <!--google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!--Animate.css--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 </head>
+
 <body>
   <?php
-@include('./Index/indexnav.php')
-?>
+  @include('./Index/indexnav.php')
+  ?>
 
   <div class="donation-banner">
     <h1>Donations</h1>
@@ -47,20 +50,20 @@ $records = $conn->query($sql);
 
   <div class="container">
     <div class="row">
-      <?php foreach ($records as $data): ?>
+      <?php foreach ($records as $data) : ?>
         <div class="col-lg-4 col-md-6">
           <div class="card">
             <img class="card-img-top" src="img/donation/<?php echo $data['donation_image_url']; ?>">
             <div class="card-body">
               <h5 class="card-title"><?php echo $data['donation_name']; ?></h5>
-              
+
               <p class="card-text card-description"><?php echo $data['donation_description']; ?>
               <div class="progress">
                 <div class="progress-bar" style="width: <?php echo $data['donation_progress']; ?>;">
                   <?php echo $data['donation_progress']; ?>
                 </div>
               </div>
-              
+
               <br>
               <a href="./esewa/donate.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
             </div>
@@ -70,11 +73,12 @@ $records = $conn->query($sql);
     </div>
   </div>
 
-<br><br><br>
+  <br><br><br>
   <footer>
     <p>&copy; 2023 FundFusion</p>
   </footer>
 
   <script src="js/donation.js" defer></script>
 </body>
+
 </html>

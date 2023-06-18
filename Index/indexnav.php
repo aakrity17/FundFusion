@@ -15,7 +15,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $site_url ?>Aboutus.php">
+                        <a class="nav-link" href="#our-team">
                             <i class="fas fa-info-circle"></i> About us
                         </a>
                     </li>

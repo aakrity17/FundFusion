@@ -11,6 +11,22 @@ if (isset($_POST['Amount'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
+</head>
+<body>
+<form action="https://uat.esewa.com.np/epay/main" method="post">
+ <input value="<?php echo $amount?>" name="tAmt" type="hidden">
+ <input value="<?php echo $amount?>" name="amt" type="hidden">
+ <input value="0" name="txAmt" type="hidden">
+ <input value="0" name="psc" type="hidden">
+ <input value="0" name="pdc" type="hidden">
+ <input value="EPAYTEST" name="scd" type="hidden">
+ <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
+ <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
+ <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
+ <button type="submit">Continue</button>
+</form>
+=======
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
@@ -47,4 +63,10 @@ if (isset($_POST['Amount'])){
 </div>
 </body>
 </html>
+>>>>>>> 6ac5258d416460e5b3f0c3912fb7c8a487110199
+
+    
+</body>
+</html>
+
 

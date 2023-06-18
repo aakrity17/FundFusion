@@ -19,20 +19,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     $passwordmd5 = md5($password);
-    $role="admin";
+    $role = "user";
 
     // Prepare the SQL statement
-    if(status)
-    $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5', '$role')";
+    $sql = "UPDATE user SET name='$name', address='$address', Contact='$contact', username='$username', email='$email', password='$passwordmd5', role='$role' WHERE id='$userId'";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
-        echo "Data inserted successfully!";
-        // Redirect to another page after successful insertion
-        header("Location:./Dashboard.php");
+        echo "Data updated successfully!";
+        // Redirect to another page after successful update
+        header("Location:../index.php");
         exit();
     } else {
-        echo "Something went wrong!". $conn->error;
+        echo "Something went wrong!" . $conn->error;
     }
 }
 ?>
@@ -96,8 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section>
         <?php if ($_SERVER["REQUEST_METHOD"] != "POST"): ?>
-        <h2>Add User</h2>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <h2>Update User</h2>
+        <form id="update-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required><br>
 
@@ -116,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required><br>
 
-            <input type="submit" value="Update">
+            <button type="submit">Update</button>
         </form>
         <?php endif; ?>
     </section>
@@ -136,7 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         var contact = row.cells[2].innerHTML;
         var username = row.cells[3].innerHTML;
         var email = row.cells[4].innerHTML;
-        var status;
 
         // Populate the form fields with the user data
         document.getElementById("name").value = name;
@@ -144,10 +142,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         document.getElementById("contact").value = contact;
         document.getElementById("username").value = username;
         document.getElementById("email").value = email;
-
-
-        
     }
+
+    // Submit the form on button click
+    document.getElementById("update-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // You can add additional validation if needed
+
+        // Submit the form
+        this.submit();
+    });
 </script>
 </body>
 </html>

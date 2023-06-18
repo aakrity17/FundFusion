@@ -9,7 +9,7 @@ include "../database/Db_Connection.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the values from the login form
     $providedUsername = $_POST['username'];
-    $providedEmail = $_POST['email'];
+    // $providedEmail = $_POST['email'];
 
     $providedPassword = md5($_POST['password']);
 
@@ -40,10 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Close the statement
         mysqli_stmt_close($stmt);
-    } else {
-        // Handle the error if preparing the statement failed
-        $errorMessage = "An error occurred while preparing the statement.";
-    }
+    } 
 
     mysqli_close($conn);
 }

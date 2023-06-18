@@ -44,6 +44,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--Animate.css--->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
 </head>
 
 <body>
@@ -377,54 +378,12 @@ while ($res = mysqli_fetch_array($sliderresult)) {
         </div>
     </section>
 
-
-
-
     <!---End of the Projects Section-->
 
 
 
     <!-- Membership card -->
     <section>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-            .card {
-                margin-bottom: 50px;
-                padding: 10px;
-                height: 100%;
-            }
-
-            .silver-card {
-                background-color: #c0c0c0;
-                color: #000;
-            }
-
-            .gold-card {
-                background-color: #ffd700;
-                color: #000;
-            }
-
-            .diamond-card {
-                background-color: brown;
-                color: #fff;
-            }
-
-            .h1 {
-                text-align: center;
-            }
-
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: stretch;
-            }
-
-            .container>.col-md-4 {
-                flex-grow: 1;
-            }
-        </style>
-
         <h2 class="text-center">Membership</h2>
 
         <div class="container">
@@ -437,12 +396,14 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
                         <div class="card-body">
                             <h5 class="card-title">About Silver Tier</h5>
-                            <p class="card-text">In this beginner-friendly tier, you will get early access to my upcoming updates.</p>
+                            <p class="card-text">In this beginner-friendly tier,By donating between $1 to $9 you will become a member of our silver Tier.</p>
                             <ul>
                                 <li>Only updates</li>
                                 <li>Chat community</li>
                                 <li>One movie free ticket</li>
                             </ul>
+                            <a href="./Membership/membership.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Donate</a>
+
                         </div>
                     </div>
                 </div>
@@ -460,6 +421,8 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Exclusive monthly newsletter</li>
                                 <li>Personalized thank you message</li>
                             </ul>
+                            <a href="./Membership/membership.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Donate</a>
+
                         </div>
                     </div>
                 </div>
@@ -477,13 +440,30 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Personalized thank you message</li>
                                 <li>Special recognition on our website</li>
                             </ul>
+                            <a href="./Membership/membership.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Donate</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+        </div>
 
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.getElementById('silver-button').addEventListener('click', function() {
+                window.location.href = '../FundFusion/User/userlogin.php';
+            });
+
+            document.getElementById('gold-button').addEventListener('click', function() {
+                window.location.href = '..FundFusion/User/userlogin.php';
+            });
+
+            document.getElementById('platinum-button').addEventListener('click', function() {
+                window.location.href = '../FundFusion/User/userlogin.php';
+
+            });
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     </section>
@@ -537,10 +517,12 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     </section>
     <style>
         .full-width-footer {
-            background: rgba(153, 72, 252, 0.98);
+            /* background: rgba(153, 72, 252, 0.98); */
             padding: 20px;
             color: white;
             font-size: 14px;
+            padding-left: 500px;
+
             text-align: center;
         }
     </style>
@@ -548,15 +530,61 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
     <body>
 
-        <footer class="full-width-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>&copy; 2023 FundFusion. All rights reserved.</p>
+        <footer style="background-color: purple">
+            <section class="nb-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-single useful-links">
+                                <div class="footer-title">
+                                    <h2>Navigation</h2>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><a href="index.php">Home <i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#about-us">About Us <i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="../fundfusion/esewa/donate.php">Donators <i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#">Volunteer <i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="Events">Events <i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#">Our Teams <i class="fa fa-angle-right pull-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-sm"></div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="col-sm-12 left-clear right-clear footer-single footer-project">
+                                <div class="footer-title">
+                                    <h2>Social links
+
+                                    </h2>
+                                    <div class="col-sm-6 text-right xs-center">
+                                        <ul class="list-inline footer-social">
+                                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+                                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href=""><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-single">
+                                <div class="footer-title">
+                                    <h2>Contact Information</h2>
+                                </div>
+                                <address>
+                                    37300 Pokhara simalchaur-8, street 20 <br>
+                                    Your State, Country <br>
+                                    <i class="fa fa-phone"></i> 981234455 <br>
+                                    <i class="fa fa-fax"></i> 012 123 2345<br>
+                                    <i class="fa fa-envelope"></i> funffusion@example.com<br>
+                                </address>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </section>
 
 
 
@@ -564,9 +592,12 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 
 </html>

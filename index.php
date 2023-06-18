@@ -444,7 +444,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Chat community</li>
                                 <li>One movie free ticket</li>
                             </ul>
-                            <button id="silver-button" class="btn btn-primary btn-effect">Choose Silver</button>
+                            <a href="./Membership/membership.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Donate</a>
 
                         </div>
                     </div>
@@ -463,7 +463,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Exclusive monthly newsletter</li>
                                 <li>Personalized thank you message</li>
                             </ul>
-                            <button id="gold-button" class="btn btn-primary btn-effect">Choose Gold</button>
+                            <a href="./Membership/membership.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Donate</a>
 
                         </div>
                     </div>
@@ -482,7 +482,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Personalized thank you message</li>
                                 <li>Special recognition on our website</li>
                             </ul>
-                            <button id="platinum-button" class="btn btn-primary btn-effect">Choose Platinum</button>
+                            <a href="./Membership/membership.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Donate</a>
                         </div>
                     </div>
                 </div>

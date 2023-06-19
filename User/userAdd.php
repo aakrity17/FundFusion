@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully!";
         // Redirect to another page after successful insertion
-        header("Location:./Dashboard.php");
+        header("Location:../admin/Dashboard.php");
         exit();
     } else {
         echo "Something went wrong!". $conn->error;

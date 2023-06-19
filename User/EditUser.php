@@ -1,8 +1,6 @@
 <?php
 include "../admin/sessioncheck.php";
-include "../admin/routeconfig.php";
-
-// Include the database connection file
+include "routeconfig.php";
 include "../database/Db_Connection.php";
 
 // Initialize variables
@@ -11,27 +9,35 @@ $name = $address = $contact = $username = $email = $password = "";
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the form data
+    $userId = $_POST["user_id"];
     $name = $_POST["name"];
     $address = $_POST["address"];
     $contact = $_POST["contact"];
     $username = $_POST["username"];
     $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    $passwordmd5 = md5($password);
-    $role = "user";
 
     // Prepare the SQL statement
-    $sql = "UPDATE user SET name='$name', address='$address', Contact='$contact', username='$username', email='$email', password='$passwordmd5', role='$role' WHERE id='$userId'";
+    $sql = "UPDATE user SET name = '$name', address = '$address', Contact = '$contact', username = '$username', email = '$email', role = 'user' WHERE id = '$userId'";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
         echo "Data updated successfully!";
-        // Redirect to another page after successful update
-        header("Location:../index.php");
-        exit();
+        header("Location: EditUser.php");
+        exit; // Important: Terminate the script after the redirect
     } else {
         echo "Something went wrong!" . $conn->error;
+    }
+}
+
+// Retrieve the user data from the database
+$sql = "SELECT * FROM user WHERE role = 'user'";
+$result = $conn->query($sql);
+$users = [];
+
+if ($result->num_rows > 0) {
+    // Fetch the user data and store it in an array
+    while ($row = $result->fetch_assoc()) {
+        $users[] = $row;
     }
 }
 ?>
@@ -48,111 +54,101 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
-<?php
-    @include('../admin/partials/navigation.php')
-?>
+    <?php include '../admin/partials/navigation.php'; ?>
 
-<div class="container">
-    <section>
-        <h2>User List</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Contact</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th colspan="2">Modify</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                // Retrieve the user data from the database
-                $sql = "SELECT * FROM user WHERE role = 'user'";
-                $result = $conn->query($sql);
+    <div class="container">
+        <section>
+            <h2>User List</h2>
+            <?php if (!empty($users)) : ?>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Contact</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th colspan="2">Modify</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($users as $user) : ?>
+                            <tr>
+                                <td><?php echo $user["name"]; ?></td>
+                                <td><?php echo $user["address"]; ?></td>
+                                <td><?php echo $user["Contact"]; ?></td>
+                                <td><?php echo $user["username"]; ?></td>
+                                <td><?php echo $user["email"]; ?></td>
+                                <td><button class="btn-delete">Delete</button></td>
+                                <td>
+                                    <button class="btn-edit" onclick="editUser(<?php echo $user["id"]; ?>)" data-user-id="<?php echo $user["id"]; ?>">Edit</button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php else : ?>
+                <p>No users found</p>
+            <?php endif; ?>
+        </section>
 
-                if ($result->num_rows > 0) {
-                    // Output data of each row
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row["name"] . "</td>";
-                        echo "<td>" . $row["address"] . "</td>";
-                        echo "<td>" . $row["Contact"] . "</td>";
-                        echo "<td>" . $row["username"] . "</td>";
-                        echo "<td>" . $row["email"] . "</td>";
-                        echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
-                        echo "<td> <button class='btn-edit' onclick='editUser(" . $row["id"] . ")' data-user-id='" . $row["id"] . "'>Edit</button></td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='5'>No users found</td></tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-    </section>
+        <section>
+            <h2>Update User</h2>
+            <form id="update-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <input type="hidden" name="user_id" id="user-id" value="">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required><br>
 
-    <section>
-        <?php if ($_SERVER["REQUEST_METHOD"] != "POST"): ?>
-        <h2>Update User</h2>
-        <form id="update-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required><br>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required><br>
 
-            <label for="address">Address:</label>
-            <input type="text" name="address" id="address" required><br>
+                <label for="contact">Contact:</label>
+                <input type="text" name="contact" id="contact" required><br>
 
-            <label for="contact">Contact:</label>
-            <input type="text" name="contact" id="contact" required><br>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required><br>
 
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br>
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required><br>
+                <button type="submit">Update</button>
+            </form>
+        </section>
+    </div>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required><br>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
+    <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
+    <script>
+        function editUser(userId) {
+            // Find the table row corresponding to the selected user
+            var row = document.querySelector("[data-user-id='" + userId + "']").closest("tr");
 
-            <button type="submit">Update</button>
-        </form>
-        <?php endif; ?>
-    </section>
-</div>
+            // Fetch the user data from the row
+            var name = row.cells[0].innerHTML;
+            var address = row.cells[1].innerHTML;
+            var contact = row.cells[2].innerHTML;
+            var username = row.cells[3].innerHTML;
+            var email = row.cells[4].innerHTML;
 
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
-<script src="<?php echo $site_url ?>js/Dashboard.js"></script>
-<script>
-    function editUser(userId) {
-        // Find the table row corresponding to the selected user
-        var row = document.querySelector("[data-user-id='" + userId + "']").closest("tr");
+            // Populate the form fields with the user data
+            document.getElementById("user-id").value = userId;
+            document.getElementById("name").value = name;
+            document.getElementById("address").value = address;
+            document.getElementById("contact").value = contact;
+            document.getElementById("username").value = username;
+            document.getElementById("email").value = email;
+        }
 
-        // Fetch the user data from the row
-        var name = row.cells[0].innerHTML;
-        var address = row.cells[1].innerHTML;
-        var contact = row.cells[2].innerHTML;
-        var username = row.cells[3].innerHTML;
-        var email = row.cells[4].innerHTML;
+        // Submit the form on button click
+        document.getElementById("update-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
 
-        // Populate the form fields with the user data
-        document.getElementById("name").value = name;
-        document.getElementById("address").value = address;
-        document.getElementById("contact").value = contact;
-        document.getElementById("username").value = username;
-        document.getElementById("email").value = email;
-    }
+            // You can add additional validation if needed
 
-    // Submit the form on button click
-    document.getElementById("update-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
-
-        // You can add additional validation if needed
-
-        // Submit the form
-        this.submit();
-    });
-</script>
+            // Submit the form
+            this.submit();
+        });
+    </script>
 </body>
 </html>

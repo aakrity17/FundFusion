@@ -537,7 +537,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <div class="col-md-3 col-sm-6">
                             <div class="footer-single useful-links">
                                 <div class="footer-title">
-                                    <h2>Navigation</h2>
+                                    <h2 style="color: white;">Navigation</h2>
                                 </div>
                                 <ul class="list-unstyled">
                                     <li><a href="index.php">Home <i class="fa fa-angle-right pull-right"></i></a></li>
@@ -553,9 +553,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <div class="col-md-3 col-sm-6">
                             <div class="col-sm-12 left-clear right-clear footer-single footer-project">
                                 <div class="footer-title">
-                                    <h2>Social links
-
-                                    </h2>
+                                    <h2 style="color: white;">Social links</h2>
                                     <div class="col-sm-6 text-right xs-center">
                                         <ul class="list-inline footer-social">
                                             <li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -571,7 +569,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <div class="col-md-3 col-sm-6">
                             <div class="footer-single">
                                 <div class="footer-title">
-                                    <h2>Contact Information</h2>
+                                    <h2 style="color:white;">Contact Information</h2>
                                 </div>
                                 <address>
                                     37300 Pokhara simalchaur-8, street 20 <br>

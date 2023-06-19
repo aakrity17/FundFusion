@@ -3,6 +3,7 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
   }
   
   .sponsorship-banner {
@@ -61,11 +62,11 @@ body {
   text-align: right;
 }
 
-.buttons {
+/* .buttons {
   display: inline-block;
 }
 
-.butn {
+.btn {
   background-color: blue;
   border: none;
   color: white;
@@ -77,10 +78,33 @@ body {
   margin: 50px;
   cursor: pointer;
   transition-duration: 0.4s;
-  border-radius: 50px;
+  border-radius: 60px;
+} */
+
+.buttons {
+  display: inline-block;
+  justify-content: flex-end;
 }
 
-.butn:hover {
+.buttons a {
+  /* margin-left: 150px;  */
+  /* Adjust the value as per your preference */
+  background-color: steelblue ;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 90px;
+  margin-right: 100px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  border-radius: 60px;
+}
+
+.buttons a:hover {
   background-color: blueviolet;
 }
 
@@ -116,7 +140,7 @@ body {
 } */
 
 
-  footer {
+  /* footer {
     
     color: rgb(255, 255, 255);;
     position: fixed;
@@ -125,6 +149,35 @@ body {
     left: 0;
     text-align: center;
     width: 100%;
+  } */
+
+
+  footer {
+    /* background-color: #f8f8f8; */
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-decoration: none;
   }
+  
+  /* footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #555;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  } */
+  
 
   

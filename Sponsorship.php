@@ -94,24 +94,21 @@ include "admin/routeconfig.php";
 
 
 
-<br><br>
+<br>
 
 
 
 <div class="container-1">
   <div class="buttons">
-    <button class="butn butn-primary" id="butn1">Register for Premium Membership</button>
-    <button class="butn butn-primary" id="butn2">Register for Regular Membership</button>
-    <button class="butn butn-primary" id="butn3">Register for VIP Membership</button>
+    <a href="./buttondirect/sponsorform.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
+    <a href="./buttondirect/sponsorform.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
+    <a href="./buttondirect/sponsorform.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
   </div>
 </div>
 
 
 <br><br><br>
 
-
-
-<br><br><br>
   <footer>
     <p>&copy; 2023 FundFusion</p>
   </footer>

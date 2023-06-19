@@ -55,17 +55,16 @@ if (isset($_POST['submit'])) {
 
     // Retrieve other form data
     
-    $uid = $_POST['uid'];
     $name = $_POST['name'];
     $address = $_POST['address'];
     $contact = $_POST['contact'];
     $email = $_POST['email'];
-    $sponsorship_title = $_POST['sponsorship_title'];
+    // $sponsorship_title = $_POST['sponsorship_title'];
 
 
     // Save the form details in the database
     $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO sponsors (uid, name, address, contact, email, amount, sponsorship_title) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$sponsorship_title')";
+    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title')";
     if (mysqli_query($conn, $sql)) {
         echo "Form details saved successfully in the database.";
     } else {
@@ -126,17 +125,10 @@ if (isset($_POST['submit'])) {
                     <i class="fas fa-user"></i>
             </div>
 
-                    <div class="form-control">
-                    &nbsp;<i class="fas fa-user"></i>
-                    &nbsp;
-        <label for="Sponsorship type">Choose your Sponsorship Type:</label>
-        <select name="sponsorship_title" id="sponsorship_title" placeholder="Sponsorship Type">
-                    <option value="Premium">Premium</option>
-                    <option value="Regular">Regular</option>
-                    <option value="VIP">VIP</option>
-        </select>
-                    
-                   </div>
+            <div class="form-control">
+                    <input type="text" value="<?php echo $title; ?>" name="donation_title">
+                    <i class="fas fa-user"></i>
+            </div>  
 
                 <div class="form-control">
                     <input type="number" placeholder="Minimum Rs.1000" name="Amount">

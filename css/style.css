@@ -570,6 +570,19 @@ body {
 
 }
 
+<<<<<<< HEAD
+=======
+/* HEAD */
+/* copyright */
+.footer-bottom {
+    background: rgba(74, 6, 156, 0.476);
+    position: fixed;
+
+    width: 100w;
+    padding: 20px 0;
+}
+
+>>>>>>> d98e6a303b29f675586c2cb427f46cdd730947f8
 /* Footer section */
 .nb-footer {
     display: flex;

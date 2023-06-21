@@ -1,6 +1,9 @@
 <?php
 include "routeconfig.php";
-include "sessioncheck.php";
+session_start();
+if(!isset($_SESSION['role'])){
+header('Location:../dashboardLogin/login.php');
+}
 ?>
 
 <!DOCTYPE html>

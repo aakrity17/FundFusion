@@ -1,12 +1,8 @@
 <?php
-session_start();
-
-// Check if the user is logged in
-if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
-    $name = $_SESSION['name'];
-}
 include "./admin/routeconfig.php";
 include "./database/Db_Connection.php";
+// session_start();
+// if (isset($_SESSION['username']) && isset($_SESSION['name'])){
 
 $sliderSql = "SELECT * FROM homepageslider WHERE id=1";
 $sliderresult = mysqli_query($conn, $sliderSql);
@@ -18,9 +14,6 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     $s2content = $res['s2content'];
     $s3content = $res['s3content'];
 }
-
-
-
 ?>
 
 <!doctype html>
@@ -44,6 +37,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--Animate.css--->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
@@ -256,7 +250,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     <!-- Volunteer section -->
     <hr />
     <section>
-        <div class="container">
+        <div class="container my-4">
             <div class="row">
                 <div class="col-6">
                     <?php
@@ -289,6 +283,138 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     </section>
     <!-- Volunteer section end -->
     <hr />
+<!-- Essentials Donation Section star -->
+<section>
+  <style>
+    .mySlides {
+        display:none;
+  }
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+    .mySlides .img{
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    .caption {
+      position: absolute;
+      top: 0px;
+      padding-top: 30px;
+      /* margin-left: 200px; */
+      width: 100%;
+      /* padding-left: 350px; */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 18px;
+    }
+    h2{
+        text-align: center;
+        font-weight: 600;
+
+    }
+    .btn-container {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding-bottom: 10px;
+      /* padding-left: 350px; */
+      text-align: center;
+      /* margin-left: 0px; */
+    }
+    .btn-container  .btn {
+      background-color: purple;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      /* margin-left: 10px; */
+      font-size: 16px;
+      border-radius: 4px;
+      /* margin-bottom: 10px; */
+    }
+  </style>
+
+  <div class="container my-4">
+    <div class="row my-4">
+      <div class="col-10 mx-auto text-center">
+        <h1 class="text-uppercase">Essentials Donation</h1>
+        <p>Donation can be any kind of aid that helps.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
+    <div class="mySlides">
+      <img src="./img/6.jpg" style="width:100%">
+      <div class="caption">
+        <h2>Donate Study Materials and Stationaries</h2>
+        <div class="btn-container">
+          <a href="#" class="btn">Register for Donation</a>
+        </div>
+      
+        
+      </div>
+      
+    </div>
+
+    <div class="mySlides">
+      <img src="./img/5.jpg" style="width:100%">
+      <div class="caption">
+        <h2>Donate Clothes and Uniforms</h2>
+        <div class="btn-container">
+          <a href="#" class="btn">Register for Donation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="./img/4.jpg" style="width:100%">
+      <div class="caption">
+        <h2>Donate Medicines snd Aids</h2>
+        <!-- <p>Donate Medicines snd Aids</p> -->
+        <div class="btn-container">
+          <a href="#" class="btn">Register for Donation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+  </script>
+
+</section>
     <!-- Our project started -->
     <section id="projects">
 
@@ -585,6 +711,25 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     </div>
                 </div>
             </section>
+            <script>
+                var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+            </script>
 
 
 
@@ -599,5 +744,9 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
+    <!-- <?php
+// }
+?> -->
+
 
 </html>

@@ -65,7 +65,7 @@ $records = $conn->query($sql);
               </div>
 
               <br>
-              <a href="./esewa/donate.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
+              <a href="./Donors/paymentGateway.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
             </div>
           </div>
         </div>

@@ -347,7 +347,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
       <div class="caption">
         <h2>Donate Study Materials and Stationaries</h2>
         <div class="btn-container">
-          <a href="#" class="btn">Register for Donation</a>
+          <a href="Essentials/Essentials.php" class="btn">Register for Donation</a>
         </div>
       
         

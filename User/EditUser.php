@@ -29,6 +29,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// Check if the delete button is clicked
+if (isset($_GET["delete_id"])) {
+    $deleteId = $_GET["delete_id"];
+
+    // Prepare the SQL statement
+    $deleteSql = "DELETE FROM user WHERE id = '$deleteId'";
+
+    // Execute the query
+    if ($conn->query($deleteSql) === TRUE) {
+        echo "Data deleted successfully!";
+        // Redirect to the same page to update the user list
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit; // Important: Terminate the script after the redirect
+    } else {
+        echo "Something went wrong!" . $conn->error;
+    }
+}
+
 // Retrieve the user data from the database
 $sql = "SELECT * FROM user WHERE role = 'user'";
 $result = $conn->query($sql);
@@ -79,7 +97,9 @@ if ($result->num_rows > 0) {
                                 <td><?php echo $user["Contact"]; ?></td>
                                 <td><?php echo $user["username"]; ?></td>
                                 <td><?php echo $user["email"]; ?></td>
-                                <td><button class="btn-delete">Delete</button></td>
+                                <td>
+                                    <button class="btn-delete" onclick="deleteUser(<?php echo $user["id"]; ?>)">Delete</button>
+                                </td>
                                 <td>
                                     <button class="btn-edit" onclick="editUser(<?php echo $user["id"]; ?>)" data-user-id="<?php echo $user["id"]; ?>">Edit</button>
                                 </td>
@@ -138,6 +158,15 @@ if ($result->num_rows > 0) {
             document.getElementById("contact").value = contact;
             document.getElementById("username").value = username;
             document.getElementById("email").value = email;
+        }
+
+        function deleteUser(userId) {
+            var confirmation = confirm("Are you sure you want to delete this user?");
+
+            if (confirmation) {
+                // Redirect to the delete page with the user ID
+                window.location.href = "<?php echo $_SERVER['PHP_SELF']; ?>?delete_id=" + userId;
+            }
         }
 
         // Submit the form on button click

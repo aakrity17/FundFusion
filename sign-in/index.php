@@ -51,10 +51,20 @@
                     <i class="fas fa-lock"></i>
                 </div>
 
-                <button type="submit" class="submit">Sign Up</button>
+                <div class="form-control">
+                <div class="g-recaptcha" data-sitekey="6LeNecMmAAAAADMVrb8PoAfWhcJQn8yl2nws1myk" data-callback="enableSignUpButton"></div>
+</div>
+
+
+<button id="signupBtn" type="submit" class="submit" disabled>Sign Up</button>
             </form>
         </div>
     </section>
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+  function enableSignUpButton() {
+    document.getElementById("signupBtn").disabled = false;
+  }
+</script>
 </body>
 </html>

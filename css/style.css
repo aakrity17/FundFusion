@@ -570,6 +570,8 @@ body {
 
 }
 
+<<<<<<< HEAD
+=======
 /* HEAD */
 /* copyright */
 .footer-bottom {
@@ -580,6 +582,7 @@ body {
     padding: 20px 0;
 }
 
+>>>>>>> d98e6a303b29f675586c2cb427f46cdd730947f8
 /* Footer section */
 .nb-footer {
     display: flex;
@@ -697,4 +700,8 @@ body {
 
 .container>.col-md-4 {
     flex-grow: 1;
+}
+
+#essential-container {
+    margin-bottom: 50px;
 }

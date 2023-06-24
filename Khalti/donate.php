@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
     <section class="main">
         <div class="donation-container">
             <h2>Together we can Make!!</h2>
-            <form class="donation-form" action="toEsewa.php" method="POST">
+            <form class="donation-form" action="khalti.php" method="POST">
                 <div class="form-control">
                     <input type="text" value="<?php echo $name; ?>" name="name">
                     <i class="fas fa-user"></i>

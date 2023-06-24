@@ -65,12 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row = mysqli_fetch_assoc($result);
             $name = $row['name'];
             $email = $row['email'];
+            
 
 
             // Store user information in the session
-            $_SESSION['username'] = $providedUsername;
-             $_SESSION['name'] = $name;
-             $_SESSION['email'] = $email;
+            // $_SESSION['username'] = $providedUsername;
+            $_SESSION['password'] = $providedPassword;
+            $_SESSION['name'] = $name;
+
+            //  $_SESSION['email'] = $email;
 
 
             

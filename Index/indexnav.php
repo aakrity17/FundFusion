@@ -47,6 +47,12 @@ session_start();
                             <i class="fas fa-calendar-alt"></i> Sponsor
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $site_url ?>Sponsorship.php">
+                            <i class="fas fa-calendar-alt"></i> Our Donors
+                        </a>
+                    </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">
                             <i></i> 

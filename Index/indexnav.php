@@ -49,18 +49,18 @@ session_start();
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $site_url ?>Sponsorship.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>Donors/donors.php">
                             <i class="fas fa-calendar-alt"></i> Our Donors
                         </a>
                     </li>
-                    <li class="nav-item mx-4">
+                    <li class="nav-item mx-4" style="width:50px;">
                         <a class="nav-link" href="#">
                             <i></i> 
                         </a>
                     </li>
                     
 <?php if (isset($_SESSION['name']) || isset($email)) : ?>
-        <li class="nav-item"><a class="nav-link" href="#"><?php echo $_SESSION['name']; ?></a></li>
+        <li class="nav-item"><a class="nav-link" href="../Profile/userProfile.php"><?php echo $_SESSION['name']; ?></a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo $site_url."User/logout.php" ?>">Logout</a></li>
     <?php else: ?>
         <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>

@@ -654,61 +654,11 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     </style>
     </head>
 
-    <body>
+    <!-- <body> -->
 
         <footer style="background-color: purple">
-            <section class="nb-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footer-single useful-links">
-                                <div class="footer-title">
-                                    <h2 style="color: white;">Navigation</h2>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.php">Home <i class="fa fa-angle-right pull-right"></i></a></li>
-                                    <li><a href="#about-us">About Us <i class="fa fa-angle-right pull-right"></i></a></li>
-                                    <li><a href="../fundfusion/esewa/donate.php">Donators <i class="fa fa-angle-right pull-right"></i></a></li>
-                                    <li><a href="#">Volunteer <i class="fa fa-angle-right pull-right"></i></a></li>
-                                    <li><a href="Events">Events <i class="fa fa-angle-right pull-right"></i></a></li>
-                                    <li><a href="#">Our Teams <i class="fa fa-angle-right pull-right"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="col-sm-12 left-clear right-clear footer-single footer-project">
-                                <div class="footer-title">
-                                    <h2 style="color: white;">Social links</h2>
-                                    <div class="col-sm-6 text-right xs-center">
-                                        <ul class="list-inline footer-social">
-                                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-                                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href=""><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footer-single">
-                                <div class="footer-title">
-                                    <h2 style="color:white;">Contact Information</h2>
-                                </div>
-                                <address>
-                                    37300 Pokhara simalchaur-8, street 20 <br>
-                                    Your State, Country <br>
-                                    <i class="fa fa-phone"></i> 981234455 <br>
-                                    <i class="fa fa-fax"></i> 012 123 2345<br>
-                                    <i class="fa fa-envelope"></i> funffusion@example.com<br>
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+       <?php include './Footer/indexFooter.php' ?>
+
             <script>
                 var slideIndex = 1;
 showDivs(slideIndex);

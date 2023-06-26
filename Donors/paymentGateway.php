@@ -2,7 +2,7 @@
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 session_start();
-if (isset($_SESSION['name'])) {
+if (isset($_SESSION['email'])) {
 
     if (isset($_GET['title'])) {
         $title = urldecode($_GET['title']);

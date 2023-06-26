@@ -38,17 +38,24 @@ if (isset($_POST['Amount'])){
             justify-content: center;
             align-items: center;
             height : 100vh;
-            background-color: #A9A9A9;
+            
+           }
+           img{
+            height :40vh;
+            weight :40vh;
+           }
+           p{
+            font-size : 25px;
+            text-align :center;
+            color : green;
            }
            
         </style>
 </head>
 <body>
-  <div class="card" style="width: 25rem;">
-  <img src="../img/Logo.png" style="background-color:#C0C0C0"alt="Fundfusion logo">
-  <div class="card-body">
-    <h5 class="card-title text-center">!! Thank You !!</h5>
-    <p class="card-text">We really appreciate your effort and time. You will now be directed to Esewa Payment Page.</p>
+  <div>
+    <img src="../img/tick.png" >
+  <p >Confirm you payment  </p>
     <form action="https://uat.esewa.com.np/epay/main" method="post">
         <input value="<?php echo $amount?>" name="tAmt" type="hidden">
         <input value="<?php echo $amount?>" name="amt" type="hidden">
@@ -61,8 +68,7 @@ if (isset($_POST['Amount'])){
         <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
         <button type="submit" class="btn btn-success col-12" >Continue</button>
     </form>
-  </div> 
-</div>
+    </div>
 </body>
 </html>
 

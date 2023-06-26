@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
         }
 
+        /* profile container  */
         .profile-container {
             max-width: 600px;
             margin: 0 auto;

@@ -39,10 +39,6 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Username" name="username">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="form-control">
                     <input type="text" placeholder="Email" name="email">
                     <i class="fas fa-user"></i>
                 </div>

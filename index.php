@@ -528,7 +528,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Chat community</li>
                                 <li>One movie free ticket</li>
                             </ul>
-                            <a href="./Membership/membership.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Join</a>
+                            <a href="Donors/paymentGateway.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Join</a>
 
                         </div>
                     </div>
@@ -547,7 +547,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Exclusive monthly newsletter</li>
                                 <li>Personalized thank you message</li>
                             </ul>
-                            <a href="./Membership/membership.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Join</a>
+                            <a href="Donors/paymentGateway.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Join</a>
 
                         </div>
                     </div>
@@ -566,7 +566,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <li>Personalized thank you message</li>
                                 <li>Special recognition on our website</li>
                             </ul>
-                            <a href="./Membership/membership.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Join</a>
+                            <a href="Donors/paymentGateway.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Join</a>
                         </div>
                     </div>
                 </div>
@@ -574,7 +574,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         </div>
 
-        <script>
+        <!-- <script>
             document.getElementById('silver-button').addEventListener('click', function() {
                 window.location.href = '../FundFusion/User/userlogin.php';
             });
@@ -587,7 +587,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 window.location.href = '../FundFusion/User/userlogin.php';
 
             });
-        </script>
+        </script> -->
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

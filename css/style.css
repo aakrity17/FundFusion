@@ -71,7 +71,7 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    background: linear-gradient(90deg, rgba(45, 40, 196, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
+    background: linear-gradient(90deg, rgba(243, 242, 248, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
     z-index: 0;
     border-radius: 0 0 50% 50%;
     transform: translateX(-50%) rotate(0deg);
@@ -89,7 +89,7 @@ body {
     width: 130%;
     height: 96%;
     /* Button click garda no*/
-    background: rgba(89, 10, 186, 0.653);
+    background: rgba(251, 247, 255, 0.89);
     opacity: 0.3;
     z-index: 0;
     border-radius: 0 0 50% 50%;

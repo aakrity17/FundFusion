@@ -81,14 +81,16 @@ if (isset($_SESSION['name'])) {
                 </div>
 
                 <div class="form-control">
-                    <input type="text" placeholder="Essential" name="essential">
+                    <input type="text" value="<?php echo $title; ?>" name="essential">
                     <i class="fas fa-user"></i>
                 </div>
 
                 
+                <div class="form-control">
+                    <button type="submit" class="submit" name="submit" value="submit">Register</button>
+                </div>
 
 
-                <button type="submit" class="submit" name="submit" value="submit">Register</button>
             </form>
         </div>
     </section>

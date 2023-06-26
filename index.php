@@ -347,7 +347,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
       <div class="caption">
         <h2>Donate Study Materials and Stationaries</h2>
         <div class="btn-container">
-          <a href="Essentials/Essentials.php" class="btn">Register for Donation</a>
+          <a href="Essentials/Essentials.php?title=<?php echo urlencode('Study Materials'); ?>" class="btn">Register for Donation</a>
         </div>
       
         
@@ -360,7 +360,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
       <div class="caption">
         <h2>Donate Clothes and Uniforms</h2>
         <div class="btn-container">
-          <a href="#" class="btn">Register for Donation</a>
+        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Clothes & Uniforms'); ?>" class="btn">Register for Donation</a>
         </div>
       </div>
     </div>
@@ -371,7 +371,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
         <h2>Donate Medicines snd Aids</h2>
         <!-- <p>Donate Medicines snd Aids</p> -->
         <div class="btn-container">
-          <a href="#" class="btn">Register for Donation</a>
+        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Medicine & Aids'); ?>" class="btn">Register for Donation</a>
         </div>
       </div>
     </div>

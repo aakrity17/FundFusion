@@ -40,7 +40,7 @@
         btn.onclick = function () {
             // minimum transaction amount must be 10, i.e 1000 in paisa.
             checkout.show({amount:<?php if (isset($_POST['Amount'])){
-    $amount=$_POST['Amount'];
+    $amount=$_POST['Amount']*100;
     echo $amount;}
     else echo 100000;?>});
         }

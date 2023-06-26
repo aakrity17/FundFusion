@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['Amount'])) {
         $amount = $_POST['Amount'];
         // Process the amount
-        echo $amount;
+        // echo $amount;
     }
 
     // Retrieve other form data
@@ -52,8 +52,8 @@ if (isset($_POST['submit'])) {
     $donation_title = $_POST['donation_title'];
 
     // Save the form details in the database
-    $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause, date) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title', CURDATE())";
+    // $uid = 10; // Assuming uid is stored in the session
+    $sql = "INSERT INTO donors ( name, address, contact, email, amount, cause, date) VALUES ('$name', '$address', '$contact', '$email', '$amount', '$donation_title', CURDATE())";
     if (mysqli_query($conn, $sql)) {
         echo "Form details saved successfully in the database.";
     } else {
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Redirect to toEsewa.php with the amount
-    header("Location: toEsewa.php?Amount=$amount");
+    // header("Location: toEsewa.php?Amount=$amount");
     exit();
 }
 ?>

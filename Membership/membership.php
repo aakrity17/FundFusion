@@ -1,8 +1,12 @@
 <?php
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
-session_start(); 
-if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
+session_start();
+// Check if the user is logged in by checking if the session variables "name" and "username" are set.
+// session_start(); 
+if (isset($_SESSION['name'])) {
+
+
 
 
     if (isset($_GET['title'])) {
@@ -13,8 +17,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
 
     $name = $_SESSION['name'];
-    $username = $_SESSION['username'];
-    $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
+    $sql = "SELECT * FROM user WHERE name = '$name'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
@@ -24,18 +27,13 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
             $address = $row['address'];
             $contact = $row['Contact'];
             $email = $row['email'];
-    
-            // Do something with the retrieved data
-            // ...
         } else {
             // No matching records found
             echo "No matching records found.";
         }
         mysqli_free_result($result); // Free the result set
-    } else {
-        // Query execution failed
-        echo "Error executing the query: " . mysqli_error($conn);
-    }   
+   
+}
 }
 else {
     header('Location:../User/userlogin.php');
@@ -63,7 +61,7 @@ if (isset($_POST['submit'])) {
 
     // Save the form details in the database
     $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title')";
+    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$title')";
     if (mysqli_query($conn, $sql)) {
         echo "Form details saved successfully in the database.";
     } else {
@@ -104,7 +102,7 @@ if (isset($_POST['submit'])) {
               <section class="main">
             <div class="donation-container">
                 <h2>Together we can Make!!</h2>
-            <form class="donation-form" action="toEsewa.php" method="POST">
+            <form class="donation-form" action="../Donors/paymentGateway.php?title=<?php echo $title; ?>" method="POST">
                 <div class="form-control">
                     <input type="text" value="<?php echo" $name"; ?>" name="name">
                     <i class="fas fa-user"></i>

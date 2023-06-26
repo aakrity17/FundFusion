@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Redirect to toEsewa.php with the amount
-    header("Location: toEsewa.php?Amount=$amount");
+    header("Location: khalti.php?Amount=$amount");
     exit();
 }
 ?>

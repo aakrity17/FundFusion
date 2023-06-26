@@ -37,18 +37,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
 
         $passwordmd5 = md5($password);
 
-        // Prepare the SQL statement
-        $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5','user')";
+        // Check if the user with the email already exists
+        $sqlCheck = "SELECT * FROM user WHERE email = '$email'";
+        $resultCheck = mysqli_query($conn, $sqlCheck);
 
-        // Execute the query
-        if ($conn->query($sql) === TRUE) {
-            echo "Data inserted successfully!";
-            header("Location: ../index.php");
-            exit();
+        if (mysqli_num_rows($resultCheck) > 0) {
+            echo "User with email '$email' already exists!";
         } else {
-            echo $conn->error;
+            // Insert the new user
+            $sql = "INSERT INTO user (name, address, Contact, email, password, role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', 'user')";
+
+            // Execute the query
+            if ($conn->query($sql) === TRUE) {
+                echo "Data inserted successfully!";
+                header("Location: ../index.php");
+                exit();
+            } else {
+                echo $conn->error;
+            }
         }
     }
-
-    
+} else {
+    // header('location: ../index.php');
+    echo "error";
 }
+?>

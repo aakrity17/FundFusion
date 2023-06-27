@@ -658,6 +658,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         <footer style="background-color: purple">
        <?php include './Footer/indexFooter.php' ?>
+        </footer>
 
             <script>
                 var slideIndex = 1;

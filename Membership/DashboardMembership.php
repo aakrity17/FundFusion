@@ -4,7 +4,7 @@ include "../admin/routeconfig.php";
 // Include the database connection file
 include "../database/Db_Connection.php";
 
-$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinum Membership'";
+$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership'";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -22,14 +22,14 @@ $result = mysqli_query($conn, $sql);
         }
 
         .container {
-            margin-left: 300px;
-            max-width: 800px;
+            margin-left: 350px;
+            max-width: 1100px;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-        }
+            padding: 50px;       }
 
         table {
             width: 100%;
@@ -57,24 +57,30 @@ $result = mysqli_query($conn, $sql);
             <tr>
                 <th>Id</th>
                 <th colspan="2">Name</th>
-                <th colspan="1">Phone</th>
-                <th colspan="2">Email</th>
-                <th colspan="2">Type</th>
-                <th colspan="2">Registered Date</th>
-                <th colspan="2">Expiry Date</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Registered Date</th>
+                <th>Expiry Date</th>
+                <th>Days Remainig</th>
+
                 
             </tr>
             <?php
-            // Iterate over the query result and populate the table rows
             while ($row = mysqli_fetch_assoc($result)) {
+                $registeredDate = $row['date'];
+                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['name'] . "</td>";
+                echo "<td colspan='2'>" . $row['name'] . "</td>";
                 echo "<td>" . $row['Contact'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
                 echo "<td>" . $row['cause'] . "</td>";
-                echo "<td>" . $row['date'] . "</td>";
-                echo "<td>" . $row['date'] . "</td>";
+                echo "<td>" . $registeredDate . "</td>";
+                echo "<td>" . $expiryDate . "</td>";
+                echo "<td>" . $daysRemaining . "</td>";
                 echo "</tr>";
             }
             ?>

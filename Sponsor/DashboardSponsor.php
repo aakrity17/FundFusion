@@ -3,6 +3,9 @@ include "../admin/routeconfig.php";
 
 // Include the database connection file
 include "../database/Db_Connection.php";
+
+$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinum Membership'";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +22,14 @@ include "../database/Db_Connection.php";
         }
 
         .container {
-            margin-left: 300px;
-            max-width: 800px;
+            margin-left: 400px;
+            max-width: 1000px;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-        }
+            padding: 50px;       }
 
         table {
             width: 100%;
@@ -40,7 +43,8 @@ include "../database/Db_Connection.php";
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #5c85e6;
+            color:bisque;
             font-weight: bold;
         }
     </style>
@@ -51,14 +55,28 @@ include "../database/Db_Connection.php";
         <h1>Sponsors</h1>
         <table>
             <tr>
-                <th colspan="3">Id</th>
-                <th colspan="3">Name</th>
-                <th colspan="3">Phone</th>
-                <th colspan="3">Email</th>
-                <th colspan="3">Type</th>
-                <th colspan="3">Registered Date</th>
-                <!-- <th colspan="3">Expiry Date</th> -->
+                <th>Id</th>
+                <th colspan="2">Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Registered Date</th>
+
+                
             </tr>
+            <?php
+            // Iterate over the query result and populate the table rows
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td colspan='2'>" . $row['name'] . "</td>";
+                echo "<td>" . $row['Contact'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['cause'] . "</td>";
+                echo "<td>" . $row['date'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
             <!-- Add your PHP code here to populate the table with member data -->
         </table>
     </div>

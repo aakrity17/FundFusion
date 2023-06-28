@@ -6,15 +6,15 @@ include "../database/Db_Connection.php";
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the values from the login form
-    $providedUsername = $_POST['username'];
+    $providedEmail = $_POST['email'];
     $providedPassword = md5($_POST['password']);
 
     // Prepare and execute a SELECT statement
-    $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE role='admin' AND username = ? AND password = ?");
+    $stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE role='admin' AND email = ? AND password = ?");
 
     // Check if preparing the statement was successful
     if ($stmt) {
-        mysqli_stmt_bind_param($stmt, 'ss', $providedUsername, $providedPassword);
+        mysqli_stmt_bind_param($stmt, 'ss', $providedEmail, $providedPassword);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row = mysqli_fetch_assoc($result);
 
             // Store user information in the session
-            $_SESSION['username'] = $providedUsername;
+            // $_SESSION['username'] = $providedUsername;
             $_SESSION['password'] = $providedPassword;
             $_SESSION['role'] = "admin";
 
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <form class="login-form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="form-control">
-                    <input type="text" placeholder="Username" name="username">
+                    <input type="text" placeholder="Email" name="email">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">

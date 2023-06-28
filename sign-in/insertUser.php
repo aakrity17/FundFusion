@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
         $passwordmd5 = md5($password);
 
         // Check if the user with the email already exists
-        $sqlCheck = "SELECT * FROM user WHERE email = '$email'";
+        $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='user'";
         $resultCheck = mysqli_query($conn, $sqlCheck);
 
         if (mysqli_num_rows($resultCheck) > 0) {

@@ -22,6 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role="admin";
 
     // Prepare the SQL statement
+    $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='admin'";
+    $resultCheck = mysqli_query($conn, $sqlCheck);
+
+    if (mysqli_num_rows($resultCheck) > 0) {
+        echo "User with email '$email' already exists!";
+    } else {
     $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5', '$role')";
 
     // Execute the query
@@ -33,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Something went wrong!". $conn->error;
     }
+}
 }
 ?>
 

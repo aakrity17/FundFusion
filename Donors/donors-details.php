@@ -124,25 +124,26 @@ if ($result) {
         </div>
 
         <div class="profile-details">
-            <h2><b>Donte History</b></h2>
-            <?php
-            $sql2="SELECT * FROM donors WHERE email='$title'";
-            $result=mysqli_query($conn,$sql2);
-                while ($row=mysqli_fetch_array($result)) {
-                    $date=$row['date'];
-
-                ?>
-                <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $title ?></p>
-                <p><i class="fas fa-calendar-alt"></i> <strong>Membership Expiry Date:</strong> <?php echo $date ?> A.D.</p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Account Created Date:</strong> 2020-12-06</p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> 2023-02-28</p>
-    
-
-             <?php  
-            } 
-            
+    <h2><b>Donation History</b></h2>
+    <?php
+    $sql2 = "SELECT * FROM donors WHERE email='$title'";
+    $result = mysqli_query($conn, $sql2);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $date = $row['date'];
             ?>
-        </div>
+            <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $row['name']; ?></p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
+            <p><i class="fas fa-calendar-check"></i> <strong>Account Created Date:</strong> <?php echo $row['amount']; ?></p>
+            <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $row['cause']; ?></p>
+            <?php
+        }
+    } else {
+        echo "No donation history found.";
+    }
+    ?>
+</div>
+
 
         <div class="profile-details">
             <h2><b>Sponsorships<b></h2>

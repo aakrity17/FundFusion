@@ -17,7 +17,6 @@ if (isset($_SESSION['email'])) {
 <?php
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
-session_start();
 if (isset($_SESSION['name'])) {
 
     if (isset($_GET['title'])) {
@@ -41,9 +40,15 @@ if (isset($_SESSION['name'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <style>
+        .main{
+            text-align: center;
+            padding-top: 50px;
+
+        }
         .container {
-            margin-top: auto;
-            padding: auto;
+            margin-top:50px;
+        
+            
         }
 
         .card {
@@ -77,13 +82,13 @@ if (isset($_SESSION['name'])) {
 
 <body>
     <div class="main">
-        <h1>Membership Options</h1>
-        <div class="container">
+        <h1>Choose your preferred payment option:</h1>
+        <div class="container" style="margin-left: 350px;">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="card esewa-card">
-                        <div class="card-body text-center">
-                            <img class="esewa-logo" src="../img/esewa.jpg" alt="eSewa Logo">
+                        <div class="card-body text-center"   >                       
+                          <img class="esewa-logo" src="../img/esewa.jpg" alt="eSewa Logo">
                             <h3>eSewa</h3>
                             <p>Click the button below to donate via eSewa.</p>
                             <a class="btn btn-primary card-button" href="../esewa/donate.php?title=<?php echo urlencode($title); ?>">Donate</a>

@@ -7,8 +7,8 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
 }
 
-include "database/Db_Connection.php";
-include "admin/routeconfig.php";
+include "../database/Db_Connection.php";
+include "../admin/routeconfig.php";
 // include "admin/sessioncheck.php";
 // session_start();
 
@@ -27,10 +27,10 @@ include "admin/routeconfig.php";
   <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
 
     <!-- External css file  -->
-  <link rel="stylesheet" href="css/sponsorship.css">
+  <link rel="stylesheet" href="../css/sponsorship.css">
 
 <!--Main CSS-->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 
 
 <!-- card-layout for sponsorship options -->
@@ -42,7 +42,7 @@ include "admin/routeconfig.php";
 
  
   <?php
-@include('./Index/indexnav.php')
+@include('../Index/indexnav.php')
 ?>
 
 <div class="sponsorship-banner">
@@ -56,7 +56,7 @@ include "admin/routeconfig.php";
                 <div class="card-header bg-secondary text-white">
                     Premium Sponsorship
                 </div>
-                <img src="./img/premium.jpg" class="card-img-top" alt="premium">
+                <img src="../img/premium.jpg" class="card-img-top" alt="premium">
                 <div class="card-body">
                     <h5 class="card-title">About Premium Sponsorship</h5>
                     <p class="card-text">Monthly Contribution: USD 120 - USD 250</p>
@@ -69,7 +69,7 @@ include "admin/routeconfig.php";
                 <div class="card-header bg-warning text-white">
                     Regular Sponsorship
                 </div>
-                <img src="./img/Regular1.png" class="card-img-top" alt="regular">
+                <img src="../img/Regular1.png" class="card-img-top" alt="regular">
                 <div class="card-body">
                     <h5 class="card-title">About Regular Sponsorship</h5>
                     <p class="card-text"> Monthly Contribution: USD 20</p>
@@ -82,7 +82,7 @@ include "admin/routeconfig.php";
                 <div class="card-header bg-danger text-white">
                     VIP Sponsorship
                 </div>
-                <br><img src="./img/Vip.png" class="card-img-top" alt="special">
+                <br><img src="../img/Vip.png" class="card-img-top" alt="special">
                 <div class="card-body">
                     <h5 class="card-title">About VIP Sponsorship</h5>
                     <p class="card-text">Monthly Contribution: USD 40 - USD 70</p>
@@ -100,9 +100,9 @@ include "admin/routeconfig.php";
 
 <div class="container-1">
   <div class="buttons">
-    <a href="./buttondirect/sponsorform.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
-    <a href="./buttondirect/sponsorform.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
-    <a href="./buttondirect/sponsorform.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
+    <a href="../buttondirect/sponsorform.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
+    <a href="../buttondirect/sponsorform.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
+    <a href="../buttondirect/sponsorform.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
   </div>
 </div>
 

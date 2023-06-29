@@ -8,6 +8,8 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the form data
     $name = $_POST['name'];
+    $title = $_POST['title'];
+    $status = "Pending";
     $address = $_POST['address'];
     $contact = $_POST['contact'];
     $email = $_POST['email'];
@@ -16,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Perform data validation if needed
 
     // Insert the data into the database
-    $sql = "INSERT INTO donors (name, address, contact, email, amount) 
-            VALUES ('$name', '$address', '$contact', '$email', '$amount')";
+    $sql = "INSERT INTO donors (name, address, contact, email, status, cause, amount) 
+            VALUES ('$name', '$address', '$contact', '$email', '$status', '$title', '$amount')";
 
     if (mysqli_query($conn, $sql)) {
         // Data inserted successfully

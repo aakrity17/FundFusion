@@ -2,10 +2,20 @@
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 
-
+session_start();
+if(isset($_SESSION['name']) && isset($_SESSION['email'])) {
     $name = $_SESSION['name'];
-    $username = $_SESSION['username'];
-    $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
+    $email = $_SESSION['email'];
+
+}
+if (isset($_GET['title'])) {
+    $title = urldecode($_GET['title']);
+} else {
+    $title = '';
+}
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $sql = "SELECT * FROM user WHERE name = '$name' AND email = '$email'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
@@ -75,6 +85,10 @@ include "../database/Db_Connection.php";
                 </div>
                 <div class="form-control">
                     <input type="text" value="<?php echo" $email"; ?>" name="email">
+                    <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+                    <input type="text" value="<?php echo" $title"; ?>" name="title">
                     <i class="fas fa-user"></i>
             </div>
 

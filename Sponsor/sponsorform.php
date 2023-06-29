@@ -42,40 +42,6 @@ else {
     exit();
 }
 
-
-
-// donate.php
-
-if (isset($_POST['submit'])) {
-    if (isset($_POST['Amount'])) {
-        $amount = $_POST['Amount'];
-        // Process the amount
-        echo $amount;
-    }
-
-    // Retrieve other form data
-    
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    // $sponsorship_title = $_POST['sponsorship_title'];
-
-
-    // Save the form details in the database
-    $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title')";
-    if (mysqli_query($conn, $sql)) {
-        echo "Form details saved successfully in the database.";
-    } else {
-        echo "Error saving form details: " . mysqli_error($conn);
-    }
-
-    // Redirect to toEsewa.php with the amount
-    header("Location: toEsewa.php?Amount=$amount");
-    exit();
-}
-
 ?>
 
 
@@ -105,7 +71,7 @@ if (isset($_POST['submit'])) {
               <section class="main">
             <div class="donation-container">
                 <h2>We appreciate your support!!</h2>
-            <form class="donation-form" action="toEsewa.php" method="POST">
+            <form class="donation-form" action="sponsordb.php" method="POST">
                 <div class="form-control">
                     <input type="text" value="<?php echo" $name"; ?>" name="name">
                     <i class="fas fa-user"></i>
@@ -125,13 +91,8 @@ if (isset($_POST['submit'])) {
                     <i class="fas fa-user"></i>
             </div>
 
-            <div class="form-control">
-                    <input type="text" value="<?php echo $title; ?>" name="donation_title">
-                    <i class="fas fa-user"></i>
-            </div>  
-
-                <div class="form-control">
-                    <input type="number" placeholder="Minimum Rs.1000" name="Amount">
+             <div class="form-control">
+                    <input type="number" placeholder="Minimum Rs.1000" name="amount">
                     <i class="fas fa-lock"></i>
                 </div>
 

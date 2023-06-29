@@ -9,11 +9,6 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
 include "../database/Db_Connection.php";
 include "../admin/routeconfig.php";
-// include "admin/sessioncheck.php";
-// session_start();
-
-// $sql = "SELECT * from sponsor";
-// $records = $conn->query($sql);
 
 ?>
 <!DOCTYPE html>
@@ -100,9 +95,9 @@ include "../admin/routeconfig.php";
 
 <div class="container-1">
   <div class="buttons">
-    <a href="../buttondirect/sponsorform.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
-    <a href="../buttondirect/sponsorform.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
-    <a href="../buttondirect/sponsorform.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
+    <a href="../sponsor/sponsorform.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
+    <a href="../sponsor/sponsorform.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
+    <a href="../sponsor/sponsorform.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
   </div>
 </div>
 

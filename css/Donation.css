@@ -6,8 +6,9 @@ body {
 }
 
 .donation-banner {
-  background-color: rgba(153, 72, 252, 0.98);
-  color: #ffffff;
+  /* background-color: rgba(153, 72, 252, 0.98); */
+  color: #000000;
+  
   /* padding: 20px; */
   font-weight: 1200;
   text-align: center;

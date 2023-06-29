@@ -43,7 +43,7 @@ session_start();
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $site_url ?>Sponsorship.php">
+                        <a class="nav-link" href="<?php echo $site_url ?>sponsor/Sponsorship.php">
                             <i class="fas fa-calendar-alt"></i> Sponsor
                         </a>
                     </li>

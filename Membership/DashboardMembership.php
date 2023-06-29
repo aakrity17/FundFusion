@@ -4,7 +4,7 @@ include "../admin/routeconfig.php";
 // Include the database connection file
 include "../database/Db_Connection.php";
 
-$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership'";
+$sql = "SELECT * FROM donors WHERE cause='Premium Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship'";
 $result = mysqli_query($conn, $sql);
 ?>
 

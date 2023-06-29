@@ -25,14 +25,45 @@ if (isset($_POST['Amount'])){
 }
 ?>
 <html>
-<head>
-    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+<head>     
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js">
+    </script>
+    <style>
+            button {
+                background-color: #5c2d91;
+                color: #fff;
+            }
+            .text-center{
+                text-align: center;
+            }
+            img{
+            height :20rem;
+            weight :20rem;
+                        
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:4rem;
+            
+           }
+           p{
+            font-size : 25px;
+            text-align :center;
+            color : blue;
+        }
+    </style>
 </head>
 <body>
-    <!-- Place this where you need payment button -->
-    <button id="payment-button">Pay with Khalti</button>
-    <!-- Place this where you need payment button -->
-    <!-- Paste this code anywhere in you body tag -->
+    <div class = "button">
+        <img src ="../img/blueticl.png">
+        <p>Confirm your payment</P>
+        <!-- Place this where you need payment button -->
+        <div class="text-center">
+            <button id="payment-button">Pay with Khalti</button>
+        <!-- Place this where you need payment button -->
+        <!-- Paste this code anywhere in you body tag -->
+        </div>
+    </div>
     <script>
         var config = {
             // replace the publicKey with yours

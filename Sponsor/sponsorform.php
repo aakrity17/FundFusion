@@ -1,15 +1,6 @@
 <?php
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
-session_start(); 
-if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
-
-
-    if (isset($_GET['title'])) {
-        $title = urldecode($_GET['title']);
-    } else {
-        $title = '';
-    }
 
 
     $name = $_SESSION['name'];
@@ -36,11 +27,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
         // Query execution failed
         echo "Error executing the query: " . mysqli_error($conn);
     }   
-}
-else {
-    header('Location:../User/userlogin.php');
-    exit();
-}
+
 
 ?>
 

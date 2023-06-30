@@ -13,7 +13,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">My Website</a>
+    <a class="navbar-brand" href="../index.php">FundFusion</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -103,10 +103,29 @@
             </div>
           </div>
           <div class="tab-pane fade" id="donation-history">
+            <?php
+$donationsql = "SELECT * FROM donors WHERE email='$title'";
+$res=mysqli_query($conn,$donationsql);
+            if (mysqli_num_rows($res) > 0) {
+                while ($rw = mysqli_fetch_assoc($res)) {
+                    $date = $rw['date'];
+            ?>
+                    <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['name']; ?></p>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
+                    <p><i class="fas fa-calendar-check"></i> <strong>Account Created Date:</strong> <?php echo $rw['amount']; ?></p>
+                    <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
+            <?php
+                }
+            } else {
+                echo "No donation history found.";
+            }
+            ?>
+                       
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Donation History</h5>
-                <p>[Donation History Information]</p>
+               
+
               </div>
             </div>
           </div>

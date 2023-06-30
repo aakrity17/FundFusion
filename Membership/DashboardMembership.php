@@ -4,7 +4,7 @@ include "../admin/routeconfig.php";
 // Include the database connection file
 include "../database/Db_Connection.php";
 
-$sql = "SELECT * FROM donors WHERE cause='Premium Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship'";
+$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership'";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -71,7 +71,9 @@ $result = mysqli_query($conn, $sql);
                 $registeredDate = $row['date'];
                 $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
                 $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-
+                if($daysRemaining>364){
+                    $daysRemaining=364;
+                  }
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td colspan='2'>" . $row['name'] . "</td>";

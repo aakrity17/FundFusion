@@ -91,16 +91,41 @@
             </div>
           </div>
           <div class="tab-pane fade" id="membership-info">
+          <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
+
+            <?php 
+            include "../database/Db_Connection.php";
+
+            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership')";
+            $result = mysqli_query($conn, $sql);
+
+            
+            while ($row = mysqli_fetch_assoc($result)) {
+                $registeredDate = $row['date'];
+                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+                if($daysRemaining>=365){
+                  $daysRemaining=364;
+                }
+
+            ?>
+
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Membership Information</h5>
-                <p>Info: [Membership Info]</p>
-                <p>Membership Expiry Date: [Expiry Date]</p>
-                <p>Account Renewed Date: [Renewed Date]</p>
-                <p>Account Created Date: [Created Date]</p>
-              </div>
+            <div class="card-body" style="font-size: 20px;">
+  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
+  <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
+  <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
+  <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
+  <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
+</div>
+
             </div>
+            <?php
+            }
+            ?>
           </div>
+
+
           <div class="tab-pane fade" id="donation-history">
           <h3 class="card-title" style="text-align:center;
           padding:50px;">Donation History</h3>

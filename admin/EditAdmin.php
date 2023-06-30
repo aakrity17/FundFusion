@@ -17,12 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     // Prepare the SQL statement
-    $sql = "UPDATE user SET name = '$name', address = '$address', Contact = '$contact', email = '$email', role = 'user' WHERE id = '$userId'";
+    $sql = "UPDATE user SET name = '$name', address = '$address', Contact = '$contact', email = '$email', role = 'admin' WHERE id = '$userId'";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
         echo "Data updated successfully!";
-        header("Location: EditUser.php");
+        header("Location: EditAdmin.php");
         exit; // Important: Terminate the script after the redirect
     } else {
         echo "Something went wrong!" . $conn->error;
@@ -48,7 +48,7 @@ if (isset($_GET["delete_id"])) {
 }
 
 // Retrieve the user data from the database
-$sql = "SELECT * FROM user WHERE role = 'user'";
+$sql = "SELECT * FROM user WHERE role = 'admin'";
 $result = $conn->query($sql);
 $users = [];
 
@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
 
     <div class="container">
         <section>
-            <h2>User List</h2>
+            <h2>Admin List</h2>
             <?php if (!empty($users)) : ?>
                 <table>
                     <thead>
@@ -112,7 +112,7 @@ if ($result->num_rows > 0) {
         </section>
 
         <section>
-            <h2>Update User</h2>
+            <h2>Update Admin Data</h2>
             <form id="update-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="hidden" name="user_id" id="user-id" value="">
                 <label for="name">Name:</label>

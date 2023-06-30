@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $address = $_POST["address"];
     $contact = $_POST["contact"];
-    $username = $_POST["username"];
+    // $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($resultCheck) > 0) {
         echo "User with email '$email' already exists!";
     } else {
-    $sql = "INSERT INTO user (name, address, Contact, username, email, password,role) VALUES ('$name', '$address', '$contact', '$username', '$email', '$passwordmd5', '$role')";
+    $sql = "INSERT INTO user (name, address, Contact, email, password,role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', '$role')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
@@ -74,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="contact">Contact:</label>
             <input type="text" name="contact" id="contact" required><br>
 
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required><br>
+            <!-- <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br> -->
 
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required><br>
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th>Name</th>
                 <th>Address</th>
                 <th>Contact</th>
-                <th>Username</th>
+                <!-- <th>Username</th> -->
                 <th>Email</th>
                 <th colspan="2">Modify</th>
 
@@ -115,10 +115,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["name"] . "</td>";
                     echo "<td>" . $row["address"] . "</td>";
                     echo "<td>" . $row["Contact"] . "</td>";
-                    echo "<td>" . $row["username"] . "</td>";
+                    // echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
                     echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
-                    echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
+                    echo "<td> <a href='./EditAdmin.php?user_id=" . $row["id"] . "'>Edit</a></td>";
 
 
                     

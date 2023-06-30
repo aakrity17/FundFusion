@@ -1,20 +1,21 @@
 <?php
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
-session_start(); 
-if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
 
-
-    if (isset($_GET['title'])) {
-        $title = urldecode($_GET['title']);
-    } else {
-        $title = '';
-    }
-
-
+session_start();
+if(isset($_SESSION['name']) && isset($_SESSION['email'])) {
     $name = $_SESSION['name'];
-    $username = $_SESSION['username'];
-    $sql = "SELECT * FROM user WHERE name = '$name' AND username = '$username'";
+    $email = $_SESSION['email'];
+
+}
+if (isset($_GET['title'])) {
+    $title = urldecode($_GET['title']);
+} else {
+    $title = '';
+}
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $sql = "SELECT * FROM user WHERE name = '$name' AND email = '$email'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
@@ -36,45 +37,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['username'])) {
         // Query execution failed
         echo "Error executing the query: " . mysqli_error($conn);
     }   
-}
-else {
-    header('Location:../User/userlogin.php');
-    exit();
-}
 
-
-
-// donate.php
-
-if (isset($_POST['submit'])) {
-    if (isset($_POST['Amount'])) {
-        $amount = $_POST['Amount'];
-        // Process the amount
-        echo $amount;
-    }
-
-    // Retrieve other form data
-    
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    // $sponsorship_title = $_POST['sponsorship_title'];
-
-
-    // Save the form details in the database
-    $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title')";
-    if (mysqli_query($conn, $sql)) {
-        echo "Form details saved successfully in the database.";
-    } else {
-        echo "Error saving form details: " . mysqli_error($conn);
-    }
-
-    // Redirect to toEsewa.php with the amount
-    header("Location: toEsewa.php?Amount=$amount");
-    exit();
-}
 
 ?>
 
@@ -105,7 +68,7 @@ if (isset($_POST['submit'])) {
               <section class="main">
             <div class="donation-container">
                 <h2>We appreciate your support!!</h2>
-            <form class="donation-form" action="toEsewa.php" method="POST">
+            <form class="donation-form" action="sponsordb.php" method="POST">
                 <div class="form-control">
                     <input type="text" value="<?php echo" $name"; ?>" name="name">
                     <i class="fas fa-user"></i>
@@ -124,14 +87,13 @@ if (isset($_POST['submit'])) {
                     <input type="text" value="<?php echo" $email"; ?>" name="email">
                     <i class="fas fa-user"></i>
             </div>
-
             <div class="form-control">
-                    <input type="text" value="<?php echo $title; ?>" name="donation_title">
+                    <input type="text" value="<?php echo" $title"; ?>" name="title">
                     <i class="fas fa-user"></i>
-            </div>  
+            </div>
 
-                <div class="form-control">
-                    <input type="number" placeholder="Minimum Rs.1000" name="Amount">
+             <div class="form-control">
+                    <input type="number" placeholder="Minimum Rs.1000" name="amount">
                     <i class="fas fa-lock"></i>
                 </div>
 

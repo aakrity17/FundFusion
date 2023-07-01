@@ -32,7 +32,7 @@
           <a class="nav-link" href="#sponsorships" onclick="displaySection('sponsorships')"><i class="fas fa-hand-holding-heart"></i>Sponsorships</a>
         </li>
       </ul>
-    </div>
+    </div>7
   </nav>
 
   <div class="container">

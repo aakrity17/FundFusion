@@ -37,7 +37,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
 ?>
 
   <div class="donation-banner">
-    <h1>Current Projects</h1>
+    <h1 style="border-style: groove;">Current Projects</h1>
   </div>
 
   <div class="container">
@@ -59,7 +59,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
     </div>
   </div>
  <div class="donation-banner">
-    <h1>Upcoming Projects</h1>
+    <h1 style="border-style: groove;">Upcoming Projects</h1>
   </div>
 
   <div class="container">
@@ -82,7 +82,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
   </div>
 
   <div class="donation-banner">
-    <h1>Past Projects</h1>
+    <h1 style="border-style: groove;">Past Projects</h1>
   </div>
 
   <div class="container">

@@ -162,18 +162,43 @@
 
               
           </div>
+          <!-- sponsorship section -->
           <div class="tab-pane fade" id="sponsorships">
+          <?php 
+            include "../database/Db_Connection.php";
+
+            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
+            $result = mysqli_query($conn, $sql);
+
+            
+            while ($row = mysqli_fetch_assoc($result)) {
+                $registeredDate = $row['date'];
+                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+                if($daysRemaining>=365){
+                  $daysRemaining=364;
+                }
+
+            ?>
+
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Sponsorships</h5>
-                <p>Info: [Sponsorship Info]</p>
-                <p>Renew your accounts via payment.</p>
-                <p>Membership Expiry Date: [Expiry Date]</p>
-                <p>Account Created Date: [Created Date]</p>
-                <p>Change Password</p>
-                <p>Activity Log</p>
-              </div>
+            <div class="card-body" style="font-size: 20px;">
+  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
+  <p><strong>Sponsor Type:</strong><?php echo $row['cause']; ?> </p>
+</div>
+
             </div>
+            <?php
+            }
+            if ($result->num_rows == 0){
+              ?>
+              <h1>No Sponsorship Available</h1>
+              <?php
+
+
+            }
+            
+            ?>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ body {
 }
 
 .donation-banner {
+  padding-top: 50px;
   /* background-color: rgba(153, 72, 252, 0.98); */
   color: #000000;
   
@@ -62,15 +63,18 @@ body {
 }
 
 .progress {
-  height: 20px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.5rem;
   overflow: hidden;
+  font-size: .75rem;
+  background-color: #120d0e;
+  border-radius: 0.25rem;
 }
 
 .progress-bar {
   height: 100%;
-  color: #fff;
+  color: #be1515;
   text-align: center;
   line-height: 20px;
   font-weight: bold;

@@ -71,38 +71,49 @@
             background-color: #333;
             color: #fff;
         }
-        img{
-            height :25vh;
-            weight :25vh;
-        }
+        
     </style>
 </head>
 
 <body>
+    <?php
+    include 'database/Db_Connection.php';
+    if (isset($_GET['title'])) {
+        $title = urldecode($_GET['title']);
+      } else {
+        $title = '';
+      }
+
+      $sql = "SELECT * FROM donors WHERE email='$title'";
+      $result = mysqli_query($conn, $sql);
+
+      if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+          $row = mysqli_fetch_assoc($result);
+          $address = $row['address'];
+          $contact = $row['Contact'];
+          $name = $row['name'];
+          $id = $row['id'];
+        }
+      }
+    ?>
 
 
-    <div class="profile-container">
-        <h1 class="profile-heading" style="text-align: center; margin-bottom:50px;"></h1>
+    <div class="profile-container" style="margin-top: 50px;">
+        <h1 class="profile-heading" style="text-align: center; margin-top:20px;"></h1>
         <div class="profile-details">
-            <div>
-                <img src ="./img/blueticl.png">
-                </div>
-            <h2><B>Personal Information</B></h2>
-            <p><i class="fas fa-id-card"></i> <strong>ID: 22</strong></p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:parajulil385@gmail.com</strong> </p>
-            <p><i class="fas fa-phone"></i> <strong>Phone Number:+977 9806501357</strong> </p>
-            <!-- <p><i class="fas fa-venus"></i> <strong>Gender:</strong> F</p> -->
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:Pkr-5</strong></p>
+            
+            <h2 style="text-align:center"><B><?php echo $name ?></B></h2>
+            <p><i class="fas fa-id-card"></i> <strong>ID: <?php echo $id ?></strong></p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:<?php echo $title ?></strong> </p>
+            <p><i class="fas fa-phone"></i> <strong>Phone Number:+977 <?php echo $contact ?></strong> </p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:<?php echo $address ?></strong></p>
+            <p><i class="fas fa-dollar-sign"></i><strong> Total Donations : </strong> <P>
+            <!-- <p><i class="fas fa-dollar-sign"></i><strong>Total Donations : </strong> <P> -->
+
+
+
         </div>
-        <div class="profile-details">
-            <h2><b>Membership Information</b></h2>
-            <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> Renew your accounts via payment.</p>
-            <p><i class="fas fa-calendar-alt"></i> <strong>Membership Expiry Date:</strong> 2024-02-27 A.D.</p>
-            <p><i class="fas fa-calendar-check"></i> <strong>Account Created Date:</strong> 2020-12-06</p>
-            <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> 2023-02-28</p>
-        </div>
-
-        <div class="profile-details">
-    <h2><b>Donation History</b></h2>
-    <p><i class="fas fa-dollar-sign"></i><strong>Total Donations : </strong> <P>
     </div>
+</body>
+</html>

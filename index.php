@@ -574,21 +574,6 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         </div>
 
-        <!-- <script>
-            document.getElementById('silver-button').addEventListener('click', function() {
-                window.location.href = '../FundFusion/User/userlogin.php';
-            });
-
-            document.getElementById('gold-button').addEventListener('click', function() {
-                window.location.href = '..FundFusion/User/userlogin.php';
-            });
-
-            document.getElementById('platinum-button').addEventListener('click', function() {
-                window.location.href = '../FundFusion/User/userlogin.php';
-
-            });
-        </script> -->
-
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 

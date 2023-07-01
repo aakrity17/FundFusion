@@ -99,14 +99,22 @@ include "../routeconfig.php";
            <th>'.$data['event_name'].'</th>
            <th>'.$data['event_duration'].'</th>
            <th><a href="edit-events.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
-           <a href="deleteevent.php?id='.$data['id'].'"><ion-icon name="trash"></ion-icon></a>
+           
+           <a href="javascript:void(0);" onclick="confirmDelete('.$data['id'].')"><ion-icon name="trash"></ion-icon></a>
            </th> 
            </tr>';
         }
-        ?>
+        ?> 
     </table>
     </div>
   </body>
+      <script>
+function confirmDelete(id) {
+    if (confirm('Are you sure you want to delete this Event?')) {
+        window.location.href = 'deleteevent.php?id=' + id;
+    }
+}
+</script>
   <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

@@ -49,29 +49,54 @@ $records = $conn->query($sql);
   </div>
 
   <div class="container">
-    <div class="row">
-      <?php foreach ($records as $data) : ?>
-        <div class="col-lg-4 col-md-6">
-          <div class="card">
-            <img class="card-img-top" src="img/donation/<?php echo $data['donation_image_url']; ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $data['donation_name']; ?></h5>
+  <div class="row">
+    <?php foreach ($records as $data) : ?>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <img class="card-img-top" src="img/donation/<?php echo $data['donation_image_url']; ?>">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $data['donation_name']; ?></h5>
+            <p class="card-text card-description"><?php echo $data['donation_description']; ?></p>
+            <div class="progress">
+              <?php
+              // Assuming you have established a database connection using mysqli
 
-              <p class="card-text card-description"><?php echo $data['donation_description']; ?>
-              <div class="progress">
-                <div class="progress-bar" style="width: <?php echo $data['donation_progress']; ?>;">
-                  <?php echo $data['donation_progress']; ?>
-                </div>
-              </div>
+              // Prepare the SQL query
+              $query = "SELECT amount FROM donors WHERE cause = ?";
+              $stmt = mysqli_prepare($conn, $query);
 
-              <br>
-              <a href="./Donors/paymentGateway.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
+              // Bind the donation_title parameter
+              $donation_title = $data['donation_name'];
+              mysqli_stmt_bind_param($stmt, "s", $donation_title);
+
+              // Execute the query
+              mysqli_stmt_execute($stmt);
+
+              // Bind the result
+              mysqli_stmt_bind_result($stmt, $amt);
+
+              // Fetch the amounts and calculate the total
+              $total_amt = 0;
+              while (mysqli_stmt_fetch($stmt)) {
+                $total_amt += $amt;
+              }
+              $percent = ($total_amt / $data['donation_target']) * 100;
+
+              // Close the statement
+              mysqli_stmt_close($stmt);
+              ?>
+
+              <div class="progress-bar" style=" width: <?php echo $percent; ?>%;"> <?php echo $percent; ?></div>
             </div>
+
+            <br>
+            <a href="./Donors/paymentGateway.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
           </div>
         </div>
-      <?php endforeach; ?>
-    </div>
+      </div>
+    <?php endforeach; ?>
   </div>
+</div>
 
   <br><br><br>
   <footer>

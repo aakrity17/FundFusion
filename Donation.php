@@ -86,7 +86,7 @@ $records = $conn->query($sql);
               mysqli_stmt_close($stmt);
               ?>
 
-              <div class="progress-bar" style=" width: <?php echo $percent; ?>%;"> <?php echo $percent; ?></div>
+              <div class="progress-bar" style=" width: <?php echo $percent; ?>%;"> <?php echo intval($percent). "%  /  ".$data['donation_target'] ; ?></div>
             </div>
 
             <br>
@@ -97,6 +97,7 @@ $records = $conn->query($sql);
     <?php endforeach; ?>
   </div>
 </div>
+
 
   <br><br><br>
   <footer>

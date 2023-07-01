@@ -49,7 +49,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
 
             // Execute the query
             if ($conn->query($sql) === TRUE) {
-                echo "Data inserted successfully!";
+                // echo "Data inserted successfully!";
+
+                // use ../PHPMailer/PHPMailer/PHPMailer;
+                include "../PHPMailer/PHPMailer/PHPMailer";
+                include "../PHPMailer/PHPMailer/Exception";
+
+                require 'Phpmailer/src/Exception.php';
+                require 'Phpmailer/src/PHPMailer.php';
+                require 'Phpmailer/src/SMTP.php';
+
+                if (isset($_POST["send"])) {
+
+
+                    $mail = new PHPMailer(true);
+
+                    //smtp settings
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'ujjwaldemoid999@gmail.com';
+                    $mail->Password = 'ctiybowllgqlfyqx';
+                    $mail->SMTPSecure = 'ssl';
+                    $mail->Port = 465;
+
+                    //email settings
+                    $mail->setFrom('ujjwaldemoid999@gmail.com');
+
+                    $mail->addAddress("parajulil385@gmail.com");
+
+                    $mail->isHTML(true);
+
+                    $mail->Subject = ("dskfns");
+                    $mail->Body = ("fnksf");
+
+                    $mail->send();
+                }
+
+
                 header("Location: ../index.php");
                 exit();
             } else {
@@ -61,4 +98,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
     // header('location: ../index.php');
     echo "error";
 }
-?>

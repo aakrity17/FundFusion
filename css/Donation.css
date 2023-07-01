@@ -68,17 +68,19 @@ body {
   height: 1.5rem;
   overflow: hidden;
   font-size: .75rem;
-  background-color: #120d0e;
+  background-color: #18043971;
   border-radius: 0.25rem;
 }
 
 .progress-bar {
   height: 100%;
-  color: #be1515;
+  color: #fcfcfc;
   text-align: center;
   line-height: 20px;
   font-weight: bold;
-  background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+  background-color: #090f7e;
+
+  /* background-image: linear-gradient(to right, #8b33c5, #15a0e1); */
 }
 
 .read-more-btn {

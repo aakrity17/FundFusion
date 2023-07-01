@@ -8,7 +8,6 @@
 
 <!--Main CSS-->
 <link rel="stylesheet" href="../css/style.css">
-
 <!--fontawesome-->
 <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
 <!--google Fonts-->

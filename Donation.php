@@ -70,7 +70,7 @@ $records = $conn->query($sql);
                 $stmt->close();
                 ?>
 
-                <div class="progress-bar" style="width: <?php echo $percent; ?>%;"></div>
+                <div class="progress-bar" style="width: <?php echo $percent; ?>%;"><?php echo intval($percent) . "%"; ?></div>
               </div>
 
               <br>

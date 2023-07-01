@@ -40,8 +40,8 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
     <h1 style="border-style: groove;">Current Projects</h1>
   </div>
 
-  <div class="container">
-    <div class="row">
+  <div class="row">
+    <div class="container">
       <?php foreach ($currentProjectRecords as $currentData): ?>
         <div class="col-lg-4 col-md-6">
           <div class="card">
@@ -51,7 +51,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $currentData['descriptions']; ?></p>             
               <p><strong> From: </strong><?php echo $currentData['p_start_date']; ?><strong> To: </strong> <?php echo $currentData['p_end_date']; ?></p>
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $currentData['id']; ?>" class="btn btn-primary">Donate</a>
+              <a href="ProjectDetail.php/?id=<?php echo $currentData['id']; ?>" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
@@ -62,8 +62,8 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
     <h1 style="border-style: groove;">Upcoming Projects</h1>
   </div>
 
-  <div class="container">
-    <div class="row">
+  <div class="row">
+    <div class="container">
       <?php foreach ($upcomingProjectRecords as $upcomingData): ?>
         <div class="col-lg-4 col-md-6">
           <div class="card">
@@ -73,7 +73,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $upcomingData['descriptions']; ?></p>
               <p><strong> From: </strong><?php echo $upcomingData['p_start_date']; ?><strong> To: </strong> <?php echo $upcomingData['p_end_date']; ?></p>
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $upcomingData['id']; ?>" class="btn btn-primary">Donate</a>
+              <a href="ProjectDetail.php/?id=<?php echo $upcomingData['id']; ?>" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
@@ -85,8 +85,8 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
     <h1 style="border-style: groove;">Past Projects</h1>
   </div>
 
-  <div class="container">
-    <div class="row">
+  <div class="row">
+    <div class="container">
       <?php foreach ($pastProjectRecords as $pastData): ?>
         <div class="col-lg-4 col-md-6">
           <div class="card">
@@ -96,7 +96,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $pastData['descriptions']; ?></p>            
               <p><strong> From: </strong><?php echo $pastData['p_start_date']; ?><strong> To: </strong> <?php echo $pastData['p_end_date']; ?></p>              
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="btn btn-primary">Donate</a>
+              <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>

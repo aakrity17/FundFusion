@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--Main CSS-->
+<link rel="stylesheet" href="../css/style.css">
+
+<!--fontawesome-->
+<script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+<!--google Fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<!--Animate.css--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
+<?php 
+// include "../database/Db_Connection.php";
+include "../admin/routeconfig.php";
+include '../Index/indexnav.php'; 
+?>
+
+<div class="container" >
     <div class="row">
-        <h1 style="text-align:center; padding:50px;">Our Donors</h1>
+        <h1 style="text-align:center; padding:100px;">Our Donors</h1>
         <div class="col-md-12 mb-3" style="text-align: right;">
             <label for="filter">Sort By:</label>
             <select id="filter" class="form-select-sm my-4" name="sortDonorsList">

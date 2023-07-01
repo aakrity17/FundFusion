@@ -30,24 +30,26 @@
             // Output data of each row
             while ($row = $result->fetch_assoc()) {
                 ?>
-                <div class="col-md-4">
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="../img/member2.jpg" class="img-fluid rounded-start" alt="Donor Image" style="padding-top:50px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                                    <p class="card-text">Address: <?php echo $row["address"]; ?></p>
-                                    <p class="card-text">Amount: <?php echo $row["amount"]; ?></p>
-                                    <p class="card-text">Cause <?php echo $row["cause"]; ?></p>
-                                    <p class="card-text"><small class="text-muted">Date: <?php echo $row["date"]; ?></small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="col-md-4">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../img/member2.jpg" class="img-fluid rounded-start" alt="Donor Image" style="padding-top:50px;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $row["name"]; ?></h5>
+          <p class="card-text">Address: <?php echo $row["address"]; ?></p>
+          <p class="card-text">Amount: <?php echo $row["amount"]; ?></p>
+          <p class="card-text">Cause: <?php echo $row["cause"]; ?></p>
+          <p class="card-text"><small class="text-muted">Date: <?php echo $row["date"]; ?></small></p>
+          <a href="../personal.php?title=<?php echo $row['email']; ?>" class="btn btn-danger">Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
                 <?php
             }
         } else {

@@ -8,6 +8,25 @@
     .navbar-nav {
       margin-left: auto;
     }
+
+    /* .profile-details {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    } */
+
+    .profile-picture img {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      margin-left: 400px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+
+    }
+    .profile-info{
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -32,7 +51,7 @@
           <a class="nav-link" href="#sponsorships" onclick="displaySection('sponsorships')"><i class="fas fa-hand-holding-heart"></i>Sponsorships</a>
         </li>
       </ul>
-    </div>7
+    </div>
   </nav>
 
   <div class="container">
@@ -68,12 +87,22 @@
                       $contact = $row['Contact'];
                       $name = $row['name'];
                       $id = $row['id'];
-
-                      // Display personal details
-                      echo "<p>ID: $id</p>";
-                      echo "<p>Email: $title</p>";
-                      echo "<p>Phone Number: $contact</p>";
-                      echo "<p>Address: $address</p>";
+                      $profilePicturePath = '../img/' . $row['profile_picture']; // Replace with the actual path to the profile pictures directory
+                ?>
+                      <div class="profile-details">
+                        <div class="profile-picture">
+                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
+                            <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+                          </a>
+                        </div>
+                        <div class="profile-info">
+                          <p>ID: <?php echo $id; ?></p>
+                          <p>Email: <?php echo $title; ?></p>
+                          <p>Phone Number: <?php echo $contact; ?></p>
+                          <p>Address: <?php echo $address; ?></p>
+                        </div>
+                      </div>
+                <?php
                     }
                   } else {
                     // Handle the query error
@@ -90,116 +119,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="membership-info">
-          <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
-
-            <?php 
-            include "../database/Db_Connection.php";
-
-            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership')";
-            $result = mysqli_query($conn, $sql);
-
-            
-            while ($row = mysqli_fetch_assoc($result)) {
-                $registeredDate = $row['date'];
-                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-                if($daysRemaining>=365){
-                  $daysRemaining=364;
-                }
-
-            ?>
-
-            <div class="card">
-            <div class="card-body" style="font-size: 20px;">
-  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-  <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
-  <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
-  <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
-  <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
-</div>
-
-            </div>
-            <?php
-            }
-            ?>
-          </div>
-
-
-          <div class="tab-pane fade" id="donation-history">
-          <h3 class="card-title" style="text-align:center;
-          padding:50px;">Donation History</h3>
-
-            
-                
-                <?php
-            include "../database/Db_Connection.php";
-
-            $donationsql = "SELECT * FROM donors WHERE email='$title' AND (cause NOT IN ('Regular Sponsorsip', 'Premium Sponsorship', 'VIP Sponsorship', 'Gold Membership', 'Platinum Membership', 'Silver Membership'))";
-            $res = mysqli_query($conn, $donationsql);
-            if (mysqli_num_rows($res) > 0) {
-              while ($rw = mysqli_fetch_assoc($res)) {
-                $date = $rw['date'];
-
-            ?>
-            <div class="card">
-              <div class="card-body" style="text-align: justify; padding-left:200px;">
-                <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['cause']; ?></p>
-                <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Amount Donated:</strong> <?php echo $rw['amount']; ?></p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
-                </div>
-            </div>
-            <?php
-
-              }
-            } else {
-              echo "No donation history found.";
-            }
-            ?>
-
-
-
-              
-          </div>
-          <!-- sponsorship section -->
-          <div class="tab-pane fade" id="sponsorships">
-          <?php 
-            include "../database/Db_Connection.php";
-
-            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
-            $result = mysqli_query($conn, $sql);
-
-            
-            while ($row = mysqli_fetch_assoc($result)) {
-                $registeredDate = $row['date'];
-                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-                if($daysRemaining>=365){
-                  $daysRemaining=364;
-                }
-
-            ?>
-
-            <div class="card">
-            <div class="card-body" style="font-size: 20px;">
-  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-  <p><strong>Sponsor Type:</strong><?php echo $row['cause']; ?> </p>
-</div>
-
-            </div>
-            <?php
-            }
-            if ($result->num_rows == 0){
-              ?>
-              <h1>No Sponsorship Available</h1>
-              <?php
-
-
-            }
-            
-            ?>
-          </div>
+          <!-- Rest of the code... -->
         </div>
       </div>
     </div>

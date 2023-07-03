@@ -110,7 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>" . $row["Contact"] . "</td>";
                     // echo "<td>" . $row["username"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
-                    echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
+                    // echo "<td> <button class='btn-delete'>Delete</button></td>"; // Add CSS class
+                    echo "<td> <button class='btn-delete' data-id='" . $row["id"] . "'>Delete</button></td>";
                     echo "<td> <a href='edituser.php?user_id=" . $row["id"] . "'>Edit</a></td>";
 
 
@@ -136,4 +137,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-alpha3/js/all.min.js"></script>
 
     <script src="<?php echo $site_url ?>js/Dashboard.js"></script>
+    <script>
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+// Add event listener to each delete button
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Get the user id from the data-id attribute
+    const userId = button.dataset.id;
+
+    // Display a confirmation dialog to confirm the deletion
+    if (confirm("Are you sure you want to delete this user?")) {
+      // Send an AJAX request to delete the user
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "deleteUser.php", true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            // Request successful, refresh the page or update the table
+            location.reload();
+          } else {
+            // Error occurred
+            console.error("Error deleting user: " + xhr.responseText);
+          }
+        }
+      };
+      // Send the user id as data to the server
+      xhr.send("user_id=" + encodeURIComponent(userId));
+    }
+  });
+});
+</script>
 </html>

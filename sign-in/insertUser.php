@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
         $name = $_POST["name"];
         $address = $_POST["address"];
         $contact = $_POST["contact"];
-        $username = $_POST["username"];
+        // $username = $_POST["username"];
         $email = $_POST["email"];
         $password = $_POST["password"];
 
@@ -49,43 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
 
             // Execute the query
             if ($conn->query($sql) === TRUE) {
-                // echo "Data inserted successfully!";
+                echo "Data inserted successfully!";
 
-                // use ../PHPMailer/PHPMailer/PHPMailer;
-                include "../PHPMailer/PHPMailer/PHPMailer";
-                include "../PHPMailer/PHPMailer/Exception";
+                // call php mailer
 
-                require 'Phpmailer/src/Exception.php';
-                require 'Phpmailer/src/PHPMailer.php';
-                require 'Phpmailer/src/SMTP.php';
-
-                if (isset($_POST["send"])) {
-
-
-                    $mail = new PHPMailer(true);
-
-                    //smtp settings
-                    $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
-                    $mail->SMTPAuth = true;
-                    $mail->Username = 'ujjwaldemoid999@gmail.com';
-                    $mail->Password = 'ctiybowllgqlfyqx';
-                    $mail->SMTPSecure = 'ssl';
-                    $mail->Port = 465;
-
-                    //email settings
-                    $mail->setFrom('ujjwaldemoid999@gmail.com');
-
-                    $mail->addAddress("parajulil385@gmail.com");
-
-                    $mail->isHTML(true);
-
-                    $mail->Subject = ("dskfns");
-                    $mail->Body = ("fnksf");
-
-                    $mail->send();
-                }
-
+                // handle the error
 
                 header("Location: ../index.php");
                 exit();

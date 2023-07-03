@@ -27,16 +27,16 @@ include "../../database/Db_Connection.php";
       ?>
         <div class="main">
             <div class="topbar">
-            <div class="toggle">
+            <!-- <div class="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
-            </div>
+            </div> -->
             
-            <div class="search">
+            <!-- <div class="search">
                 <label>
                 <input type="search" placeholder="Search here" />
                 <ion-icon id="search-bar" name="search-outline"></ion-icon>
                 </label>
-            </div>
+            </div> -->
         </div>
 
         
@@ -57,7 +57,7 @@ include "../../database/Db_Connection.php";
                     <input type="text" id="donation_name" name="donation_name" placeholder="New Donation Name">
                 </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                 <div class="col-25">
                     <label for="donation_type">Donation type</label>
                 </div>
@@ -69,7 +69,7 @@ include "../../database/Db_Connection.php";
                         <option value="3">Private Operating Foundations</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-25">
                     <label for="donation_progress">Donation Progress</label>
@@ -119,7 +119,7 @@ include "../../database/Db_Connection.php";
     <table>
         <tr>
             <th><u>Donation Name</u></th>
-            <th><u>Donation Type</u></th>
+            <th><u>Donation Description</u></th>
             <th><u>Options</u></th>
         </tr>
         <?php
@@ -127,11 +127,11 @@ include "../../database/Db_Connection.php";
         {
            echo ' <tr>
            <th>'.$data['donation_name'].'</th>
-           <th>'.$data['donation_type'].'</th>
+           <th>'.$data['donation_description'].'</th>
            <th><a href="edit-donation.php?id='.$data['id'].'"><ion-icon name="create"></ion-icon></a>
          
          <a href="javascript:void(0);" onclick="confirmDelete('.$data['id'].')"><ion-icon name="trash"></ion-icon></a>
-           </th>" 
+           </th> 
            </tr>';
         }
         ?>

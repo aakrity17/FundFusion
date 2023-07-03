@@ -12,8 +12,8 @@ body {
 
 
 .logo {
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     padding-left: 10px;
     background-color: transparent;
@@ -44,7 +44,7 @@ body {
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
-    width:120px;
+    width: 120px;
 }
 
 .navbar-toggler {
@@ -149,7 +149,7 @@ body {
     margin: 10px;
     color: #fff;
     animation-delay: 0.5s;
-    border: 1px solid rgba(102, 42, 176, 0.696);
+    border: 1px solid rgba(92, 35, 161, 0.764);
 
 }
 

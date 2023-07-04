@@ -6,6 +6,7 @@ body {
 }
 
 .donation-banner {
+  padding-top: 50px;
   /* background-color: rgba(153, 72, 252, 0.98); */
   color: #000000;
   
@@ -62,19 +63,24 @@ body {
 }
 
 .progress {
-  height: 20px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.5rem;
   overflow: hidden;
+  font-size: .75rem;
+  background-color: #18043971;
+  border-radius: 0.25rem;
 }
 
 .progress-bar {
   height: 100%;
-  color: #fff;
+  color: #fcfcfc;
   text-align: center;
   line-height: 20px;
   font-weight: bold;
-  background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+  background-color: #090f7e;
+
+  /* background-image: linear-gradient(to right, #8b33c5, #15a0e1); */
 }
 
 .read-more-btn {

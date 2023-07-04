@@ -23,7 +23,7 @@
             
             <!-- <p class="welcome-message">Please, provide login credential to access dashboard.</p> -->
 
-            <form class="login-form" method="POST" action="insertUser.php">
+            <form class="login-form" method="POST" action="../PHPMailer/send.php">
                 <div class="form-control">
                     <input type="text" placeholder="Name" name="name">
                     <i class="fas fa-user"></i>
@@ -31,16 +31,16 @@
 
                 <div class="form-control" >
                     <input type="text" placeholder="Address" name="address">
-                    <i class="fas fa-user"></i>
+                    <i class="fa fa-map-marker"></i>
                 </div>
 
                 <div class="form-control">
                     <input type="text" placeholder="Contact" name="contact">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-phone"></i>
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Email" name="email">
-                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Email" name="email">
+                    <i class="fas fa-envelope"></i>
                 </div>
                 <div class="form-control">
                     <input type="password" placeholder="Password" name="password">
@@ -52,7 +52,7 @@
 </div>
 
 
-<button id="signupBtn" type="submit" class="submit" disabled>Sign Up</button>
+<button id="signupBtn" type="submit" class="submit" disabled name="submit">Sign Up</button>
             </form>
         </div>
     </section>

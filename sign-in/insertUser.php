@@ -26,15 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
     $response = json_decode($result);
 
     if ($response->success && $response->hostname === 'localhost') {
-        // reCAPTCHA verification successful, process the form data
-        // Retrieve the form data
         $name = $_POST["name"];
         $address = $_POST["address"];
         $contact = $_POST["contact"];
-        $username = $_POST["username"];
+        // $username = $_POST["username"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-
         $passwordmd5 = md5($password);
 
         // Check if the user with the email already exists
@@ -50,6 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
             // Execute the query
             if ($conn->query($sql) === TRUE) {
                 echo "Data inserted successfully!";
+<<<<<<< HEAD
+=======
+
+                // call php mailer
+
+                // handle the error
+
+>>>>>>> 9856ee6d65876103c9150c9abfc63e98bfb827a6
                 header("Location: ../index.php");
                 exit();
             } else {
@@ -58,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
         }
     }
 } else {
-    // header('location: ../index.php');
     echo "error";
 }
 ?>

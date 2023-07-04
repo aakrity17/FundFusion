@@ -26,7 +26,7 @@ $records = $conn->query($sql);
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 </head>
-<body>
+<body style="overflow-x: hidden;">
      <?php
 @include('./Index/indexnav.php')
 ?>

@@ -416,19 +416,20 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
 </section>
     <!-- Our project started -->
-    <section id="projects">
+    
+    <!-- <section id="projects"> -->
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="row my-3">
                 <div class="col-10 mx-auto text-center">
                     <h1 class="text-uppercase">Our Latest Projects</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
                 </div>
-            </div>
+            </div> -->
             <!----->
-            <div class="row">
+            <!-- <div class="row"> -->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/8.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -437,10 +438,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
                         Food
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/p4.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -449,10 +450,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
                         water
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/p3.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -461,10 +462,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
                         Medicine
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/p4.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -473,10 +474,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
                         Education
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/3.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -485,10 +486,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
 
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
                 <!--single Project-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <!-- <div class="col-10 col-md-6 col-lg-4">
                     <div class="project-container p-5 outline">
                         <img src="img/2.jpg" class="img-fluid grow" alt="">
                         <a herf="#" class="donation text-capitalize">Donate Now</a>
@@ -497,14 +498,51 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                     <h6 class="text-center">
                         Health
                     </h6>
-                </div>
+                </div> -->
                 <!--End of Single Project-->
 
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
 
     <!---End of the Projects Section-->
+
+    <section id="projects">
+    <div class="donation-banner">
+        <h1 style="border-style: groove;text-align:center;">Projects</h1>
+    </div>
+    <?php
+        include "database/Db_Connection.php";
+        $currentProjectsSql = "SELECT * from projects where p_start_date <= cast(NOW() as date) AND cast(NOW() as date) <= p_end_date;";
+        $currentProjectRecords = $conn->query($currentProjectsSql);
+
+        $upcomingProjectsSql = "SELECT * from projects where p_start_date >= cast(NOW() as date)";
+        $upcomingProjectRecords = $conn->query($upcomingProjectsSql);
+
+        $pastProjectsSql = "SELECT * from projects where p_end_date <= cast(NOW() as date)";
+        $pastProjectRecords = $conn->query($pastProjectsSql);
+    ?>
+    
+
+    
+    <div class="container">
+        <div class="row">
+            <?php $count = 0; ?>
+            <?php foreach ($pastProjectRecords as $pastData): ?>
+            <!--single Project-->
+            <div class="col-10 col-md-6 col-lg-4">
+                <div class="project-container p-5 outline">
+                    <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
+                    <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
+                    <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
+                </div>
+            </div>
+            <?php $count++; ?>
+            <?php if ($count == 3) break; ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
 
 
 
@@ -573,21 +611,6 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             </div>
 
         </div>
-
-        <!-- <script>
-            document.getElementById('silver-button').addEventListener('click', function() {
-                window.location.href = '../FundFusion/User/userlogin.php';
-            });
-
-            document.getElementById('gold-button').addEventListener('click', function() {
-                window.location.href = '..FundFusion/User/userlogin.php';
-            });
-
-            document.getElementById('platinum-button').addEventListener('click', function() {
-                window.location.href = '../FundFusion/User/userlogin.php';
-
-            });
-        </script> -->
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

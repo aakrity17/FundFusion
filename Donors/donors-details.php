@@ -2,181 +2,124 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        .navbar-nav {
-            margin-left: auto;
-        }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    /* .profile-details {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    } */
+
+    .profile-picture img {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      margin-left: 400px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+
+    }
+    .profile-info{
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../index.php">FundFusion</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#personal-info" onclick="displaySection('personal-info')"><i class="fas fa-user"></i>Personal Information</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#membership-info" onclick="displaySection('membership-info')"><i class="fas fa-certificate"></i>Membership Information</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#donation-history" onclick="displaySection('donation-history')"><i class="fas fa-donate"></i>Donation History</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sponsorships" onclick="displaySection('sponsorships')"><i class="fas fa-hand-holding-heart"></i>Sponsorships</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.php">FundFusion</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#personal-info" onclick="displaySection('personal-info')"><i class="fas fa-user"></i>Personal Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#membership-info" onclick="displaySection('membership-info')"><i class="fas fa-certificate"></i>Membership Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#donation-history" onclick="displaySection('donation-history')"><i class="fas fa-donate"></i>Donation History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sponsorships" onclick="displaySection('sponsorships')"><i class="fas fa-hand-holding-heart"></i>Sponsorships</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="personal-info">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center; padding-top:50px;">Personal Information</h5>
-                                <?php
-                                session_start();
-                                include "../admin/routeconfig.php";
-                                include "../database/Db_Connection.php";
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="personal-info">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center; padding-top:50px;">Personal Information</h5>
+                <?php
+                session_start();
+                include "../admin/routeconfig.php";
+                include "../database/Db_Connection.php";
 
-                                if (isset($_SESSION['email'])) {
-                                    if (isset($_GET['title'])) {
-                                        $title = urldecode($_GET['title']);
-                                    } else {
-                                        $title = '';
-                                    }
+                if (isset($_SESSION['email'])) {
+                  if (isset($_GET['title'])) {
+                    $title = urldecode($_GET['title']);
+                  } else {
+                    $title = '';
+                  }
 
-                                    // Sanitize and validate the $title variable
-                                    $title = mysqli_real_escape_string($conn, $title); // Assuming $conn is the database connection variable
+                  // Sanitize and validate the $title variable
+                  $title = mysqli_real_escape_string($conn, $title); // Assuming $conn is the database connection variable
 
-                                    $sql = "SELECT * FROM user WHERE email='$title'";
-                                    $result = mysqli_query($conn, $sql);
+                  $sql = "SELECT * FROM user WHERE email='$title'";
+                  $result = mysqli_query($conn, $sql);
 
-                                    if ($result) {
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $address = $row['address'];
-                                            $contact = $row['Contact'];
-                                            $name = $row['name'];
-                                            $id = $row['id'];
-
-                                            // Display personal details
-                                            echo "<p>ID: $id</p>";
-                                            echo "<p>Email: $title</p>";
-                                            echo "<p>Phone Number: $contact</p>";
-                                            echo "<p>Address: $address</p>";
-                                        }
-                                    } else {
-                                        // Handle the query error
-                                        echo "Error: " . mysqli_error($conn);
-                                    }
-                                } else {
-                                    // Handle the case when the 'email' session variable is not set
-                                    echo "Session email not set.";
-                                }
-
-                                // Close the database connection
-                                mysqli_close($conn);
-                                ?>
-                            </div>
+                  if ($result) {
+                    if (mysqli_num_rows($result) > 0) {
+                      $row = mysqli_fetch_assoc($result);
+                      $address = $row['address'];
+                      $contact = $row['Contact'];
+                      $name = $row['name'];
+                      $id = $row['id'];
+                      $profilePicturePath = '../img/' . $row['profile_picture']; // Replace with the actual path to the profile pictures directory
+                ?>
+                      <div class="profile-details">
+                        <div class="profile-picture">
+                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
+                            <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+                          </a>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="membership-info">
-                        <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
-
-                        <?php
-                        include "../database/Db_Connection.php";
-
-                        $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership')";
-                        $result = mysqli_query($conn, $sql);
-
-
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $registeredDate = $row['date'];
-                            $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-                            $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-                            if ($daysRemaining >= 365) {
-                                $daysRemaining = 364;
-                            }
-
-                        ?>
-
-                            <div class="card">
-                                <div class="card-body" style="font-size: 20px;">
-                                    <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-                                    <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
-                                    <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
-                                    <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
-                                    <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
-                                </div>
-
-                            </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-
-
-                    <div class="tab-pane fade" id="donation-history">
-                        <h3 class="card-title" style="text-align:center;
-          padding:50px;">Donation History</h3>
-
-
-
-                        <?php
-                        include "../database/Db_Connection.php";
-
-                        $donationsql = "SELECT * FROM donors WHERE email='$title' AND (cause NOT IN ('Regular Sponsorsip', 'Premium Sponsorship', 'VIP Sponsorship', 'Gold Membership', 'Platinum Membership', 'Silver Membership'))";
-                        $res = mysqli_query($conn, $donationsql);
-                        if (mysqli_num_rows($res) > 0) {
-                            while ($rw = mysqli_fetch_assoc($res)) {
-                                $date = $rw['date'];
-
-                        ?>
-                                <div class="card">
-                                    <div class="card-body" style="text-align: justify; padding-left:200px;">
-                                        <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['cause']; ?></p>
-                                        <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
-                                        <p><i class="fas fa-calendar-check"></i> <strong>Amount Donated:</strong> <?php echo $rw['amount']; ?></p>
-                                        <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
-                                    </div>
-                                </div>
-                        <?php
-
-                            }
-                        } else {
-                            echo "No donation history found.";
-                        }
-                        ?>
-
-
-
-
-                    </div>
-                    <div class="tab-pane fade" id="sponsorships">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Sponsorships</h5>
-                                <p>Info: [Sponsorship Info]</p>
-                                <p>Renew your accounts via payment.</p>
-                                <p>Membership Expiry Date: [Expiry Date]</p>
-                                <p>Account Created Date: [Created Date]</p>
-                                <p>Change Password</p>
-                                <p>Activity Log</p>
-                            </div>
+                        <div class="profile-info">
+                          <p>ID: <?php echo $id; ?></p>
+                          <p>Email: <?php echo $title; ?></p>
+                          <p>Phone Number: <?php echo $contact; ?></p>
+                          <p>Address: <?php echo $address; ?></p>
                         </div>
-                    </div>
-                </div>
+                      </div>
+                <?php
+                    }
+                  } else {
+                    // Handle the query error
+                    echo "Error: " . mysqli_error($conn);
+                  }
+                } else {
+                  // Handle the case when the 'email' session variable is not set
+                  echo "Session email not set.";
+                }
+
+                // Close the database connection
+                mysqli_close($conn);
+                ?>
+              </div>
             </div>
+          </div>
+          <!-- Rest of the code... -->
         </div>
     </div>
 

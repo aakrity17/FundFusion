@@ -47,14 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
             // Execute the query
             if ($conn->query($sql) === TRUE) {
                 echo "Data inserted successfully!";
-<<<<<<< HEAD
-=======
 
                 // call php mailer
 
                 // handle the error
 
->>>>>>> 9856ee6d65876103c9150c9abfc63e98bfb827a6
                 header("Location: ../index.php");
                 exit();
             } else {

@@ -58,8 +58,21 @@ include '../Index/indexnav.php';
                     <div class="card mb-3">
                         <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../img/member2.jpg" class="img-fluid rounded-start" alt="Donor Image" style="padding-top:50px;">
-                        </div>
+  <?php
+  $donEmail = $row["email"];
+  $sql2 = "SELECT profile_picture FROM user WHERE email='$donEmail'";
+  $result2 = mysqli_query($conn, $sql2);
+
+  if ($result2 && mysqli_num_rows($result2) > 0) {
+    $donor = mysqli_fetch_assoc($result2);
+    $profilePicturePath = '../img/' . $donor['profile_picture']; // Replace with the actual path to the profile pictures directory
+  } else {
+    $profilePicturePath = '../img/member2.jpg'; // Default profile picture path if the donor doesn't have a custom profile picture
+  }
+  ?>
+  <img src="<?php echo $profilePicturePath; ?>" class="img-fluid rounded-start" alt="Donor Image" style="padding-top:50px;">
+</div>
+
                         <div class="col-md-8">
                             <div class="card-body">
                             <h5 class="card-title"><?php echo $row["name"]; ?></h5>

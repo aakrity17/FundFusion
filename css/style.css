@@ -248,7 +248,7 @@ body {
     border-radius: 4px;
     color: #000;
     font-weight: bold;
-    /* About us wala ko color */
+    /* About us wala ko boarder ko color */
     background-color: #0000003c;
 
     /* background: rgba(91, 10, 183, 0.6); */
@@ -401,9 +401,10 @@ body {
     bottom: -48px;
     left: 20px;
     right: 20px;
+    background-color: #0000005b;
 
-    background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
-            rgba(0, 32, 59, 0.8)100%);
+    /* background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%, */
+    /* rgba(0, 32, 59, 0.8)100%); */
     padding: 15px 0;
     border-radius: 4px;
 }

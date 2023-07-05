@@ -1,4 +1,14 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../PHPMailer/Phpmailer/src/Exception.php';
+require '../PHPMailer/Phpmailer/src/PHPMailer.php';
+require '../PHPMailer/Phpmailer/src/SMTP.php';
+
+
+
 include '../database/Db_Connection.php';
 
 function generateRandomPassword($length = 10) {
@@ -17,28 +27,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Generate a random password
     $newPassword = generateRandomPassword();
-    
-    // Update the password field of the user
-    $sql = "UPDATE user SET password = md5('$newPassword') WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
-    
-    if ($result) {
-        if (mysqli_affected_rows($conn) > 0) {
-            // Password updated successfully
-            $message= "New Password is sent to your email.Change your password!".$newPassword;
-            // echo md5()
-            // echo "New Password: " . $newPassword;
-        } else {
-            // No rows affected, user with the provided email not found
-            echo "User not found!";
+
+
+// Update the password field of the user
+$sql = "UPDATE user SET password = md5('$newPassword') WHERE email = '$email'";
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+    if (mysqli_affected_rows($conn) > 0) {
+        // Password updated successfully
+        $mail = new PHPMailer(true);
+
+        // SMTP settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'fundfusionab@gmail.com';
+        $mail->Password = 'qjfkeinkxaxtfept';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+
+        // Email settings
+        $mail->setFrom('fundfusionab@gmail.com');
+        $mail->addAddress($email);
+        $mail->isHTML(true);
+        $mail->Subject = 'New Password Generated';
+        $mail->Body = 'Your new password is: ' . $newPassword;
+
+        try {
+            $mail->send();
+            $message = 'New password has been sent to your email. Please check your mail inbox.';
+        } catch (Exception $e) {
+            $message = 'An error occurred while sending the email: ' . $mail->ErrorInfo;
         }
     } else {
-        // Error occurred while updating the password
-        echo "Error updating password: " . mysqli_error($conn);
+        // No rows affected, user with the provided email not found
+        $message = 'User not found!';
     }
-}else{
-    $message='';
+} else {
+    // Error occurred while updating the password
+    $message = 'Error updating password: ' . mysqli_error($conn);
 }
+
+
+ }
 ?>
 
 

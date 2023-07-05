@@ -91,7 +91,6 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
-                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
                             <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
                           </a>
                         </div>
@@ -101,6 +100,7 @@
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>
                         </div>
+                        <button> <a href="update_picture.php?email=<?php echo urlencode($title); ?>">Edit your Profile Details</button>
                       </div>
                 <?php
                     }

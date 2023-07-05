@@ -68,20 +68,20 @@ if(isset($_POST["submit"])){
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'ujjwaldemoid999@gmail.com';
-                    $mail->Password = 'ctiybowllgqlfyqx';
+                    $mail->Username = 'fundfusionab@gmail.com';
+                    $mail->Password = 'qjfkeinkxaxtfept';
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
 
                     //email settings
-                    $mail->setFrom('ujjwaldemoid999@gmail.com');
+                    $mail->setFrom('fundfusionab@gmail.com');
                     
                     $mail->addAddress($_POST["email"]);
                     
                     $mail->isHTML(true);
                     
-                    $mail->Subject = ("User Registered!!");
-                    $mail->Body = ('Thank you for registering to our system!');
+                    $mail->Subject = ("User Registration!!");
+                    $mail->Body = ('Thank you for registering to FundFusion!');
 
                     $mail->send();
 

@@ -24,7 +24,8 @@
       margin-top: 50px;
 
     }
-    .profile-info{
+
+    .profile-info {
       text-align: center;
     }
   </style>
@@ -91,7 +92,11 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
+<<<<<<< HEAD
                         <a href="update_picture.php?email=<?php echo urlencode($title); ?>"> <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+=======
+                          <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+>>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
                           </a>
                         </div>
                         <div class="profile-info">
@@ -100,12 +105,18 @@
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>
                         </div>
+<<<<<<< HEAD
                         <div class="btn-container" style="text-align:center; margin-top:30px;">
                         <button>Edit your Profile Details</button>
                         <button>Change your Password</button>
                         </div>
                         
 
+=======
+                        <div style="text-align: center;">
+                          <button> <a href="update_picture.php?email=<?php echo urlencode($title); ?>">Edit your Profile Details</button>
+                        </div>
+>>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
                       </div>
                 <?php
                     }
@@ -125,9 +136,9 @@
             </div>
           </div>
           <div class="tab-pane fade" id="membership-info">
-          <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
+            <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
 
-            <?php 
+            <?php
             include "../database/Db_Connection.php";
 
             $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership')";
@@ -135,25 +146,25 @@
 
 
             while ($row = mysqli_fetch_assoc($result)) {
-                $registeredDate = $row['date'];
-                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-                if($daysRemaining>=365){
-                  $daysRemaining=364;
-                }
+              $registeredDate = $row['date'];
+              $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+              $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+              if ($daysRemaining >= 365) {
+                $daysRemaining = 364;
+              }
 
             ?>
 
-            <div class="card">
-            <div class="card-body" style="font-size: 20px;">
-  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-  <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
-  <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
-  <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
-  <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
-</div>
+              <div class="card">
+                <div class="card-body" style="font-size: 20px;">
+                  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
+                  <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
+                  <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
+                  <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
+                  <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
+                </div>
 
-            </div>
+              </div>
             <?php
             }
             ?>
@@ -161,12 +172,12 @@
 
 
           <div class="tab-pane fade" id="donation-history">
-          <h3 class="card-title" style="text-align:center;
+            <h3 class="card-title" style="text-align:center;
           padding:50px;">Donation History</h3>
 
 
 
-                <?php
+            <?php
             include "../database/Db_Connection.php";
 
             $donationsql = "SELECT * FROM donors WHERE email='$title' AND (cause NOT IN ('Regular Sponsorsip', 'Premium Sponsorship', 'VIP Sponsorship', 'Gold Membership', 'Platinum Membership', 'Silver Membership'))";
@@ -176,14 +187,14 @@
                 $date = $rw['date'];
 
             ?>
-            <div class="card">
-              <div class="card-body" style="text-align: justify; padding-left:200px;">
-                <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['cause']; ?></p>
-                <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Amount Donated:</strong> <?php echo $rw['amount']; ?></p>
-                <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
+                <div class="card">
+                  <div class="card-body" style="text-align: justify; padding-left:200px;">
+                    <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['cause']; ?></p>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
+                    <p><i class="fas fa-calendar-check"></i> <strong>Amount Donated:</strong> <?php echo $rw['amount']; ?></p>
+                    <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
+                  </div>
                 </div>
-            </div>
             <?php
 
               }
@@ -198,7 +209,7 @@
           </div>
           <!-- sponsorship section -->
           <div class="tab-pane fade" id="sponsorships">
-          <?php 
+            <?php
             include "../database/Db_Connection.php";
 
             $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
@@ -206,28 +217,28 @@
 
 
             while ($row = mysqli_fetch_assoc($result)) {
-                $registeredDate = $row['date'];
-                $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-                $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-                if($daysRemaining>=365){
-                  $daysRemaining=364;
-                }
+              $registeredDate = $row['date'];
+              $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+              $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+              if ($daysRemaining >= 365) {
+                $daysRemaining = 364;
+              }
 
             ?>
 
-            <div class="card">
-            <div class="card-body" style="font-size: 20px;">
-  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-  <p><strong>Sponsor Type:</strong><?php echo $row['cause']; ?> </p>
-</div>
+              <div class="card">
+                <div class="card-body" style="font-size: 20px;">
+                  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
+                  <p><strong>Sponsor Type:</strong><?php echo $row['cause']; ?> </p>
+                </div>
 
-            </div>
+              </div>
             <?php
             }
-            if ($result->num_rows == 0){
-              ?>
+            if ($result->num_rows == 0) {
+            ?>
               <h1>No Sponsorship Available</h1>
-              <?php
+            <?php
 
 
             }
@@ -237,20 +248,18 @@
           <!-- Rest of the code... -->
         </div>
       </div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script>
-    function displaySection(sectionId) {
-      $('.nav-link').removeClass('active');
-      $(`a[href="#${sectionId}"]`).addClass('active');
-      $('.tab-pane').removeClass('show active');
-      $(`#${sectionId}`).addClass('show active');
-    }
-  </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script>
+        function displaySection(sectionId) {
+          $('.nav-link').removeClass('active');
+          $(`a[href="#${sectionId}"]`).addClass('active');
+          $('.tab-pane').removeClass('show active');
+          $(`#${sectionId}`).addClass('show active');
+        }
+      </script>
 </body>
 
 </html>

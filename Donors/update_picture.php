@@ -54,13 +54,15 @@ if (isset($_SESSION['email'])) {
     </head>
 
     <body>
-      <h1>Update Profile Picture</h1>
       <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
-        <label for="profile-picture">Choose a new picture:</label>
+      <h1>Update Profile Picture</h1>
+      <label for="profile-picture">Choose a new picture:</label>
         <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
         <br>
         <button type="submit">Update Picture</button>
       </form>
+
+      
     </body>
 
     </html>

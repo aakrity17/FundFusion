@@ -31,6 +31,7 @@
                     <input type="password" placeholder="Password" name="password">
                     <i class="fas fa-lock"></i>
                 </div>
+                <p style="padding-left:120px;"><a href="forgotPassword.php" style="text-decoration:none;">Forgot Password ?</a></p>
 
                 <button class="submit">Login</button>
             </form>

@@ -590,7 +590,9 @@ body {
 /* HEAD */
 /* copyright */
 .footer-bottom {
-    background: rgba(74, 6, 156, 0.476);
+    background-color: #000000d8;
+
+    /* background: rgba(74, 6, 156, 0.476); */
     position: fixed;
 
     width: 100w;
@@ -606,7 +608,9 @@ body {
     text-align: center;
     padding: 45px 0px 20px 500px;
     /* //top, right, buttom, left */
-    background: rgba(119, 63, 189, 0.634);
+    background-color: #000000b5;
+
+    /* background: rgba(119, 63, 189, 0.634); */
 
     /* background: rgba(89, 10, 186, 0.488); */
 

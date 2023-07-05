@@ -92,7 +92,8 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
-                          <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
+                            <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
                           </a>
                         </div>
                         <div class="profile-info">
@@ -102,7 +103,11 @@
                           <p>Address: <?php echo $address; ?></p>
                         </div>
                         <div style="text-align: center;">
-                          <button> <a href="update_picture.php?email=<?php echo urlencode($title); ?>">Edit your Profile Details</button>
+                          <button> <a href="editDetails.php?email=<?php echo urlencode($title); ?>">
+                              Edit your Profile Details</button>
+                          <button> <a href="changePassword.php?email=<?php echo urlencode($title); ?>">
+                              Change Password</button>
+
                         </div>
                       </div>
                 <?php

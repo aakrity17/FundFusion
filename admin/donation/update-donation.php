@@ -7,7 +7,7 @@ include "../routeconfig.php";
     {	
         $id = mysqli_real_escape_string($conn, $_POST['id']);
         $name = mysqli_real_escape_string($conn, $_POST['donation_name']);
-        $type = mysqli_real_escape_string($conn, $_POST['donation_type']);
+        // $type = mysqli_real_escape_string($conn, $_POST['donation_type']);
         $progress = mysqli_real_escape_string($conn, $_POST['donation_progress']);
         $target = mysqli_real_escape_string($conn, $_POST['donation_target']);
        // $filename = ($conn, $_POST['donation_image_url']);
@@ -24,7 +24,7 @@ include "../routeconfig.php";
         $filename = $_FILES["donation_image_url"]["name"];
         $tempname = $_FILES["donation_image_url"]["tmp_name"];
         $folder = "../../img/donation/" . $filename;
-        $result = mysqli_query($conn, "UPDATE donation SET donation_name='$name', donation_type='$type', donation_progress='$progress', donation_target='$target', donation_image_url='$filename', donation_description='$description' WHERE id=$id");
+        $result = mysqli_query($conn, "UPDATE donation SET donation_name='$name', donation_progress='$progress', donation_target='$target', donation_image_url='$filename', donation_description='$description' WHERE id=$id");
         move_uploaded_file($tempname, $folder);
         
         header('Location: '. $site_url .'admin/donation/edit-donation.php?id='.$id.'&status=success');

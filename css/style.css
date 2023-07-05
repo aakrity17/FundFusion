@@ -94,7 +94,8 @@ body {
     width: 130%;
     height: 96%;
     /* mathi ko jasto curve tara mix*/
-    /* background: rgba(178, 234, 8, 0.89); */
+    background-color: #000000d8;
+
     opacity: 0.3;
     z-index: 0;
     border-radius: 0 0 50% 50%;
@@ -116,6 +117,7 @@ body {
 /* font color of h2 */
 #hero h2 {
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 30px;
     font-size: 48px;
     font-weight: bold;
@@ -154,16 +156,18 @@ body {
     margin: 10px;
     color: #fff;
     animation-delay: 0.5s;
-    border: 1px solid rgba(92, 35, 161, 0.764);
+    /* border: 1px solid rgba(92, 35, 161, 0.764);
+     */
+    background-color: #000000d8;
 
 }
 
 /* button click garda: read More  */
-#hero .hero-btn:hover {
-    background: rgba(55, 11, 109, 0.429);
-    /* background:; */
-    color: #fff;
-    text-decoration: none;
+/* #hero .hero-btn:hover { */
+/* background: rgba(55, 11, 109, 0.429); */
+/* background:; */
+/* color: #fff; */
+/* text-decoration: none; */
 }
 
 @keyframes glowing {
@@ -245,14 +249,17 @@ body {
     color: #000;
     font-weight: bold;
     /* About us wala ko color */
-    background: rgba(91, 10, 183, 0.6);
+    background-color: #0000003c;
+
+    /* background: rgba(91, 10, 183, 0.6); */
     /* border: 1px solid; */
     font-size: 20px;
     line-height: 30px;
 }
 
 .tabs .nav-pills .nav-item .nav-link span {
-    color: #013030;
+    color: white;
+    /* color: #013030; */
     font-size: 30px;
 }
 
@@ -286,7 +293,7 @@ body {
 }
 
 .tabs .tab-content h3 a {
-    color: #000;
+    color: white;
 }
 
 /*======End of About Us=========*/

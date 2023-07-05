@@ -1,4 +1,9 @@
 <?php
+
+spl_autoload_register(function ($class_name) {
+    include '../path/to/PHPMailer/' . $class_name . '.php';
+});
+
 include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 session_start(); 
@@ -55,9 +60,35 @@ if (isset($_POST['submit'])) {
     $uid = 10; // Assuming uid is stored in the session
     $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause, date) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title', CURDATE())";
     if (mysqli_query($conn, $sql)) {
-        echo "Form details saved successfully in the database.";
+        // Form details saved successfully in the database
+    
+        // Create a new PHPMailer instance
+        // $mail = new PHPMailer;
+        $mail = new PHPMailer\PHPMailer\PHPMailer();
+    
+        // Set up SMTP configuration
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';  // Replace with your SMTP server
+        $mail->SMTPAuth = true;
+        $mail->Username = 'fundfusionab@gmail.com';  // Replace with your email address
+        $mail->Password = 'irzupuqmlqwdnbyz';  // Replace with your email password
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+    
+        // Set up email content
+        $mail->setFrom('fundfusionab@gmail.com', 'FundFusion');  // Replace with your email address and name
+        $mail->addAddress($_POST["email"], $_POST["name"]);  // User's email address and name
+        $mail->Subject = 'Thank you for donating!';
+        $mail->Body = "Dear $name,\n\nThank you for your generous donation of $amount. We greatly appreciate your support.\n\nSincerely,\nFundFusion Team";
+    
+        // Send the email
+        if ($mail->send()) {
+            echo "Form details saved successfully in the database. Thank you email sent.";
+        } else {
+            echo "Error sending the thank you email: " . $mail->ErrorInfo;
+        }
     } else {
-        echo "Error saving form details: ";
+        echo "Error saving form details: " . mysqli_error($conn);
     }
 
     // Redirect to toEsewa.php with the amount

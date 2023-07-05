@@ -92,11 +92,7 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
-<<<<<<< HEAD
-                        <a href="update_picture.php?email=<?php echo urlencode($title); ?>"> <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
-=======
                           <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
->>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
                           </a>
                         </div>
                         <div class="profile-info">
@@ -105,18 +101,9 @@
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>
                         </div>
-<<<<<<< HEAD
-                        <div class="btn-container" style="text-align:center; margin-top:30px;">
-                        <button>Edit your Profile Details</button>
-                        <button>Change your Password</button>
-                        </div>
-                        
-
-=======
                         <div style="text-align: center;">
                           <button> <a href="update_picture.php?email=<?php echo urlencode($title); ?>">Edit your Profile Details</button>
                         </div>
->>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
                       </div>
                 <?php
                     }

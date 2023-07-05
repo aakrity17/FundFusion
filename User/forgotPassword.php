@@ -20,6 +20,7 @@ function generateRandomPassword($length = 10) {
     }
     return $password;
 }
+$message='';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the values from the login form

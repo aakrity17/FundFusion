@@ -38,7 +38,9 @@ body {
 
 .nav-bg {
     /* nav bar ko lagi */
-    background: rgba(153, 72, 252, 0.756);
+    background-color: rgba(153, 72, 252, 0.756);
+    backdrop-filter: blur(10px);
+
 }
 
 

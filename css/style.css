@@ -19,7 +19,7 @@ body {
     background-color: transparent;
     overflow: auto;
     position: fixed;
-    height: auto;
+    height: 200px;
     left: 0px;
     right: 400px;
     width: 200px;
@@ -29,7 +29,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: red;
     min-width: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -38,7 +38,8 @@ body {
 
 .nav-bg {
     /* nav bar ko lagi */
-    background-color: rgba(153, 72, 252, 0.756);
+    background-color: #00000072;
+
     backdrop-filter: blur(10px);
 
 }
@@ -73,7 +74,9 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    background: linear-gradient(90deg, rgba(243, 242, 248, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
+    background-color: #000000d8;
+    backdrop-filter: blur(10px);
+
     z-index: 0;
     border-radius: 0 0 50% 50%;
     transform: translateX(-50%) rotate(0deg);
@@ -90,8 +93,8 @@ body {
     top: 0;
     width: 130%;
     height: 96%;
-    /* Button click garda no*/
-    background: rgba(251, 247, 255, 0.89);
+    /* mathi ko jasto curve tara mix*/
+    /* background: rgba(178, 234, 8, 0.89); */
     opacity: 0.3;
     z-index: 0;
     border-radius: 0 0 50% 50%;

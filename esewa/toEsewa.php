@@ -1,5 +1,12 @@
-
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../PHPMailer/Phpmailer/src/Exception.php';
+require '../PHPMailer/Phpmailer/src/PHPMailer.php';
+require '../PHPMailer/Phpmailer/src/SMTP.php';
+
 include '../database/Db_Connection.php';
 if (isset($_POST['Amount'])){
     $amount=$_POST['Amount'];
@@ -16,6 +23,35 @@ if (isset($_POST['Amount'])){
       $result=mysqli_query($conn, $sql);
    if($result){
     echo "Success";
+
+    if (mysqli_query($conn, $sql)) {
+      
+      $mail = new PHPMailer(true);
+  
+      // Set up SMTP configuration
+      $mail->isSMTP();
+      $mail->Host = 'smtp.gmail.com';  // Replace with your SMTP server
+      $mail->SMTPAuth = true;
+      $mail->Username = 'fundfusionab@gmail.com';  // Replace with your email address
+      $mail->Password = 'irzupuqmlqwdnbyz';  // Replace with your email password
+      $mail->SMTPSecure = 'ssl';
+      $mail->Port = 465;
+  
+      // Set up email content
+      $mail->setFrom('fundfusionab@gmail.com', 'FundFusion');  // Replace with your email address and name
+      $mail->addAddress($_POST["email"], $_POST["name"]);  // User's email address and name
+      $mail->Subject = 'Thank you for donating!';
+      $mail->Body = "Dear $name,\n\nThank you for your generous donation from Esewa of $amount. We greatly appreciate your support.\n\nSincerely,\nFundFusion Team";
+  
+      // Send the email
+      if ($mail->send()) {
+          echo "Form details saved successfully in the database. Thank you email sent.";
+      } else {
+          echo "Error sending the thank you email: " . $mail->ErrorInfo;
+      }
+  } else {
+      echo "Error saving form details: " . mysqli_error($conn);
+  }
     
    }
    else{

@@ -19,7 +19,7 @@ body {
     background-color: transparent;
     overflow: auto;
     position: fixed;
-    height: auto;
+    height: 200px;
     left: 0px;
     right: 400px;
     width: 200px;
@@ -29,7 +29,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: red;
     min-width: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -38,7 +38,10 @@ body {
 
 .nav-bg {
     /* nav bar ko lagi */
-    background: rgba(153, 72, 252, 0.756);
+    background-color: #00000072;
+
+    backdrop-filter: blur(10px);
+
 }
 
 
@@ -71,7 +74,9 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    background: linear-gradient(90deg, rgba(243, 242, 248, 0.404) 20%, rgba(109, 45, 205, 0.683) 43%, rgba(215, 61, 215, 0.45) 81%, rgba(27, 14, 121, 0.687) 100%);
+    background-color: #000000d8;
+    backdrop-filter: blur(10px);
+
     z-index: 0;
     border-radius: 0 0 50% 50%;
     transform: translateX(-50%) rotate(0deg);
@@ -88,8 +93,9 @@ body {
     top: 0;
     width: 130%;
     height: 96%;
-    /* Button click garda no*/
-    background: rgba(251, 247, 255, 0.89);
+    /* mathi ko jasto curve tara mix*/
+    background-color: #000000d8;
+
     opacity: 0.3;
     z-index: 0;
     border-radius: 0 0 50% 50%;
@@ -111,6 +117,7 @@ body {
 /* font color of h2 */
 #hero h2 {
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 30px;
     font-size: 48px;
     font-weight: bold;
@@ -149,17 +156,13 @@ body {
     margin: 10px;
     color: #fff;
     animation-delay: 0.5s;
-    border: 1px solid rgba(92, 35, 161, 0.764);
+    /* border: 1px solid rgba(92, 35, 161, 0.764);
+     */
+    background-color: #000000d8;
 
 }
 
-/* button click garda: read More  */
-#hero .hero-btn:hover {
-    background: rgba(55, 11, 109, 0.429);
-    /* background:; */
-    color: #fff;
-    text-decoration: none;
-}
+
 
 @keyframes glowing {
     0% {
@@ -239,15 +242,18 @@ body {
     border-radius: 4px;
     color: #000;
     font-weight: bold;
-    /* About us wala ko color */
-    background: rgba(91, 10, 183, 0.6);
+    /* About us wala ko boarder ko color */
+    background-color: #0000003c;
+
+    /* background: rgba(91, 10, 183, 0.6); */
     /* border: 1px solid; */
     font-size: 20px;
     line-height: 30px;
 }
 
 .tabs .nav-pills .nav-item .nav-link span {
-    color: #013030;
+    color: white;
+    /* color: #013030; */
     font-size: 30px;
 }
 
@@ -281,7 +287,7 @@ body {
 }
 
 .tabs .tab-content h3 a {
-    color: #000;
+    color: white;
 }
 
 /*======End of About Us=========*/
@@ -389,9 +395,10 @@ body {
     bottom: -48px;
     left: 20px;
     right: 20px;
+    background-color: #0000005b;
 
-    background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
-            rgba(0, 32, 59, 0.8)100%);
+    /* background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%, */
+    /* rgba(0, 32, 59, 0.8)100%); */
     padding: 15px 0;
     border-radius: 4px;
 }
@@ -577,7 +584,9 @@ body {
 /* HEAD */
 /* copyright */
 .footer-bottom {
-    background: rgba(74, 6, 156, 0.476);
+    background-color: #000000d8;
+
+    /* background: rgba(74, 6, 156, 0.476); */
     position: fixed;
 
     width: 100w;
@@ -593,7 +602,9 @@ body {
     text-align: center;
     padding: 45px 0px 20px 500px;
     /* //top, right, buttom, left */
-    background: rgba(119, 63, 189, 0.634);
+    background-color: #000000b5;
+
+    /* background: rgba(119, 63, 189, 0.634); */
 
     /* background: rgba(89, 10, 186, 0.488); */
 

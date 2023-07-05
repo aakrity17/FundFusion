@@ -44,27 +44,82 @@ if (isset($_SESSION['email'])) {
       }
     }
     // Display the form to update the profile picture
-    ?>
+?>
     <!DOCTYPE html>
     <html>
 
     <head>
-      <title>Update Profile Picture</title>
-      <!-- Add your CSS stylesheets and other head elements here -->
+      <style>
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          padding: 20px;
+          background-color: #f2f2f2;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        label {
+          margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+          margin-bottom: 20px;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #45a049;
+        }
+      </style>
     </head>
 
     <body>
-      <h1>Update Profile Picture</h1>
+<<<<<<< HEAD
       <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
-        <label for="profile-picture">Choose a new picture:</label>
+      <h1>Update Profile Picture</h1>
+      <label for="profile-picture">Choose a new picture:</label>
         <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
         <br>
         <button type="submit">Update Picture</button>
       </form>
+
+      
+=======
+      <div class="container">
+        <h1>Update Profile Picture</h1>
+        <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
+          <label for="profile-picture">Choose a new picture:</label>
+          <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
+          <button type="submit">Update Picture</button>
+        </form>
+      </div>
+>>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
     </body>
 
     </html>
-    <?php
+
+<?php
   } else {
     // Handle the case when the email parameter is not set in the URL
     echo "Email parameter not found.";

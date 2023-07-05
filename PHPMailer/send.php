@@ -69,7 +69,7 @@ if(isset($_POST["submit"])){
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
                     $mail->Username = 'fundfusionab@gmail.com';
-                    $mail->Password = 'qjfkeinkxaxtfept';
+                    $mail->Password = 'irzupuqmlqwdnbyz';
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
 

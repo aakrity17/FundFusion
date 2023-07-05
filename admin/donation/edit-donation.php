@@ -38,7 +38,7 @@ include "../routeconfig.php";
             while($res = mysqli_fetch_array($result))
             {
                 $name = $res['donation_name'];
-                $type = $res['donation_type'];
+                // $type = $res['donation_type'];
                 $progress = $res['donation_progress'];
                 $target = $res['donation_target'];
                 $imageURL = $res['donation_image_url'];
@@ -66,14 +66,14 @@ include "../routeconfig.php";
             </div>
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
             <div class="col-25">
                 <label for="donation_type">Donation Type</label>
             </div>
             <div class="col-75">
                 <input type="text" id="donation_type" name="donation_type" value="<?php echo $type;?>">
             </div>
-            </div>
+            </div> -->
 
             <div class="row">
             <div class="col-25">

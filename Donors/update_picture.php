@@ -95,17 +95,6 @@ if (isset($_SESSION['email'])) {
     </head>
 
     <body>
-<<<<<<< HEAD
-      <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
-      <h1>Update Profile Picture</h1>
-      <label for="profile-picture">Choose a new picture:</label>
-        <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
-        <br>
-        <button type="submit">Update Picture</button>
-      </form>
-
-      
-=======
       <div class="container">
         <h1>Update Profile Picture</h1>
         <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
@@ -114,7 +103,6 @@ if (isset($_SESSION['email'])) {
           <button type="submit">Update Picture</button>
         </form>
       </div>
->>>>>>> badadd5584a31d1493deb13d26312007da74f8bb
     </body>
 
     </html>

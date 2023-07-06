@@ -64,7 +64,7 @@
               <div class="card-body">
                 <h5 class="card-title" style="text-align: center; padding-top:50px;">Personal Information</h5>
                 <?php
-                session_start();
+                   session_start();
                 include "../admin/routeconfig.php";
                 include "../database/Db_Connection.php";
 
@@ -84,6 +84,7 @@
                   if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                       $row = mysqli_fetch_assoc($result);
+                      $name = $row['name'];
                       $address = $row['address'];
                       $contact = $row['Contact'];
                       $name = $row['name'];
@@ -92,17 +93,23 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
-                          <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
+                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
+                            <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
                           </a>
                         </div>
                         <div class="profile-info">
                           <p>ID: <?php echo $id; ?></p>
+                          <p>Name: <?php echo $name; ?></p>
                           <p>Email: <?php echo $title; ?></p>
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>
                         </div>
                         <div style="text-align: center;">
-                          <button> <a href="update_picture.php?email=<?php echo urlencode($title); ?>">Edit your Profile Details</button>
+                          <button> <a href="editDetails.php?email=<?php echo urlencode($title); ?>">
+                              Edit your Profile Details</button>
+                          <button> <a href="changePassword.php?email=<?php echo urlencode($title); ?>">
+                              Change Password</button>
+
                         </div>
                       </div>
                 <?php

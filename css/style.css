@@ -29,16 +29,18 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: red;
+    /* background-color: red; */
     min-width: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
+    rgba(0, 32, 59, 0.8)100%); */
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
     display: none;
 }
 
 .nav-bg {
     /* nav bar ko lagi */
-    background-color: #00000072;
+    background: rgba(137, 43, 226, 0.225);
 
     backdrop-filter: blur(10px);
 
@@ -74,7 +76,10 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    background-color: #000000d8;
+    background: blueviolet;
+    /* background: linear-gradient(360deg, #c206c5 0%, rgba(164, 152, 240, 0.9)35%, */
+    /* rgba(0, 32, 59, 0.8)100%); */
+    /* background-color: #000000d8; */
     backdrop-filter: blur(10px);
 
     z-index: 0;
@@ -94,7 +99,7 @@ body {
     width: 130%;
     height: 96%;
     /* mathi ko jasto curve tara mix*/
-    background-color: #000000d8;
+    /* background-color: #000000d8; */
 
     opacity: 0.3;
     z-index: 0;
@@ -156,9 +161,7 @@ body {
     margin: 10px;
     color: #fff;
     animation-delay: 0.5s;
-    /* border: 1px solid rgba(92, 35, 161, 0.764);
-     */
-    background-color: #000000d8;
+    border: 1px solid rgba(56, 10, 113, 0.764);
 
 }
 
@@ -243,9 +246,9 @@ body {
     color: #000;
     font-weight: bold;
     /* About us wala ko boarder ko color */
-    background-color: #0000003c;
+    /* background-color: #0000003c; */
 
-    /* background: rgba(91, 10, 183, 0.6); */
+    background: rgba(91, 10, 183, 0.6);
     /* border: 1px solid; */
     font-size: 20px;
     line-height: 30px;
@@ -260,7 +263,7 @@ body {
 .tabs .nav-pills .nav-item .nav-link.active {
     color: #fff;
     /* after clicking to the about us */
-    /* background: rgba(91, 10, 183, 0.854); */
+    background: rgba(91, 10, 183, 0.854);
     border: 10px solid;
 }
 
@@ -360,7 +363,7 @@ body {
 .grow:hover,
 .grow:focus,
 .grow:active {
-    /* box-shadow: 0 10px 10px 5px #8708a17e; */
+    box-shadow: 0 10px 10px 5px #8708a17e;
     transform: scale(1.1);
 }
 
@@ -397,8 +400,8 @@ body {
     right: 20px;
     background-color: #0000005b;
 
-    /* background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%, */
-    /* rgba(0, 32, 59, 0.8)100%); */
+    background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
+            rgba(0, 32, 59, 0.8)100%);
     padding: 15px 0;
     border-radius: 4px;
 }
@@ -461,7 +464,7 @@ body {
     border: 1px solid #012e30;
     border-radius: 7px;
     padding: 5px 10px;
-    box-shadow: 0 3px 6px rgba(120, 23, 133, 0.16);
+    box-shadow: 0 3px 6px rgba(131, 23, 145, 0.16);
 }
 
 .donation-form .input-field .input-group .input-group-text {
@@ -584,9 +587,9 @@ body {
 /* HEAD */
 /* copyright */
 .footer-bottom {
-    background-color: #000000d8;
+    /* background-color: #000000d8; */
 
-    /* background: rgba(74, 6, 156, 0.476); */
+    background: rgba(74, 6, 156, 0.476);
     position: fixed;
 
     width: 100w;
@@ -604,7 +607,7 @@ body {
     /* //top, right, buttom, left */
     background-color: #000000b5;
 
-    /* background: rgba(119, 63, 189, 0.634); */
+    background: rgba(119, 63, 189, 0.634);
 
     /* background: rgba(89, 10, 186, 0.488); */
 

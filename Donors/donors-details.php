@@ -64,7 +64,7 @@
               <div class="card-body">
                 <h5 class="card-title" style="text-align: center; padding-top:50px;">Personal Information</h5>
                 <?php
-                session_start();
+                   session_start();
                 include "../admin/routeconfig.php";
                 include "../database/Db_Connection.php";
 
@@ -84,6 +84,7 @@
                   if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                       $row = mysqli_fetch_assoc($result);
+                      $name = $row['name'];
                       $address = $row['address'];
                       $contact = $row['Contact'];
                       $name = $row['name'];
@@ -98,6 +99,7 @@
                         </div>
                         <div class="profile-info">
                           <p>ID: <?php echo $id; ?></p>
+                          <p>Name: <?php echo $name; ?></p>
                           <p>Email: <?php echo $title; ?></p>
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>

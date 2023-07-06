@@ -23,7 +23,7 @@ if (isset($_SESSION['email'])) {
                         $row = mysqli_fetch_assoc($result);
                         $currentpassword = $row['password'];
 
-                        if ($currentpassword == $old_password) {
+                        if ($currentpassword == md5($old_password)) {
                             $sql = "UPDATE user SET password = md5('$new_password') WHERE email = '$title'";
                             $result = mysqli_query($conn, $sql);
 

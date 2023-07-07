@@ -55,13 +55,16 @@ include '../Index/indexnav.php';
                         <div class="row g-0">
                         <div class="col-md-4">
   <?php
-  $donEmail = $row["email"];
-  $sql2 = "SELECT profile_picture FROM user WHERE email='$donEmail'";
+  $donid = $row["uid"];
+  $sql2 = "SELECT * FROM user WHERE id='$donid'";
   $result2 = mysqli_query($conn, $sql2);
 
   if ($result2 && mysqli_num_rows($result2) > 0) {
     $donor = mysqli_fetch_assoc($result2);
-    $profilePicturePath = '../img/' . $donor['profile_picture']; // Replace with the actual path to the profile pictures directory
+    $profilePicturePath = '../img/' . $donor['profile_picture']; 
+    $uname=$donor["name"]; 
+    $address=$donor["address"]; 
+    // Replace with the actual path to the profile pictures directory
   } else {
     $profilePicturePath = '../img/member2.jpg'; // Default profile picture path if the donor doesn't have a custom profile picture
   }
@@ -71,12 +74,29 @@ include '../Index/indexnav.php';
 
                         <div class="col-md-8">
                             <div class="card-body">
-                            <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                            <p class="card-text">Address: <?php echo $row["address"]; ?></p>
+                            <h5 class="card-title"><?php echo $uname?></h5>
+                            <p class="card-text">Address: <?php echo $address ?></p>
                             <p class="card-text">Amount: <?php echo $row["amount"]; ?></p>
-                            <p class="card-text">Cause: <?php echo $row["cause"]; ?></p>
-                            <p class="card-text"><small class="text-muted">Date: <?php echo $row["date"]; ?></small></p>
-                            <a href="../personal.php?title=<?php echo $row['email']; ?>" class="btn btn-danger">Visit</a>
+                            <p class="card-text">Date: <?php echo $row["date"]; ?></p>
+                            <p class="card-text">Donation Title:
+                                 <?php
+                            $did=$row["donation_id"]; 
+                            $sql3="SELECT * FROM donation WHERE id = $did";
+                            $result3 = $conn->query($sql3);
+
+            if ($result3->num_rows > 0) {
+                // Output data of each row
+                while ($row3 = $result3->fetch_assoc()) {
+                    echo $row3['donation_name'];
+                }
+            }
+
+                            ?>
+                            </p>
+
+
+                            
+                            <a href="../personal.php?title=<?php echo $donor['email']; ?>" class="btn btn-danger">Visit</a>
                             </div>
                         </div>
                     </div>

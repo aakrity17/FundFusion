@@ -102,6 +102,7 @@ if (isset($_SESSION['email'])) {
   <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
   <button type="submit">Update Picture</button>
 </form>
+
     </body>
 
     </html>

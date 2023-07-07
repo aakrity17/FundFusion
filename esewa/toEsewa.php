@@ -6,6 +6,9 @@ use PHPMailer\PHPMailer\Exception;
 require '../PHPMailer/Phpmailer/src/Exception.php';
 require '../PHPMailer/Phpmailer/src/PHPMailer.php';
 require '../PHPMailer/Phpmailer/src/SMTP.php';
+session_start(); 
+if (isset($_SESSION['name'])) {
+
 
 include '../database/Db_Connection.php';
 if (isset($_POST['Amount'])){
@@ -58,6 +61,7 @@ if (isset($_POST['Amount'])){
     echo "Error: " . mysqli_error($conn);
   }
 
+}
 }
 ?>
 <!DOCTYPE html>

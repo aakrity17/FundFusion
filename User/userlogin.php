@@ -66,6 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row = mysqli_fetch_assoc($result);
             $name = $row['name'];
             $email = $row['email'];
+            $id=$row['id'];
             
 
 
@@ -74,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['password'] = $providedPassword;
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
+            $_SESSION['id'] = $id;
 
 
             

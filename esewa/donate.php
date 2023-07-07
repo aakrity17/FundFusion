@@ -30,38 +30,29 @@ if (isset($_SESSION['name'])) {
         // Query execution failed
         echo "Error executing the query: " . mysqli_error($conn);
     }   
+
+
+
+    $sql2 = "SELECT * FROM donation WHERE id = '$title'";
+    $result2 = mysqli_query($conn, $sql2);
+    if ($result2) {
+        if (mysqli_num_rows($result2) > 0) {
+            // Fetch the data
+            $row2 = mysqli_fetch_assoc($result2);
+            // Access the values
+            $donation_name = $row2['donation_name'];
+         
+        } else {
+            // No matching records found
+            echo "No matching records found.";
+        }
+        mysqli_free_result($result2); // Free the result set
+    } else {
+        // Query execution failed
+        echo "Error executing the query: " . mysqli_error($conn);
+    }   
 } else {
     header('Location:../User/userlogin.php');
-    exit();
-}
-
-// donate.php
-
-if (isset($_POST['submit'])) {
-    if (isset($_POST['Amount'])) {
-        $amount = $_POST['Amount'];
-        // Process the amount
-        echo $amount;
-    }
-
-    // Retrieve other form data
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    $donation_title = $_POST['donation_title'];
-
-    // Save the form details in the database
-    $uid = 10; // Assuming uid is stored in the session
-    $sql = "INSERT INTO donors (uid, name, address, contact, email, amount, cause, date) VALUES ('$uid', '$name', '$address', '$contact', '$email', '$amount', '$donation_title', CURDATE())";
-    if (mysqli_query($conn, $sql)) {
-        echo "Form details saved successfully in the database.";
-    } else {
-        echo "Error saving form details: ";
-    }
-
-    // Redirect to toEsewa.php with the amount
-    header("Location: toEsewa.php?Amount=$amount");
     exit();
 }
 ?>
@@ -110,7 +101,12 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="form-control">
-                    <input type="text" value="<?php echo $title; ?>" name="donation_title">
+                    <input type="text" value="<?php echo $donation_name; ?>" name="donation_title">
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div class="form-control" hidden>
+                    <input type="text" value="<?php echo $title; ?>" name="donation_id">
                     <i class="fas fa-user"></i>
                 </div>
 

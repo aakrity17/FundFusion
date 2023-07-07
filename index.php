@@ -283,235 +283,164 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     </section>
     <!-- Volunteer section end -->
     <hr />
-<!-- Essentials Donation Section star -->
-<section>
-  <style>
-    .mySlides {
-        display:none;
-  }
-    .w3-left, .w3-right, .w3-badge {cursor:pointer}
-    .w3-badge {height:13px;width:13px;padding:0}
-    .mySlides .img{
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    .caption {
-      position: absolute;
-      top: 0px;
-      padding-top: 30px;
-      /* margin-left: 200px; */
-      width: 100%;
-      /* padding-left: 350px; */
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      font-size: 18px;
-    }
-    h2{
-        text-align: center;
-        font-weight: 600;
+    <!-- Essentials Donation Section star -->
+    <section>
+        <style>
+            .mySlides {
+                display: none;
+            }
 
-    }
-    .btn-container {
-      position: relative;
-      background-color: rgba(0, 0, 0, 0.5);
-      width: 100%;
-      padding-bottom: 10px;
-      /* padding-left: 350px; */
-      text-align: center;
-      /* margin-left: 0px; */
-    }
-    .btn-container  .btn {
-      background-color: purple;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      /* margin-left: 10px; */
-      font-size: 16px;
-      border-radius: 4px;
-      /* margin-bottom: 10px; */
-    }
-  </style>
+            .w3-left,
+            .w3-right,
+            .w3-badge {
+                cursor: pointer
+            }
 
-  <div class="container my-4">
-    <div class="row my-4">
-      <div class="col-10 mx-auto text-center">
-        <h1 class="text-uppercase">Essentials Donation</h1>
-        <p>Donation can be any kind of aid that helps.</p>
-      </div>
-    </div>
-  </div>
+            .w3-badge {
+                height: 13px;
+                width: 13px;
+                padding: 0
+            }
 
-  <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
-    <div class="mySlides">
-      <img src="./img/6.jpg" style="width:100%">
-      <div class="caption">
-        <h2>Donate Study Materials and Stationaries</h2>
-        <div class="btn-container">
-          <a href="Essentials/Essentials.php?title=<?php echo urlencode('Study Materials'); ?>" class="btn">Register for Donation</a>
-        </div>
-      
-        
-      </div>
-      
-    </div>
+            .mySlides .img {
+                box-sizing: border-box;
+                border-radius: 8px;
+            }
 
-    <div class="mySlides">
-      <img src="./img/5.jpg" style="width:100%">
-      <div class="caption">
-        <h2>Donate Clothes and Uniforms</h2>
-        <div class="btn-container">
-        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Clothes & Uniforms'); ?>" class="btn">Register for Donation</a>
-        </div>
-      </div>
-    </div>
+            .caption {
+                position: absolute;
+                top: 0px;
+                padding-top: 30px;
+                /* margin-left: 200px; */
+                width: 100%;
+                /* padding-left: 350px; */
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                font-size: 18px;
+            }
 
-    <div class="mySlides">
-      <img src="./img/4.jpg" style="width:100%">
-      <div class="caption">
-        <h2>Donate Medicines snd Aids</h2>
-        <!-- <p>Donate Medicines snd Aids</p> -->
-        <div class="btn-container">
-        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Medicine & Aids'); ?>" class="btn">Register for Donation</a>
-        </div>
-      </div>
-    </div>
+            h2 {
+                text-align: center;
+                font-weight: 600;
 
-    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-    </div>
-  </div>
+            }
 
-  <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+            .btn-container {
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                padding-bottom: 10px;
+                /* padding-left: 350px; */
+                text-align: center;
+                /* margin-left: 0px; */
+            }
 
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
+            .btn-container .btn {
+                background-color: purple;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                /* margin-left: 10px; */
+                font-size: 16px;
+                border-radius: 4px;
+                /* margin-bottom: 10px; */
+            }
+        </style>
 
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
-      }
-      x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-white";
-    }
-  </script>
-
-</section>
-    <!-- Our project started -->
-    
-    <!-- <section id="projects"> -->
-
-        <!-- <div class="container">
-            <div class="row my-3">
+        <div class="container my-4">
+            <div class="row my-4">
                 <div class="col-10 mx-auto text-center">
-                    <h1 class="text-uppercase">Our Latest Projects</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
+                    <h1 class="text-uppercase">Essentials Donation</h1>
+                    <p style="text-align: center;">Donation can be any kind of aid that helps.</p>
                 </div>
-            </div> -->
-            <!----->
-            <!-- <div class="row"> -->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/8.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                    <h6 class="text-center">
-                        Food
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/p4.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-2</h4>
-                    <h6 class="text-center">
-                        water
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/p3.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-3</h4>
-                    <h6 class="text-center">
-                        Medicine
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/p4.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-4</h4>
-                    <h6 class="text-center">
-                        Education
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/3.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-5</h4>
-                    <h6 class="text-center">
-
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-                <!--single Project-->
-                <!-- <div class="col-10 col-md-6 col-lg-4">
-                    <div class="project-container p-5 outline">
-                        <img src="img/2.jpg" class="img-fluid grow" alt="">
-                        <a herf="#" class="donation text-capitalize">Donate Now</a>
-                    </div>
-                    <h4 class="text-capitalize text-center my-2">Project-6</h4>
-                    <h6 class="text-center">
-                        Health
-                    </h6>
-                </div> -->
-                <!--End of Single Project-->
-
-            <!-- </div>
+            </div>
         </div>
-    </section> -->
 
-    <!---End of the Projects Section-->
+
+        <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
+            <div class="mySlides">
+                <img src="./img/6.jpg" style="width:100%">
+                <div class="caption">
+                    <h2>Donate Study Materials and Stationaries</h2>
+                    <div class="btn-container">
+                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Study Materials'); ?>" class="btn">Register for Donation</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="mySlides">
+                <img src="./img/5.jpg" style="width:100%">
+                <div class="caption">
+                    <h2>Donate Clothes and Uniforms</h2>
+                    <div class="btn-container">
+                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Clothes & Uniforms'); ?>" class="btn">Register for Donation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <img src="./img/4.jpg" style="width:100%">
+                <div class="caption">
+                    <h2>Donate Medicines snd Aids</h2>
+                    <!-- <p>Donate Medicines snd Aids</p> -->
+                    <div class="btn-container">
+                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Medicine & Aids'); ?>" class="btn">Register for Donation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-white";
+            }
+        </script>
+
+    </section>
 
     <section id="projects">
-    <div class="donation-banner">
-        <h1 style="border-style: groove;text-align:center;">Projects</h1>
-    </div>
-    <?php
+        <div class="donation-banner">
+            <h1 style="border-style: groove;text-align:center;">Projects</h1>
+        </div>
+        <?php
         include "database/Db_Connection.php";
         $currentProjectsSql = "SELECT * from projects where p_start_date <= cast(NOW() as date) AND cast(NOW() as date) <= p_end_date;";
         $currentProjectRecords = $conn->query($currentProjectsSql);
@@ -521,28 +450,28 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         $pastProjectsSql = "SELECT * from projects where p_end_date <= cast(NOW() as date)";
         $pastProjectRecords = $conn->query($pastProjectsSql);
-    ?>
-    
+        ?>
 
-    
-    <div class="container">
-        <div class="row">
-            <?php $count = 0; ?>
-            <?php foreach ($pastProjectRecords as $pastData): ?>
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
-                    <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
-                    <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
-                </div>
+
+
+        <div class="container">
+            <div class="row">
+                <?php $count = 0; ?>
+                <?php foreach ($pastProjectRecords as $pastData) : ?>
+                    <!--single Project-->
+                    <div class="col-10 col-md-6 col-lg-4">
+                        <div class="project-container p-5 outline">
+                            <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
+                            <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
+                            <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
+                        </div>
+                    </div>
+                    <?php $count++; ?>
+                    <?php if ($count == 3) break; ?>
+                <?php endforeach; ?>
             </div>
-            <?php $count++; ?>
-            <?php if ($count == 3) break; ?>
-            <?php endforeach; ?>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -679,46 +608,50 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
     <!-- <body> -->
 
-        <footer style="background-color: purple">
-       <?php include './Footer/indexFooter.php' ?>
-        </footer>
+    <footer style="background-color: purple">
+        <?php include './Footer/indexFooter.php' ?>
+    </footer>
 
-            <script>
-                var slideIndex = 1;
-showDivs(slideIndex);
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-            </script>
-
-
-
-
-
-
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 
 
 
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-    <!-- <?php
-// }
-?> -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<!-- <?php
+        // }
+        ?> -->
 
 
 </html>

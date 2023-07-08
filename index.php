@@ -585,6 +585,210 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             }
         </script>
 
+<<<<<<< HEAD
+    </section>
+
+    <section id="projects">
+        <div class="donation-banner">
+            <h1 style="border-style: groove;text-align:center;">Projects</h1>
+        </div>
+        <?php
+        include "database/Db_Connection.php";
+        $currentProjectsSql = "SELECT * from projects where p_start_date <= cast(NOW() as date) AND cast(NOW() as date) <= p_end_date;";
+        $currentProjectRecords = $conn->query($currentProjectsSql);
+
+        $upcomingProjectsSql = "SELECT * from projects where p_start_date >= cast(NOW() as date)";
+        $upcomingProjectRecords = $conn->query($upcomingProjectsSql);
+
+        $pastProjectsSql = "SELECT * from projects where p_end_date <= cast(NOW() as date)";
+        $pastProjectRecords = $conn->query($pastProjectsSql);
+        ?>
+
+
+
+        <div class="container">
+            <div class="row">
+                <?php $count = 0; ?>
+                <?php foreach ($pastProjectRecords as $pastData) : ?>
+                    <!--single Project-->
+                    <div class="col-10 col-md-6 col-lg-4">
+                        <div class="project-container p-5 outline">
+                            <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
+                            <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
+                            <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
+                        </div>
+                    </div>
+                    <?php $count++; ?>
+                    <?php if ($count == 3) break; ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Membership card -->
+    <section>
+        <h2 class="text-center">Membership</h2>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card silver-card">
+                        <div class="card-header bg-secondary text-white">
+                            Silver Tier
+                        </div>
+                        <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Silver Tier</h5>
+                            <p class="card-text">In this beginner-friendly tier,By donating between $1 to $9 you will become a member of our silver Tier.</p>
+                            <ul>
+                                <li>Only updates</li>
+                                <li>Chat community</li>
+                                <li>One movie free ticket</li>
+                            </ul>
+                            <a href="Membership/paymentGateway.php?title=<?php echo 1; ?>" class="btn btn-primary">Join</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gold-card">
+                        <div class="card-header bg-warning text-white">
+                            Gold Tier
+                        </div>
+                        <img src="./img/gold.png" class="card-img-top" alt="Gold Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Gold Tier</h5>
+                            <p class="card-text">By donating $10 monthly, you will become a member of our Gold Tier.</p>
+                            <ul>
+                                <li>All Silver Tier benefits</li>
+                                <li>Exclusive monthly newsletter</li>
+                                <li>Personalized thank you message</li>
+                            </ul>
+                            <a href="Membership/paymentGateway.php?title=<?php echo 2; ?>" class="btn btn-primary">Join</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card diamond-card">
+                        <div class="card-header bg-danger text-white">
+                            Platinum tier
+                        </div>
+                        <img src="./img/Platinum-Badge.png" class="card-img-top" alt="Diamond Tier">
+                        <div class="card-body">
+                            <h5 class="card-title">About Platinum Tier</h5>
+                            <p class="card-text">For a monthly donation of $20 or more, you will receive the exclusive benefits of our Platinum.</p>
+                            <ul>
+                                <li>All Silver and Gold Tier benefits</li>
+                                <li>Personalized thank you message</li>
+                                <li>Special recognition on our website</li>
+                            </ul>
+                            <a href="Membership/paymentGateway.php?title=<?php echo 3; ?>" class="btn btn-primary">Join</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    </section>
+    <!--  -->
+
+
+    <!-- Team Section-->
+    <?php
+    $teamsSql = "SELECT * FROM teams";
+    $teamsresult = mysqli_query($conn, $teamsSql);
+    ?>
+
+    <section class="team">
+        <section id="our-team">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="text-center">Our Team</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+                </div>
+                <div class="row">
+                    <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="team-1">
+                                <div class="pic">
+                                    <img src="img/member1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h4><?php echo $rs['name']; ?></h4>
+                                    <span><?php echo $rs['skill']; ?></span>
+                                    <div class="social">
+                                        <a href="<?php echo $rs['twitter']; ?>">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['fb']; ?>">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['insta']; ?>">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="<?php echo $rs['linkedin']; ?>">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </section>
+    </section>
+    <style>
+        .full-width-footer {
+            /* background: rgba(153, 72, 252, 0.98); */
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+            padding-left: 500px;
+
+            text-align: center;
+        }
+    </style>
+    </head>
+
+    <!-- <body> -->
+
+    <footer style="background-color: purple">
+        <?php include './Footer/indexFooter.php' ?>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+=======
+>>>>>>> 11710ef0e7247909b4cbe9a554900b1a8276afa7
 
 
 

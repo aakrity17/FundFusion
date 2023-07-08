@@ -21,16 +21,16 @@ include "../routeconfig.php";
       ?>
         <div class="main">
             <div class="topbar">
-            <div class="toggle">
+            <!-- <div class="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
-            </div>
+            </div> -->
             <!-- Search -->
-            <div class="search">
+            <!-- <div class="search">
                 <label>
                 <input type="text" placeholder="Search here" />
                 <ion-icon name="search-outline"></ion-icon>
                 </label>
-            </div>
+            </div> -->
         </div>
         <h2>Create New Project</h2>
         <p>Add all the details regarding projects below.</p>

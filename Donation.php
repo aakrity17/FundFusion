@@ -25,6 +25,9 @@ $records = $conn->query($sql);
   <link rel="stylesheet" href="css/donation.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- javascript for the icons in navbar -->
+  <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+
 
 </head>
 

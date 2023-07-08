@@ -57,7 +57,7 @@ if (isset($_SESSION['email'])) {
           justify-content: center;
           height: 100vh;
           padding: 20px;
-          background-color: #f2f2f2;
+          background-color: #6633cc;
         }
 
         h1 {
@@ -96,12 +96,14 @@ if (isset($_SESSION['email'])) {
 
     <body>
       <div class="container">
-        <h1>Update Profile Picture</h1>
+        <h1 style="color: white;">Update Profile Picture</h1>
         <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
-  <label for="profile-picture">Choose a new picture:</label>
-  <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
-  <button type="submit">Update Picture</button>
-</form>
+          <label for="profile-picture">
+            <h3 style="color:white"></h3>
+          </label>
+          <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
+          <button type="submit">Update Picture</button>
+        </form>
 
     </body>
 

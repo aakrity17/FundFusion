@@ -506,7 +506,7 @@ body {
 .footer-bottom {
     /* background-color: #000000d8; */
 
-    background: rgba(74, 6, 156, 0.476);
+    /* background: rgba(74, 6, 156, 0.476); */
     position: fixed;
 
     width: 100w;
@@ -521,7 +521,6 @@ body {
     flex-wrap: wrap;
     text-align: center;
     padding: 45px 0px 20px 500px;
-    background-color: #000000b5;
     background: #6633cc;
 
 
@@ -532,29 +531,34 @@ body {
     margin-top: 30px;
 }
 
-/* navigation dotted wala  i.e title*/
+/* navigation dotted wala  i.e title Navigation and Social links ko tala ko dashes*/
 .nb-footer .footer-title {
     display: block;
     margin: 10px 0 25px 0;
-    border-bottom: 1px dotted #e4e9f0;
+    /* border-bottom: 1px solid #e4e9f0; */
 }
 
 .nb-footer .footer-single a {
     text-decoration: none;
+    /* border-bottom: 2px solid white; */
+
+
 }
 
-/* .nb-footer .footer-single h2 {
+.nb-footer .footer-single h2 {
     color: white;
     font-size: 22px;
     font-weight: 200;
     display: grid;
-    border-bottom: 2px solid #7BFF00;
+    /* Title ko dashed */
+    border-bottom: 2px solid white;
     padding-bottom: 5px;
     margin-bottom: -2px;
-} */
+}
 
 .nb-footer .footer-single li {
-    border-top: solid 1px white;
+    /* list ko dashed */
+    border-top: solid 2px white;
 }
 
 .nb-footer .footer-single li:first-child {
@@ -564,6 +568,8 @@ body {
 .nb-footer .footer-single li a {
     color: white;
     font-size: 12px;
+    /* border-bottom: 2px solid white; */
+
     padding: 6px 0px;
     display: block;
     transition: all 0.4s ease-in-out;
@@ -574,7 +580,8 @@ body {
 }
 
 .nb-footer .btn-footer {
-    border: 1px solid #7BFF00;
+
+    border: 1px solid white;
     margin-top: 10px;
     color: white;
 }
@@ -590,7 +597,7 @@ body {
     color: white;
     font-size: 14px;
     margin-top: 5px;
-    line-height: 22px;
+    line-height: 50px;
 }
 
 /* =============End of footer section============= */

@@ -123,12 +123,13 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         </div>
     </section>
-    <h6 style="text-align: center;">ABOUT US</h6>
-    <h2 style="text-align: center;" class="mb-3">OUR MISSION | VISION &amp; PLANS</h2>
     <!--end of hero Section-->
     <!--About us-->
     <section id="about-us">
         <section class="mt-5" id="aboutus">
+            <h6 style="text-align: center;">ABOUT US</h6>
+            <h2 style="text-align: center;" class="mb-3">OUR MISSION | VISION &amp; PLANS</h2>
+
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <!-- <div class="col-md-8 text-center heading-section">
@@ -488,21 +489,17 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+            <hr>
         </section>
+        <h2 class="text-center">Our Team</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
         <!--  -->
-        <hr>
-
-
         <!-- Team Section-->
         <?php
         $teamsSql = "SELECT * FROM teams";
         $teamsresult = mysqli_query($conn, $teamsSql);
         ?>
         <section class="team">
-            <h2 class="text-center">Our Team</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
-
 
             <section id="our-team">
                 <div class="container">

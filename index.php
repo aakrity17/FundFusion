@@ -123,283 +123,441 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         </div>
     </section>
-
     <!--end of hero Section-->
-
     <!--About us-->
     <section id="about-us">
-        <!-- <section class="mt-5" id="aboutus"> -->
+        <section class="mt-5" id="aboutus">
+            <h6 style="text-align: center;">ABOUT US</h6>
+            <h2 style="text-align: center;" class="mb-3">OUR MISSION | VISION &amp; PLANS</h2>
+
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <!-- <div class="col-md-8 text-center heading-section">
+                        <span style="text-align: center;">About Us</span>
+                        <h2 style="text-align: center;" class="mb-3">Our Mission | Vision &amp; Plans</h2>
+                    </div> -->
+                </div>
+
+                <!------>
+                <div class="row tabs mt-4">
+                    <div class="col-md-4">
+                        <ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
+                            <li class="nav-item text-left">
+                                <a class="nav-link active py-4" data-toggle="tab" href="#about-1">About</a>
+                            </li>
+                            <li class="nav-item text-left">
+                                <a class="nav-link py-4" data-toggle="tab" href="#about-2">Our Beginning</a>
+                            </li>
+                            <li class="nav-item text-left">
+                                <a class="nav-link py-4" data-toggle="tab" href="#about-3">Our Mission</a>
+                            </li>
+                            <li class="nav-item text-left">
+                                <a class="nav-link py-4" data-toggle="tab" href="#about-4">Our Vision</a>
+                            </li>
+                            <li class="nav-item text-left">
+                                <a class="nav-link py-4" data-toggle="tab" href="#about-5">Our Mandate</a>
+                            </li>
+                            <li class="nav-item text-left">
+                                <a class="nav-link py-4" data-toggle="tab" href="#about-6">Our Plans</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!----->
+                    <div class="col-md-8">
+                        <div class="tab-content">
+                            <div class="tab-pane container p-0 active" id="about-1">
+
+                                <!-- ABOUT US WALA PAGE -->
+                                <div class="img" style="background-image: url(img/about.jpg);"></div>
+                                <h3><a href="about-us">About Us</a></h3>
+                                <p>Welcome to our charity app! We are a team of passionate individuals dedicated to making a
+                                    positive impact in the world. Our mission is to connect people with the causes they care
+                                    about and make it easy for them to support those causes.
+
+                                </p>
+                            </div>
 
 
+                            <!----->
+                            <!-- PLANE WALA PAGE -->
 
+                            <div class="tab-pane container p-0" id="about-2">
 
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-8 text-center heading-section">
-                    <span>About Us</span>
-                    <h2 class="mb-3">Our Mission | Vision & Plans</h2>
+                                <div class="img" style="background-image: url(img/begi.jpeg);"></div>
+
+                                <h3><a href="#">Our Beginning</a></h3>
+                                <p>After months of hard work, the charity app was finally ready,
+                                    to the public for the first time.
+                                    From that moment on, our charity app has been on a mission to make charitable giving
+                                    more accessible and impactful. We are proud of our beginning, and we look forward to
+                                    continuing to make a difference in the lives of people and communities around the world.
+                                </p>
+                            </div>
+                            <!----->
+                            <!-- OUT MISSION WALA PAGE -->
+
+                            <div class="tab-pane container p-0" id="about-3">
+                                <div class="img" style="background-image: url(img/mission.jpg);"></div>
+                                <h3><a href="#">Our Mission</a></h3>
+                                <p>At our charity app, our mission is to make charitable giving more accessible,
+                                    transparent, and impactful. We believe that everyone has the power to make a difference,
+                                    regardless of their background or financial situation.
+
+                                    Our app is designed to connect people with the causes they care about and make it easy
+                                    for them to support those causes. We partner with a wide range of non-profit
+                                    organizations to provide our users with a diverse range of options for giving back.</p>
+                            </div>
+                            <!----->
+                            <div class="tab-pane container p-0" id="about-4">
+                                <div class="img" style="background-image: url(img/vision.jpg);"></div>
+                                <h3><a href="#">Our Vision</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
+                                    tempor.
+                                    Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
+                                    malesuada justo,
+                                    euismod consequat lorem aliquam eget..</p>
+                            </div>
+                            <!----->
+                            <div class="tab-pane container p-0" id="about-5">
+                                <div class="img" style="background-image: url(img/mandate.jpg);"></div>
+                                <h3><a href="#">Our Mandate</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
+                                    tempor.
+                                    Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
+                                    malesuada justo,
+                                    euismod consequat lorem aliquam eget.</p>
+                            </div>
+                            <!----->
+                            <div class="tab-pane container p-0" id="about-6">
+                                <div class="img" style="background-image:url(img/plan.jpg);"></div>
+                                <h3><a href="#">Our Plans</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
+                                    tempor. Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
+                                    malesuada justo, euismod consequat lorem aliquam eget..</p>
+                            </div>
+
+                            <!-- - -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!------>
-            <div class="row tabs mt-4">
-                <div class="col-md-4">
-                    <ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
-                        <li class="nav-item text-left">
-                            <a class="nav-link active py-4" data-toggle="tab" href="#about-1">About</a>
-                        </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-4" data-toggle="tab" href="#about-2">Our Beginning</a>
-                        </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-4" data-toggle="tab" href="#about-3">Our Mission</a>
-                        </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-4" data-toggle="tab" href="#about-4">Our Vision</a>
-                        </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-4" data-toggle="tab" href="#about-5">Our Mandate</a>
-                        </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-4" data-toggle="tab" href="#about-6">Our Plans</a>
-                        </li>
-                    </ul>
+            </div>
+        </section>
+        <hr />
+
+        <!-- End About us -->
+
+
+        <!-- Volunteer section -->
+        <section>
+            <h1 style="text-align: center;">Become a Volunteer</h1>
+
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-6">
+                        <?php
+                        if (isset($_GET['status'])) {
+                            echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
+                        }
+                        ?>
+                        <!-- <h1 style="text-align: center;">Become a Volunteer</h1> -->
+                        <form action="newvolunteer.php" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="full_name" placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email_address" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="occupation" placeholder="Occupation">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-6">
+                        <img src="img/2.jpg" class="img-fluid" alt="">
+                    </div>
                 </div>
-                <!----->
-                <div class="col-md-8">
-                    <div class="tab-content">
-                        <div class="tab-pane container p-0 active" id="about-1">
+            </div>
+        </section>
+        <!-- Volunteer section end -->
+        <hr />
+        </br>
 
-                            <!-- ABOUT US WALA PAGE -->
-                            <div class="img" style="background-image: url(img/about.jpg);"></div>
-                            <h3><a href="about-us">About Us</a></h3>
-                            <p>Welcome to our charity app! We are a team of passionate individuals dedicated to making a
-                                positive impact in the world. Our mission is to connect people with the causes they care
-                                about and make it easy for them to support those causes.
 
-                            </p>
+        <!-- Essentials Donation Section -->
+        <section>
+            <h1 class="text-uppercase">Essentials Donation
+                <style>
+                    h1 {
+                        text-align: center;
+                    }
+                </style>
+            </h1>
+            <p style="text-align: center;">Donation can be any kind of aid that helps.</p>
+
+            <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
+                <div class="mySlides">
+                    <img src="./img/6.jpg" style="width:100%">
+                    <div class="caption">
+                        <h2>Donate Study Materials and Stationaries</h2>
+                        <div class="btn-container">
+                            <a href="Essentials/Essentials.php?title=<?php echo urlencode('Study Materials'); ?>" class="btn">Register for Donation</a>
                         </div>
+                    </div>
+                </div>
 
-
-                        <!----->
-                        <!-- PLANE WALA PAGE -->
-
-                        <div class="tab-pane container p-0" id="about-2">
-
-                            <div class="img" style="background-image: url(img/begi.jpeg);"></div>
-
-                            <h3><a href="#">Our Beginning</a></h3>
-                            <p>After months of hard work, the charity app was finally ready,
-                                to the public for the first time.
-                                From that moment on, our charity app has been on a mission to make charitable giving
-                                more accessible and impactful. We are proud of our beginning, and we look forward to
-                                continuing to make a difference in the lives of people and communities around the world.
-                            </p>
+                <div class="mySlides">
+                    <img src="./img/5.jpg" style="width:100%">
+                    <div class="caption">
+                        <h2>Donate Clothes and Uniforms</h2>
+                        <div class="btn-container">
+                            <a href="Essentials/Essentials.php?title=<?php echo urlencode('Clothes & Uniforms'); ?>" class="btn">Register for Donation</a>
                         </div>
-                        <!----->
-                        <!-- OUT MISSION WALA PAGE -->
+                    </div>
+                </div>
 
-                        <div class="tab-pane container p-0" id="about-3">
-                            <div class="img" style="background-image: url(img/mission.jpg);"></div>
-                            <h3><a href="#">Our Mission</a></h3>
-                            <p>At our charity app, our mission is to make charitable giving more accessible,
-                                transparent, and impactful. We believe that everyone has the power to make a difference,
-                                regardless of their background or financial situation.
+                <div class="mySlides">
+                    <img src="./img/4.jpg" style="width:100%">
+                    <div class="caption">
+                        <h2>Donate Medicines snd Aids</h2>
+                        <!-- <p>Donate Medicines snd Aids</p> -->
+                        <div class="btn-container">
+                            <a href="Essentials/Essentials.php?title=<?php echo urlencode('Medicine & Aids'); ?>" class="btn">Register for Donation</a>
+                        </div>
+                    </div>
+                </div>
 
-                                Our app is designed to connect people with the causes they care about and make it easy
-                                for them to support those causes. We partner with a wide range of non-profit
-                                organizations to provide our users with a diverse range of options for giving back.</p>
-                        </div>
-                        <!----->
-                        <div class="tab-pane container p-0" id="about-4">
-                            <div class="img" style="background-image: url(img/vision.jpg);"></div>
-                            <h3><a href="#">Our Vision</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
-                                tempor.
-                                Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
-                                malesuada justo,
-                                euismod consequat lorem aliquam eget..</p>
-                        </div>
-                        <!----->
-                        <div class="tab-pane container p-0" id="about-5">
-                            <div class="img" style="background-image: url(img/mandate.jpg);"></div>
-                            <h3><a href="#">Our Mandate</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
-                                tempor.
-                                Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
-                                malesuada justo,
-                                euismod consequat lorem aliquam eget.</p>
-                        </div>
-                        <!----->
-                        <div class="tab-pane container p-0" id="about-6">
-                            <div class="img" style="background-image:url(img/plan.jpg);"></div>
-                            <h3><a href="#">Our Plans</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem sed arcu lobortis
-                                tempor. Fusce vel magna id lorem finibus eleifend. Suspendisse potenti. Aenean ultrices
-                                malesuada justo, euismod consequat lorem aliquam eget..</p>
-                        </div>
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
 
-                        <!-- - -->
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                    showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    if (n > x.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " w3-white";
+                }
+            </script>
+
+        </section>
+        <br />
+        <hr />
+        <!-- End Of -->
+
+
+        <section id="projects">
+            <div class="donation-banner">
+                <h1 style="text-align:center;">PROJECTS</h1>
+            </div>
+            <?php
+            include "database/Db_Connection.php";
+            $currentProjectsSql = "SELECT * from projects where p_start_date <= cast(NOW() as date) AND cast(NOW() as date) <= p_end_date;";
+            $currentProjectRecords = $conn->query($currentProjectsSql);
+
+            $upcomingProjectsSql = "SELECT * from projects where p_start_date >= cast(NOW() as date)";
+            $upcomingProjectRecords = $conn->query($upcomingProjectsSql);
+
+            $pastProjectsSql = "SELECT * from projects where p_end_date <= cast(NOW() as date)";
+            $pastProjectRecords = $conn->query($pastProjectsSql);
+            ?>
+
+
+
+            <div class="container">
+                <div class="row">
+                    <?php $count = 0; ?>
+                    <?php foreach ($pastProjectRecords as $pastData) : ?>
+                        <!--single Project-->
+                        <div class="col-10 col-md-6 col-lg-4">
+                            <div class="project-container p-5 outline">
+                                <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
+                                <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
+                                <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
+                            </div>
+                        </div>
+                        <?php $count++; ?>
+                        <?php if ($count == 3) break; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+        </br>
+        </br>
+        <hr />
+
+
+        <!-- Membership card -->
+        <section>
+            <h2 class="text-center">MEMBERSHIP</h2>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card silver-card">
+                            <div class="card-header bg-secondary text-white">
+                                Silver Tier
+                            </div>
+                            <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
+                            <div class="card-body">
+                                <h5 class="card-title">About Silver Tier</h5>
+                                <p class="card-text">In this beginner-friendly tier,By donating between $1 to $9 you will become a member of our silver Tier.</p>
+                                <ul>
+                                    <li>Only updates</li>
+                                    <li>Chat community</li>
+                                    <li>One movie free ticket</li>
+                                </ul>
+                                <a href="Donors/paymentGateway.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Join</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card gold-card">
+                            <div class="card-header bg-warning text-white">
+                                Gold Tier
+                            </div>
+                            <img src="./img/gold.png" class="card-img-top" alt="Gold Tier">
+                            <div class="card-body">
+                                <h5 class="card-title">About Gold Tier</h5>
+                                <p class="card-text">By donating $10 monthly, you will become a member of our Gold Tier.</p>
+                                <ul>
+                                    <li>All Silver Tier benefits</li>
+                                    <li>Exclusive monthly newsletter</li>
+                                    <li>Personalized thank you message</li>
+                                </ul>
+                                <a href="Donors/paymentGateway.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Join</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card diamond-card">
+                            <div class="card-header bg-danger text-white">
+                                Platinum tier
+                            </div>
+                            <img src="./img/Platinum-Badge.png" class="card-img-top" alt="Diamond Tier">
+                            <div class="card-body">
+                                <h5 class="card-title">About Platinum Tier</h5>
+                                <p class="card-text">For a monthly donation of $20 or more, you will receive the exclusive benefits of our Platinum.</p>
+                                <ul>
+                                    <li>All Silver and Gold Tier benefits</li>
+                                    <li>Personalized thank you message</li>
+                                    <li>Special recognition on our website</li>
+                                </ul>
+                                <a href="Donors/paymentGateway.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Join</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-        </div>
-    </section>
-    <!-- End About us -->
-    <!-- Volunteer section -->
-    <hr />
-    <section>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-6">
-                    <?php
-                    if (isset($_GET['status'])) {
-                        echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
-                    }
-                    ?>
-                    <h1 style="text-align: center;">Become a Volunteer</h1>
-                    <form action="newvolunteer.php" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="full_name" placeholder="Full Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email_address" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="occupation" placeholder="Occupation">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            <hr>
+        </section>
+        <h2 class="text-center">Our Team</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+        <!--  -->
+        <!-- Team Section-->
+        <?php
+        $teamsSql = "SELECT * FROM teams";
+        $teamsresult = mysqli_query($conn, $teamsSql);
+        ?>
+        <section class="team">
+
+            <section id="our-team">
+                <div class="container">
+                    <div class="section-title">
+                        <!-- <h2 class="text-center">Our Team</h2> -->
+                    </div>
+                    <div class="row">
+                        <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="team-1">
+                                    <div class="pic">
+                                        <img src="img/member1.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="team-info">
+                                        <h4><?php echo $rs['name']; ?></h4>
+                                        <span><?php echo $rs['skill']; ?></span>
+                                        <div class="social">
+                                            <a href="<?php echo $rs['twitter']; ?>">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="<?php echo $rs['fb']; ?>">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                            <a href="<?php echo $rs['insta']; ?>">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a href="<?php echo $rs['linkedin']; ?>">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <img src="img/2.jpg" class="img-fluid" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Volunteer section end -->
-    <hr />
-    <!-- Essentials Donation Section star -->
-    <section>
+            </section>
+        </section>
+        <hr>
+
         <style>
-            .mySlides {
-                display: none;
-            }
-
-            .w3-left,
-            .w3-right,
-            .w3-badge {
-                cursor: pointer
-            }
-
-            .w3-badge {
-                height: 13px;
-                width: 13px;
-                padding: 0
-            }
-
-            .mySlides .img {
-                box-sizing: border-box;
-                border-radius: 8px;
-            }
-
-            .caption {
-                position: absolute;
-                top: 0px;
-                padding-top: 30px;
-                /* margin-left: 200px; */
-                width: 100%;
-                /* padding-left: 350px; */
-                background-color: rgba(0, 0, 0, 0.5);
+            .full-width-footer {
+                /* background: rgba(153, 72, 252, 0.98); */
+                padding: 20px;
                 color: white;
-                font-size: 18px;
-            }
+                font-size: 14px;
+                padding-left: 500px;
 
-            h2 {
                 text-align: center;
-                font-weight: 600;
-
-            }
-
-            .btn-container {
-                position: relative;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                padding-bottom: 10px;
-                /* padding-left: 350px; */
-                text-align: center;
-                /* margin-left: 0px; */
-            }
-
-            .btn-container .btn {
-                background-color: purple;
-                color: white;
-                padding: 10px 20px;
-                text-decoration: none;
-                /* margin-left: 10px; */
-                font-size: 16px;
-                border-radius: 4px;
-                /* margin-bottom: 10px; */
             }
         </style>
+        </head>
 
-        <div class="container my-4">
-            <div class="row my-4">
-                <div class="col-10 mx-auto text-center">
-                    <h1 class="text-uppercase">Essentials Donation</h1>
-                    <p style="text-align: center;">Donation can be any kind of aid that helps.</p>
-                </div>
-            </div>
-        </div>
+        <!-- <body> -->
 
-
-        <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
-            <div class="mySlides">
-                <img src="./img/6.jpg" style="width:100%">
-                <div class="caption">
-                    <h2>Donate Study Materials and Stationaries</h2>
-                    <div class="btn-container">
-                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Study Materials'); ?>" class="btn">Register for Donation</a>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <div class="mySlides">
-                <img src="./img/5.jpg" style="width:100%">
-                <div class="caption">
-                    <h2>Donate Clothes and Uniforms</h2>
-                    <div class="btn-container">
-                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Clothes & Uniforms'); ?>" class="btn">Register for Donation</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <img src="./img/4.jpg" style="width:100%">
-                <div class="caption">
-                    <h2>Donate Medicines snd Aids</h2>
-                    <!-- <p>Donate Medicines snd Aids</p> -->
-                    <div class="btn-container">
-                        <a href="Essentials/Essentials.php?title=<?php echo urlencode('Medicine & Aids'); ?>" class="btn">Register for Donation</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-            </div>
-        </div>
+        <footer style="background-color: purple">
+            <?php include './Footer/indexFooter.php' ?>
+        </footer>
 
         <script>
             var slideIndex = 1;
@@ -409,31 +567,23 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 showDivs(slideIndex += n);
             }
 
-            function currentDiv(n) {
-                showDivs(slideIndex = n);
-            }
-
             function showDivs(n) {
                 var i;
                 var x = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("demo");
                 if (n > x.length) {
                     slideIndex = 1
                 }
                 if (n < 1) {
                     slideIndex = x.length
-                }
+                };
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" w3-white", "");
-                }
                 x[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " w3-white";
             }
         </script>
 
+<<<<<<< HEAD
     </section>
 
     <section id="projects">
@@ -635,6 +785,8 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             x[slideIndex - 1].style.display = "block";
         }
     </script>
+=======
+>>>>>>> 11710ef0e7247909b4cbe9a554900b1a8276afa7
 
 
 
@@ -644,10 +796,9 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
 
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 <!-- <?php
         // }

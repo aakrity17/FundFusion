@@ -60,6 +60,56 @@ if (isset($_SESSION['email'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User Details</title>
+    <style>
+        body {
+            background-color: #6633cc;
+        }
+
+        .update-details-container {
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .update-details-container h4 {
+            color: #333333;
+        }
+
+        .update-details-container label {
+            display: block;
+            margin-top: 10px;
+            color: #333333;
+        }
+
+        .update-details-container input[type="text"],
+        .update-details-container input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+        }
+
+        .update-details-container button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #6633cc;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .update-details-container button:hover {
+            background-color: #551ac8;
+        }
+    </style>
 </head>
 
 <body>

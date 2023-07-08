@@ -45,36 +45,37 @@ $records = $conn->query($sql);
               <h5 class="card-title"><?php echo $data['donation_name']; ?></h5>
               <p class="card-text card-description"><?php echo $data['donation_description']; ?></p>
               <div class="progress">
-                <?php
-                // Prepare the SQL query
-                $query = "SELECT SUM(amount) as total_amount FROM donors WHERE cause = ?";
-                $stmt = $conn->prepare($query);
+              <?php
+// Prepare the SQL query
+$query = "SELECT SUM(amount) as total_amount FROM donors WHERE donation_id = ?";
+$stmt = $conn->prepare($query);
 
-                // Bind the donation_title parameter
-                $donation_title = $data['donation_name'];
-                $stmt->bind_param("s", $donation_title);
+// Bind the donation_id parameter
+$donation_id = $data['id'];
+$stmt->bind_param("i", $donation_id);
 
-                // Execute the query
-                $stmt->execute();
+// Execute the query
+$stmt->execute();
 
-                // Bind the result
-                $stmt->bind_result($total_amount);
+// Bind the result
+$stmt->bind_result($total_amount);
 
-                // Fetch the total amount
-                $stmt->fetch();
+// Fetch the total amount
+$stmt->fetch();
 
-                // Calculate the donation progress percentage
-                $percent = ($total_amount / $data['donation_target']) * 100;
+// Calculate the donation progress percentage
+$percent = ($total_amount / $data['donation_target']) * 100;
 
-                // Close the statement
-                $stmt->close();
-                ?>
+// Close the statement
+$stmt->close();
+?>
+
 
                 <div class="progress-bar" style="width: <?php echo $percent; ?>%;"><?php echo intval($percent) . "%"; ?></div>
               </div>
 
               <br>
-              <a href="./Donors/paymentGateway.php?title=<?php echo urlencode($data['donation_name']); ?>" class="btn btn-primary">Donate</a>
+              <a href="./Donors/paymentGateway.php?title=<?php echo urlencode($data['id']); ?>" class="btn btn-primary">Donate</a>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donationModal<?php echo $data['id']; ?>">Read More</button>
             </div>
           </div>

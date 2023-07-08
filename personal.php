@@ -84,16 +84,41 @@
         $title = '';
       }
 
-      $sql = "SELECT * FROM donors WHERE email='$title'";
+      $sql = "SELECT uid FROM donors WHERE id='$title'";
       $result = mysqli_query($conn, $sql);
 
       if ($result) {
         if (mysqli_num_rows($result) > 0) {
           $row = mysqli_fetch_assoc($result);
-          $address = $row['address'];
-          $contact = $row['Contact'];
-          $name = $row['name'];
-          $id = $row['id'];
+          $user_id = $row['uid'];
+
+
+          $sql2 = "SELECT * FROM user WHERE id='$user_id'";
+          $result2 = mysqli_query($conn, $sql2);
+    
+          if ($result2) {
+            if (mysqli_num_rows($result2) > 0) {
+              $row2 = mysqli_fetch_assoc($result2);
+              $address = $row2['address'];
+              $contact = $row2['Contact'];
+              $email = $row2['email'];
+
+              $name = $row2['name'];
+
+              $donation_total = 0;
+
+                $donation_sql = "SELECT SUM(amount) AS total FROM donors WHERE uid='$user_id'";
+                $donation_result = mysqli_query($conn, $donation_sql);
+
+                if ($donation_result) {
+                    $donation_row = mysqli_fetch_assoc($donation_result);
+                    $donation_total = $donation_row['total'];
+                }
+
+            }
+        }
+         
+
         }
       }
     ?>
@@ -104,11 +129,11 @@
         <div class="profile-details">
             
             <h2 style="text-align:center"><B><?php echo $name ?></B></h2>
-            <p><i class="fas fa-id-card"></i> <strong>ID: <?php echo $id ?></strong></p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:<?php echo $title ?></strong> </p>
+            <p><i class="fas fa-id-card"></i> <strong>ID: <?php echo $user_id ?></strong></p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:<?php echo $email ?></strong> </p>
             <p><i class="fas fa-phone"></i> <strong>Phone Number:+977 <?php echo $contact ?></strong> </p>
             <p><i class="fas fa-map-marker-alt"></i> <strong>Address:<?php echo $address ?></strong></p>
-            <p><i class="fas fa-dollar-sign"></i><strong> Total Donations : </strong> <P>
+            <p><i class="fas fa-dollar-sign"></i><strong> Total Donations :<?php echo $donation_total ?> </strong> <P>
             <!-- <p><i class="fas fa-dollar-sign"></i><strong>Total Donations : </strong> <P> -->
 
 

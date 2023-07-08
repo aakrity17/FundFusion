@@ -15,7 +15,7 @@ if (isset($_SESSION['email'])) {
             $confirm_password = $_POST['confirm_password'];
 
             if ($new_password == $confirm_password) {
-                $sql = "SELECT * FROM user WHERE email='$title'";
+                $sql = "SELECT * FROM user WHERE id='$title'";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {
@@ -24,7 +24,7 @@ if (isset($_SESSION['email'])) {
                         $currentpassword = $row['password'];
 
                         if ($currentpassword == md5($old_password)) {
-                            $sql = "UPDATE user SET password = md5('$new_password') WHERE email = '$title'";
+                            $sql = "UPDATE user SET password = md5('$new_password') WHERE id = '$title'";
                             $result = mysqli_query($conn, $sql);
 
                             if ($result) {

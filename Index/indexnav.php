@@ -60,7 +60,7 @@ session_start();
                     </li>
                     
 <?php if (isset($_SESSION['name']) || isset($email)) : ?>
-        <li class="nav-item"><a class="nav-link" href="./Donors/donors-details.php?title=<?php echo urlencode($_SESSION['email']); ?>"><?php echo $_SESSION['name']; ?></a></li>
+        <li class="nav-item"><a class="nav-link" href="./Donors/donors-details.php?title=<?php echo urlencode($_SESSION['id']); ?>"><?php echo $_SESSION['name']; ?></a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo $site_url."User/logout.php" ?>">Logout</a></li>
     <?php else: ?>
         <li class="nav-item"><a class="nav-link" href="./sign-in/index.php">Sign in</a></li>

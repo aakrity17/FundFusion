@@ -98,11 +98,11 @@ if (isset($_SESSION['email'])) {
       <div class="container">
         <h1>Update Profile Picture</h1>
         <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
-          <label for="profile-picture">Choose a new picture:</label>
-          <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
-          <button type="submit">Update Picture</button>
-        </form>
-      </div>
+  <label for="profile-picture">Choose a new picture:</label>
+  <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
+  <button type="submit">Update Picture</button>
+</form>
+
     </body>
 
     </html>

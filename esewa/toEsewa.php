@@ -6,25 +6,29 @@ use PHPMailer\PHPMailer\Exception;
 require '../PHPMailer/Phpmailer/src/Exception.php';
 require '../PHPMailer/Phpmailer/src/PHPMailer.php';
 require '../PHPMailer/Phpmailer/src/SMTP.php';
+session_start(); 
+if (isset($_SESSION['name']) || isset($_SESSION['id'])) {
+$uid=$_SESSION['id'];
 
 include '../database/Db_Connection.php';
 if (isset($_POST['Amount'])){
     $amount=$_POST['Amount'];
     echo $amount;
+    $donation_id=$_POST['donation_id'];
+    $status="Pending";
     $name=$_POST['name'];
     $address=$_POST['address'];
     $contact=$_POST['contact'];
-    $cause=$_POST['donation_title'];
     $email=$_POST['email'];
     $status="Pending";
 
     // $sql="INSERT INTO donors VALUES("id",
-    $sql = "INSERT INTO donors (name, address, contact, email, amount,status, cause, date) VALUES ('$name', '$address', '$contact', '$email', '$amount','$status', '$cause', CURDATE())";
+    $sql = "INSERT INTO donors (uid ,donation_id,amount, status, date) VALUES ('$uid','$donation_id', '$amount','$status', CURDATE())";
       $result=mysqli_query($conn, $sql);
    if($result){
     echo "Success";
 
-    if (mysqli_query($conn, $sql)) {
+    if ($result) {
       
       $mail = new PHPMailer(true);
   
@@ -58,6 +62,7 @@ if (isset($_POST['Amount'])){
     echo "Error: " . mysqli_error($conn);
   }
 
+}
 }
 ?>
 <!DOCTYPE html>

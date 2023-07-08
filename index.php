@@ -423,7 +423,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         <!-- Membership card -->
         <section>
-            <h2 class="text-center">MEMBERSHIP</h2>
+            <h2 class="text-center">Membership</h2>
 
             <div class="container">
                 <div class="row justify-content-center">
@@ -441,7 +441,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Chat community</li>
                                     <li>One movie free ticket</li>
                                 </ul>
-                                <a href="Donors/paymentGateway.php?title=<?php echo "Silver Membership"; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 1; ?>" class="btn btn-primary">Join</a>
 
                             </div>
                         </div>
@@ -460,7 +460,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Exclusive monthly newsletter</li>
                                     <li>Personalized thank you message</li>
                                 </ul>
-                                <a href="Donors/paymentGateway.php?title=<?php echo "Gold Membership"; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 2; ?>" class="btn btn-primary">Join</a>
 
                             </div>
                         </div>
@@ -479,7 +479,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Personalized thank you message</li>
                                     <li>Special recognition on our website</li>
                                 </ul>
-                                <a href="Donors/paymentGateway.php?title=<?php echo "Platinum Membership"; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 3; ?>" class="btn btn-primary">Join</a>
                             </div>
                         </div>
                     </div>
@@ -489,8 +489,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            <hr>
+
+                
         </section>
+        <hr>
         <h2 class="text-center">Our Team</h2>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
         <!--  -->

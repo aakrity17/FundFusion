@@ -29,10 +29,10 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    /* background-color: red; */
     min-width: 10px;
+
     /* background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
-    rgba(0, 32, 59, 0.8)100%); */
+            rgba(0, 32, 59, 0.8)100%); */
     /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
     display: none;
@@ -40,7 +40,9 @@ body {
 
 .nav-bg {
     /* nav bar ko lagi */
-    background: rgba(137, 43, 226, 0.225);
+    /* background: #000033;
+     */
+    background: #6633cc;
 
     backdrop-filter: blur(10px);
 
@@ -76,10 +78,10 @@ body {
     top: 0;
     width: 130%;
     height: 95%;
-    background: blueviolet;
-    /* background: linear-gradient(360deg, #c206c5 0%, rgba(164, 152, 240, 0.9)35%, */
-    /* rgba(0, 32, 59, 0.8)100%); */
-    /* background-color: #000000d8; */
+    background: #6633cc;
+
+    /* background: #000033; */
+
     backdrop-filter: blur(10px);
 
     z-index: 0;
@@ -98,8 +100,11 @@ body {
     top: 0;
     width: 130%;
     height: 96%;
+    /* background: #020241; */
+    background: #4b13bc;
+
+
     /* mathi ko jasto curve tara mix*/
-    /* background-color: #000000d8; */
 
     opacity: 0.3;
     z-index: 0;
@@ -149,6 +154,7 @@ body {
     height: auto;
 }
 
+/* Home ko donate us wala button */
 #hero .hero-btn {
     font-weight: bold;
     font-size: 16px;
@@ -161,7 +167,8 @@ body {
     margin: 10px;
     color: #fff;
     animation-delay: 0.5s;
-    border: 1px solid rgba(56, 10, 113, 0.764);
+    background: blueviolet;
+
 
 }
 
@@ -240,15 +247,16 @@ body {
     margin-bottom: 10px;
 }
 
+/* Our mission | vision and Plans */
 .tabs .nav-pills .nav-item .nav-link {
     background: #fff;
     border-radius: 4px;
+    /* font color of about us */
     color: #000;
     font-weight: bold;
     /* About us wala ko boarder ko color */
-    /* background-color: #0000003c; */
+    background-color: #0000001c;
 
-    background: rgba(91, 10, 183, 0.6);
     /* border: 1px solid; */
     font-size: 20px;
     line-height: 30px;
@@ -260,10 +268,12 @@ body {
     font-size: 30px;
 }
 
+/* about us ko click garda ko color */
 .tabs .nav-pills .nav-item .nav-link.active {
     color: #fff;
     /* after clicking to the about us */
-    background: rgba(91, 10, 183, 0.854);
+    background: #6633cc;
+    /* background: rgba(91, 10, 183, 0.854); */
     border: 10px solid;
 }
 
@@ -399,9 +409,7 @@ body {
     left: 20px;
     right: 20px;
     background-color: #0000005b;
-
-    background: linear-gradient(360deg, #f09bf1 0%, rgba(164, 152, 240, 0.9)35%,
-            rgba(0, 32, 59, 0.8)100%);
+    background: #6633cc;
     padding: 15px 0;
     border-radius: 4px;
 }
@@ -458,97 +466,6 @@ body {
 }
 
 
-/*========== Donation Section======*/
-.donation-form .input-field .input-group {
-    width: 100%;
-    border: 1px solid #012e30;
-    border-radius: 7px;
-    padding: 5px 10px;
-    box-shadow: 0 3px 6px rgba(131, 23, 145, 0.16);
-}
-
-.donation-form .input-field .input-group .input-group-text {
-    font-size: 16px;
-    background: transparent;
-    border: 0;
-    font-weight: bold;
-}
-
-.donation-form .input-field .input-group .form-control {
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    border-bottom: 0;
-    border-top: 0;
-    border-radius: 0;
-    border-right: 0;
-    padding: 0 0 0 25px;
-    height: 50px;
-    font-size: 16px;
-    color: #000;
-}
-
-.donation-form .input-field .input-group .form-control:placeholder {
-    font-size: 16px;
-    color: #7a7b7c;
-    font-weight: 400;
-}
-
-.donation-form .input-field .input-group .form-control:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.donation-form .amount .need {
-    box-shadow: 0 3px 6px rgba(134, 22, 134, 0.16);
-    padding: 18px 27px;
-    border-radius: 7px;
-    border: 1px solid #573fc2b6;
-    display: block;
-    overflow: hidden;
-}
-
-@media (max-width: 767px) {
-    .donation-form .amount .need {
-        display: block !important;
-        margin-top: 15px;
-    }
-}
-
-.donation-form .amount .need .select h5 {
-    font-size: 16px;
-    color: #8f1da5;
-    margin-bottom: 0;
-}
-
-.donation-form .amount .need .fund label {
-    font-size: 16px;
-    font-weight: 400;
-    color: #962aa7;
-    margin-bottom: 0;
-}
-
-@media(max-width: 767px) {
-    .donation-form .amount .need .fund {
-        width: 33.33%;
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-.donation-btn {
-    margin-top: 50px;
-}
-
-.btn-don {
-    background: #573fc2b6;
-    color: #fff;
-    border-radius: 50px;
-}
-
-.btn-don:hover {
-    background-color: #573fc2de;
-    /* color: white; */
-}
-
 
 
 .socials {
@@ -604,12 +521,9 @@ body {
     flex-wrap: wrap;
     text-align: center;
     padding: 45px 0px 20px 500px;
-    /* //top, right, buttom, left */
     background-color: #000000b5;
+    background: #6633cc;
 
-    background: rgba(119, 63, 189, 0.634);
-
-    /* background: rgba(89, 10, 186, 0.488); */
 
 }
 
@@ -679,9 +593,9 @@ body {
     line-height: 22px;
 }
 
-/* End of footer section */
+/* =============End of footer section============= */
 
-/* membership  buttons*/
+/*======= membership  Section ============*/
 .card {
     margin-bottom: 50px;
     padding: 10px;
@@ -719,4 +633,66 @@ body {
 
 #essential-container {
     margin-bottom: 50px;
+}
+
+
+/* ============Essential Donations */
+.mySlides {
+    display: none;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
+}
+
+.mySlides .img {
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.caption {
+    position: absolute;
+    top: 0px;
+    padding-top: 30px;
+    /* margin-left: 200px; */
+    width: 100%;
+    /* padding-left: 350px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.btn-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding-bottom: 10px;
+    /* padding-left: 350px; */
+    text-align: center;
+    /* margin-left: 0px; */
+}
+
+.btn-container .btn {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    /* margin-left: 10px; */
+    font-size: 16px;
+    border-radius: 4px;
+    /* margin-bottom: 10px; */
 }

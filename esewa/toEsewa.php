@@ -28,7 +28,7 @@ if (isset($_POST['Amount'])){
    if($result){
     echo "Success";
 
-    if (mysqli_query($conn, $sql)) {
+    if ($result) {
       
       $mail = new PHPMailer(true);
   

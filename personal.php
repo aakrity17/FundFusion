@@ -105,6 +105,16 @@
 
               $name = $row2['name'];
 
+              $donation_total = 0;
+
+                $donation_sql = "SELECT SUM(amount) AS total FROM donors WHERE uid='$user_id'";
+                $donation_result = mysqli_query($conn, $donation_sql);
+
+                if ($donation_result) {
+                    $donation_row = mysqli_fetch_assoc($donation_result);
+                    $donation_total = $donation_row['total'];
+                }
+
             }
         }
          
@@ -123,7 +133,7 @@
             <p><i class="fas fa-envelope"></i> <strong>Email:<?php echo $email ?></strong> </p>
             <p><i class="fas fa-phone"></i> <strong>Phone Number:+977 <?php echo $contact ?></strong> </p>
             <p><i class="fas fa-map-marker-alt"></i> <strong>Address:<?php echo $address ?></strong></p>
-            <p><i class="fas fa-dollar-sign"></i><strong> Total Donations : </strong> <P>
+            <p><i class="fas fa-dollar-sign"></i><strong> Total Donations :<?php echo $donation_total ?> </strong> <P>
             <!-- <p><i class="fas fa-dollar-sign"></i><strong>Total Donations : </strong> <P> -->
 
 

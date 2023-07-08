@@ -6,26 +6,13 @@ if (isset($_SESSION['email'])) {
 
     if (isset($_GET['title'])) {
         $title = urldecode($_GET['title']);
+
     } else {
         $title = '';
     }
-}
+
 ?>
 
-
-
-<?php
-include "../admin/routeconfig.php";
-include "../database/Db_Connection.php";
-if (isset($_SESSION['name'])) {
-
-    if (isset($_GET['title'])) {
-        $title = urldecode($_GET['title']);
-    } else {
-        $title = '';
-    }
-}
-?>
 
 
 
@@ -82,7 +69,7 @@ if (isset($_SESSION['name'])) {
 
 <body>
     <div class="main">
-        <h1>Choose your preferred payment option:</h1>
+    <h1>Choose your preferred payment option: </h1>
         <div class="container" style="margin-left: 350px;">
             <div class="row">
                 <div class="col-md-4">
@@ -91,7 +78,7 @@ if (isset($_SESSION['name'])) {
                           <img class="esewa-logo" src="../img/esewa.jpg" alt="eSewa Logo">
                             <h3>eSewa</h3>
                             <p>Click the button below to donate via eSewa.</p>
-                            <a class="btn btn-primary card-button" href="../esewa/donate.php?title=<?php echo urlencode($title); ?>">Donate</a>
+                            <a class="btn btn-primary card-button" href="../esewa/donate.php?title=<?php echo $title; ?>">Donate</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +88,7 @@ if (isset($_SESSION['name'])) {
                             <img class="khalti-logo" src="../img/khalti.jpg" alt="Khalti Logo">
                             <h3>Khalti</h3>
                             <p>Click the button below to donate via Khalti.</p>
-                            <a class="btn btn-primary card-button" href="../Khalti/donate.php?title=<?php echo urlencode($title); ?>">Donate</a>
+                            <a class="btn btn-primary card-button" href="../Khalti/donate.php?title=<?php echo $title; ?>">Donate</a>
                         </div>
                     </div>
                 </div>
@@ -113,3 +100,8 @@ if (isset($_SESSION['name'])) {
 </body>
 
 </html>
+<?php
+}else{
+    header('location:../index.php');
+}
+?>

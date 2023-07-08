@@ -34,7 +34,7 @@ if (isset($_POST['Amount'])){
     echo "Success";
 
     //for sending mail
-    if (mysqli_query($conn, $sql)) {
+    if ($result) {
         
         $mail = new PHPMailer(true);
     

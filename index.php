@@ -490,7 +490,11 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
+<<<<<<< HEAD
                 
+=======
+                
+>>>>>>> 68fe34cb7e71fcfed9eee1d33e4213e2ff780459
         </section>
         <hr>
         <h2 class="text-center">Our Team</h2>

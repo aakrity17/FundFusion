@@ -10,7 +10,7 @@ if (isset($_SESSION['email'])) {
         $title = urldecode($_GET['email']);
 
         // Retrieve previous user details from the database
-        $sql = "SELECT * FROM user WHERE email = '$title'";
+        $sql = "SELECT * FROM user WHERE id = '$title'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
@@ -39,7 +39,7 @@ if (isset($_SESSION['email'])) {
         $email = $_POST['email'];
 
         // Update user details in the database
-        $sql = "UPDATE user SET name = '$name', address = '$address', Contact = '$contact', email = '$email', role = 'user' WHERE email = '$title'";
+        $sql = "UPDATE user SET name = '$name', address = '$address', Contact = '$contact', email = '$email', role = 'user' WHERE id = '$title'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {

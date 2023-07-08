@@ -78,7 +78,7 @@
                   // Sanitize and validate the $title variable
                   $title = mysqli_real_escape_string($conn, $title); // Assuming $conn is the database connection variable
 
-                  $sql = "SELECT * FROM user WHERE email='$title'";
+                  $sql = "SELECT * FROM user WHERE id='$title'";
                   $result = mysqli_query($conn, $sql);
 
                   if ($result) {
@@ -87,7 +87,7 @@
                       $name = $row['name'];
                       $address = $row['address'];
                       $contact = $row['Contact'];
-                      $name = $row['name'];
+                      $email = $row['email'];
                       $id = $row['id'];
                       $profilePicturePath = '../img/' . $row['profile_picture']; // Replace with the actual path to the profile pictures directory
                 ?>
@@ -100,15 +100,16 @@
                         <div class="profile-info">
                           <p>ID: <?php echo $id; ?></p>
                           <p>Name: <?php echo $name; ?></p>
-                          <p>Email: <?php echo $title; ?></p>
+                          <p>Email: <?php echo $email; ?></p>
                           <p>Phone Number: <?php echo $contact; ?></p>
                           <p>Address: <?php echo $address; ?></p>
                         </div>
                         <div style="text-align: center;">
                           <button> <a href="editDetails.php?email=<?php echo urlencode($title); ?>">
-                              Edit your Profile Details</button>
+                              Edit your Profile Details</button></a>
                           <button> <a href="changePassword.php?email=<?php echo urlencode($title); ?>">
                               Change Password</button>
+                    </a>
 
                         </div>
                       </div>
@@ -163,7 +164,7 @@
             }
             ?>
           </div>
-
+<!-- Donation Section -->
 
           <div class="tab-pane fade" id="donation-history">
             <h3 class="card-title" style="text-align:center;
@@ -174,7 +175,7 @@
             <?php
             include "../database/Db_Connection.php";
 
-            $donationsql = "SELECT * FROM donors WHERE email='$title' AND (cause NOT IN ('Regular Sponsorsip', 'Premium Sponsorship', 'VIP Sponsorship', 'Gold Membership', 'Platinum Membership', 'Silver Membership'))";
+            $donationsql = "SELECT * FROM donors WHERE uid='$title'";
             $res = mysqli_query($conn, $donationsql);
             if (mysqli_num_rows($res) > 0) {
               while ($rw = mysqli_fetch_assoc($res)) {
@@ -183,10 +184,20 @@
             ?>
                 <div class="card">
                   <div class="card-body" style="text-align: justify; padding-left:200px;">
-                    <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php echo $rw['cause']; ?></p>
+                    <p><i class="fas fa-info-circle"></i> <strong>Info:</strong> <?php
+                    $did=$rw['donation_id'];
+                    $dsql="SELECT donation_name FROM donation WHERE id='$did'";
+                    $rs = mysqli_query($conn, $dsql);
+                       if (mysqli_num_rows($res) > 0) {
+                        $drw = mysqli_fetch_assoc($rs);
+                        $donation_name=$drw['donation_name'];
+
+                       }
+                       echo $donation_name;
+
+                    ?></p>
                     <p><i class="fas fa-calendar-alt"></i> <strong>Donation Date:</strong> <?php echo $date; ?> A.D.</p>
                     <p><i class="fas fa-calendar-check"></i> <strong>Amount Donated:</strong> <?php echo $rw['amount']; ?></p>
-                    <p><i class="fas fa-calendar-check"></i> <strong>Membership Renewed Date:</strong> <?php echo $rw['cause']; ?></p>
                   </div>
                 </div>
             <?php
@@ -206,7 +217,7 @@
             <?php
             include "../database/Db_Connection.php";
 
-            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
+            $sql = "SELECT * FROM donors WHERE uid='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
             $result = mysqli_query($conn, $sql);
 
 

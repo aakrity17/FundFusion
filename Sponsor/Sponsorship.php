@@ -95,9 +95,9 @@ include "../admin/routeconfig.php";
 
 <div class="container-1">
   <div class="buttons">
-    <a href="../Donors/paymentGateway.php?title=<?php echo "Premium Sponsorship"; ?>" class="btn btn-primary">Register for Premium</a>
-    <a href="../Donors/paymentGateway.php?title=<?php echo "Regular Sponsorship"; ?>" class="btn btn-primary">Register for Regular</a>
-    <a href="../Donors/paymentGateway.php?title=<?php echo "VIP Sponsorship"; ?>" class="btn btn-primary">Register for VIP</a>
+    <a href="paymentGateway.php?title=<?php echo 1; ?>" class="btn btn-primary">Register for Premium</a>
+    <a href="paymentGateway.php?title=<?php echo 2; ?>" class="btn btn-primary">Register for Regular</a>
+    <a href="paymentGateway.php?title=<?php echo 3; ?>" class="btn btn-primary">Register for VIP</a>
   </div>
 </div>
 

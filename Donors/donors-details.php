@@ -9,12 +9,6 @@
       margin-left: auto;
     }
 
-    /* .profile-details {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-    } */
-
     .profile-picture img {
       max-width: 200px;
       max-height: 200px;
@@ -93,7 +87,7 @@
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
-                          <a href="update_picture.php?email=<?php echo urlencode($title); ?>">
+                          <a href="update_picture.php?id=<?php echo urlencode($title); ?>">
                             <img src="<?php echo $profilePicturePath; ?>" alt="Profile Picture">
                           </a>
                         </div>

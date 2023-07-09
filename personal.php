@@ -1,5 +1,4 @@
-<?php
-?>
+
 <!DOCTYPE html>
 <head>
     <title>Donors Details</title>
@@ -84,7 +83,7 @@
         $title = '';
       }
 
-      $sql = "SELECT uid FROM donors WHERE id='$title'";
+      $sql = "SELECT uid FROM donors WHERE Uid='$title'";
       $result = mysqli_query($conn, $sql);
 
       if ($result) {
@@ -93,7 +92,7 @@
           $user_id = $row['uid'];
 
 
-          $sql2 = "SELECT * FROM user WHERE id='$user_id'";
+          $sql2 = "SELECT * FROM user WHERE id='$title'";
           $result2 = mysqli_query($conn, $sql2);
     
           if ($result2) {
@@ -103,8 +102,7 @@
               $contact = $row2['Contact'];
               $email = $row2['email'];
 
-              $name = $row2['name'];
-
+              $name = $row2['name']; 
               $donation_total = 0;
 
                 $donation_sql = "SELECT SUM(amount) AS total FROM donors WHERE uid='$user_id'";

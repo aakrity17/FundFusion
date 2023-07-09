@@ -4,12 +4,12 @@ include "../admin/routeconfig.php";
 include "../database/Db_Connection.php";
 
 if (isset($_SESSION['email'])) {
-  if (isset($_GET['email'])) {
-    $email = urldecode($_GET['email']);
+  $email=$_SESSION['email'];
+  if (isset($_GET['id'])) {
+    $id = urldecode($_GET['id']);
+    echo $id;
 
-    // Sanitize and validate the $email variable
-    $email = mysqli_real_escape_string($conn, $email); // Assuming $conn is the database connection variable
-
+  
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Handle the form submission
       $profilePicture = $_FILES['profile_picture'];
@@ -24,7 +24,7 @@ if (isset($_SESSION['email'])) {
         // Move the uploaded image to the desired location
         if (move_uploaded_file($profilePictureTmp, $profilePicturePath)) {
           // Update the profile picture path in the database
-          $sql = "UPDATE user SET profile_picture='$profilePictureName' WHERE email='$email'";
+          $sql = "UPDATE user SET profile_picture='$profilePictureName' WHERE id=$id";
           $result = mysqli_query($conn, $sql);
 
           if ($result) {
@@ -32,6 +32,7 @@ if (isset($_SESSION['email'])) {
             echo "Profile picture updated successfully!";
           } else {
             // Handle the query error
+            echo $id;
             echo "Error: " . mysqli_error($conn);
           }
         } else {
@@ -97,7 +98,7 @@ if (isset($_SESSION['email'])) {
     <body>
       <div class="container">
         <h1 style="color: white;">Update Profile Picture</h1>
-        <form action="update_picture.php?email=<?php echo urlencode($email); ?>" method="POST" enctype="multipart/form-data">
+        <form action="update_picture.php?id=<?php echo urlencode($id); ?>" method="POST" enctype="multipart/form-data">
           <label for="profile-picture">
             <h3 style="color:white"></h3>
           </label>
@@ -112,7 +113,7 @@ if (isset($_SESSION['email'])) {
 <?php
   } else {
     // Handle the case when the email parameter is not set in the URL
-    echo "Email parameter not found.";
+    echo "ID parameter not found.";
   }
 } else {
   // Handle the case when the 'email' session variable is not set

@@ -96,7 +96,7 @@ include '../Index/indexnav.php';
 
 
                             
-                            <a href="../personal.php?title=<?php echo $did; ?>" class="btn btn-danger">Visit</a>
+                            <a href="../personal.php?title=<?php echo $donid; ?>" class="btn btn-danger">Visit</a>
                             </div>
                         </div>
                     </div>

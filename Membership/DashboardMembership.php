@@ -4,7 +4,19 @@ include "../admin/routeconfig.php";
 // Include the database connection file
 include "../database/Db_Connection.php";
 
+<<<<<<< HEAD
 $sql = "SELECT * FROM membership_register_info";
+=======
+//$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership'";
+
+$sql = "SELECT u.id, u.name, u.Contact AS phone, u.email, m.membership_type AS type, mri.date AS registered_date,
+DATE_ADD(mri.date, INTERVAL m.amount DAY) AS expiry_date,
+DATEDIFF(DATE_ADD(mri.date, INTERVAL m.amount DAY), CURDATE()) AS days_remaining
+FROM user u
+JOIN membership_register_info mri ON u.id = mri.user_id
+JOIN membership m ON m.id = mri.membership_id;
+";
+>>>>>>> 57fabd90e5dd42eab0d87a3d887bf9193b75b807
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -68,7 +80,7 @@ $result = mysqli_query($conn, $sql);
             </tr>
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
-                $registeredDate = $row['date'];
+                $registeredDate = $row['registered_date'];
                 $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
                 $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
                 if($daysRemaining>364){
@@ -77,9 +89,9 @@ $result = mysqli_query($conn, $sql);
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td colspan='2'>" . $row['name'] . "</td>";
-                echo "<td>" . $row['Contact'] . "</td>";
+                echo "<td>" . $row['phone'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['cause'] . "</td>";
+                echo "<td>" . $row['type'] . "</td>";
                 echo "<td>" . $registeredDate . "</td>";
                 echo "<td>" . $expiryDate . "</td>";
                 echo "<td>" . $daysRemaining . "</td>";

@@ -4,7 +4,13 @@ include "../admin/routeconfig.php";
 // Include the database connection file
 include "../database/Db_Connection.php";
 
-$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinum Membership'";
+//$sql = "SELECT * FROM donors WHERE cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinum Membership'";
+
+$sql = "SELECT u.id, u.name, u.Contact AS phone, u.email, s.type, sr.date AS registered_date
+FROM user u
+JOIN sponsorship_register_info sr ON u.id = sr.user_id
+JOIN sponsorship s ON s.id = sr.sponsorship_id;";
+
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -70,10 +76,10 @@ $result = mysqli_query($conn, $sql);
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td colspan='2'>" . $row['name'] . "</td>";
-                echo "<td>" . $row['Contact'] . "</td>";
+                echo "<td>" . $row['phone'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['cause'] . "</td>";
-                echo "<td>" . $row['date'] . "</td>";
+                echo "<td>" . $row['type'] . "</td>";
+                echo "<td>" . $row['registered_date'] . "</td>";
                 echo "</tr>";
             }
             ?>

@@ -17,7 +17,7 @@ $uid=$_SESSION['id'];
 
 if (isset($_POST['Amount'])){
     $amount=$_POST['Amount'];
-    echo $amount;
+   // echo $amount;
     $donation_id=$_POST['donation_id'];
     $status="Pending";
     $name=$_POST['name'];

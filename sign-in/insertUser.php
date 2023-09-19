@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
             echo "User with email '$email' already exists!";
         } else {
             // Insert the new user
-            $sql = "INSERT INTO user (name, address, Contact, email, password, role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', 'user')";
+            $sql = "INSERT INTO user (name, address, Contact, email, password, role,status) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', 'user','active')";
 
             // Execute the query
             if ($conn->query($sql) === TRUE) {

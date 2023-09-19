@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     // Prepare the SQL statement
-    $sql = "UPDATE user SET name = ?, address = ?, Contact = ?, username = ?, email = ?, role = 'user' WHERE id = ?";
+    $sql = "UPDATE user SET name = ?, address = ?, Contact = ?, username = ?, email = ?, role = 'user',status='active' WHERE id = ?";
 
     // Prepare the statement
     $stmt = $conn->prepare($sql);

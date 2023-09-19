@@ -7,7 +7,6 @@ if (isset($_SESSION['email'])) {
   $email=$_SESSION['email'];
   if (isset($_GET['id'])) {
     $id = urldecode($_GET['id']);
-    echo $id;
 
   
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -29,7 +28,10 @@ if (isset($_SESSION['email'])) {
 
           if ($result) {
             // Profile picture update successful
-            echo "Profile picture updated successfully!";
+            $message= "Profile picture updated successfully!";
+            $message="Password changed successfully";
+            $encMessage=base64_encode($message);
+            header("location:../Success/success.php?message=$encMessage"); 
           } else {
             // Handle the query error
             echo $id;

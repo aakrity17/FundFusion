@@ -50,6 +50,8 @@ include "../../database/Db_Connection.php";
         <div class="containerbox">
         <form action="newdonation.php" method="POST" enctype="multipart/form-data">
             <div class="row">
+
+            
                 <div class="col-25">
                     <label for="donation_name">Donation Name</label>
                 </div>
@@ -57,6 +59,8 @@ include "../../database/Db_Connection.php";
                     <input type="text" id="donation_name" name="donation_name" placeholder="New Donation Name">
                 </div>
                 </div>
+
+                
                 <!-- <div class="row">
                 <div class="col-25">
                     <label for="donation_type">Donation type</label>

@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $passwordmd5 = md5($password);
     $role="admin";
+    $status="active";
 
     // Prepare the SQL statement
     $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='admin'";
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($resultCheck) > 0) {
         echo "User with email '$email' already exists!";
     } else {
-    $sql = "INSERT INTO user (name, address, Contact, email, password,role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', '$role')";
+    $sql = "INSERT INTO user (name, address, Contact, email, password,role,status) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', '$role', '$status')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
@@ -89,8 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <section >
-    <h2>Admin List</h2>
-    <table >
+    <h2> Modify Admin </h2>
+    <table hidden>
         <thead>
             <tr>
                 <th>Name</th>
@@ -102,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             </tr>
         </thead>
+        <button type="button"  style="margin-left: 400px; font-size:25px; background-color:cadetblue; color:black " ><a href="EditAdmin.php" style="text-decoration:none">Edit  Admin </a></button>
         <tbody>
             <?php
             // Retrieve the user data from the database

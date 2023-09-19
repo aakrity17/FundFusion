@@ -20,9 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $passwordmd5 = md5($password);
     $role="user";
+    $status="active";
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO user (name, address, Contact, email, password,role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', '$role')";
+    $sql = "INSERT INTO user (name, address, Contact, email, password,role,status) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', '$role','$status')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
@@ -82,8 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <section >
-    <h2>User List</h2>
-    <table >
+    <h2>Modify User Details</h2>
+    <table hidden>
         <thead>
             <tr>
                 <th>Name</th>
@@ -98,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tbody>
             <?php
             // Retrieve the user data from the database
-            $sql = "SELECT * FROM user WHERE role = 'user'";
+            $sql = "SELECT * FROM user WHERE role = 'user' && status='active'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -124,6 +125,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ?>
         </tbody>
     </table>
+    <button type="button"  style="margin-left: 400px; font-size:25px; background-color:cadetblue; color:black " ><a href="EditUser.php" style="text-decoration:none">Edit  User </a></button>
+
     
 </section>
 </div>

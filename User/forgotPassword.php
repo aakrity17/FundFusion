@@ -58,13 +58,20 @@ if ($result) {
         try {
             $mail->send();
             $message = 'New password has been sent to your email. Please check your mail inbox.';
+            $encMessage=base64_encode($message);
+         
+
+            header("location:../Success/success.php?message=$encMessage");
         } catch (Exception $e) {
             $message = 'An error occurred while sending the email: ' . $mail->ErrorInfo;
         }
     } else {
         // No rows affected, user with the provided email not found
-        $message = 'User not found!';
-    }
+        $message = 'Unable to complete process';
+        $encMessage=base64_encode($message);
+     
+
+        header("location:../Success/failure.php?message=$encMessage");    }
 } else {
     // Error occurred while updating the password
     $message = 'Error updating password: ' . mysqli_error($conn);

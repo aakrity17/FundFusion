@@ -4,9 +4,11 @@ session_start();
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
-            <img src="<?php echo $site_url ?>img/Logo.png" class="logo">
+            <img src="<?php echo $site_url ?>img/Logo.png" class="logo" style="display: none;"> <!-- Inline CSS to hide the logo -->
             <a class="navbar-brand text-white" href="<?php echo $site_url ?>index.php"></a>
-
+            <button class="navbar-toggler" type="button" id="toggleNavBtn">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
             <!-- Navigation links -->
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -73,3 +75,12 @@ session_start();
             </div>
         </div>
     </nav>
+
+    <!-- <script>
+    // JavaScript to handle the toggle functionality
+    $(document).ready(function () {
+        $("#toggleNavBtn").click(function () {
+            $("#myNavbar").toggleClass("show");
+        });
+    });
+</script> -->

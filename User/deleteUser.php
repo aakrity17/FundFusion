@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userId = $_POST["user_id"];
 
     // Prepare the SQL statement
-    $sql = "DELETE FROM user WHERE id = '$userId'";
+    $sql = "UPDATE user SET status='deleted' WHERE id = '$userId'";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {

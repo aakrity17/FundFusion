@@ -28,13 +28,18 @@ if (isset($_SESSION['email'])) {
                             $result = mysqli_query($conn, $sql);
 
                             if ($result) {
-                                echo "Password successfully updated";
-                            } else {
-                                echo "Error updating password: " . mysqli_error($conn);
+                                $message="Password changed successfully";
+                                $encMessage=base64_encode($message);
+         
+
+                                header("location:../Success/success.php?message=$encMessage");                             } else {
                             }
                         } else {
-                            echo "Incorrect password";
-                        }
+                            $message = 'Incorrect Password';
+                            $encMessage=base64_encode($message);
+                         
+                    
+                            header("location:../Success/failure.php?message=$encMessage");                        }
                     } else {
                         echo "User not found";
                     }

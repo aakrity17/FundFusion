@@ -10,12 +10,13 @@ if (isset($_POST["user_id"])) {
   $userId = $_POST["user_id"];
 
   // Prepare the SQL statement to delete the user
-  $sql = "DELETE FROM user WHERE id = '$userId'";
+  $sql = "UPDATE  user SET status=deleted WHERE id = '$userId'";
 
   // Execute the query
   if ($conn->query($sql) === TRUE) {
     // Deletion successful
     echo "User deleted successfully!";
+    header("location:index.php");
   } else {
     // Error occurred
     echo "Error deleting user: " . $conn->error;

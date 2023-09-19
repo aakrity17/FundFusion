@@ -67,6 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $row['name'];
             $email = $row['email'];
             $id=$row['id'];
+            $status=$row['status'];
+            if ($status=='active'){
+
+            
             
 
 
@@ -81,7 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Redirect the user to the dashboard page
             header('Location: ../index.php');
-            exit(); // Make sure to exit after the redirect
+            exit(); 
+            }// Make sure to exit after the redirect
         } else {
             $errorMessage = "Invalid username or password.";
         }

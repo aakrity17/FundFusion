@@ -1,8 +1,4 @@
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <?php
 include './database/Db_Connection.php';
@@ -23,8 +19,8 @@ while ($row = mysqli_fetch_array($result)) {
 
 <section class="nb-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
+        <div class="row mx-4" >
+            <div class="col-md-3 col-sm-6 ">
                 <div class="footer-single useful-links">
                     <div class="footer-title">
                         <h2 style="color: white;">Navigation</h2>
@@ -45,12 +41,18 @@ while ($row = mysqli_fetch_array($result)) {
                     <div class="footer-title">
                         <h2 style="color: white;">Social links</h2>
                         <div class="col-sm-6 text-right xs-center">
-                            <ul class="list-inline footer-social">
-                                <li><a href="<?php echo $fb; ?>"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="<?php echo $youtube; ?>"><i class="fa fa-youtube-play"></i></a></li>
+                            <ul class="list-inline footer-social" style="display: flex;">
+                                <li><a href="<?php echo $fb; ?>"><i class="fa fa-facebook mx-4"></i></a></li>
+                                <li><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter "></i></a></li>
+                            </ul>
+                            <ul class="list-inline footer-social" style="display: flex;">
+
+                                <li><a href="<?php echo $youtube; ?>"><i class="fa fa-youtube-play mx-4"></i></a></li>
                                 <li><a href="<?php echo $google; ?>"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="<?php echo $skype; ?>"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <ul class="list-inline footer-social" style="display: flex;">
+
+                                <li><a href="<?php echo $skype; ?>"><i class="fa fa-skype mx-4"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -59,9 +61,9 @@ while ($row = mysqli_fetch_array($result)) {
             <div class="col-md-3 col-sm-6">
                 <div class="footer-single">
                     <div class="footer-title">
-                        <h2 style="color:white;">Contact Information</h2>
+                        <h2 style="color:white; width:200px;">Contact Information</h2>
                     </div>
-                    <address>
+                    <address style="width:200px;">
                         <?php echo $address; ?> <br>
                         <i class="fa fa-phone"></i><?php echo $phone; ?><br>
                         <i class="fa fa-fax"></i> <?php echo $fax; ?><br>

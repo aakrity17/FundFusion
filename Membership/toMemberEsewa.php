@@ -13,6 +13,7 @@ $uid=$_SESSION['id'];
 include '../database/Db_Connection.php';
 if (isset($_POST['Amount'])){
     $amount=$_POST['Amount'];
+    $donation_title=$_POST['donation_title'];
 
     $name=$_POST['name'];
     $address=$_POST['address'];
@@ -41,8 +42,8 @@ if (isset($_POST['Amount'])){
       // Set up email content
       $mail->setFrom('fundfusionab@gmail.com', 'FundFusion');  // Replace with your email address and name
       $mail->addAddress($_POST["email"], $_POST["name"]);  // User's email address and name
-      $mail->Subject = 'Thank you for donating!';
-      $mail->Body = "Dear $name,\n\nThank you for being our member. We greatly appreciate your support.\n\nSincerely,\nFundFusion Team";
+      $mail->Subject = 'Do Not Reply';
+      $mail->Body = "Dear $name,\n\nThank you for being our $donation_title member. We greatly appreciate your support.Received $amount \n\nSincerely,\nFundFusion Team";
   
       // Send the email
       if ($mail->send()) {

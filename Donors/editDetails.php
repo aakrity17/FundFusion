@@ -43,7 +43,9 @@ if (isset($_SESSION['email'])) {
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
-            echo "User details successfully updated";
+            $message= "User details successfully updated";
+             $encMessage=base64_encode($message);
+             header("location:../Success/success.php?message=$encMessage"); 
         } else {
             echo "Error updating user details: " . mysqli_error($conn);
         }

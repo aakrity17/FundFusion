@@ -21,16 +21,7 @@ include "../routeconfig.php";
       ?>
         <div class="main">
             <div class="topbar">
-            <!-- <div class="toggle">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div> -->
-            <!-- Search -->
-            <!-- <div class="search">
-                <label>
-                <input type="text" placeholder="Search here" />
-                <ion-icon name="search-outline"></ion-icon>
-                </label>
-            </div> -->
+            
         </div>
         <h2>Create New Event</h2>
         <p>Add all the details regarding events below.</p>
@@ -45,6 +36,8 @@ include "../routeconfig.php";
         <div class="containerbox">
         <form action="newevent.php" method="POST" enctype="multipart/form-data">
             <div class="row">
+
+
             <div class="col-25">
                 <label for="ename">Event Name</label>
             </div>

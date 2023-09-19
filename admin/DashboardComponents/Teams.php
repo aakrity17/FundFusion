@@ -58,11 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .content-container {
-            margin-left: 400px;
-            padding-left: 300px;
+            margin-left: 200px;
+            padding-left: 100px;
 
 
         }
+      
     </style>
         <link rel="stylesheet" href="<?php echo $site_url ?>css/Dashboard.css" />
 
@@ -79,32 +80,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="content-container">
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <?php while ($rs = mysqli_fetch_array($teamsresult)) { ?>
-                <div class="mb-3">
-                    <input type="hidden" name="team[<?php echo $rs['id']; ?>][id]" value="<?php echo $rs['id']; ?>">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][name]" value="<?php echo $rs['name']; ?>" required>
+                <div class=" mydiv mb-3" style="background-color:grey;">
+                    <input type="hidden" name="team[<?php echo $rs['id']; ?>][id]" value="<?php echo $rs['id']; ?>" style="background-color:grey;" >
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][name]" value="<?php echo $rs['name']; ?>" style="background-color:grey;" required>
                         <label for="team_name">Team Member Name</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][skill]" value="<?php echo $rs['skill']; ?>" required>
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][skill]" value="<?php echo $rs['skill']; ?>" style="background-color:grey;" required>
                         <label for="team_skill">Skill</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][fb]" value="<?php echo $rs['fb']; ?>">
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][fb]" value="<?php echo $rs['fb']; ?>" style="background-color:grey;">
                         <label for="team_fb">Facebook URL</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][insta]" value="<?php echo $rs['insta']; ?>">
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][insta]" value="<?php echo $rs['insta']; ?>" style="background-color:grey;">
                         <label for="team_insta">Instagram URL</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][linkedin]" value="<?php echo $rs['linkedin']; ?>">
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][linkedin]" value="<?php echo $rs['linkedin']; ?>" style="background-color:grey;">
                         <label for="team_linkedin">LinkedIn URL</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][twitter]" value="<?php echo $rs['twitter']; ?>">
+                    <div class="form-floating" style="padding-left:200px">
+                        <input type="text" class="form-control" name="team[<?php echo $rs['id']; ?>][twitter]" value="<?php echo $rs['twitter']; ?>" style="background-color:grey;">
                         <label for="team_twitter">Twitter URL</label>
                     </div>
+                    
                 </div>
             <?php } ?>
 

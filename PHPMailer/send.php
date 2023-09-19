@@ -49,14 +49,14 @@ if(isset($_POST["submit"])){
             $passwordmd5 = md5($password);
     
             // Check if the user with the email already exists
-            $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='user'";
+            $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='user' AND status='active'";
             $resultCheck = mysqli_query($conn, $sqlCheck);
     
             if (mysqli_num_rows($resultCheck) > 0) {
                 echo "User with email '$email' already exists!";
             } else {
                 // Insert the new user
-                $sql = "INSERT INTO user (name, address, Contact, email, password, role) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', 'user')";
+                $sql = "INSERT INTO user (name, address, Contact, email, password, role,status) VALUES ('$name', '$address', '$contact', '$email', '$passwordmd5', 'user','active')";
     
                 // Execute the query
                 if ($conn->query($sql) === TRUE) {

@@ -34,7 +34,7 @@ if (isset($_GET["delete_id"])) {
     $deleteId = $_GET["delete_id"];
 
     // Prepare the SQL statement
-    $deleteSql = "DELETE FROM user WHERE id = '$deleteId'";
+    $deleteSql = "UPDATE user SET status='inactive' WHERE id = '$deleteId'";
 
     // Execute the query
     if ($conn->query($deleteSql) === TRUE) {
@@ -48,7 +48,7 @@ if (isset($_GET["delete_id"])) {
 }
 
 // Retrieve the user data from the database
-$sql = "SELECT * FROM user WHERE role = 'user'";
+$sql = "SELECT * FROM user WHERE role = 'user' AND status='active'";
 $result = $conn->query($sql);
 $users = [];
 

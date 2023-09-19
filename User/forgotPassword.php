@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 // Update the password field of the user
-$sql = "UPDATE user SET password = md5('$newPassword') WHERE email = '$email'";
+$sql = "UPDATE user SET password = md5('$newPassword') WHERE email = '$email' AND role='user'";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {

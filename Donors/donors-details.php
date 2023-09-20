@@ -227,8 +227,12 @@ if ($daysRemaining >= 365) {
             <?php
             include "../database/Db_Connection.php";
 
-            $sql = "SELECT * FROM donors WHERE uid='$title' AND  (cause='Premium Sponsorship' OR cause='Regular Sponsorship' OR cause='VIP Sponsorship')";
-            $result = mysqli_query($conn, $sql);
+            $sql = "SELECT mri.*, u.name, u.address, m.type, m.amount
+            FROM sponsorship_register_info mri
+            INNER JOIN user u ON mri.user_id = u.id
+            INNER JOIN sponsorship m ON mri.sponsorship_id = m.id
+            WHERE mri.user_id = $title";          
+              $result = mysqli_query($conn, $sql);
 
 
             while ($row = mysqli_fetch_assoc($result)) {
@@ -241,13 +245,16 @@ if ($daysRemaining >= 365) {
 
             ?>
 
-              <div class="card">
-                <div class="card-body" style="font-size: 20px;">
-                  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-                  <p><strong>Sponsor Type:</strong><?php echo $row['cause']; ?> </p>
-                </div>
-
-              </div>
+<div class="card">
+    <div class="card-body" style="font-size: 20px;">
+        <p><strong>Name:</strong> <?php echo $row['name']; ?> </p>
+        <p><strong>Address:</strong> <?php echo $row['address']; ?> </p>
+        <p><strong>Sponsorship Type:</strong> <?php echo $row['type']; ?> </p>
+        <p><strong>Sponsorship Amount:</strong> <?php echo $row['amount']; ?> </p>
+        <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
+        <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
+    </div>
+</div>
             <?php
             }
             if ($result->num_rows == 0) {

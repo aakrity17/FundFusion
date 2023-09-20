@@ -124,40 +124,56 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="membership-info">
-            <h3 class="card-title" style="text-align: center; padding-top:50px;">Membership Information</h3>
 
-            <?php
-            include "../database/Db_Connection.php";
+         <div class="tab-pane fade" id="membership-info">
+    <h3 class="card-title" style="text-align: center; padding-top: 50px;">Membership Information</h3>
 
-            $sql = "SELECT * FROM donors WHERE email='$title' AND  (cause='Gold Membership' OR cause='Silver Membership' OR cause='Platinium Membership')";
-            $result = mysqli_query($conn, $sql);
+    <?php
+    include "../database/Db_Connection.php";
 
 
-            while ($row = mysqli_fetch_assoc($result)) {
-              $registeredDate = $row['date'];
-              $expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
-              $daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
-              if ($daysRemaining >= 365) {
-                $daysRemaining = 364;
-              }
+    $sql = "SELECT mri.*, u.name, u.address, m.membership_type, m.amount
+    FROM membership_register_info mri
+    INNER JOIN user u ON mri.user_id = u.id
+    INNER JOIN membership m ON mri.membership_id = m.id
+    WHERE mri.user_id = $title";
 
-            ?>
 
-              <div class="card">
-                <div class="card-body" style="font-size: 20px;">
-                  <p><strong>Info:</strong><?php echo $row['name']; ?> </p>
-                  <p><strong>Membership Type:</strong><?php echo $row['cause']; ?> </p>
-                  <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
-                  <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
-                  <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
-                </div>
 
-              </div>
-            <?php
-            }
-            ?>
-          </div>
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+echo "SQL Error: " . mysqli_error($conn);
+}
+if(mysqli_num_rows($result)>0){
+while ($row = mysqli_fetch_assoc($result)) {
+$registeredDate = $row['date'];
+$expiryDate = date('Y-m-d', strtotime('+1 year', strtotime($registeredDate)));
+$daysRemaining = ceil((strtotime($expiryDate) - time()) / (60 * 60 * 24));
+if ($daysRemaining >= 365) {
+    $daysRemaining = 364;
+}
+?>
+
+<div class="card">
+    <div class="card-body" style="font-size: 20px;">
+        <p><strong>Name:</strong> <?php echo $row['name']; ?> </p>
+        <p><strong>Address:</strong> <?php echo $row['address']; ?> </p>
+        <p><strong>Membership Type:</strong> <?php echo $row['membership_type']; ?> </p>
+        <p><strong>Membership Amount:</strong> <?php echo $row['amount']; ?> </p>
+        <p><strong>Membership Expiry Date:</strong> <?php echo $expiryDate; ?></p>
+        <p><strong>Account Created Date:</strong> <?php echo $registeredDate; ?></p>
+        <p><strong>Days Remaining:</strong> <?php echo $daysRemaining; ?></p>
+    </div>
+</div>
+<?php
+}
+
+}else{
+  echo "<p?>No data found.</p>";
+}
+?>
+         </div>
+
 <!-- Donation Section -->
 
           <div class="tab-pane fade" id="donation-history">

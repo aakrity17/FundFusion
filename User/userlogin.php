@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../dashboardLogin/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>FundFusion || Dashboard-login ||</title>
+    <title>FundFusion || User-login ||</title>
 </head>
 <body>
     <section class="side">
@@ -69,10 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id=$row['id'];
             $status=$row['status'];
             if ($status=='active'){
-
-            
-            
-
 
             // Store user information in the session
             // $_SESSION['username'] = $providedUsername;

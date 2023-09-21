@@ -49,4 +49,6 @@ $records = $conn->query($sql);
         }
         ?>
 </div>
+<?php include './Footer/indexFooter.php' ?>
+
     </body>

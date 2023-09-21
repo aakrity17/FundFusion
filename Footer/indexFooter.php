@@ -19,8 +19,8 @@ while ($row = mysqli_fetch_array($result)) {
 
 <section class="nb-footer">
     <div class="container">
-        <div class="row mx-4" >
-            <div class="col-md-3 col-sm-6 ">
+        <!-- <div class="row" > -->
+            <div class="col-10 col-md-6 col-lg-4">
                 <div class="footer-single useful-links">
                     <div class="footer-title">
                         <h2 style="color: white;">Navigation</h2>
@@ -36,30 +36,8 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
             </div>
             <div class="clearfix visible-sm"></div>
-            <div class="col-md-3 col-sm-6">
-                <div class="col-sm-12 left-clear right-clear footer-single footer-project">
-                    <div class="footer-title">
-                        <h2 style="color: white;">Social links</h2>
-                        <div class="col-sm-6 text-right xs-center">
-                            <ul class="list-inline footer-social" style="display: flex;">
-                                <li><a href="<?php echo $fb; ?>"><i class="fa fa-facebook mx-4"></i></a></li>
-                                <li><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter "></i></a></li>
-                            </ul>
-                            <ul class="list-inline footer-social" style="display: flex;">
-
-                                <li><a href="<?php echo $youtube; ?>"><i class="fa fa-youtube-play mx-4"></i></a></li>
-                                <li><a href="<?php echo $google; ?>"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                            <ul class="list-inline footer-social" style="display: flex;">
-
-                                <li><a href="<?php echo $skype; ?>"><i class="fa fa-skype mx-4"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-single">
+            <div class="col-10 col-md-6 col-lg-4">
+            <div class="footer-single">
                     <div class="footer-title">
                         <h2 style="color:white; width:200px;">Contact Information</h2>
                     </div>
@@ -71,6 +49,16 @@ while ($row = mysqli_fetch_array($result)) {
                     </address>
                 </div>
             </div>
-        </div>
+            <div class="col-10 col-md-6 col-lg-4">
+            <div class="footer-single">
+                    <div class="footer-title">
+                        <h2 style="color:white; width:200px;">Find us on Map</h2>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.0232144985353!2d83.9737104111368!3d28.20660727579958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595aa38889db1%3A0xf35a851e0c6a4f34!2sLA%20GRANDEE%20International%20College!5e0!3m2!1sen!2snp!4v1695278328434!5m2!1sen!2snp" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            </div>
+        <!-- </div> -->
     </div>
 </section>

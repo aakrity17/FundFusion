@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['g-recaptcha-response']
         $sqlCheck = "SELECT * FROM user WHERE email = '$email' AND role='user'";
         $resultCheck = mysqli_query($conn, $sqlCheck);
 
-        if (mysqli_num_rows($resultCheck) > 0) {
+        if (mysqli_num_rows($resultCheck) > 0 ) {
+            
             echo "User with email '$email' already exists!";
         } else {
             // Insert the new user

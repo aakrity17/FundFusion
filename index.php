@@ -145,11 +145,11 @@ while ($res = mysqli_fetch_array($sliderresult)) {
     <!--end of hero Section-->
     <!--About us-->
     <section id="about-us">
-        <section class="mt-5" id="aboutus">
+        <section class="mt-5" id="aboutus" style="width: 100%;">
             <h6 style="text-align: center;">ABOUT US</h6>
             <h2 style="text-align: center;" class="mb-3">OUR MISSION | VISION &amp; PLANS</h2>
 
-            <div class="container">
+            <div class="container" style="width: 100%; background-color:#fff; ">
                 <div class="row justify-content-center mb-5">
                     <!-- <div class="col-md-8 text-center heading-section">
                         <span style="text-align: center;">About Us</span>
@@ -255,7 +255,6 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     malesuada justo, euismod consequat lorem aliquam eget..</p>
                             </div>
 
-                            <!-- - -->git p
                         </div>
                     </div>
 
@@ -263,24 +262,30 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             </div>
             </div>
         </section>
-        <hr />
 
         <!-- End About us -->
 
 
         <!-- Volunteer section -->
-        <section>
-            <h1 style="text-align: center;">Become a Volunteer</h1>
+        <section class="mt-5" id="volunteer" style="width: 100%; padding-top:3rem !important; padding-bottom:3rem !important; background-image:url('https://www.sambhavnepal.org/wp-content/themes/sambhav-nepal/assets/img/bg-pattern.jpg')">
+        <h2 style="text-align: center;" class="mb-3">Become a Volunteer | Assist the Help</h2>
+        <p style="text-align: center;">We can do it together. Let's work hand to hand</p>
 
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-6">
+            <div class="container-fluid my-4" style="width: 100%;" >
+                <div class="row" style="width: 100%;">
+                <div class="col-1"></div>
+                    <div class="col-5">
                         <?php
                         if (isset($_GET['status'])) {
                             echo '<h3 style="color:green">!!Your application is submitted Successfully!!</h3>';
                         }
                         ?>
                         <!-- <h1 style="text-align: center;">Become a Volunteer</h1> -->
+                        <style>
+                            .form-control {
+                                font-size: 1.2rem !important;
+                            }
+                        </style>
                         <form action="newvolunteer.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="full_name" placeholder="Full Name">
@@ -289,27 +294,28 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <input type="email" class="form-control" name="email_address" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" name="phone_number" placeholder="Phone Number">
-                            </div>
+                            <input type="text" maxlength="10" pattern="[0-9]" class="form-control" name="phone_number" placeholder="Phone Number" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="occupation" placeholder="Occupation">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="form-group">
+                                <textarea rows="8" cols="50" class="form-control" name="message" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success col-12" style="background-color: #2b6777;">Submit</button>
                         </form>
                     </div>
                     <div class="col-6">
-                        <img src="img/2.jpg" class="img-fluid" alt="">
+                        <img src="img/volunteer.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
         </section>
         <!-- Volunteer section end -->
-        <hr />
-        </br>
+        
 
 
         <!-- Essentials Donation Section -->
-        <section>
+        <section class="mt-5">
             <h1 class="text-uppercase">Essentials Donation
                 <style>
                     h1 {
@@ -319,9 +325,9 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             </h1>
             <p style="text-align: center;">Donation can be any kind of aid that helps.</p>
 
-            <div class="w3-content w3-display-container" style="max-width:800px; margin: 0 auto;">
+            <div class="w3-content w3-display-container" style="max-width:1100px; margin: 0 auto;">
                 <div class="mySlides">
-                    <img src="./img/6.jpg" style="width:100%">
+                    <img src="./img/6.jpg" style="width:100%; height:600px">
                     <div class="caption">
                         <h2>Donate Study Materials and Stationaries</h2>
                         <div class="btn-container">
@@ -331,7 +337,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 </div>
 
                 <div class="mySlides">
-                    <img src="./img/5.jpg" style="width:100%">
+                    <img src="./img/5.jpg" style="width:100%; height:600px">
                     <div class="caption">
                         <h2>Donate Clothes and Uniforms</h2>
                         <div class="btn-container">
@@ -341,7 +347,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 </div>
 
                 <div class="mySlides">
-                    <img src="./img/4.jpg" style="width:100%">
+                    <img src="./img/medical.jpg" style="width:100%; height:600px">
                     <div class="caption">
                         <h2>Donate Medicines snd Aids</h2>
                         <!-- <p>Donate Medicines snd Aids</p> -->
@@ -394,12 +400,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             </script>
 
         </section>
-        <br />
-        <hr />
         <!-- End Of -->
 
 
-        <section id="projects">
+        <section id="projects" class="mt-5" style="background-image: url(https://fourposecharity.org/images/white-background.jpg);">
             <div class="donation-banner">
                 <h1 style="text-align:center;">PROJECTS</h1>
             </div>
@@ -416,17 +420,24 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             ?>
 
 
-
+<style>
+    .projectsImage {
+    width: 20rem !important;
+    height: 20rem !important;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+</style>
             <div class="container">
                 <div class="row">
                     <?php $count = 0; ?>
                     <?php foreach ($pastProjectRecords as $pastData) : ?>
                         <!--single Project-->
-                        <div class="col-10 col-md-6 col-lg-4">
-                            <div class="project-container p-5 outline">
-                                <img class="img-fluid grow" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
-                                <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="donation text-capitalize">View More</a>
-                                <h5 class="text-capitalize text-center my-2"><?php echo $pastData['title']; ?></h5>
+                        <div class="col-10 col-md-6 col-lg-4" style="padding:1.2rem 0.5rem 1.2rem 1.2rem; ">
+                            <div class="project-container p-5">
+                                <img class="img-fluid grow projectsImage" src="img/projects/<?php echo $pastData['thumbnail']; ?>">
+                                <h5 class="text-capitalize my-2" style="font-size:1.7rem;"><?php echo $pastData['title']; ?></h5>
+                                <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="btn btn-primary col-12 text-capitalize">View More</a>
                             </div>
                         </div>
                         <?php $count++; ?>
@@ -435,13 +446,10 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 </div>
             </div>
         </section>
-        </br>
-        </br>
-        <hr />
 
 
         <!-- Membership card -->
-        <section>
+        <section class="mt-5">
             <h2 class="text-center">Membership</h2>
 
             <div class="container">
@@ -451,7 +459,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                             <div class="card-header bg-secondary text-white">
                                 Silver Tier
                             </div>
-                            <img src="./img/bronze.png" class="card-img-top" alt="Silver Tier">
+                            <img src="./img/silver1.png" class="card-img-top" alt="Silver Tier">
                             <div class="card-body">
                                 <h5 class="card-title">About Silver Tier</h5>
                                 <p class="card-text">In this beginner-friendly tier,By donating between $1 to $9 you will become a member of our silver Tier.</p>
@@ -460,7 +468,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Chat community</li>
                                     <li>One movie free ticket</li>
                                 </ul>
-                                <a href="Membership/paymentGateway.php?title=<?php echo 1; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 1; ?>" class="btn btn-primary col-12">Join</a>
 
                             </div>
                         </div>
@@ -479,7 +487,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Exclusive monthly newsletter</li>
                                     <li>Personalized thank you message</li>
                                 </ul>
-                                <a href="Membership/paymentGateway.php?title=<?php echo 2; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 2; ?>" class="btn btn-primary col-12">Join</a>
 
                             </div>
                         </div>
@@ -498,7 +506,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                     <li>Personalized thank you message</li>
                                     <li>Special recognition on our website</li>
                                 </ul>
-                                <a href="Membership/paymentGateway.php?title=<?php echo 3; ?>" class="btn btn-primary">Join</a>
+                                <a href="Membership/paymentGateway.php?title=<?php echo 3; ?>" class="btn btn-primary col-12">Join</a>
                             </div>
                         </div>
                     </div>
@@ -507,20 +515,18 @@ while ($res = mysqli_fetch_array($sliderresult)) {
             </div>
 
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-                
+        
         </section>
-        <hr>
+
+        <section class="team mt-5" style="background-image:url('https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg')">
         <h2 class="text-center">Our Team</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum.</p>
+        <p class="text-center">We Are Dedicated To Helping Disadvantaged Children Improve Their Quality Of Life.</p>
         <!--  -->
         <!-- Team Section-->
         <?php
         $teamsSql = "SELECT * FROM teams";
         $teamsresult = mysqli_query($conn, $teamsSql);
         ?>
-        <section class="team">
 
             <section id="our-team">
                 <div class="container">
@@ -532,7 +538,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="team-1">
                                     <div class="pic">
-                                        <img src="img/member1.jpg" class="img-fluid" alt="">
+                                        <img src="img/team-img.jpg" class="img-fluid" alt="">
                                     </div>
                                     <div class="team-info">
                                         <h4><?php echo $rs['name']; ?></h4>
@@ -559,7 +565,6 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 </div>
             </section>
         </section>
-        <hr>
 
       <!-- Add the meta tag for responsiveness in the head section of your HTML -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -570,7 +575,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 <style>
   /* Base styles for the footer elements */
   .nb-footer {
-    background-color: #6633cc;
+    background-color: #2b6777;
     color: white;
     padding: 30px 0;
     align-items: center;
@@ -624,11 +629,11 @@ while ($res = mysqli_fetch_array($sliderresult)) {
 
         <!-- <body> -->
 
-        <footer style="background-color: purple">
+        <footer>
             <?php include './Footer/indexFooter.php' ?>
         </footer>
 
-        <script>
+        <!-- <script>
             var slideIndex = 1;
             showDivs(slideIndex);
 
@@ -650,7 +655,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                 }
                 x[slideIndex - 1].style.display = "block";
             }
-        </script>
+        </script> -->
 
 <script src="path/to/jquery.min.js"></script>
 

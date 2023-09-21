@@ -105,9 +105,8 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
   </div>
 
 <br><br><br>
-  <footer>
-    <p>&copy; 2023 FundFusion</p>
-  </footer>
+<?php include './Footer/indexFooter.php' ?>
+
 
   <script src="js/donation.js" defer></script>
 </body>

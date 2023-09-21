@@ -113,7 +113,7 @@ if (isset($_POST['Amount'])){
     <script>
         var config = {
             // replace the publicKey with yours
-            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
+            "publicKey": "test_public_key_6d8aa475442747e288adf0b27a5d180c",
             "productIdentity": "1234567890",
             "productName": "Dragon",
             "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",

@@ -70,7 +70,7 @@
                   }
 
                   // Sanitize and validate the $title variable
-                  $title = mysqli_real_escape_string($conn, $title); // Assuming $conn is the database connection variable
+                  $title = mysqli_real_escape_string($conn, $title); 
 
                   $sql = "SELECT * FROM user WHERE id='$title'";
                   $result = mysqli_query($conn, $sql);
@@ -83,7 +83,7 @@
                       $contact = $row['Contact'];
                       $email = $row['email'];
                       $id = $row['id'];
-                      $profilePicturePath = '../img/' . $row['profile_picture']; // Replace with the actual path to the profile pictures directory
+                      $profilePicturePath = '../img/' . $row['profile_picture']; 
                 ?>
                       <div class="profile-details">
                         <div class="profile-picture">
@@ -102,8 +102,9 @@
                           <button> <a href="editDetails.php?email=<?php echo urlencode($title); ?>">
                               Edit your Profile Details</button></a>
                           <button> <a href="changePassword.php?email=<?php echo urlencode($title); ?>">
-                              Change Password</button>
-                    </a>
+                              Change Password</button></a>
+                              <button> <a href="otherDetails.php?email=<?php echo urlencode($title); ?>">
+                              See other Details</button></a>
 
                         </div>
                       </div>
@@ -125,7 +126,7 @@
             </div>
           </div>
 
-         <div class="tab-pane fade" id="membership-info">
+    <div class="tab-pane fade" id="membership-info">
     <h3 class="card-title" style="text-align: center; padding-top: 50px;">Membership Information</h3>
 
     <?php

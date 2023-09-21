@@ -1,0 +1,5 @@
+{amount:<?php if (isset($_POST['Amount'])){
+    // $amount=$_POST['Amount']*100;
+    $amount=1000;
+    echo $amount;}
+    else echo 100000;?>}

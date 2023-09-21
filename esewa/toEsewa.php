@@ -49,7 +49,7 @@ if (isset($_POST['Amount'])){
   
       // Send the email
       if ($mail->send()) {
-          echo "Form details saved successfully in the database. Thank you email sent.";
+          echo "";
       } else {
           echo "Error sending the thank you email: " . $mail->ErrorInfo;
       }

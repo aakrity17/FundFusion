@@ -4,8 +4,8 @@ session_start();
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
-            <img src="<?php echo $site_url ?>img/Logo.png" class="logo"> <!-- Inline CSS to hide the logo -->
-            <a class="navbar-brand text-white" href="<?php echo $site_url ?>index.php"></a>
+            <img src="<?php echo $site_url ?>img/Logo.png" class="logo" href="<?php echo $site_url ?>index.php"> <!-- Inline CSS to hide the logo -->
+            <a class="navbar-brand text-white" ></a>
             <button class="navbar-toggler" type="button" id="toggleNavBtn">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,23 +18,15 @@ session_start();
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#our-team">
-                            <i class="fas fa-info-circle"></i> About us
-                        </a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $site_url ?>Donation.php">
                             <i class="fas fa-donate"></i> Donation
                         </a>
                     </li>
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="#our-team">
-                            <i class="fas fa-users"></i> Our Team
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Projects.php">
+                        <a class="nav-link" href=<?php echo $site_url . "Projects.php" ;?>>
                             <i class="fas fa-project-diagram"></i> Projects
                         </a>
                     </li>
@@ -46,13 +38,19 @@ session_start();
 
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $site_url ?>sponsor/Sponsorship.php">
-                            <i class="fas fa-calendar-alt"></i> Sponsor
+                            <i class="fas fa-hand-holding-heart"></i> Sponsor
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $site_url ?>Donors/donors.php">
-                            <i class="fas fa-calendar-alt"></i> Our Donors
+                            <i class="fas fa-users"></i> Donors
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $site_url ?>contact.php">
+                            <i class="fas fa-envelope"></i> Contact Us
                         </a>
                     </li>
                     <li class="nav-item mx-4" style="width:50px;">

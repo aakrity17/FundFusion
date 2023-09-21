@@ -42,7 +42,7 @@ body {
     /* nav bar ko lagi */
     /* background: #000033;
      */
-    background: #6633cc;
+    background: #2b6777;
 
     backdrop-filter: blur(10px);
 
@@ -72,15 +72,18 @@ body {
 }
 
 #hero:after {
+    background-color: rgba(0, 0, 0, 0.2); /* Black with 80% opacity */
+
     content: '';
     position: absolute;
     left: 50%;
     top: 0;
     width: 130%;
     height: 95%;
-    background: #6633cc;
+    background-image:url("../img/poor5.jpg");
+    background-repeat: none;
+    background-size: cover;
 
-    /* background: #000033; */
 
     backdrop-filter: blur(10px);
 
@@ -101,12 +104,15 @@ body {
     width: 130%;
     height: 96%;
     /* background: #020241; */
-    background: #4b13bc;
+    background-image:url("../img/3.jpg");
+    background-repeat: none;
+    background-size: cover;
+
 
 
     /* mathi ko jasto curve tara mix*/
 
-    opacity: 0.3;
+    opacity: 0.1;
     z-index: 0;
     border-radius: 0 0 50% 50%;
     transform: translateX(-50%)translateY(18px)rotate(2deg);
@@ -148,7 +154,7 @@ body {
 #hero .carousel-control-next-icon,
 #hero .carousel-control-prev-icon {
     background: none;
-    font-size: 48px;
+    font-size: 0px;
     line-height: 1;
     width: auto;
     height: auto;
@@ -165,9 +171,9 @@ body {
     transition: 0.5s;
     line-height: 1;
     margin: 10px;
-    color: #fff;
+    color: #2b6777;
     animation-delay: 0.5s;
-    background: blueviolet;
+    background: #c8d8e4;
 
 
 }
@@ -243,14 +249,18 @@ body {
 
 /*--End of Hero---( sakiyo now About wala*/
 /*======About Us=========*/
+#about-us{
+    align-items: center;
+
+}
 .tabs .nav-pills .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Our mission | vision and Plans */
 .tabs .nav-pills .nav-item .nav-link {
     background: #fff;
-    border-radius: 4px;
+    border-radius: 20px;
     /* font color of about us */
     color: #000;
     font-weight: bold;
@@ -263,7 +273,7 @@ body {
 }
 
 .tabs .nav-pills .nav-item .nav-link span {
-    color: white;
+    color: #fff;
     /* color: #013030; */
     font-size: 30px;
 }
@@ -272,9 +282,8 @@ body {
 .tabs .nav-pills .nav-item .nav-link.active {
     color: #fff;
     /* after clicking to the about us */
-    background: #6633cc;
-    /* background: rgba(91, 10, 183, 0.854); */
-    border: 10px solid;
+    background: #2b6777;
+    border: 1px solid;
 }
 
 .tabs .nav-pills .nav-item .nav-link.active span {
@@ -284,14 +293,18 @@ body {
 .tabs .tab-content {
     background: #fff;
     padding: 0;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 550px;
 }
 
 .tabs .tab-content .img {
-    /*images-size for this section 1000 x 667 */
     width: 100%;
-    height: 400px;
+    height: 300px;
     margin-bottom: 20px;
     background: no-repeat;
+
 }
 
 .tabs .tab-content h3 {
@@ -300,8 +313,8 @@ body {
 }
 
 .tabs .tab-content h3 a {
-    color: white;
-}
+    color: #080606;
+} 
 
 /*======End of About Us=========*/
 
@@ -373,7 +386,6 @@ body {
 .grow:hover,
 .grow:focus,
 .grow:active {
-    box-shadow: 0 10px 10px 5px #8708a17e;
     transform: scale(1.1);
 }
 
@@ -404,12 +416,12 @@ body {
 }
 
 .team .team-1 .team-info {
-    position: absolute;
+    
     bottom: -48px;
     left: 20px;
     right: 20px;
     background-color: #0000005b;
-    background: #6633cc;
+    background: #636363;
     padding: 15px 0;
     border-radius: 4px;
 }
@@ -417,7 +429,7 @@ body {
 .team .team-1 h4 {
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.4rem;
     color: #fff;
     position: relative;
     padding-bottom: 10px;
@@ -429,7 +441,7 @@ body {
     display: block;
     width: 50px;
     height: 1px;
-    background: #912b8f;
+    background: #ffffff;
     bottom: 0;
     left: calc(50% - 25px);
 }
@@ -437,7 +449,7 @@ body {
 .team .team-1 span {
     font-style: italic;
     display: block;
-    font-size: 13px;
+    font-size: 1.1rem;
     color: #fff;
 }
 
@@ -520,8 +532,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    padding: 45px 0px 20px 500px;
-    background: #6633cc;
+    /* padding: 45px 0px 20px 500px; */
+    background: #2b6777;
 
 
 }
@@ -703,3 +715,5 @@ h2 {
     border-radius: 4px;
     /* margin-bottom: 10px; */
 }
+
+

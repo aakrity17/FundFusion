@@ -28,7 +28,7 @@
         }
 
         .success-icon {
-            color: #6633cc;
+            color: #2b6777;
             font-size: 80px;
         }
 
@@ -43,7 +43,7 @@
         }
 
         .back-button {
-            background-color: #6633cc;
+            background-color: #2b6777;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -53,7 +53,7 @@
         }
 
         .back-button:hover {
-            background-color: #6633cc;
+            background-color: #2b6777;
         }
     </style>
 </head>
@@ -73,7 +73,7 @@ $originalData = base64_decode($decodedData);
             echo '<p>Something went wrong. No message provided.</p>';
         }
         ?>
-        <a href="../index.php" class="back-button">Back to Dashboard</a>
+        <a href="../index.php" class="back-button">Back to Home Page</a>
     </div>
 
     <script>

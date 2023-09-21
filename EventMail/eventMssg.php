@@ -31,8 +31,8 @@ if (isset($_SESSION['name']) && isset($_SESSION['email'])) {
         // Set up email content
         $mail->setFrom('fundfusionab@gmail.com', 'FundFusion');  // Replace with your email address and name
         $mail->addAddress($email, $name);  // User's email address and name
-        $mail->Subject = 'Participated Successfully!';
-        $mail->Body = "Dear user,\n\nThank you for participating in the event. Our team will contact you for further information regarding the event.\n\nSincerely,\nFundFusion Team";
+        $mail->Subject = 'Participation for Event';
+        $mail->Body = "Dear user,\n\nThank you for interest in participating of the event. Our team will contact you for further information regarding the event.\n\nSincerely,\nFundFusion Team";
 
         // Send the email
         if ($mail->send()) {

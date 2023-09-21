@@ -72,7 +72,7 @@
             echo '<p>Something went wrong. No message provided.</p>';
         }
         ?>
-        <a href="../index.php" class="back-button">Back to Dashboard</a>
+        <a href="../index.php" class="back-button">Back to Home Page</a>
     </div>
 </body>
 </html>

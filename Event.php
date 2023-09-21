@@ -43,11 +43,7 @@ $records = $conn->query($sql);
     
                     <h5 class="card-title">'.$data['event_name'].'</h5>
                     <p class="card-text">'.$data['event_description'].'</p>
-<<<<<<< HEAD
-                    <a href="./EventMail/eventMssg.php" class="btn btn-primary" id="#participate-btn">Participate</a>
-=======
-                    <a href="#" class="btn btn-success">Participate</a>
->>>>>>> d17306817c6bd16a1ff7077133bc76bc6e968a72
+                    <a href="./EventMail/eventMssg.php" class="btn btn-success">Participate</a>
                 </div>
             </div>';
         }

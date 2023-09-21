@@ -83,7 +83,7 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                         <?php echo $s1content; ?>
                     </p>
 
-                    <a href="./esewa/donate.php?title=<?php echo urlencode("Organization Donation"); ?>" class="btn hero-btn animate__animated animate__backInUp">
+                    <a href="./Donation.php" class="btn hero-btn animate__animated animate__backInUp">
                         Donate us
                     </a>
                 </div>
@@ -294,12 +294,13 @@ while ($res = mysqli_fetch_array($sliderresult)) {
                                 <input type="email" class="form-control" name="email_address" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                            <input type="text" maxlength="10" pattern="[0-9]" class="form-control" name="phone_number" placeholder="Phone Number" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">                            </div>
+                                <input type="text" maxlength="10" class="form-control" name="phone_number" placeholder="Phone Number" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="occupation" placeholder="Occupation">
                             </div>
                             <div class="form-group">
-                                <textarea rows="8" cols="50" class="form-control" name="message" placeholder="Your Message"></textarea>
+                                <textarea rows="8" cols="50" class="form-control" name="formMessage" placeholder="Your Message"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success col-12" style="background-color: #2b6777;">Submit</button>
                         </form>

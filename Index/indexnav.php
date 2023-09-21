@@ -4,7 +4,7 @@ session_start();
 <nav class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2 " id="mainNav">
         <div class="container-fluid">
             <!-- Logo -->
-            <img src="<?php echo $site_url ?>img/Logo.png" class="logo" href="<?php echo $site_url ?>index.php"> <!-- Inline CSS to hide the logo -->
+            <img src="<?php echo $site_url ?>img/Logo.png" class="logo" href="<?php echo $site_url ?>index.php">
             <a class="navbar-brand text-white" ></a>
             <button class="navbar-toggler" type="button" id="toggleNavBtn">
             <span class="navbar-toggler-icon"></span>

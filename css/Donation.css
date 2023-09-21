@@ -78,7 +78,7 @@ body {
   text-align: center;
   line-height: 20px;
   font-weight: bold;
-  background-color: #090f7e;
+  background-color: #2b6777;
 
   /* background-image: linear-gradient(to right, #8b33c5, #15a0e1); */
 }
@@ -93,13 +93,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #8b33c5;
+  background-color: #2b6777;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #15a0e1;
+  background-color: #121818;
 }
 
 footer {

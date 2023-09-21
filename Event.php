@@ -43,7 +43,7 @@ $records = $conn->query($sql);
     
                     <h5 class="card-title">'.$data['event_name'].'</h5>
                     <p class="card-text">'.$data['event_description'].'</p>
-                    <a href="#" class="btn btn-primary">Participate</a>
+                    <a href="#" class="btn btn-success">Participate</a>
                 </div>
             </div>';
         }

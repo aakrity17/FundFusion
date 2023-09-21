@@ -43,12 +43,16 @@ $records = $conn->query($sql);
     
                     <h5 class="card-title">'.$data['event_name'].'</h5>
                     <p class="card-text">'.$data['event_description'].'</p>
-                    <a href="#" class="btn btn-primary">Participate</a>
+                    <a href="./EventMail/eventMssg.php" class="btn btn-primary" id="#participate-btn">Participate</a>
                 </div>
             </div>';
         }
         ?>
 </div>
 <?php include './Footer/indexFooter.php' ?>
+<script>
+
+    
+    </script>
 
     </body>

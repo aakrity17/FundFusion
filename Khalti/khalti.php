@@ -115,7 +115,7 @@ if (isset($_POST['Amount'])){
             // replace the publicKey with yours
             "publicKey": "test_public_key_6d8aa475442747e288adf0b27a5d180c",
             "productIdentity": "1234567890",
-            "productName": "Dragon",
+            "productName": "Donation",
             "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
             "paymentPreference": [
                 "KHALTI",
@@ -128,6 +128,10 @@ if (isset($_POST['Amount'])){
                 onSuccess (payload) {
                     // hit merchant api for initiating verfication
                     console.log(payload);
+                    window.location.href = '../Success/success.php';
+
+
+                
                 },
                 onError (error) {
                     console.log(error);

@@ -51,7 +51,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $currentData['descriptions']; ?></p>             
               <p><strong> From: </strong><?php echo $currentData['p_start_date']; ?><strong> To: </strong> <?php echo $currentData['p_end_date']; ?></p>
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $currentData['id']; ?>" class="btn btn-primary">View More</a>
+              <a href="ProjectDetail.php/?id=<?php echo $currentData['id']; ?>" class="btn btn-success">View More</a>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $upcomingData['descriptions']; ?></p>
               <p><strong> From: </strong><?php echo $upcomingData['p_start_date']; ?><strong> To: </strong> <?php echo $upcomingData['p_end_date']; ?></p>
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $upcomingData['id']; ?>" class="btn btn-primary">View More</a>
+              <a href="ProjectDetail.php/?id=<?php echo $upcomingData['id']; ?>" class="btn btn-success">View More</a>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ $pastProjectRecords = $conn->query($pastProjectsSql);
               <p class="card-text card-description"><?php echo $pastData['descriptions']; ?></p>            
               <p><strong> From: </strong><?php echo $pastData['p_start_date']; ?><strong> To: </strong> <?php echo $pastData['p_end_date']; ?></p>              
               <br>
-              <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="btn btn-primary">Donate</a>
+              <a href="ProjectDetail.php/?id=<?php echo $pastData['id']; ?>" class="btn btn-success">View More</a>
             </div>
           </div>
         </div>
